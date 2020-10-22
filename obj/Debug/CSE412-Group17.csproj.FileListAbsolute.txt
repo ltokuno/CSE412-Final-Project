@@ -1,0 +1,11 @@
+C:\Users\Robert\Documents\VsProjects\412Proj\bin\Debug\CSE412-Group17.exe.config
+C:\Users\Robert\Documents\VsProjects\412Proj\bin\Debug\CSE412-Group17.exe
+C:\Users\Robert\Documents\VsProjects\412Proj\bin\Debug\CSE412-Group17.pdb
+C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412-Group17.csprojAssemblyReference.cache
+C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412_Group17.MainForm.resources
+C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412_Group17.Properties.Resources.resources
+C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412-Group17.csproj.GenerateResource.cache
+C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412-Group17.csproj.CoreCompileInputs.cache
+C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412-Group17.exe
+C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412-Group17.pdb
+C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412_Group17.HomePage.resources
