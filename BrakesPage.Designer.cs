@@ -1,6 +1,6 @@
 ﻿namespace CSE412_Group17
 {
-    partial class HomePage
+    partial class BrakesPage
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.lblStoreName = new System.Windows.Forms.Label();
             this.btnParts = new System.Windows.Forms.Button();
             this.panelParts = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,13 +47,23 @@
             this.panelResources = new System.Windows.Forms.Panel();
             this.btnAboutUs = new System.Windows.Forms.Button();
             this.btnResources = new System.Windows.Forms.Button();
-            this.lblHomeMessage1 = new System.Windows.Forms.Label();
-            this.btnHomePage = new System.Windows.Forms.Button();
-            this.lblHomePageMessage2 = new System.Windows.Forms.Label();
+            this.lblMsg = new System.Windows.Forms.Label();
+            this.lblMsg2 = new System.Windows.Forms.Label();
+            this.lblPartName = new System.Windows.Forms.Label();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
             this.panelResources.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // lblStoreName
+            // 
+            this.lblStoreName.AutoSize = true;
+            this.lblStoreName.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblStoreName.Location = new System.Drawing.Point(398, 44);
+            this.lblStoreName.Name = "lblStoreName";
+            this.lblStoreName.Size = new System.Drawing.Size(281, 55);
+            this.lblStoreName.TabIndex = 0;
+            this.lblStoreName.Text = "Store Name";
             // 
             // btnParts
             // 
@@ -205,7 +216,6 @@
             this.btnBrakes.TabIndex = 5;
             this.btnBrakes.Text = "Brakes";
             this.btnBrakes.UseVisualStyleBackColor = false;
-            this.btnBrakes.Click += new System.EventHandler(this.btnBrakes_Click);
             // 
             // btnMyAccount
             // 
@@ -319,53 +329,52 @@
             this.btnResources.UseVisualStyleBackColor = false;
             this.btnResources.Click += new System.EventHandler(this.btnResources_Click);
             // 
-            // lblHomeMessage1
+            // lblMsg
             // 
-            this.lblHomeMessage1.AutoSize = true;
-            this.lblHomeMessage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHomeMessage1.Location = new System.Drawing.Point(215, 309);
-            this.lblHomeMessage1.Name = "lblHomeMessage1";
-            this.lblHomeMessage1.Size = new System.Drawing.Size(639, 20);
-            this.lblHomeMessage1.TabIndex = 18;
-            this.lblHomeMessage1.Text = "Welcome to our bicycle store! We have a variety of parts to help build your ride." +
-    "";
+            this.lblMsg.AutoSize = true;
+            this.lblMsg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMsg.Location = new System.Drawing.Point(393, 240);
+            this.lblMsg.Name = "lblMsg";
+            this.lblMsg.Size = new System.Drawing.Size(298, 20);
+            this.lblMsg.TabIndex = 18;
+            this.lblMsg.Text = "Customize your bike to fit your style.";
             // 
-            // btnHomePage
+            // lblMsg2
             // 
-            this.btnHomePage.FlatAppearance.BorderSize = 0;
-            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomePage.Location = new System.Drawing.Point(387, 42);
-            this.btnHomePage.Name = "btnHomePage";
-            this.btnHomePage.Size = new System.Drawing.Size(318, 58);
-            this.btnHomePage.TabIndex = 21;
-            this.btnHomePage.Text = "Store Name";
-            this.btnHomePage.UseVisualStyleBackColor = true;
-            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
+            this.lblMsg2.AutoSize = true;
+            this.lblMsg2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMsg2.Location = new System.Drawing.Point(152, 269);
+            this.lblMsg2.Name = "lblMsg2";
+            this.lblMsg2.Size = new System.Drawing.Size(776, 20);
+            this.lblMsg2.TabIndex = 19;
+            this.lblMsg2.Text = "Whether you are fixing up your current bike or building a new one, we have the it" +
+    "ems you\'ll need.";
             // 
-            // lblHomePageMessage2
+            // lblPartName
             // 
-            this.lblHomePageMessage2.AutoSize = true;
-            this.lblHomePageMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHomePageMessage2.Location = new System.Drawing.Point(352, 329);
-            this.lblHomePageMessage2.Name = "lblHomePageMessage2";
-            this.lblHomePageMessage2.Size = new System.Drawing.Size(369, 20);
-            this.lblHomePageMessage2.TabIndex = 22;
-            this.lblHomePageMessage2.Text = "Please explore the tabs above to get started!";
+            this.lblPartName.AutoSize = true;
+            this.lblPartName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPartName.Location = new System.Drawing.Point(502, 306);
+            this.lblPartName.Name = "lblPartName";
+            this.lblPartName.Size = new System.Drawing.Size(73, 24);
+            this.lblPartName.TabIndex = 20;
+            this.lblPartName.Text = "Brakes";
+            this.lblPartName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // HomePage
+            // BrakesPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 702);
+            this.Controls.Add(this.panelParts);
             this.Controls.Add(this.panelResources);
             this.Controls.Add(this.panelAccount);
-            this.Controls.Add(this.panelParts);
-            this.Controls.Add(this.lblHomePageMessage2);
-            this.Controls.Add(this.btnHomePage);
-            this.Controls.Add(this.lblHomeMessage1);
-            this.Name = "HomePage";
-            this.Text = "HomePage";
+            this.Controls.Add(this.lblPartName);
+            this.Controls.Add(this.lblMsg2);
+            this.Controls.Add(this.lblMsg);
+            this.Controls.Add(this.lblStoreName);
+            this.Name = "BrakesPage";
+            this.Text = "BrakesPage";
             this.panelParts.ResumeLayout(false);
             this.panelAccount.ResumeLayout(false);
             this.panelResources.ResumeLayout(false);
@@ -375,6 +384,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Label lblStoreName;
         private System.Windows.Forms.Button btnParts;
         private System.Windows.Forms.Panel panelParts;
         private System.Windows.Forms.Button btnTiresTubes;
@@ -393,8 +404,8 @@
         private System.Windows.Forms.Panel panelResources;
         private System.Windows.Forms.Button btnAboutUs;
         private System.Windows.Forms.Button btnResources;
-        private System.Windows.Forms.Label lblHomeMessage1;
-        private System.Windows.Forms.Button btnHomePage;
-        private System.Windows.Forms.Label lblHomePageMessage2;
+        private System.Windows.Forms.Label lblMsg;
+        private System.Windows.Forms.Label lblMsg2;
+        private System.Windows.Forms.Label lblPartName;
     }
 }

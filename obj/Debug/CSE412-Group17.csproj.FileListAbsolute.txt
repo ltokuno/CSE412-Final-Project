@@ -9,3 +9,4 @@ C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412-Group17.csproj.Cor
 C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412-Group17.exe
 C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412-Group17.pdb
 C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412_Group17.HomePage.resources
+C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412_Group17.BrakesPg.resources

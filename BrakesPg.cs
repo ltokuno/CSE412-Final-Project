@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CSE412_Group17
 {
-    public partial class HomePage : Form
+    public partial class BrakesPg : Form
     {
-        public HomePage()
+        public BrakesPg()
         {
             InitializeComponent();
         }
@@ -79,7 +79,7 @@ namespace CSE412_Group17
 
         }
 
-        private void btnBrakes_Click(object sender, EventArgs e) // go to Brakes page
+        private void btnBrakes_Click_1(object sender, EventArgs e) // go to Brakes page
         {
 
             this.Hide();
@@ -87,7 +87,6 @@ namespace CSE412_Group17
             BrakesPg brakes = new BrakesPg();
 
             brakes.Show();
-
         }
     }
 }
