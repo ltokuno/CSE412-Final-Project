@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace CSE412_Group17
 {
-    public partial class BrakesPg : Form
+    public partial class PedalsPg : Form
     {
-        public static string brakeItem = null;
-        public static int brakeQuantity = 0; // # of items to add to cart
+        public static string pedalsItem = null;
+        public static int pedalsQuantity = 0; // # of items to add to cart
 
-        public BrakesPg()
+        public PedalsPg()
         {
             InitializeComponent();
         }
@@ -158,37 +158,40 @@ namespace CSE412_Group17
 
         }
 
-        private void btnAddToCart_Cork_Click(object sender, EventArgs e)
+        private void btnAddToCart_Lightweight_Click(object sender, EventArgs e)
         {
 
-            brakeItem = lblCork.Text;
+            pedalsItem = lblLightweight.Text;
             // show add to cart and quantity to add
             comboBoxQuantity.Visible = true;
             btnAddToCart.Visible = true;
 
         }
 
-        private void btnAddToCart_Clark_Click(object sender, EventArgs e)
+        private void btnAddToCart_Mountain_Click(object sender, EventArgs e)
         {
-            brakeItem = lblClark.Text;
+
+            pedalsItem = lblMountain.Text;
             // show add to cart and quantity to add
             comboBoxQuantity.Visible = true;
             btnAddToCart.Visible = true;
 
         }
 
-        private void btnAddToCart_Hammer_Click(object sender, EventArgs e)
+        private void btnAddToCart_Clipless_Click(object sender, EventArgs e)
         {
-            brakeItem = lblHammer.Text;
+
+            pedalsItem = lblClipless.Text;
             // show add to cart and quantity to add
             comboBoxQuantity.Visible = true;
             btnAddToCart.Visible = true;
 
         }
 
-        private void btnAddToCart_Muddy_Click(object sender, EventArgs e)
+        private void btnAddToCart_Nylon_Click(object sender, EventArgs e)
         {
-            brakeItem = lblMuddy.Text;
+
+            pedalsItem = lblNylon.Text;
             // show add to cart and quantity to add
             comboBoxQuantity.Visible = true;
             btnAddToCart.Visible = true;
@@ -209,14 +212,14 @@ namespace CSE412_Group17
         private void comboBoxQuantity_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            brakeQuantity = Convert.ToInt32(comboBoxQuantity.Text);
+            pedalsQuantity = Convert.ToInt32(comboBoxQuantity.Text);
 
         }
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
 
-            string msg = String.Format("Quantity of {0} of {1} was added to the cart!", brakeQuantity, brakeItem);
+            string msg = String.Format("Quantity of {0} of {1} was added to the cart!", pedalsQuantity, pedalsItem);
 
             // display success message
             MessageBox.Show(msg);

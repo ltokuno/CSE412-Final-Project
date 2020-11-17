@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace CSE412_Group17
 {
-    public partial class BrakesPg : Form
+    public partial class HandleBarsPg : Form
     {
-        public static string brakeItem = null;
-        public static int brakeQuantity = 0; // # of items to add to cart
-
-        public BrakesPg()
+        public static string hbarsItem = null;
+        public static int hbarsQuantity = 0; // # of items to add to cart
+        public HandleBarsPg()
         {
             InitializeComponent();
         }
@@ -158,37 +157,40 @@ namespace CSE412_Group17
 
         }
 
-        private void btnAddToCart_Cork_Click(object sender, EventArgs e)
+        private void btnAddToCart_Aluminum_Click(object sender, EventArgs e)
         {
 
-            brakeItem = lblCork.Text;
+            hbarsItem = lblAluminum.Text;
             // show add to cart and quantity to add
             comboBoxQuantity.Visible = true;
             btnAddToCart.Visible = true;
 
         }
 
-        private void btnAddToCart_Clark_Click(object sender, EventArgs e)
+        private void btnAddToCart_Carbon_Click(object sender, EventArgs e)
         {
-            brakeItem = lblClark.Text;
+
+            hbarsItem = lblCarbon.Text;
             // show add to cart and quantity to add
             comboBoxQuantity.Visible = true;
             btnAddToCart.Visible = true;
 
         }
 
-        private void btnAddToCart_Hammer_Click(object sender, EventArgs e)
+        private void btnAddToCart_CK_Click(object sender, EventArgs e)
         {
-            brakeItem = lblHammer.Text;
+
+            hbarsItem = lblCK.Text;
             // show add to cart and quantity to add
             comboBoxQuantity.Visible = true;
             btnAddToCart.Visible = true;
 
         }
 
-        private void btnAddToCart_Muddy_Click(object sender, EventArgs e)
+        private void btnAddToCart_Grips_Click(object sender, EventArgs e)
         {
-            brakeItem = lblMuddy.Text;
+
+            hbarsItem = lblGrips.Text;
             // show add to cart and quantity to add
             comboBoxQuantity.Visible = true;
             btnAddToCart.Visible = true;
@@ -209,14 +211,14 @@ namespace CSE412_Group17
         private void comboBoxQuantity_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            brakeQuantity = Convert.ToInt32(comboBoxQuantity.Text);
+            hbarsQuantity = Convert.ToInt32(comboBoxQuantity.Text);
 
         }
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
 
-            string msg = String.Format("Quantity of {0} of {1} was added to the cart!", brakeQuantity, brakeItem);
+            string msg = String.Format("Quantity of {0} of {1} was added to the cart!", hbarsQuantity, hbarsItem);
 
             // display success message
             MessageBox.Show(msg);

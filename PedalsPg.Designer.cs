@@ -1,6 +1,6 @@
 ﻿namespace CSE412_Group17
 {
-    partial class HomePage
+    partial class PedalsPg 
     {
         /// <summary>
         /// Required designer variable.
@@ -46,9 +46,20 @@
             this.panelResources = new System.Windows.Forms.Panel();
             this.btnAboutUs = new System.Windows.Forms.Button();
             this.btnResources = new System.Windows.Forms.Button();
-            this.lblHomeMessage1 = new System.Windows.Forms.Label();
+            this.lblBrakesMessage1 = new System.Windows.Forms.Label();
+            this.lblBrakesMessage2 = new System.Windows.Forms.Label();
+            this.lblPedalsDisplay = new System.Windows.Forms.Label();
             this.btnHomePage = new System.Windows.Forms.Button();
-            this.lblHomePageMessage2 = new System.Windows.Forms.Label();
+            this.btnAddToCart_Nylon = new System.Windows.Forms.Button();
+            this.btnAddToCart_Clipless = new System.Windows.Forms.Button();
+            this.btnAddToCart_Mountain = new System.Windows.Forms.Button();
+            this.btnAddToCart_Lightweight = new System.Windows.Forms.Button();
+            this.lblNylon = new System.Windows.Forms.Label();
+            this.lblClipless = new System.Windows.Forms.Label();
+            this.lblMountain = new System.Windows.Forms.Label();
+            this.lblLightweight = new System.Windows.Forms.Label();
+            this.btnAddToCart = new System.Windows.Forms.Button();
+            this.comboBoxQuantity = new System.Windows.Forms.ComboBox();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
             this.panelResources.SuspendLayout();
@@ -211,7 +222,7 @@
             this.btnBrakes.TabIndex = 5;
             this.btnBrakes.Text = "Brakes";
             this.btnBrakes.UseVisualStyleBackColor = false;
-            this.btnBrakes.Click += new System.EventHandler(this.btnBrakes_Click);
+            this.btnBrakes.Click += new System.EventHandler(this.btnBrakes_Click_1);
             // 
             // btnMyAccount
             // 
@@ -326,16 +337,36 @@
             this.btnResources.UseVisualStyleBackColor = false;
             this.btnResources.Click += new System.EventHandler(this.btnResources_Click);
             // 
-            // lblHomeMessage1
+            // lblBrakesMessage1
             // 
-            this.lblHomeMessage1.AutoSize = true;
-            this.lblHomeMessage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHomeMessage1.Location = new System.Drawing.Point(215, 309);
-            this.lblHomeMessage1.Name = "lblHomeMessage1";
-            this.lblHomeMessage1.Size = new System.Drawing.Size(639, 20);
-            this.lblHomeMessage1.TabIndex = 18;
-            this.lblHomeMessage1.Text = "Welcome to our bicycle store! We have a variety of parts to help build your ride." +
-    "";
+            this.lblBrakesMessage1.AutoSize = true;
+            this.lblBrakesMessage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrakesMessage1.Location = new System.Drawing.Point(394, 235);
+            this.lblBrakesMessage1.Name = "lblBrakesMessage1";
+            this.lblBrakesMessage1.Size = new System.Drawing.Size(298, 20);
+            this.lblBrakesMessage1.TabIndex = 18;
+            this.lblBrakesMessage1.Text = "Customize your bike to fit your style.";
+            // 
+            // lblBrakesMessage2
+            // 
+            this.lblBrakesMessage2.AutoSize = true;
+            this.lblBrakesMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrakesMessage2.Location = new System.Drawing.Point(192, 255);
+            this.lblBrakesMessage2.Name = "lblBrakesMessage2";
+            this.lblBrakesMessage2.Size = new System.Drawing.Size(690, 20);
+            this.lblBrakesMessage2.TabIndex = 19;
+            this.lblBrakesMessage2.Text = "Whether you are fixing up a bike or building a new one, we have the items you\'ll " +
+    "need.";
+            // 
+            // lblPedalsDisplay
+            // 
+            this.lblPedalsDisplay.AutoSize = true;
+            this.lblPedalsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPedalsDisplay.Location = new System.Drawing.Point(512, 286);
+            this.lblPedalsDisplay.Name = "lblPedalsDisplay";
+            this.lblPedalsDisplay.Size = new System.Drawing.Size(63, 20);
+            this.lblPedalsDisplay.TabIndex = 20;
+            this.lblPedalsDisplay.Text = "Pedals";
             // 
             // btnHomePage
             // 
@@ -350,28 +381,135 @@
             this.btnHomePage.UseVisualStyleBackColor = true;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
-            // lblHomePageMessage2
+            // btnAddToCart_Nylon
             // 
-            this.lblHomePageMessage2.AutoSize = true;
-            this.lblHomePageMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHomePageMessage2.Location = new System.Drawing.Point(352, 329);
-            this.lblHomePageMessage2.Name = "lblHomePageMessage2";
-            this.lblHomePageMessage2.Size = new System.Drawing.Size(369, 20);
-            this.lblHomePageMessage2.TabIndex = 22;
-            this.lblHomePageMessage2.Text = "Please explore the tabs above to get started!";
+            this.btnAddToCart_Nylon.Location = new System.Drawing.Point(640, 488);
+            this.btnAddToCart_Nylon.Name = "btnAddToCart_Nylon";
+            this.btnAddToCart_Nylon.Size = new System.Drawing.Size(75, 23);
+            this.btnAddToCart_Nylon.TabIndex = 61;
+            this.btnAddToCart_Nylon.Text = "Buy";
+            this.btnAddToCart_Nylon.UseVisualStyleBackColor = true;
+            this.btnAddToCart_Nylon.Click += new System.EventHandler(this.btnAddToCart_Nylon_Click);
             // 
-            // HomePage
+            // btnAddToCart_Clipless
+            // 
+            this.btnAddToCart_Clipless.Location = new System.Drawing.Point(640, 451);
+            this.btnAddToCart_Clipless.Name = "btnAddToCart_Clipless";
+            this.btnAddToCart_Clipless.Size = new System.Drawing.Size(75, 23);
+            this.btnAddToCart_Clipless.TabIndex = 60;
+            this.btnAddToCart_Clipless.Text = "Buy";
+            this.btnAddToCart_Clipless.UseVisualStyleBackColor = true;
+            this.btnAddToCart_Clipless.Click += new System.EventHandler(this.btnAddToCart_Clipless_Click);
+            // 
+            // btnAddToCart_Mountain
+            // 
+            this.btnAddToCart_Mountain.Location = new System.Drawing.Point(640, 414);
+            this.btnAddToCart_Mountain.Name = "btnAddToCart_Mountain";
+            this.btnAddToCart_Mountain.Size = new System.Drawing.Size(75, 23);
+            this.btnAddToCart_Mountain.TabIndex = 59;
+            this.btnAddToCart_Mountain.Text = "Buy";
+            this.btnAddToCart_Mountain.UseVisualStyleBackColor = true;
+            this.btnAddToCart_Mountain.Click += new System.EventHandler(this.btnAddToCart_Mountain_Click);
+            // 
+            // btnAddToCart_Lightweight
+            // 
+            this.btnAddToCart_Lightweight.Location = new System.Drawing.Point(640, 377);
+            this.btnAddToCart_Lightweight.Name = "btnAddToCart_Lightweight";
+            this.btnAddToCart_Lightweight.Size = new System.Drawing.Size(75, 23);
+            this.btnAddToCart_Lightweight.TabIndex = 58;
+            this.btnAddToCart_Lightweight.Text = "Buy";
+            this.btnAddToCart_Lightweight.UseVisualStyleBackColor = true;
+            this.btnAddToCart_Lightweight.Click += new System.EventHandler(this.btnAddToCart_Lightweight_Click);
+            // 
+            // lblNylon
+            // 
+            this.lblNylon.AutoSize = true;
+            this.lblNylon.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNylon.Location = new System.Drawing.Point(383, 491);
+            this.lblNylon.Name = "lblNylon";
+            this.lblNylon.Size = new System.Drawing.Size(100, 20);
+            this.lblNylon.TabIndex = 57;
+            this.lblNylon.Text = "Nylon Pedals";
+            // 
+            // lblClipless
+            // 
+            this.lblClipless.AutoSize = true;
+            this.lblClipless.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClipless.Location = new System.Drawing.Point(383, 454);
+            this.lblClipless.Name = "lblClipless";
+            this.lblClipless.Size = new System.Drawing.Size(115, 20);
+            this.lblClipless.TabIndex = 56;
+            this.lblClipless.Text = "Clipless Pedals";
+            // 
+            // lblMountain
+            // 
+            this.lblMountain.AutoSize = true;
+            this.lblMountain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMountain.Location = new System.Drawing.Point(383, 417);
+            this.lblMountain.Name = "lblMountain";
+            this.lblMountain.Size = new System.Drawing.Size(127, 20);
+            this.lblMountain.TabIndex = 55;
+            this.lblMountain.Text = "Mountain Pedals";
+            // 
+            // lblLightweight
+            // 
+            this.lblLightweight.AutoSize = true;
+            this.lblLightweight.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLightweight.Location = new System.Drawing.Point(383, 380);
+            this.lblLightweight.Name = "lblLightweight";
+            this.lblLightweight.Size = new System.Drawing.Size(142, 20);
+            this.lblLightweight.TabIndex = 54;
+            this.lblLightweight.Text = "Lightweight Pedals";
+            // 
+            // btnAddToCart
+            // 
+            this.btnAddToCart.Location = new System.Drawing.Point(805, 441);
+            this.btnAddToCart.Name = "btnAddToCart";
+            this.btnAddToCart.Size = new System.Drawing.Size(96, 23);
+            this.btnAddToCart.TabIndex = 63;
+            this.btnAddToCart.Text = "Add To Cart";
+            this.btnAddToCart.UseVisualStyleBackColor = true;
+            this.btnAddToCart.Visible = false;
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
+            // 
+            // comboBoxQuantity
+            // 
+            this.comboBoxQuantity.FormattingEnabled = true;
+            this.comboBoxQuantity.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.comboBoxQuantity.Location = new System.Drawing.Point(805, 353);
+            this.comboBoxQuantity.Name = "comboBoxQuantity";
+            this.comboBoxQuantity.Size = new System.Drawing.Size(77, 21);
+            this.comboBoxQuantity.TabIndex = 62;
+            this.comboBoxQuantity.Text = "Quantity";
+            this.comboBoxQuantity.Visible = false;
+            this.comboBoxQuantity.SelectedIndexChanged += new System.EventHandler(this.comboBoxQuantity_SelectedIndexChanged);
+            // 
+            // PedalsPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 702);
+            this.Controls.Add(this.btnAddToCart);
+            this.Controls.Add(this.comboBoxQuantity);
+            this.Controls.Add(this.btnAddToCart_Nylon);
+            this.Controls.Add(this.btnAddToCart_Clipless);
+            this.Controls.Add(this.btnAddToCart_Mountain);
+            this.Controls.Add(this.btnAddToCart_Lightweight);
+            this.Controls.Add(this.lblNylon);
+            this.Controls.Add(this.lblClipless);
+            this.Controls.Add(this.lblMountain);
+            this.Controls.Add(this.lblLightweight);
             this.Controls.Add(this.panelResources);
             this.Controls.Add(this.panelAccount);
             this.Controls.Add(this.panelParts);
-            this.Controls.Add(this.lblHomePageMessage2);
             this.Controls.Add(this.btnHomePage);
-            this.Controls.Add(this.lblHomeMessage1);
-            this.Name = "HomePage";
+            this.Controls.Add(this.lblPedalsDisplay);
+            this.Controls.Add(this.lblBrakesMessage2);
+            this.Controls.Add(this.lblBrakesMessage1);
+            this.Name = "PedalsPg";
             this.Text = "HomePage";
             this.panelParts.ResumeLayout(false);
             this.panelAccount.ResumeLayout(false);
@@ -400,8 +538,19 @@
         private System.Windows.Forms.Panel panelResources;
         private System.Windows.Forms.Button btnAboutUs;
         private System.Windows.Forms.Button btnResources;
-        private System.Windows.Forms.Label lblHomeMessage1;
+        private System.Windows.Forms.Label lblBrakesMessage1;
+        private System.Windows.Forms.Label lblBrakesMessage2;
+        private System.Windows.Forms.Label lblPedalsDisplay;
         private System.Windows.Forms.Button btnHomePage;
-        private System.Windows.Forms.Label lblHomePageMessage2;
+        private System.Windows.Forms.Button btnAddToCart_Nylon;
+        private System.Windows.Forms.Button btnAddToCart_Clipless;
+        private System.Windows.Forms.Button btnAddToCart_Mountain;
+        private System.Windows.Forms.Button btnAddToCart_Lightweight;
+        private System.Windows.Forms.Label lblNylon;
+        private System.Windows.Forms.Label lblClipless;
+        private System.Windows.Forms.Label lblMountain;
+        private System.Windows.Forms.Label lblLightweight;
+        private System.Windows.Forms.Button btnAddToCart;
+        private System.Windows.Forms.ComboBox comboBoxQuantity;
     }
 }
