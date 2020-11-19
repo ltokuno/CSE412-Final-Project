@@ -1,6 +1,6 @@
 ﻿namespace CSE412_Group17
 {
-    partial class TireTubesPg
+    partial class MyOrdersPg
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.btnParts = new System.Windows.Forms.Button();
             this.panelParts = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,20 +47,12 @@
             this.panelResources = new System.Windows.Forms.Panel();
             this.btnAboutUs = new System.Windows.Forms.Button();
             this.btnResources = new System.Windows.Forms.Button();
-            this.lblBrakesMessage1 = new System.Windows.Forms.Label();
-            this.lblBrakesMessage2 = new System.Windows.Forms.Label();
-            this.lblTireTubesDisplay = new System.Windows.Forms.Label();
             this.btnHomePage = new System.Windows.Forms.Button();
-            this.btnAddToCart_Prem650 = new System.Windows.Forms.Button();
-            this.btnAddToCart_Prem700 = new System.Windows.Forms.Button();
-            this.btnAddToCart_650 = new System.Windows.Forms.Button();
-            this.btnAddToCart_700 = new System.Windows.Forms.Button();
-            this.lbl650c_Premium = new System.Windows.Forms.Label();
-            this.lbl700c_Premium = new System.Windows.Forms.Label();
-            this.lbl650c = new System.Windows.Forms.Label();
-            this.lbl700c = new System.Windows.Forms.Label();
-            this.btnAddToCart = new System.Windows.Forms.Button();
-            this.comboBoxQuantity = new System.Windows.Forms.ComboBox();
+            this.lblCartMessage = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnQuantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnMyProfile = new System.Windows.Forms.Button();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
@@ -223,7 +216,7 @@
             this.btnBrakes.TabIndex = 5;
             this.btnBrakes.Text = "Brakes";
             this.btnBrakes.UseVisualStyleBackColor = false;
-            this.btnBrakes.Click += new System.EventHandler(this.btnBrakes_Click_1);
+            this.btnBrakes.Click += new System.EventHandler(this.btnBrakes_Click);
             // 
             // btnMyAccount
             // 
@@ -341,37 +334,6 @@
             this.btnResources.UseVisualStyleBackColor = false;
             this.btnResources.Click += new System.EventHandler(this.btnResources_Click);
             // 
-            // lblBrakesMessage1
-            // 
-            this.lblBrakesMessage1.AutoSize = true;
-            this.lblBrakesMessage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrakesMessage1.Location = new System.Drawing.Point(394, 235);
-            this.lblBrakesMessage1.Name = "lblBrakesMessage1";
-            this.lblBrakesMessage1.Size = new System.Drawing.Size(298, 20);
-            this.lblBrakesMessage1.TabIndex = 18;
-            this.lblBrakesMessage1.Text = "Customize your bike to fit your style.";
-            // 
-            // lblBrakesMessage2
-            // 
-            this.lblBrakesMessage2.AutoSize = true;
-            this.lblBrakesMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrakesMessage2.Location = new System.Drawing.Point(192, 255);
-            this.lblBrakesMessage2.Name = "lblBrakesMessage2";
-            this.lblBrakesMessage2.Size = new System.Drawing.Size(690, 20);
-            this.lblBrakesMessage2.TabIndex = 19;
-            this.lblBrakesMessage2.Text = "Whether you are fixing up a bike or building a new one, we have the items you\'ll " +
-    "need.";
-            // 
-            // lblTireTubesDisplay
-            // 
-            this.lblTireTubesDisplay.AutoSize = true;
-            this.lblTireTubesDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTireTubesDisplay.Location = new System.Drawing.Point(498, 286);
-            this.lblTireTubesDisplay.Name = "lblTireTubesDisplay";
-            this.lblTireTubesDisplay.Size = new System.Drawing.Size(102, 20);
-            this.lblTireTubesDisplay.TabIndex = 20;
-            this.lblTireTubesDisplay.Text = "Tires/Tubes";
-            // 
             // btnHomePage
             // 
             this.btnHomePage.FlatAppearance.BorderSize = 0;
@@ -385,111 +347,42 @@
             this.btnHomePage.UseVisualStyleBackColor = true;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
-            // btnAddToCart_Prem650
+            // lblCartMessage
             // 
-            this.btnAddToCart_Prem650.Location = new System.Drawing.Point(640, 488);
-            this.btnAddToCart_Prem650.Name = "btnAddToCart_Prem650";
-            this.btnAddToCart_Prem650.Size = new System.Drawing.Size(75, 23);
-            this.btnAddToCart_Prem650.TabIndex = 69;
-            this.btnAddToCart_Prem650.Text = "Buy";
-            this.btnAddToCart_Prem650.UseVisualStyleBackColor = true;
-            this.btnAddToCart_Prem650.Click += new System.EventHandler(this.btnAddToCart_Prem650_Click);
+            this.lblCartMessage.AutoSize = true;
+            this.lblCartMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCartMessage.Location = new System.Drawing.Point(227, 286);
+            this.lblCartMessage.Name = "lblCartMessage";
+            this.lblCartMessage.Size = new System.Drawing.Size(106, 20);
+            this.lblCartMessage.TabIndex = 25;
+            this.lblCartMessage.Text = "Your Orders";
             // 
-            // btnAddToCart_Prem700
+            // listView1
             // 
-            this.btnAddToCart_Prem700.Location = new System.Drawing.Point(640, 451);
-            this.btnAddToCart_Prem700.Name = "btnAddToCart_Prem700";
-            this.btnAddToCart_Prem700.Size = new System.Drawing.Size(75, 23);
-            this.btnAddToCart_Prem700.TabIndex = 68;
-            this.btnAddToCart_Prem700.Text = "Buy";
-            this.btnAddToCart_Prem700.UseVisualStyleBackColor = true;
-            this.btnAddToCart_Prem700.Click += new System.EventHandler(this.btnAddToCart_Prem700_Click);
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnItem,
+            this.columnPrice,
+            this.columnQuantity});
+            this.listView1.HideSelection = false;
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.listView1.Location = new System.Drawing.Point(231, 343);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(624, 266);
+            this.listView1.TabIndex = 26;
+            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
-            // btnAddToCart_650
+            // columnItem
             // 
-            this.btnAddToCart_650.Location = new System.Drawing.Point(640, 414);
-            this.btnAddToCart_650.Name = "btnAddToCart_650";
-            this.btnAddToCart_650.Size = new System.Drawing.Size(75, 23);
-            this.btnAddToCart_650.TabIndex = 67;
-            this.btnAddToCart_650.Text = "Buy";
-            this.btnAddToCart_650.UseVisualStyleBackColor = true;
-            this.btnAddToCart_650.Click += new System.EventHandler(this.btnAddToCart_650_Click);
+            this.columnItem.Text = "Item";
             // 
-            // btnAddToCart_700
+            // columnPrice
             // 
-            this.btnAddToCart_700.Location = new System.Drawing.Point(640, 377);
-            this.btnAddToCart_700.Name = "btnAddToCart_700";
-            this.btnAddToCart_700.Size = new System.Drawing.Size(75, 23);
-            this.btnAddToCart_700.TabIndex = 66;
-            this.btnAddToCart_700.Text = "Buy";
-            this.btnAddToCart_700.UseVisualStyleBackColor = true;
-            this.btnAddToCart_700.Click += new System.EventHandler(this.btnAddToCart_700_Click);
+            this.columnPrice.Text = "Price";
             // 
-            // lbl650c_Premium
+            // columnQuantity
             // 
-            this.lbl650c_Premium.AutoSize = true;
-            this.lbl650c_Premium.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl650c_Premium.Location = new System.Drawing.Point(383, 491);
-            this.lbl650c_Premium.Name = "lbl650c_Premium";
-            this.lbl650c_Premium.Size = new System.Drawing.Size(150, 20);
-            this.lbl650c_Premium.TabIndex = 65;
-            this.lbl650c_Premium.Text = "Premium 650c Tube";
-            // 
-            // lbl700c_Premium
-            // 
-            this.lbl700c_Premium.AutoSize = true;
-            this.lbl700c_Premium.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl700c_Premium.Location = new System.Drawing.Point(383, 454);
-            this.lbl700c_Premium.Name = "lbl700c_Premium";
-            this.lbl700c_Premium.Size = new System.Drawing.Size(150, 20);
-            this.lbl700c_Premium.TabIndex = 64;
-            this.lbl700c_Premium.Text = "Premium 700c Tube";
-            // 
-            // lbl650c
-            // 
-            this.lbl650c.AutoSize = true;
-            this.lbl650c.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl650c.Location = new System.Drawing.Point(383, 417);
-            this.lbl650c.Name = "lbl650c";
-            this.lbl650c.Size = new System.Drawing.Size(84, 20);
-            this.lbl650c.TabIndex = 63;
-            this.lbl650c.Text = "650c Tube";
-            // 
-            // lbl700c
-            // 
-            this.lbl700c.AutoSize = true;
-            this.lbl700c.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl700c.Location = new System.Drawing.Point(383, 380);
-            this.lbl700c.Name = "lbl700c";
-            this.lbl700c.Size = new System.Drawing.Size(84, 20);
-            this.lbl700c.TabIndex = 62;
-            this.lbl700c.Text = "700c Tube";
-            // 
-            // btnAddToCart
-            // 
-            this.btnAddToCart.Location = new System.Drawing.Point(805, 441);
-            this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(96, 23);
-            this.btnAddToCart.TabIndex = 71;
-            this.btnAddToCart.Text = "Add To Cart";
-            this.btnAddToCart.UseVisualStyleBackColor = true;
-            this.btnAddToCart.Visible = false;
-            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
-            // 
-            // comboBoxQuantity
-            // 
-            this.comboBoxQuantity.FormattingEnabled = true;
-            this.comboBoxQuantity.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3"});
-            this.comboBoxQuantity.Location = new System.Drawing.Point(805, 353);
-            this.comboBoxQuantity.Name = "comboBoxQuantity";
-            this.comboBoxQuantity.Size = new System.Drawing.Size(77, 21);
-            this.comboBoxQuantity.TabIndex = 70;
-            this.comboBoxQuantity.Text = "Quantity";
-            this.comboBoxQuantity.Visible = false;
-            this.comboBoxQuantity.SelectedIndexChanged += new System.EventHandler(this.comboBoxQuantity_SelectedIndexChanged);
+            this.columnQuantity.Text = "Quantity";
             // 
             // btnMyProfile
             // 
@@ -501,37 +394,25 @@
             this.btnMyProfile.Location = new System.Drawing.Point(884, 63);
             this.btnMyProfile.Name = "btnMyProfile";
             this.btnMyProfile.Size = new System.Drawing.Size(102, 37);
-            this.btnMyProfile.TabIndex = 72;
+            this.btnMyProfile.TabIndex = 27;
             this.btnMyProfile.Text = "My Profile";
             this.btnMyProfile.UseVisualStyleBackColor = false;
             this.btnMyProfile.Click += new System.EventHandler(this.btnMyProfile_Click);
             // 
-            // TireTubesPg
+            // MyOrdersPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 702);
             this.Controls.Add(this.btnMyProfile);
-            this.Controls.Add(this.btnAddToCart);
-            this.Controls.Add(this.comboBoxQuantity);
-            this.Controls.Add(this.btnAddToCart_Prem650);
-            this.Controls.Add(this.btnAddToCart_Prem700);
-            this.Controls.Add(this.btnAddToCart_650);
-            this.Controls.Add(this.btnAddToCart_700);
-            this.Controls.Add(this.lbl650c_Premium);
-            this.Controls.Add(this.lbl700c_Premium);
-            this.Controls.Add(this.lbl650c);
-            this.Controls.Add(this.lbl700c);
-            this.Controls.Add(this.panelResources);
-            this.Controls.Add(this.panelAccount);
             this.Controls.Add(this.panelParts);
+            this.Controls.Add(this.lblCartMessage);
+            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.panelAccount);
+            this.Controls.Add(this.panelResources);
             this.Controls.Add(this.btnHomePage);
-            this.Controls.Add(this.lblTireTubesDisplay);
-            this.Controls.Add(this.lblBrakesMessage2);
-            this.Controls.Add(this.lblBrakesMessage1);
-            this.Name = "TireTubesPg";
+            this.Name = "MyOrdersPg";
             this.Text = "HomePage";
-            this.Load += new System.EventHandler(this.TireTubesPg_Load);
             this.panelParts.ResumeLayout(false);
             this.panelAccount.ResumeLayout(false);
             this.panelResources.ResumeLayout(false);
@@ -559,20 +440,12 @@
         private System.Windows.Forms.Panel panelResources;
         private System.Windows.Forms.Button btnAboutUs;
         private System.Windows.Forms.Button btnResources;
-        private System.Windows.Forms.Label lblBrakesMessage1;
-        private System.Windows.Forms.Label lblBrakesMessage2;
-        private System.Windows.Forms.Label lblTireTubesDisplay;
         private System.Windows.Forms.Button btnHomePage;
-        private System.Windows.Forms.Button btnAddToCart_Prem650;
-        private System.Windows.Forms.Button btnAddToCart_Prem700;
-        private System.Windows.Forms.Button btnAddToCart_650;
-        private System.Windows.Forms.Button btnAddToCart_700;
-        private System.Windows.Forms.Label lbl650c_Premium;
-        private System.Windows.Forms.Label lbl700c_Premium;
-        private System.Windows.Forms.Label lbl650c;
-        private System.Windows.Forms.Label lbl700c;
-        private System.Windows.Forms.Button btnAddToCart;
-        private System.Windows.Forms.ComboBox comboBoxQuantity;
+        private System.Windows.Forms.Label lblCartMessage;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnItem;
+        private System.Windows.Forms.ColumnHeader columnPrice;
+        private System.Windows.Forms.ColumnHeader columnQuantity;
         private System.Windows.Forms.Button btnMyProfile;
     }
 }

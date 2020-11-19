@@ -41,8 +41,8 @@
             this.btnMyAccount = new System.Windows.Forms.Button();
             this.panelAccount = new System.Windows.Forms.Panel();
             this.btnMyOrders = new System.Windows.Forms.Button();
-            this.btnViewOrderStatus = new System.Windows.Forms.Button();
-            this.btnSignInRegister = new System.Windows.Forms.Button();
+            this.btnMyCart = new System.Windows.Forms.Button();
+            this.btnSignOut = new System.Windows.Forms.Button();
             this.panelResources = new System.Windows.Forms.Panel();
             this.btnAboutUs = new System.Windows.Forms.Button();
             this.btnResources = new System.Windows.Forms.Button();
@@ -60,6 +60,7 @@
             this.lbl700Front = new System.Windows.Forms.Label();
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.comboBoxQuantity = new System.Windows.Forms.ComboBox();
+            this.btnMyProfile = new System.Windows.Forms.Button();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
             this.panelResources.SuspendLayout();
@@ -243,8 +244,8 @@
             // panelAccount
             // 
             this.panelAccount.Controls.Add(this.btnMyOrders);
-            this.panelAccount.Controls.Add(this.btnViewOrderStatus);
-            this.panelAccount.Controls.Add(this.btnSignInRegister);
+            this.panelAccount.Controls.Add(this.btnMyCart);
+            this.panelAccount.Controls.Add(this.btnSignOut);
             this.panelAccount.Controls.Add(this.btnMyAccount);
             this.panelAccount.Location = new System.Drawing.Point(419, 143);
             this.panelAccount.Name = "panelAccount";
@@ -265,36 +266,39 @@
             this.btnMyOrders.TabIndex = 16;
             this.btnMyOrders.Text = "My Orders";
             this.btnMyOrders.UseVisualStyleBackColor = false;
+            this.btnMyOrders.Click += new System.EventHandler(this.btnMyOrders_Click);
             // 
-            // btnViewOrderStatus
+            // btnMyCart
             // 
-            this.btnViewOrderStatus.BackColor = System.Drawing.Color.Gray;
-            this.btnViewOrderStatus.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnViewOrderStatus.FlatAppearance.BorderSize = 0;
-            this.btnViewOrderStatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewOrderStatus.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewOrderStatus.ForeColor = System.Drawing.Color.Transparent;
-            this.btnViewOrderStatus.Location = new System.Drawing.Point(0, 89);
-            this.btnViewOrderStatus.Name = "btnViewOrderStatus";
-            this.btnViewOrderStatus.Size = new System.Drawing.Size(249, 37);
-            this.btnViewOrderStatus.TabIndex = 15;
-            this.btnViewOrderStatus.Text = "Order Status";
-            this.btnViewOrderStatus.UseVisualStyleBackColor = false;
+            this.btnMyCart.BackColor = System.Drawing.Color.Gray;
+            this.btnMyCart.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMyCart.FlatAppearance.BorderSize = 0;
+            this.btnMyCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyCart.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMyCart.Location = new System.Drawing.Point(0, 89);
+            this.btnMyCart.Name = "btnMyCart";
+            this.btnMyCart.Size = new System.Drawing.Size(249, 37);
+            this.btnMyCart.TabIndex = 15;
+            this.btnMyCart.Text = "My Cart";
+            this.btnMyCart.UseVisualStyleBackColor = false;
+            this.btnMyCart.Click += new System.EventHandler(this.btnMyCart_Click);
             // 
-            // btnSignInRegister
+            // btnSignOut
             // 
-            this.btnSignInRegister.BackColor = System.Drawing.Color.Gray;
-            this.btnSignInRegister.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSignInRegister.FlatAppearance.BorderSize = 0;
-            this.btnSignInRegister.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSignInRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignInRegister.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSignInRegister.Location = new System.Drawing.Point(0, 52);
-            this.btnSignInRegister.Name = "btnSignInRegister";
-            this.btnSignInRegister.Size = new System.Drawing.Size(249, 37);
-            this.btnSignInRegister.TabIndex = 14;
-            this.btnSignInRegister.Text = "Sign In/Register";
-            this.btnSignInRegister.UseVisualStyleBackColor = false;
+            this.btnSignOut.BackColor = System.Drawing.Color.Gray;
+            this.btnSignOut.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnSignOut.FlatAppearance.BorderSize = 0;
+            this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSignOut.Location = new System.Drawing.Point(0, 52);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(249, 37);
+            this.btnSignOut.TabIndex = 14;
+            this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.UseVisualStyleBackColor = false;
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignInRegister_Click);
             // 
             // panelResources
             // 
@@ -487,11 +491,27 @@
             this.comboBoxQuantity.Visible = false;
             this.comboBoxQuantity.SelectedIndexChanged += new System.EventHandler(this.comboBoxQuantity_SelectedIndexChanged);
             // 
+            // btnMyProfile
+            // 
+            this.btnMyProfile.BackColor = System.Drawing.Color.Gray;
+            this.btnMyProfile.FlatAppearance.BorderSize = 0;
+            this.btnMyProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMyProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMyProfile.ForeColor = System.Drawing.Color.Transparent;
+            this.btnMyProfile.Location = new System.Drawing.Point(884, 63);
+            this.btnMyProfile.Name = "btnMyProfile";
+            this.btnMyProfile.Size = new System.Drawing.Size(102, 37);
+            this.btnMyProfile.TabIndex = 80;
+            this.btnMyProfile.Text = "My Profile";
+            this.btnMyProfile.UseVisualStyleBackColor = false;
+            this.btnMyProfile.Click += new System.EventHandler(this.btnMyProfile_Click);
+            // 
             // WheelsPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 702);
+            this.Controls.Add(this.btnMyProfile);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.comboBoxQuantity);
             this.Controls.Add(this.btnAddToCart_Clincher5);
@@ -533,8 +553,8 @@
         private System.Windows.Forms.Button btnMyAccount;
         private System.Windows.Forms.Panel panelAccount;
         private System.Windows.Forms.Button btnMyOrders;
-        private System.Windows.Forms.Button btnViewOrderStatus;
-        private System.Windows.Forms.Button btnSignInRegister;
+        private System.Windows.Forms.Button btnMyCart;
+        private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Panel panelResources;
         private System.Windows.Forms.Button btnAboutUs;
         private System.Windows.Forms.Button btnResources;
@@ -552,5 +572,6 @@
         private System.Windows.Forms.Label lbl700Front;
         private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.ComboBox comboBoxQuantity;
+        private System.Windows.Forms.Button btnMyProfile;
     }
 }

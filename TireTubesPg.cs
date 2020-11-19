@@ -236,5 +236,49 @@ namespace CSE412_Group17
             comboBoxQuantity.Text = "Quantity"; // reset value
 
         }
+
+        private void btnSignInRegister_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+
+            SignInRegPg signIn = new SignInRegPg();
+
+            signIn.Show();
+
+        }
+
+        private void btnMyCart_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+
+            MyCartPg cart = new MyCartPg();
+
+            cart.Show();
+
+        }
+
+        private void btnMyOrders_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+
+            MyOrdersPg orders = new MyOrdersPg();
+
+            orders.Show();
+
+        }
+
+        private void btnMyProfile_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+
+            MyProfilePg profilePg = new MyProfilePg();
+
+            profilePg.Show();
+
+        }
     }
 }

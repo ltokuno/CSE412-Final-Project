@@ -10,12 +10,9 @@ using System.Windows.Forms;
 
 namespace CSE412_Group17
 {
-    public partial class WheelsPg : Form
+    public partial class MyCartPg : Form
     {
-        public static string wheelsItem = null;
-        public static int wheelsQuantity = 0; // # of items to add to cart
-
-        public WheelsPg()
+        public MyCartPg()
         {
             InitializeComponent();
         }
@@ -82,7 +79,7 @@ namespace CSE412_Group17
 
         }
 
-        private void btnBrakes_Click_1(object sender, EventArgs e) // go to Brakes page
+        private void btnBrakes_Click(object sender, EventArgs e) // go to Brakes page
         {
 
             this.Hide();
@@ -90,6 +87,7 @@ namespace CSE412_Group17
             BrakesPg brakes = new BrakesPg();
 
             brakes.Show();
+
         }
 
         private void btnChains_Click(object sender, EventArgs e)
@@ -158,46 +156,6 @@ namespace CSE412_Group17
 
         }
 
-        private void btnAddToCart_700_Click(object sender, EventArgs e)
-        {
-
-            wheelsItem = lbl700Front.Text;
-            // show add to cart and quantity to add
-            comboBoxQuantity.Visible = true;
-            btnAddToCart.Visible = true;
-
-        }
-
-        private void btnAddToCart_650_Click(object sender, EventArgs e)
-        {
-
-            wheelsItem = lbl650Front.Text;
-            // show add to cart and quantity to add
-            comboBoxQuantity.Visible = true;
-            btnAddToCart.Visible = true;
-
-        }
-
-        private void btnAddToCart_Clincher4_Click(object sender, EventArgs e)
-        {
-
-            wheelsItem = lblClincher4.Text;
-            // show add to cart and quantity to add
-            comboBoxQuantity.Visible = true;
-            btnAddToCart.Visible = true;
-
-        }
-
-        private void btnAddToCart_Clincher5_Click(object sender, EventArgs e)
-        {
-
-            wheelsItem = lblClincher5.Text;
-            // show add to cart and quantity to add
-            comboBoxQuantity.Visible = true;
-            btnAddToCart.Visible = true;
-
-        }
-
         private void btnAboutUs_Click(object sender, EventArgs e)
         {
 
@@ -206,29 +164,6 @@ namespace CSE412_Group17
             AboutUsPg about = new AboutUsPg();
 
             about.Show();
-
-        }
-
-        private void comboBoxQuantity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            wheelsQuantity = Convert.ToInt32(comboBoxQuantity.Text);
-
-        }
-
-        private void btnAddToCart_Click(object sender, EventArgs e)
-        {
-
-            string msg = String.Format("Quantity of {0} of {1} was added to the cart!", wheelsQuantity, wheelsItem);
-
-            // display success message
-            MessageBox.Show(msg);
-
-            // hide cart buttons now that item is added
-            comboBoxQuantity.Visible = false;
-            btnAddToCart.Visible = false;
-
-            comboBoxQuantity.Text = "Quantity"; // reset value
 
         }
 
@@ -251,6 +186,30 @@ namespace CSE412_Group17
             MyCartPg cart = new MyCartPg();
 
             cart.Show();
+
+        }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+
+
+            // check first if cart is not empty, then place order
+
+            char[] characters = "qazwsxedcrfvtgbyhnujmikolp0123456789".ToCharArray();
+            string confirmationNo = null;
+
+            Random rand = new Random();
+
+            // generate 10 character confirmation number
+            for(int i = 0; i < 10; i++)
+            {
+
+                confirmationNo += characters[rand.Next(0, 35)].ToString();
+
+
+            }
+
+            MessageBox.Show(String.Format("Your order has been placed!\nConfirmation Number: {0}", confirmationNo));
 
         }
 

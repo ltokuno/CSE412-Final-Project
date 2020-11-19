@@ -52,6 +52,30 @@
     <Compile Include="AboutUsPg.Designer.cs">
       <DependentUpon>AboutUsPg.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyProfilePg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyProfilePg.Designer.cs">
+      <DependentUpon>MyProfilePg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyOrdersPg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyOrdersPg.Designer.cs">
+      <DependentUpon>MyOrdersPg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyCartPg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyCartPg.Designer.cs">
+      <DependentUpon>MyCartPg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignInRegPg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignInRegPg.Designer.cs">
+      <DependentUpon>SignInRegPg.cs</DependentUpon>
+    </Compile>
     <Compile Include="TireTubesPg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +134,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutUsPg.resx">
       <DependentUpon>AboutUsPg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyProfilePg.resx">
+      <DependentUpon>MyProfilePg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyOrdersPg.resx">
+      <DependentUpon>MyOrdersPg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyCartPg.resx">
+      <DependentUpon>MyCartPg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignInRegPg.resx">
+      <DependentUpon>SignInRegPg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TireTubesPg.resx">
       <DependentUpon>TireTubesPg.cs</DependentUpon>

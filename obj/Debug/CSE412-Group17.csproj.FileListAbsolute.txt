@@ -17,3 +17,7 @@ C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412_Group17.HandleBars
 C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412_Group17.ForksPg.resources
 C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412_Group17.ChainsPg.resources
 C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412_Group17.AboutUsPg.resources
+C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412_Group17.SignInRegPg.resources
+C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412_Group17.MyCartPg.resources
+C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412_Group17.MyOrdersPg.resources
+C:\Users\Robert\Documents\VsProjects\412Proj\obj\Debug\CSE412_Group17.MyProfilePg.resources
