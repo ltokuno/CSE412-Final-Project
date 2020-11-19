@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace CSE412_Group17
 {
-    public partial class HomePage : Form
+    public partial class MyProfilePg : Form
     {
 
-        public HomePage()
+        public MyProfilePg()
         {
             InitializeComponent();
         }

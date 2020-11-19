@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace CSE412_Group17
 {
-    public partial class HomePage : Form
+    public partial class AboutUsPg : Form
     {
-
-        public HomePage()
+        public AboutUsPg()
         {
             InitializeComponent();
         }
@@ -154,6 +153,11 @@ namespace CSE412_Group17
             TireTubesPg tiretubes = new TireTubesPg();
 
             tiretubes.Show();
+
+        }
+
+        private void AboutUsPg_Load(object sender, EventArgs e)
+        {
 
         }
 

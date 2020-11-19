@@ -1,6 +1,6 @@
 ﻿namespace CSE412_Group17
 {
-    partial class HomePage
+    partial class MyCartPg
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.btnParts = new System.Windows.Forms.Button();
             this.panelParts = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -46,9 +47,14 @@
             this.panelResources = new System.Windows.Forms.Panel();
             this.btnAboutUs = new System.Windows.Forms.Button();
             this.btnResources = new System.Windows.Forms.Button();
-            this.lblHomeMessage1 = new System.Windows.Forms.Label();
+            this.lblCartMessage = new System.Windows.Forms.Label();
             this.btnHomePage = new System.Windows.Forms.Button();
-            this.lblHomePageMessage2 = new System.Windows.Forms.Label();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.columnItem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnQuantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnPlaceOrder = new System.Windows.Forms.Button();
+            this.lblPlaceOrderMessage = new System.Windows.Forms.Label();
             this.btnMyProfile = new System.Windows.Forms.Button();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
@@ -330,16 +336,15 @@
             this.btnResources.UseVisualStyleBackColor = false;
             this.btnResources.Click += new System.EventHandler(this.btnResources_Click);
             // 
-            // lblHomeMessage1
+            // lblCartMessage
             // 
-            this.lblHomeMessage1.AutoSize = true;
-            this.lblHomeMessage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHomeMessage1.Location = new System.Drawing.Point(215, 309);
-            this.lblHomeMessage1.Name = "lblHomeMessage1";
-            this.lblHomeMessage1.Size = new System.Drawing.Size(639, 20);
-            this.lblHomeMessage1.TabIndex = 18;
-            this.lblHomeMessage1.Text = "Welcome to our bicycle store! We have a variety of parts to help build your ride." +
-    "";
+            this.lblCartMessage.AutoSize = true;
+            this.lblCartMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCartMessage.Location = new System.Drawing.Point(77, 286);
+            this.lblCartMessage.Name = "lblCartMessage";
+            this.lblCartMessage.Size = new System.Drawing.Size(167, 20);
+            this.lblCartMessage.TabIndex = 18;
+            this.lblCartMessage.Text = "Your Shopping Cart";
             // 
             // btnHomePage
             // 
@@ -354,15 +359,53 @@
             this.btnHomePage.UseVisualStyleBackColor = true;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
-            // lblHomePageMessage2
+            // listView1
             // 
-            this.lblHomePageMessage2.AutoSize = true;
-            this.lblHomePageMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHomePageMessage2.Location = new System.Drawing.Point(352, 329);
-            this.lblHomePageMessage2.Name = "lblHomePageMessage2";
-            this.lblHomePageMessage2.Size = new System.Drawing.Size(369, 20);
-            this.lblHomePageMessage2.TabIndex = 22;
-            this.lblHomePageMessage2.Text = "Please explore the tabs above to get started!";
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnItem,
+            this.columnPrice,
+            this.columnQuantity});
+            this.listView1.HideSelection = false;
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.listView1.Location = new System.Drawing.Point(81, 343);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(624, 266);
+            this.listView1.TabIndex = 22;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // columnItem
+            // 
+            this.columnItem.Text = "Item";
+            // 
+            // columnPrice
+            // 
+            this.columnPrice.Text = "Price";
+            // 
+            // columnQuantity
+            // 
+            this.columnQuantity.Text = "Quantity";
+            // 
+            // btnPlaceOrder
+            // 
+            this.btnPlaceOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlaceOrder.Location = new System.Drawing.Point(796, 434);
+            this.btnPlaceOrder.Name = "btnPlaceOrder";
+            this.btnPlaceOrder.Size = new System.Drawing.Size(132, 43);
+            this.btnPlaceOrder.TabIndex = 23;
+            this.btnPlaceOrder.Text = "Place Order";
+            this.btnPlaceOrder.UseVisualStyleBackColor = true;
+            this.btnPlaceOrder.Click += new System.EventHandler(this.btnPlaceOrder_Click);
+            // 
+            // lblPlaceOrderMessage
+            // 
+            this.lblPlaceOrderMessage.AutoSize = true;
+            this.lblPlaceOrderMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlaceOrderMessage.Location = new System.Drawing.Point(742, 397);
+            this.lblPlaceOrderMessage.Name = "lblPlaceOrderMessage";
+            this.lblPlaceOrderMessage.Size = new System.Drawing.Size(244, 20);
+            this.lblPlaceOrderMessage.TabIndex = 24;
+            this.lblPlaceOrderMessage.Text = "Click below to place an order!";
             // 
             // btnMyProfile
             // 
@@ -374,24 +417,26 @@
             this.btnMyProfile.Location = new System.Drawing.Point(884, 63);
             this.btnMyProfile.Name = "btnMyProfile";
             this.btnMyProfile.Size = new System.Drawing.Size(102, 37);
-            this.btnMyProfile.TabIndex = 17;
+            this.btnMyProfile.TabIndex = 25;
             this.btnMyProfile.Text = "My Profile";
             this.btnMyProfile.UseVisualStyleBackColor = false;
             this.btnMyProfile.Click += new System.EventHandler(this.btnMyProfile_Click);
             // 
-            // HomePage
+            // MyCartPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 702);
             this.Controls.Add(this.btnMyProfile);
             this.Controls.Add(this.panelAccount);
-            this.Controls.Add(this.panelResources);
+            this.Controls.Add(this.lblPlaceOrderMessage);
+            this.Controls.Add(this.btnPlaceOrder);
             this.Controls.Add(this.panelParts);
-            this.Controls.Add(this.lblHomePageMessage2);
+            this.Controls.Add(this.panelResources);
             this.Controls.Add(this.btnHomePage);
-            this.Controls.Add(this.lblHomeMessage1);
-            this.Name = "HomePage";
+            this.Controls.Add(this.lblCartMessage);
+            this.Controls.Add(this.listView1);
+            this.Name = "MyCartPg";
             this.Text = "HomePage";
             this.panelParts.ResumeLayout(false);
             this.panelAccount.ResumeLayout(false);
@@ -420,9 +465,14 @@
         private System.Windows.Forms.Panel panelResources;
         private System.Windows.Forms.Button btnAboutUs;
         private System.Windows.Forms.Button btnResources;
-        private System.Windows.Forms.Label lblHomeMessage1;
+        private System.Windows.Forms.Label lblCartMessage;
         private System.Windows.Forms.Button btnHomePage;
-        private System.Windows.Forms.Label lblHomePageMessage2;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader columnItem;
+        private System.Windows.Forms.ColumnHeader columnPrice;
+        private System.Windows.Forms.ColumnHeader columnQuantity;
+        private System.Windows.Forms.Button btnPlaceOrder;
+        private System.Windows.Forms.Label lblPlaceOrderMessage;
         private System.Windows.Forms.Button btnMyProfile;
     }
 }

@@ -10,10 +10,9 @@ using System.Windows.Forms;
 
 namespace CSE412_Group17
 {
-    public partial class HomePage : Form
+    public partial class MyCartPg : Form
     {
-
-        public HomePage()
+        public MyCartPg()
         {
             InitializeComponent();
         }
@@ -187,6 +186,30 @@ namespace CSE412_Group17
             MyCartPg cart = new MyCartPg();
 
             cart.Show();
+
+        }
+
+        private void btnPlaceOrder_Click(object sender, EventArgs e)
+        {
+
+
+            // check first if cart is not empty, then place order
+
+            char[] characters = "qazwsxedcrfvtgbyhnujmikolp0123456789".ToCharArray();
+            string confirmationNo = null;
+
+            Random rand = new Random();
+
+            // generate 10 character confirmation number
+            for(int i = 0; i < 10; i++)
+            {
+
+                confirmationNo += characters[rand.Next(0, 35)].ToString();
+
+
+            }
+
+            MessageBox.Show(String.Format("Your order has been placed!\nConfirmation Number: {0}", confirmationNo));
 
         }
 

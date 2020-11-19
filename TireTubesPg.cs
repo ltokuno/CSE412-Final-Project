@@ -10,10 +10,12 @@ using System.Windows.Forms;
 
 namespace CSE412_Group17
 {
-    public partial class HomePage : Form
+    public partial class TireTubesPg : Form
     {
+        public static string ttubesItem = null;
+        public static int ttubesQuantity = 0; // # of items to add to cart
 
-        public HomePage()
+        public TireTubesPg()
         {
             InitializeComponent();
         }
@@ -80,7 +82,7 @@ namespace CSE412_Group17
 
         }
 
-        private void btnBrakes_Click(object sender, EventArgs e) // go to Brakes page
+        private void btnBrakes_Click_1(object sender, EventArgs e) // go to Brakes page
         {
 
             this.Hide();
@@ -88,7 +90,6 @@ namespace CSE412_Group17
             BrakesPg brakes = new BrakesPg();
 
             brakes.Show();
-
         }
 
         private void btnChains_Click(object sender, EventArgs e)
@@ -157,6 +158,51 @@ namespace CSE412_Group17
 
         }
 
+        private void TireTubesPg_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddToCart_700_Click(object sender, EventArgs e)
+        {
+
+            ttubesItem = lbl700c.Text;
+            // show add to cart and quantity to add
+            comboBoxQuantity.Visible = true;
+            btnAddToCart.Visible = true;
+
+        }
+
+        private void btnAddToCart_650_Click(object sender, EventArgs e)
+        {
+
+            ttubesItem = lbl650c.Text;
+            // show add to cart and quantity to add
+            comboBoxQuantity.Visible = true;
+            btnAddToCart.Visible = true;
+
+        }
+
+        private void btnAddToCart_Prem700_Click(object sender, EventArgs e)
+        {
+
+            ttubesItem = lbl700c_Premium.Text;
+            // show add to cart and quantity to add
+            comboBoxQuantity.Visible = true;
+            btnAddToCart.Visible = true;
+
+        }
+
+        private void btnAddToCart_Prem650_Click(object sender, EventArgs e)
+        {
+
+            ttubesItem = lbl650c_Premium.Text;
+            // show add to cart and quantity to add
+            comboBoxQuantity.Visible = true;
+            btnAddToCart.Visible = true;
+
+        }
+
         private void btnAboutUs_Click(object sender, EventArgs e)
         {
 
@@ -165,6 +211,29 @@ namespace CSE412_Group17
             AboutUsPg about = new AboutUsPg();
 
             about.Show();
+
+        }
+
+        private void comboBoxQuantity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            ttubesQuantity = Convert.ToInt32(comboBoxQuantity.Text);
+
+        }
+
+        private void btnAddToCart_Click(object sender, EventArgs e)
+        {
+
+            string msg = String.Format("Quantity of {0} of {1} was added to the cart!", ttubesQuantity, ttubesItem);
+
+            // display success message
+            MessageBox.Show(msg);
+
+            // hide cart buttons now that item is added
+            comboBoxQuantity.Visible = false;
+            btnAddToCart.Visible = false;
+
+            comboBoxQuantity.Text = "Quantity"; // reset value
 
         }
 

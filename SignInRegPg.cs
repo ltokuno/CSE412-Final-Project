@@ -10,63 +10,19 @@ using System.Windows.Forms;
 
 namespace CSE412_Group17
 {
-    public partial class HomePage : Form
+    public partial class SignInRegPg : Form
     {
+        // used for comparing login info to existing account
+        public static string username = null;
+        public static string password = null;
 
-        public HomePage()
+        // used for comparing NEW users to see if account already exists
+        public static string new_username = null;
+        public static string new_password = null;
+
+        public SignInRegPg()
         {
             InitializeComponent();
-        }
-
-        private void btnParts_Click(object sender, EventArgs e)
-        {
-
-            if(panelParts.Height == 313)
-            {
-
-                panelParts.Height = 52;
-
-            }
-            else
-            {
-
-                panelParts.Height = 313;
-
-            }
-        }
-
-        private void btnMyAccount_Click(object sender, EventArgs e)
-        {
-
-            if (panelAccount.Height == 165)
-            {
-
-                panelAccount.Height = 52;
-
-            }
-            else
-            {
-
-                panelAccount.Height = 165;
-
-            }
-        }
-
-        private void btnResources_Click(object sender, EventArgs e)
-        {
-
-            if (panelResources.Height == 89)
-            {
-
-                panelResources.Height = 52;
-
-            }
-            else
-            {
-
-                panelResources.Height = 89;
-
-            }
         }
 
         private void btnHomePage_Click(object sender, EventArgs e) // go to Home page
@@ -74,9 +30,9 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            HomePage home = new HomePage();
+            SignInRegPg signIn = new SignInRegPg();
 
-            home.Show();
+            signIn.Show();
 
         }
 
@@ -168,6 +124,60 @@ namespace CSE412_Group17
 
         }
 
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            // get user input to compare
+            username = txtUsername.Text;
+            password = txtPassword.Text;
+
+            // compare
+            if(username == "test" && password == "123")
+            {
+
+                this.Hide();
+
+                HomePage home = new HomePage();
+
+                home.Show();
+
+            }
+            else
+            {
+
+                MessageBox.Show("Invalid Username or Password.");
+
+            }
+
+            //reset fields
+            txtUsername.Text = null;
+            txtPassword.Text = null;
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            // get user input to compare
+            new_username = txtNewUser.Text;
+            new_password = txtNewPassword.Text;
+
+            // compare
+            if (new_username != "test")
+            {
+
+                MessageBox.Show("Register Successful.");
+
+            }
+            else
+            {
+
+                MessageBox.Show("Username Already Taken.");
+
+            }
+
+            //reset fields
+            txtNewUser.Text = null;
+            txtNewPassword.Text = null;
+        }
+
         private void btnSignInRegister_Click(object sender, EventArgs e)
         {
 
@@ -179,36 +189,8 @@ namespace CSE412_Group17
 
         }
 
-        private void btnMyCart_Click(object sender, EventArgs e)
+        private void SignInRegPg_Load(object sender, EventArgs e)
         {
-
-            this.Hide();
-
-            MyCartPg cart = new MyCartPg();
-
-            cart.Show();
-
-        }
-
-        private void btnMyOrders_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            MyOrdersPg orders = new MyOrdersPg();
-
-            orders.Show();
-
-        }
-
-        private void btnMyProfile_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            MyProfilePg profilePg = new MyProfilePg();
-
-            profilePg.Show();
 
         }
     }
