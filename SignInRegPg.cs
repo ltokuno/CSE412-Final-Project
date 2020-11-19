@@ -130,7 +130,7 @@ namespace CSE412_Group17
             username = txtUsername.Text;
             password = txtPassword.Text;
 
-            // compare
+            // compare. check if user is an admin
             if(username == "test" && password == "123")
             {
 
@@ -139,6 +139,16 @@ namespace CSE412_Group17
                 HomePage home = new HomePage();
 
                 home.Show();
+
+            }
+            else if(username == "admin" && password == "123")
+            {
+
+                this.Hide();
+
+                AdminPg admin = new AdminPg();
+
+                admin.Show();
 
             }
             else
@@ -160,7 +170,7 @@ namespace CSE412_Group17
             new_password = txtNewPassword.Text;
 
             // compare
-            if (new_username != "test")
+            if (new_username != "test" && new_username != "admin")
             {
 
                 MessageBox.Show("Register Successful.");
