@@ -118,6 +118,10 @@
     <Compile Include="ChainsPg.Designer.cs">
       <DependentUpon>ChainsPg.cs</DependentUpon>
     </Compile>
+    <Compile Include="controllers\OrderCTRL.cs" />
+    <Compile Include="controllers\PartsCTRL.cs" />
+    <Compile Include="controllers\UserCTRL.cs" />
+    <Compile Include="controllers\VendorCTRL.cs" />
     <Compile Include="HomePage.cs">
       <SubType>Form</SubType>
     </Compile>
