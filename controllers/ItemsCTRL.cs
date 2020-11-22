@@ -18,14 +18,12 @@ namespace CSE412_Group17.controllers {
             return output;
         }
 
+
         public Item getItemByID(int ID) {
-            Item output;
 
             DBSelector selector = new DBSelector();
 
-            output = selector.getRow<Item>("SELECT * FROM Item WHERE ItemID=" + ID);
-
-            return output;
+            return selector.getRow<Item>("SELECT * FROM Item WHERE ItemID=" + ID);
         }
 
     } //end class
