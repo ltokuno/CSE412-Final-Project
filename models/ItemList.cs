@@ -9,7 +9,12 @@ namespace CSE412_Group17
     class ItemList
     {
         public int OrderID { get; set; }
-        public Item[] Items { get; set; }
+
+        //public Item[] Items { get; set; }
+
+        public int ItemID { get; set; }
+
+        public int Quantity { get; set; }
 
     }
 }

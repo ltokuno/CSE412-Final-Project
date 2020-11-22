@@ -52,6 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dal\DBModifier.cs" />
+    <Compile Include="dal\DBSelector.cs" />
     <Compile Include="pages\AboutUsPg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,7 +127,7 @@
       <DependentUpon>ChainsPg.cs</DependentUpon>
     </Compile>
     <Compile Include="controllers\OrderCTRL.cs" />
-    <Compile Include="controllers\PartsCTRL.cs" />
+    <Compile Include="controllers\ItemsCTRL.cs" />
     <Compile Include="controllers\UserCTRL.cs" />
     <Compile Include="controllers\VendorCTRL.cs" />
     <Compile Include="pages\HomePage.cs">
