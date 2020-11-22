@@ -44,3 +44,6 @@ D:\Data\source\CSE412\obj\Debug\CSE412-Group17.csproj.CoreCompileInputs.cache
 D:\Data\source\CSE412\bin\Debug\CSE412-Group17.exe.config
 D:\Data\source\CSE412\bin\Debug\CSE412-Group17.exe
 D:\Data\source\CSE412\bin\Debug\CSE412-Group17.pdb
+D:\Data\source\CSE412\bin\Debug\Dapper.dll
+D:\Data\source\CSE412\bin\Debug\Dapper.xml
+D:\Data\source\CSE412\obj\Debug\CSE412-Group17.csproj.CopyComplete
