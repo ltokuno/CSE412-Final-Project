@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CSE412_Group17.controllers;
+using CSE412_Group17.models;
 
 namespace CSE412_Group17
 {
@@ -34,7 +35,7 @@ namespace CSE412_Group17
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {
-
+            UserSingleton.LogOutUser();
             this.Hide();
 
             SignInRegPg signIn = new SignInRegPg();

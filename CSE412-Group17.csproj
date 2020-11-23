@@ -90,6 +90,7 @@
     <Compile Include="controllers\LoginCTRL.cs" />
     <Compile Include="dal\DBModifier.cs" />
     <Compile Include="dal\DBSelector.cs" />
+    <Compile Include="models\UserSingleton.cs" />
     <Compile Include="pages\AboutUsPg.cs">
       <SubType>Form</SubType>
     </Compile>

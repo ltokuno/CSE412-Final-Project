@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
+using CSE412_Group17.models;
 
 namespace CSE412_Group17
 {
@@ -232,7 +233,7 @@ namespace CSE412_Group17
         {
 
             this.Hide();
-
+            UserSingleton.LogOutUser();
             SignInRegPg signIn = new SignInRegPg();
 
             signIn.Show();

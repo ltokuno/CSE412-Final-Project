@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CSE412_Group17.controllers;
+using CSE412_Group17.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,13 +14,6 @@ namespace CSE412_Group17
 {
     public partial class SignInRegPg : Form
     {
-        // used for comparing login info to existing account
-        public static string username = null;
-        public static string password = null;
-
-        // used for comparing NEW users to see if account already exists
-        public static string new_username = null;
-        public static string new_password = null;
 
         public SignInRegPg()
         {
@@ -36,156 +31,71 @@ namespace CSE412_Group17
 
         }
 
-        private void btnBrakes_Click(object sender, EventArgs e) // go to Brakes page
-        {
-
-            this.Hide();
-
-            BrakesPg brakes = new BrakesPg();
-
-            brakes.Show();
-
-        }
-
-        private void btnChains_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            ChainsPg chains = new ChainsPg();
-
-            chains.Show();
-
-        }
-
-        private void btnForks_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            ForksPg forks = new ForksPg();
-
-            forks.Show();
-
-        }
-
-        private void btnHandlebars_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            HandleBarsPg handlebars = new HandleBarsPg();
-
-            handlebars.Show();
-
-        }
-
-        private void btnPedals_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            PedalsPg pedals = new PedalsPg();
-
-            pedals.Show();
-
-        }
-
-        private void btnWheels_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            WheelsPg wheels = new WheelsPg();
-
-            wheels.Show();
-
-        }
-
-        private void btnTiresTubes_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            TireTubesPg tiretubes = new TireTubesPg();
-
-            tiretubes.Show();
-
-        }
-
-        private void btnAboutUs_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            AboutUsPg about = new AboutUsPg();
-
-            about.Show();
-
-        }
-
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // get user input to compare
-            username = txtUsername.Text;
-            password = txtPassword.Text;
-
-            // compare. check if user is an admin
-            if(username == "test" && password == "123")
+            if (String.IsNullOrEmpty(txtUsername.Text))
             {
-
-                this.Hide();
-
-                HomePage home = new HomePage();
-
-                home.Show();
-
+                MessageBox.Show("Please Enter Username");
+                return;
             }
-            else if(username == "admin" && password == "123")
+            else if (String.IsNullOrEmpty(txtPassword.Text))
             {
-
-                this.Hide();
-
-                AdminBox admin = new AdminBox();
-
-                admin.Show();
-
+                MessageBox.Show("Please Enter Password");
+                return;
             }
-            else
+            bool notFound = true;
+            UserCTRL userctrl = new UserCTRL();
+            LoginCTRL loginctrl = new LoginCTRL();
+            foreach (Login l in loginctrl.getAllLogins())
             {
+                if (l.UserName == txtUsername.Text)
+                {
+                    if(l.Password == txtPassword.Text)
+                    {
+                        User user = userctrl.getUserByID(l.ID);
+                        UserSingleton.Instance(user);
+                        if (user.IsAdmin && SignInAsAdminBox.Checked)
+                        {
+                            MessageBox.Show("Login Successful");
+                            notFound = false;
+                            this.Hide();
 
+                            AdminBox admin = new AdminBox();
+
+                            admin.Show();
+                        }else if (!user.IsAdmin && SignInAsAdminBox.Checked)
+                        {
+                            MessageBox.Show("User is Not an Admin");
+                            notFound = false;
+                            this.Hide();
+
+                            HomePage home = new HomePage();
+
+                            home.Show();
+                        }
+                        else
+                        {
+                            //MessageBox.Show(UserSingleton.GetUser().ToString());
+                            MessageBox.Show("Login Successful");
+                            notFound = false;
+                            this.Hide();
+
+                            HomePage home = new HomePage();
+
+                            home.Show();
+                        }
+                    }
+                }
+            }
+            if (notFound)
+            {
                 MessageBox.Show("Invalid Username or Password.");
-
             }
-
-            //reset fields
-            txtUsername.Text = null;
-            txtPassword.Text = null;
         }
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            // get user input to compare
-            new_username = txtNewUser.Text;
-            new_password = txtNewPassword.Text;
-
-            // compare
-            if (new_username != "test" && new_username != "admin")
-            {
-
-                MessageBox.Show("Register Successful.");
-
-            }
-            else
-            {
-
-                MessageBox.Show("Username Already Taken.");
-
-            }
-
-            //reset fields
-            txtNewUser.Text = null;
-            txtNewPassword.Text = null;
+            
         }
 
         private void btnSignInRegister_Click(object sender, EventArgs e)
@@ -200,6 +110,11 @@ namespace CSE412_Group17
         }
 
         private void SignInRegPg_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
         }
