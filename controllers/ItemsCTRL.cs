@@ -25,15 +25,22 @@ namespace CSE412_Group17.controllers {
 
         public void addItem(Item theItem, Vendor theVendor) {
             DBModifier modder = new DBModifier();
+            DBSelector selector = new DBSelector();
 
             //put the item in the DB
             modder.modifyRows("INSERT INTO \"Item\"(\"RetailPrice\",\"StockQuantity\",\"ItemName\",\"CostPrice\",\"Category\") VALUES('" +
                 theItem.RetailPrice + "'," + theItem.StockQuantity + "'," + theItem.ItemName + "'," + theItem.CostPrice + "'," + 
                 theItem.Category + "')");
 
+            Item newitem = selector.getRow<Item>("SELECT * FROM \"Item\" WHERE \"RetailPrice\" = '" + theItem.RetailPrice + 
+                "' AND \"StockQuantity\" = " + theItem.StockQuantity +
+                "' AND \"ItemName\" = '" + theItem.ItemName + 
+                "' AND \"CostPrice\" = '" + theItem.CostPrice + 
+                "' AND \"Category\" = '" + theItem.Category);
+
             //add it to the vedor
             modder.modifyRows("INSERT INTO \"Vendor_Items\"(\"VedndorID\",\"ItemID\") VALUES(' " +
-                theItem.ItemID + "'," + theVendor.VendorID + "')");
+                newitem.ItemID + "'," + theVendor.VendorID + "')");
         }
 
     } //end class
