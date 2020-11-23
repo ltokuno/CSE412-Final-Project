@@ -23,7 +23,7 @@ namespace CSE412_Group17.controllers {
 
             modder.modifyRows("INSERT INTO \"User\"(\"loginID\", \"FirstName\", \"LastName\", \"Email\", \"PhoneNumber\", \"DateOfBirth\", \"IsAdmin\", \"Gender\", \"Address\") VALUES('"
                 + loginId + "','" + theUser.FirstName + "','" + theUser.LastName + "','" + theUser.Email + "','" + theUser.PhoneNumber + "','" + theUser.DateOfBirth + "','"
-                + theUser.IsAdmin + "','" + theUser.Gender + "','" + theUser.Address + "'");
+                + theUser.IsAdmin + "','" + theUser.Gender + "','" + theUser.Address + "')");
         }
 
         public void changeUser(User theUser) {
