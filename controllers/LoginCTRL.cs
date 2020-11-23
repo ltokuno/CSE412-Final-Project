@@ -16,7 +16,7 @@ namespace CSE412_Group17.controllers {
             return selector.getRows<Login>("SELECT * FROM \"Login\"");
         }
 
-        //todo: have this return the new id
+        //todo: have this return the new id without another trip to the db
         public int saveLoginInfo(string username, string password) {
             
             DBModifier modder = new DBModifier();

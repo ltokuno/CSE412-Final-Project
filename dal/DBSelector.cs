@@ -9,8 +9,6 @@ namespace CSE412_Group17.dal {
     class DBSelector {
         private string connectionString = Properties.Settings.Default.DBConnString;
 
-        
-
         public T getRow<T>(string sql) {
 
             T output;
