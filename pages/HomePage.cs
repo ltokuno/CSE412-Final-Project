@@ -21,18 +21,12 @@ namespace CSE412_Group17
         private void btnParts_Click(object sender, EventArgs e)
         {
 
-            if(panelParts.Height == 313)
-            {
+            this.Hide();
 
-                panelParts.Height = 52;
+            BrakesPg brakes = new BrakesPg();
 
-            }
-            else
-            {
+            brakes.Show();
 
-                panelParts.Height = 313;
-
-            }
         }
 
         private void btnMyAccount_Click(object sender, EventArgs e)
