@@ -16,13 +16,20 @@ namespace CSE412_Group17.controllers {
             return selector.getRows<Login>("SELECT * FROM \"Login\"");
         }
 
-
-        public void saveLoginInfo(string username, string password) {
+        //todo: have this return the new id
+        public int saveLoginInfo(string username, string password) {
             
             DBModifier modder = new DBModifier();
 
             modder.modifyRows("INSERT INTO \"Login\" (\"UserName\", \"Password\") VALUES ('" + username + "'," + password + "')");
 
+            DBSelector selector = new DBSelector();
+
+            Login newLogin = selector.getRow<Login>("SELECT * FROM \"Login\" WHERE " + 
+                "\"UserName\" = '" + username + 
+                "' AND \"Password\" = '" + password + "'");
+
+            return newLogin.ID;
         }
 
 

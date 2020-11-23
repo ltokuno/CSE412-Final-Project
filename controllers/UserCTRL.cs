@@ -34,5 +34,13 @@ namespace CSE412_Group17.controllers {
                 + theUser.IsAdmin + "','" + theUser.Gender + "','" + theUser.Address + "'");
         }
 
+        public void changeUser(User theUser) {
+            DBModifier modder = new DBModifier();
+
+            modder 
+
+        }
+
+
     } //end class
 }
