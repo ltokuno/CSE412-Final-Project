@@ -10,7 +10,7 @@ namespace CSE412_Group17.controllers {
 
             DBSelector selector = new DBSelector();
 
-            return selector.getRow<Order>("SELECT * FROM Order WHERE OrderID=" + ID);
+            return selector.getRow<Order>("SELECT * FROM \"Order\" WHERE \"OrderID\"= '" + ID + "'");
         }
 
 
@@ -18,7 +18,7 @@ namespace CSE412_Group17.controllers {
 
             DBSelector selector = new DBSelector();
 
-            return selector.getRows<Order>("SELECT * FROM Order WHERE OrderID=" + userID);
+            return selector.getRows<Order>("SELECT * FROM \"Order\" WHERE \"OrderID\"= '" + userID + "'");
         }
 
 
@@ -26,7 +26,7 @@ namespace CSE412_Group17.controllers {
 
             DBSelector selector = new DBSelector();
 
-            List<ItemList> itemList = selector.getRows<ItemList>("SELECT * FROM ItemList WHERE OrderID=" + oderID);
+            List<ItemList> itemList = selector.getRows<ItemList>("SELECT * FROM \"ItemList\" WHERE \"OrderID\"= '" + oderID + "'");
 
             StringBuilder sb = new StringBuilder();
             
@@ -41,7 +41,7 @@ namespace CSE412_Group17.controllers {
                 }
             }
 
-            return selector.getRows<Item>("SELECT * FROM Item WHERE ItemID IN (" + sb.ToString() + ")");
+            return selector.getRows<Item>("SELECT * FROM \"Item\" WHERE \"ItemID\" IN (" + sb.ToString() + ")");
 
         }
 
@@ -49,7 +49,7 @@ namespace CSE412_Group17.controllers {
         public List<ItemList> getORderLineItems(int orderID) {
             DBSelector selector = new DBSelector();
 
-            return selector.getRows<ItemList>("SELCT * FROM ItemList Where OrderID=" + orderID);
+            return selector.getRows<ItemList>("SELCT * FROM \"ItemList\" Where \"OrderID\"= '" + orderID + "'");
         }
 
 
@@ -63,12 +63,12 @@ namespace CSE412_Group17.controllers {
             DBModifier modder = new DBModifier();
 
             //todo: OrderDateTime should come from the Order object
-            modder.modifyRows("INSERT INTO Order (ConfirmationNumber, OrderDateTime, TotalPrice, UserID) VALUES (" +
-                theOrder.ConfirmationNumber + "," + DateTime.Now + "," + theOrder.TotalPrice + "," + theOrder.UserID + ")");
+            modder.modifyRows("INSERT INTO \"Order\" (\"ConfirmationNumber\", \"OrderDateTime\", \"TotalPrice\", \"UserID\") VALUES ('" +
+                theOrder.ConfirmationNumber + "','" + theOrder.OrderID + "','" + theOrder.TotalPrice + "','" + theOrder.UserID + "')");
 
             foreach (ItemList i in itemLists) {
-                modder.modifyRows("INSERT INTO ItemList (OrderID, ItemID, Quantity) VALUES (" +
-                    i.OrderID + "," + i.ItemID + "," + i.Quantity + ")");
+                modder.modifyRows("INSERT INTO \"ItemList\" (\"OrderID\", \"ItemID\", \"Quantity\") VALUES ('" +
+                    i.OrderID + "','" + i.ItemID + "','" + i.Quantity + "')");
             }
         }
 

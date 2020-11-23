@@ -13,13 +13,13 @@ namespace CSE412_Group17.controllers {
 
         public List<Item> geItemsByCategory(string category) {
             DBSelector selector = new DBSelector();
-            return selector.getRows<Item>("SELECT * FROM \"Item\" WHERE \"Category\" = " + "'" + category + "'");
+            return selector.getRows<Item>("SELECT * FROM \"Item\" WHERE \"Category\" = '" + category + "'");
         }
 
 
         public Item getItemByID(int ID) {
             DBSelector selector = new DBSelector();
-            return selector.getRow<Item>("SELECT * FROM \"Item\" WHERE \"ItemID\"=" + ID);
+            return selector.getRow<Item>("SELECT * FROM \"Item\" WHERE \"ItemID\"= '" + ID + "'");
         }
 
     } //end class

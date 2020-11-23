@@ -9,7 +9,7 @@ namespace CSE412_Group17.controllers {
 
             DBSelector selector = new DBSelector();
 
-            return selector.getRows<Vendor>("SELECT * FROM Vendor");
+            return selector.getRows<Vendor>("SELECT * FROM \"Vendor\"");
         }
 
 
@@ -17,7 +17,7 @@ namespace CSE412_Group17.controllers {
 
             DBSelector selector = new DBSelector();
 
-            return selector.getRow<Vendor>("SELECT * FROM Vendor WHERE VendorName=" + name);
+            return selector.getRow<Vendor>("SELECT * FROM \"Vendor\" WHERE \"VendorName\"='" + name + "'");
         }
 
 
@@ -25,7 +25,7 @@ namespace CSE412_Group17.controllers {
 
             DBSelector selector = new DBSelector();
 
-            return selector.getRow<Vendor>("SELECT * FROM Vendor WHERE VendorName=" + id);
+            return selector.getRow<Vendor>("SELECT * FROM \"Vendor\" WHERE \"VendorName\"='" + id + "'");
         }
 
 
@@ -33,8 +33,8 @@ namespace CSE412_Group17.controllers {
             DBModifier modder = new DBModifier();
 
             //todo: change this to the new DB structure
-            modder.modifyRows("INSERT INTO Vendor(VendorName, VendorAdress) VALUES("
-                + theVendor.VendorName + "," + theVendor.VendorAddress + "," + ")");
+            modder.modifyRows("INSERT INTO \"Vendor\"(\"VendorName\", \"VendorAdress\") VALUES('"
+                + theVendor.VendorName + "','" + theVendor.VendorAddress + "')");
         }
 
     } //end class

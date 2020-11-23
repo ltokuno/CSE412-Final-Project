@@ -7,13 +7,13 @@ namespace CSE412_Group17.controllers {
         public Login getLoginByUserID(int userID) {
             DBSelector selector = new DBSelector();
 
-            return selector.getRow<Login>("SELECT * FROM \"Public.Login\" WHERE ID = " + userID);
+            return selector.getRow<Login>("SELECT * FROM \"Public.Login\" WHERE \"ID\" = '" + userID + "'");
         }
 
 
         public List<Login> getAllLogins() {
             DBSelector selector = new DBSelector();
-            return selector.getRows<Login>("SELECT * FROM Login");
+            return selector.getRows<Login>("SELECT * FROM \"Login\"");
         }
 
 
@@ -21,7 +21,7 @@ namespace CSE412_Group17.controllers {
             
             DBModifier modder = new DBModifier();
 
-            modder.modifyRows("INSERT INTO Login (UserName, Password) VALUES (" + username + "," + password + ")");
+            modder.modifyRows("INSERT INTO \"Login\" (\"UserName\", \"Password\") VALUES ('" + username + "'," + password + "')");
 
         }
 
@@ -29,7 +29,7 @@ namespace CSE412_Group17.controllers {
         public void setPassword(int loginID, string password) {
             DBModifier modder = new DBModifier();
 
-            modder.modifyRows("UPDATE Login SET Passsword = " + password + " WHERE ID = " + loginID);
+            modder.modifyRows("UPDATE \"Login\" SET \"Passsword\" = " + password + " WHERE \"ID\" = '" + loginID + "'");
 
         }
 
