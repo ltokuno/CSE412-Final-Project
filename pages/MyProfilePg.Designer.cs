@@ -41,7 +41,6 @@
             this.btnMyAccount = new System.Windows.Forms.Button();
             this.panelAccount = new System.Windows.Forms.Panel();
             this.btnMyOrders = new System.Windows.Forms.Button();
-            this.btnMyCart = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.panelResources = new System.Windows.Forms.Panel();
             this.btnAboutUs = new System.Windows.Forms.Button();
@@ -239,7 +238,6 @@
             // panelAccount
             // 
             this.panelAccount.Controls.Add(this.btnMyOrders);
-            this.panelAccount.Controls.Add(this.btnMyCart);
             this.panelAccount.Controls.Add(this.btnSignOut);
             this.panelAccount.Controls.Add(this.btnMyAccount);
             this.panelAccount.Location = new System.Drawing.Point(419, 143);
@@ -255,29 +253,13 @@
             this.btnMyOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMyOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyOrders.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMyOrders.Location = new System.Drawing.Point(0, 126);
+            this.btnMyOrders.Location = new System.Drawing.Point(0, 89);
             this.btnMyOrders.Name = "btnMyOrders";
             this.btnMyOrders.Size = new System.Drawing.Size(249, 37);
             this.btnMyOrders.TabIndex = 16;
             this.btnMyOrders.Text = "My Orders";
             this.btnMyOrders.UseVisualStyleBackColor = false;
             this.btnMyOrders.Click += new System.EventHandler(this.btnMyOrders_Click);
-            // 
-            // btnMyCart
-            // 
-            this.btnMyCart.BackColor = System.Drawing.Color.Gray;
-            this.btnMyCart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMyCart.FlatAppearance.BorderSize = 0;
-            this.btnMyCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyCart.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMyCart.Location = new System.Drawing.Point(0, 89);
-            this.btnMyCart.Name = "btnMyCart";
-            this.btnMyCart.Size = new System.Drawing.Size(249, 37);
-            this.btnMyCart.TabIndex = 15;
-            this.btnMyCart.Text = "My Cart";
-            this.btnMyCart.UseVisualStyleBackColor = false;
-            this.btnMyCart.Click += new System.EventHandler(this.btnMyCart_Click);
             // 
             // btnSignOut
             // 
@@ -339,10 +321,10 @@
             // lblHomeMessage1
             // 
             this.lblHomeMessage1.AutoSize = true;
-            this.lblHomeMessage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHomeMessage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHomeMessage1.Location = new System.Drawing.Point(77, 279);
             this.lblHomeMessage1.Name = "lblHomeMessage1";
-            this.lblHomeMessage1.Size = new System.Drawing.Size(106, 24);
+            this.lblHomeMessage1.Size = new System.Drawing.Size(90, 20);
             this.lblHomeMessage1.TabIndex = 18;
             this.lblHomeMessage1.Text = "First Name:";
             // 
@@ -362,10 +344,10 @@
             // lblHomePageMessage2
             // 
             this.lblHomePageMessage2.AutoSize = true;
-            this.lblHomePageMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHomePageMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHomePageMessage2.Location = new System.Drawing.Point(77, 303);
             this.lblHomePageMessage2.Name = "lblHomePageMessage2";
-            this.lblHomePageMessage2.Size = new System.Drawing.Size(104, 24);
+            this.lblHomePageMessage2.Size = new System.Drawing.Size(90, 20);
             this.lblHomePageMessage2.TabIndex = 22;
             this.lblHomePageMessage2.Text = "Last Name:";
             // 
@@ -387,57 +369,57 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(77, 356);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 24);
+            this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 23;
             this.label1.Text = "Email:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(77, 380);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(145, 24);
+            this.label2.Size = new System.Drawing.Size(119, 20);
             this.label2.TabIndex = 24;
             this.label2.Text = "Phone Number:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(77, 430);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 24);
+            this.label3.Size = new System.Drawing.Size(103, 20);
             this.label3.TabIndex = 25;
             this.label3.Text = "Date of Birth:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(77, 454);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(79, 24);
+            this.label4.Size = new System.Drawing.Size(67, 20);
             this.label4.TabIndex = 26;
             this.label4.Text = "Gender:";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(77, 505);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 24);
+            this.label5.Size = new System.Drawing.Size(72, 20);
             this.label5.TabIndex = 27;
             this.label5.Text = "Address:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(77, 237);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(163, 24);
@@ -486,7 +468,6 @@
         private System.Windows.Forms.Button btnMyAccount;
         private System.Windows.Forms.Panel panelAccount;
         private System.Windows.Forms.Button btnMyOrders;
-        private System.Windows.Forms.Button btnMyCart;
         private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Panel panelResources;
         private System.Windows.Forms.Button btnAboutUs;

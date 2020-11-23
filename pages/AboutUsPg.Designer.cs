@@ -41,7 +41,6 @@
             this.btnMyAccount = new System.Windows.Forms.Button();
             this.panelAccount = new System.Windows.Forms.Panel();
             this.btnMyOrders = new System.Windows.Forms.Button();
-            this.btnMyCart = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.panelResources = new System.Windows.Forms.Panel();
             this.btnAboutUs = new System.Windows.Forms.Button();
@@ -241,7 +240,6 @@
             // panelAccount
             // 
             this.panelAccount.Controls.Add(this.btnMyOrders);
-            this.panelAccount.Controls.Add(this.btnMyCart);
             this.panelAccount.Controls.Add(this.btnSignOut);
             this.panelAccount.Controls.Add(this.btnMyAccount);
             this.panelAccount.Location = new System.Drawing.Point(419, 143);
@@ -257,29 +255,13 @@
             this.btnMyOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMyOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyOrders.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMyOrders.Location = new System.Drawing.Point(0, 126);
+            this.btnMyOrders.Location = new System.Drawing.Point(0, 89);
             this.btnMyOrders.Name = "btnMyOrders";
             this.btnMyOrders.Size = new System.Drawing.Size(249, 37);
             this.btnMyOrders.TabIndex = 16;
             this.btnMyOrders.Text = "My Orders";
             this.btnMyOrders.UseVisualStyleBackColor = false;
             this.btnMyOrders.Click += new System.EventHandler(this.btnMyOrders_Click);
-            // 
-            // btnMyCart
-            // 
-            this.btnMyCart.BackColor = System.Drawing.Color.Gray;
-            this.btnMyCart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMyCart.FlatAppearance.BorderSize = 0;
-            this.btnMyCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyCart.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMyCart.Location = new System.Drawing.Point(0, 89);
-            this.btnMyCart.Name = "btnMyCart";
-            this.btnMyCart.Size = new System.Drawing.Size(249, 37);
-            this.btnMyCart.TabIndex = 15;
-            this.btnMyCart.Text = "My Cart";
-            this.btnMyCart.UseVisualStyleBackColor = false;
-            this.btnMyCart.Click += new System.EventHandler(this.btnMyCart_Click);
             // 
             // btnSignOut
             // 
@@ -387,7 +369,7 @@
             // lblCompanyFounders
             // 
             this.lblCompanyFounders.AutoSize = true;
-            this.lblCompanyFounders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCompanyFounders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCompanyFounders.Location = new System.Drawing.Point(458, 387);
             this.lblCompanyFounders.Name = "lblCompanyFounders";
             this.lblCompanyFounders.Size = new System.Drawing.Size(164, 20);
@@ -397,7 +379,7 @@
             // lblRobert
             // 
             this.lblRobert.AutoSize = true;
-            this.lblRobert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRobert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRobert.Location = new System.Drawing.Point(597, 497);
             this.lblRobert.Name = "lblRobert";
             this.lblRobert.Size = new System.Drawing.Size(128, 20);
@@ -407,7 +389,7 @@
             // lblScott
             // 
             this.lblScott.AutoSize = true;
-            this.lblScott.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblScott.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblScott.Location = new System.Drawing.Point(568, 456);
             this.lblScott.Name = "lblScott";
             this.lblScott.Size = new System.Drawing.Size(157, 20);
@@ -417,7 +399,7 @@
             // lblLance
             // 
             this.lblLance.AutoSize = true;
-            this.lblLance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLance.Location = new System.Drawing.Point(383, 456);
             this.lblLance.Name = "lblLance";
             this.lblLance.Size = new System.Drawing.Size(110, 20);
@@ -427,7 +409,7 @@
             // lblMisgana
             // 
             this.lblMisgana.AutoSize = true;
-            this.lblMisgana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMisgana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMisgana.Location = new System.Drawing.Point(555, 422);
             this.lblMisgana.Name = "lblMisgana";
             this.lblMisgana.Size = new System.Drawing.Size(170, 20);
@@ -437,7 +419,7 @@
             // lblIsabella
             // 
             this.lblIsabella.AutoSize = true;
-            this.lblIsabella.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIsabella.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIsabella.Location = new System.Drawing.Point(383, 422);
             this.lblIsabella.Name = "lblIsabella";
             this.lblIsabella.Size = new System.Drawing.Size(125, 20);
@@ -447,7 +429,7 @@
             // lblMichael
             // 
             this.lblMichael.AutoSize = true;
-            this.lblMichael.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMichael.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMichael.Location = new System.Drawing.Point(383, 497);
             this.lblMichael.Name = "lblMichael";
             this.lblMichael.Size = new System.Drawing.Size(99, 20);
@@ -483,12 +465,12 @@
             this.Controls.Add(this.lblRobert);
             this.Controls.Add(this.lblCompanyFounders);
             this.Controls.Add(this.panelResources);
-            this.Controls.Add(this.panelAccount);
             this.Controls.Add(this.panelParts);
             this.Controls.Add(this.lblLine2);
             this.Controls.Add(this.btnHomePage);
             this.Controls.Add(this.lblLine1);
             this.Controls.Add(this.lblLine3);
+            this.Controls.Add(this.panelAccount);
             this.Name = "AboutUsPg";
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.AboutUsPg_Load);
@@ -514,7 +496,6 @@
         private System.Windows.Forms.Button btnMyAccount;
         private System.Windows.Forms.Panel panelAccount;
         private System.Windows.Forms.Button btnMyOrders;
-        private System.Windows.Forms.Button btnMyCart;
         private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Panel panelResources;
         private System.Windows.Forms.Button btnAboutUs;
