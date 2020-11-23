@@ -22,7 +22,7 @@ namespace CSE412_Group17.controllers {
             DBModifier modder = new DBModifier();
 
             modder.modifyRows("INSERT INTO \"User\"(\"loginID\", \"FirstName\", \"LastName\", \"Email\", \"PhoneNumber\", \"DateOfBirth\", \"IsAdmin\", \"Gender\", \"Address\") VALUES('"
-                + "','" + loginId + "','" + theUser.FirstName + "','" + theUser.LastName + "','" + theUser.Email + "','" + theUser.PhoneNumber + "','" + theUser.DateOfBirth + "','"
+                + loginId + "','" + theUser.FirstName + "','" + theUser.LastName + "','" + theUser.Email + "','" + theUser.PhoneNumber + "','" + theUser.DateOfBirth + "','"
                 + theUser.IsAdmin + "','" + theUser.Gender + "','" + theUser.Address + "'");
         }
 

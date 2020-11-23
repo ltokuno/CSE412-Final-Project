@@ -55,6 +55,11 @@
             this.btnMyProfile = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.ShoppingCart = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
             this.panelResources.SuspendLayout();
@@ -386,7 +391,7 @@
             "1",
             "2",
             "3"});
-            this.comboBoxQuantity.Location = new System.Drawing.Point(605, 353);
+            this.comboBoxQuantity.Location = new System.Drawing.Point(355, 380);
             this.comboBoxQuantity.Name = "comboBoxQuantity";
             this.comboBoxQuantity.Size = new System.Drawing.Size(77, 21);
             this.comboBoxQuantity.TabIndex = 30;
@@ -396,7 +401,7 @@
             // 
             // btnAddToCart
             // 
-            this.btnAddToCart.Location = new System.Drawing.Point(605, 441);
+            this.btnAddToCart.Location = new System.Drawing.Point(355, 417);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(96, 23);
             this.btnAddToCart.TabIndex = 31;
@@ -423,7 +428,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(419, 353);
+            this.comboBox1.Location = new System.Drawing.Point(228, 343);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 33;
@@ -432,18 +437,67 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(419, 379);
+            this.listBox1.Location = new System.Drawing.Point(229, 380);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 212);
             this.listBox1.TabIndex = 34;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-
+            // 
+            // ShoppingCart
+            // 
+            this.ShoppingCart.FormattingEnabled = true;
+            this.ShoppingCart.Location = new System.Drawing.Point(631, 380);
+            this.ShoppingCart.Name = "ShoppingCart";
+            this.ShoppingCart.Size = new System.Drawing.Size(120, 212);
+            this.ShoppingCart.TabIndex = 35;
+            this.ShoppingCart.SelectedIndexChanged += new System.EventHandler(this.ShoppingCart_SelectedIndexChanged);
+            this.ShoppingCart.SizeChanged += new System.EventHandler(this.ShoppingCart_SizeChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(228, 329);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Select Category";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(631, 361);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Your Cart";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(634, 599);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Total: ";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(678, 599);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 13);
+            this.lblTotal.TabIndex = 39;
             // 
             // BrakesPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 702);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ShoppingCart);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnMyProfile);
@@ -495,5 +549,10 @@
         private System.Windows.Forms.Button btnMyProfile;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox ShoppingCart;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotal;
     }
 }

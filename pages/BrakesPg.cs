@@ -181,13 +181,15 @@ namespace CSE412_Group17
                 msg = String.Format("Quantity of {0} of {1} was added to the cart!", quantity, item);
 
                 // display success message
-                MessageBox.Show(msg);
+                // MessageBox.Show(msg);
 
                 // hide cart buttons now that item is added
                 comboBoxQuantity.Visible = false;
                 btnAddToCart.Visible = false;
 
                 comboBoxQuantity.Text = "Quantity"; // reset value
+
+                ShoppingCart.Items.Add((Item)listBox1.SelectedItem);
 
             }
             else
@@ -257,7 +259,6 @@ namespace CSE412_Group17
         private void BrakesPg_Load(object sender, EventArgs e) {
             ItemsCTRL items = new ItemsCTRL();
 
-
             foreach (String s in items.getItemCategories())
                 comboBox1.Items.Add(s);
         }
@@ -271,5 +272,28 @@ namespace CSE412_Group17
             btnAddToCart.Visible = true;
 
         }
+
+        private void ShoppingCart_SizeChanged(object sender, EventArgs e) {
+            lblTotal.Text = totalCartPrice().ToString();
+        }
+
+        private void ShoppingCart_SelectedIndexChanged(object sender, EventArgs e) {
+
+        }
+
+        private decimal totalCartPrice() {
+            decimal output = 0;
+
+            Item tmp;
+
+            foreach (Object i in ShoppingCart.Items) {
+                tmp = (Item)i;
+
+                output += tmp.RetailPrice;
+
+            }
+            return output;
+        }
+
     }
 }
