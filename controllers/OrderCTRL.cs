@@ -18,15 +18,15 @@ namespace CSE412_Group17.controllers {
 
             DBSelector selector = new DBSelector();
 
-            return selector.getRows<Order>("SELECT * FROM \"Order\" WHERE \"OrderID\"= '" + userID + "'");
+            return selector.getRows<Order>("SELECT * FROM \"Order\" WHERE \"UserID\"= '" + userID + "'");
         }
 
 
-        public List<Item> getOrderItems(int oderID) {
+        public List<Item> getOrderItems(int orderID) {
 
             DBSelector selector = new DBSelector();
 
-            List<ItemList> itemList = selector.getRows<ItemList>("SELECT * FROM \"ItemList\" WHERE \"OrderID\"= '" + oderID + "'");
+            List<ItemList> itemList = selector.getRows<ItemList>("SELECT * FROM \"ItemList\" WHERE \"OrderID\"= '" + orderID + "'");
 
             StringBuilder sb = new StringBuilder();
             
@@ -46,10 +46,10 @@ namespace CSE412_Group17.controllers {
         }
 
 
-        public List<ItemList> getORderLineItems(int orderID) {
+        public List<ItemList> getOrderLineItems(int orderID) {
             DBSelector selector = new DBSelector();
 
-            return selector.getRows<ItemList>("SELCT * FROM \"ItemList\" Where \"OrderID\"= '" + orderID + "'");
+            return selector.getRows<ItemList>("SELECT * FROM \"ItemList\" WHERE \"OrderID\" = '" + orderID + "'");
         }
 
 
@@ -63,7 +63,7 @@ namespace CSE412_Group17.controllers {
             DBSelector selector = new DBSelector();
 
             return selector.getRow<int>("INSERT INTO \"Order\" (\"ConfirmationNumber\", \"OrderDateTime\", \"TotalPrice\", \"UserID\") VALUES ('" +
-                theOrder.ConfirmationNumber + "','" + theOrder.OrderDate + "','" + theOrder.TotalPrice + "','" + theOrder.UserID + "')" +
+                theOrder.ConfirmationNumber + "','" + theOrder.OrderDateTime + "','" + theOrder.TotalPrice + "','" + theOrder.UserID + "')" +
                 "RETURNING \"OrderID\"");
         }
 

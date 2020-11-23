@@ -74,12 +74,24 @@
             this.label5 = new System.Windows.Forms.Label();
             this.OrderConfListBox = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.MyOrdersPanel = new System.Windows.Forms.Panel();
+            this.lblMyTotal = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblMyConfNum = new System.Windows.Forms.Label();
+            this.lblMyOrderID = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.MyItemsListbox = new System.Windows.Forms.ListBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.MyOrdersListbox = new System.Windows.Forms.ListBox();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
             this.panelResources.SuspendLayout();
             this.shoppingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantityUpDn)).BeginInit();
             this.orderPanel.SuspendLayout();
+            this.MyOrdersPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnParts
@@ -277,7 +289,7 @@
             this.btnMyOrders.ForeColor = System.Drawing.Color.Transparent;
             this.btnMyOrders.Location = new System.Drawing.Point(0, 89);
             this.btnMyOrders.Name = "btnMyOrders";
-            this.btnMyOrders.Size = new System.Drawing.Size(249, 37);
+            this.btnMyOrders.Size = new System.Drawing.Size(249, 59);
             this.btnMyOrders.TabIndex = 16;
             this.btnMyOrders.Text = "My Orders";
             this.btnMyOrders.UseVisualStyleBackColor = false;
@@ -598,18 +610,16 @@
             this.lblConfNumber.AutoSize = true;
             this.lblConfNumber.Location = new System.Drawing.Point(128, 72);
             this.lblConfNumber.Name = "lblConfNumber";
-            this.lblConfNumber.Size = new System.Drawing.Size(97, 13);
+            this.lblConfNumber.Size = new System.Drawing.Size(0, 13);
             this.lblConfNumber.TabIndex = 6;
-            this.lblConfNumber.Text = "999999999999999";
             // 
             // lblOrderID
             // 
             this.lblOrderID.AutoSize = true;
             this.lblOrderID.Location = new System.Drawing.Point(128, 50);
             this.lblOrderID.Name = "lblOrderID";
-            this.lblOrderID.Size = new System.Drawing.Size(31, 13);
+            this.lblOrderID.Size = new System.Drawing.Size(0, 13);
             this.lblOrderID.TabIndex = 5;
-            this.lblOrderID.Text = "9999";
             // 
             // label7
             // 
@@ -660,11 +670,122 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Your Order";
             // 
+            // MyOrdersPanel
+            // 
+            this.MyOrdersPanel.Controls.Add(this.lblMyTotal);
+            this.MyOrdersPanel.Controls.Add(this.label9);
+            this.MyOrdersPanel.Controls.Add(this.lblMyConfNum);
+            this.MyOrdersPanel.Controls.Add(this.lblMyOrderID);
+            this.MyOrdersPanel.Controls.Add(this.label11);
+            this.MyOrdersPanel.Controls.Add(this.label12);
+            this.MyOrdersPanel.Controls.Add(this.label13);
+            this.MyOrdersPanel.Controls.Add(this.MyItemsListbox);
+            this.MyOrdersPanel.Controls.Add(this.label8);
+            this.MyOrdersPanel.Controls.Add(this.MyOrdersListbox);
+            this.MyOrdersPanel.Location = new System.Drawing.Point(262, 300);
+            this.MyOrdersPanel.Name = "MyOrdersPanel";
+            this.MyOrdersPanel.Size = new System.Drawing.Size(519, 414);
+            this.MyOrdersPanel.TabIndex = 49;
+            this.MyOrdersPanel.Visible = false;
+            // 
+            // lblMyTotal
+            // 
+            this.lblMyTotal.AutoSize = true;
+            this.lblMyTotal.Location = new System.Drawing.Point(409, 93);
+            this.lblMyTotal.Name = "lblMyTotal";
+            this.lblMyTotal.Size = new System.Drawing.Size(0, 13);
+            this.lblMyTotal.TabIndex = 14;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(369, 91);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Total:";
+            // 
+            // lblMyConfNum
+            // 
+            this.lblMyConfNum.AutoSize = true;
+            this.lblMyConfNum.Location = new System.Drawing.Point(409, 65);
+            this.lblMyConfNum.Name = "lblMyConfNum";
+            this.lblMyConfNum.Size = new System.Drawing.Size(0, 13);
+            this.lblMyConfNum.TabIndex = 12;
+            // 
+            // lblMyOrderID
+            // 
+            this.lblMyOrderID.AutoSize = true;
+            this.lblMyOrderID.Location = new System.Drawing.Point(409, 41);
+            this.lblMyOrderID.Name = "lblMyOrderID";
+            this.lblMyOrderID.Size = new System.Drawing.Size(0, 13);
+            this.lblMyOrderID.TabIndex = 11;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(291, 116);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(32, 13);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Items";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(295, 66);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(108, 13);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Confirmation Number:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(353, 41);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(50, 13);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Order ID:";
+            // 
+            // MyItemsListbox
+            // 
+            this.MyItemsListbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MyItemsListbox.FormattingEnabled = true;
+            this.MyItemsListbox.Location = new System.Drawing.Point(294, 132);
+            this.MyItemsListbox.Name = "MyItemsListbox";
+            this.MyItemsListbox.Size = new System.Drawing.Size(213, 225);
+            this.MyItemsListbox.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(20, 32);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "My Orders";
+            // 
+            // MyOrdersListbox
+            // 
+            this.MyOrdersListbox.FormattingEnabled = true;
+            this.MyOrdersListbox.Location = new System.Drawing.Point(23, 50);
+            this.MyOrdersListbox.Name = "MyOrdersListbox";
+            this.MyOrdersListbox.Size = new System.Drawing.Size(215, 342);
+            this.MyOrdersListbox.TabIndex = 0;
+            this.MyOrdersListbox.SelectedIndexChanged += new System.EventHandler(this.MyOrdersListbox_SelectedIndexChanged);
+            // 
             // BrakesPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 696);
+            this.ClientSize = new System.Drawing.Size(1078, 743);
+            this.Controls.Add(this.MyOrdersPanel);
             this.Controls.Add(this.orderPanel);
             this.Controls.Add(this.shoppingPanel);
             this.Controls.Add(this.btnMyProfile);
@@ -685,6 +806,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.quantityUpDn)).EndInit();
             this.orderPanel.ResumeLayout(false);
             this.orderPanel.PerformLayout();
+            this.MyOrdersPanel.ResumeLayout(false);
+            this.MyOrdersPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -737,5 +860,16 @@
         private System.Windows.Forms.ListBox OrderConfListBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnOrderDone;
+        private System.Windows.Forms.Panel MyOrdersPanel;
+        private System.Windows.Forms.Label lblMyTotal;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblMyConfNum;
+        private System.Windows.Forms.Label lblMyOrderID;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ListBox MyItemsListbox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListBox MyOrdersListbox;
     }
 }

@@ -15,8 +15,49 @@ namespace CSE412_Group17
 {
     public partial class BrakesPg : Form
     {
-        BindingList<Item> itemsList = new BindingList<Item>();
-        BindingList<LineItem> cartItems = new BindingList<LineItem>();
+        private BindingList<Item> itemsListDS = new BindingList<Item>();
+        private BindingList<LineItem> cartItemsDS = new BindingList<LineItem>();
+        private BindingList<Order> myOrdersDS = new BindingList<Order>();
+        private BindingList<LineItem> myOrdersItemsDS = new BindingList<LineItem>();
+
+        private enum PanelsEnum {
+            MyOrders, Profile, Admin, Shopping, Checkout, Account, Resources
+        }
+        private void ShowPanel(PanelsEnum thePanel) {
+            List<Panel> thePanels = new List<Panel>();
+            //thePanels.Add(panelParts);
+            //thePanels.Add(panelAccount);
+            //thePanels.Add(panelResources);
+            thePanels.Add(MyOrdersPanel);
+            thePanels.Add(orderPanel);
+            thePanels.Add(shoppingPanel);
+
+            foreach(Panel p in thePanels) {
+                p.Visible = false;
+            }
+
+            switch (thePanel) {
+                case PanelsEnum.Admin:
+                    break;
+                case PanelsEnum.Checkout:
+                    orderPanel.Visible = true;
+                    break;
+                case PanelsEnum.MyOrders:
+                    MyOrdersPanel.Visible = true;
+                    break;
+                case PanelsEnum.Shopping:
+                    shoppingPanel.Visible = true;
+                    break;
+                case PanelsEnum.Profile:
+                    break;
+                case PanelsEnum.Account:
+                    panelAccount.Visible = true;
+                    break;
+                case PanelsEnum.Resources:
+                    panelResources.Visible = true;
+                    break;
+            }
+        }
 
         public BrakesPg()
         {
@@ -25,8 +66,7 @@ namespace CSE412_Group17
 
         private void btnParts_Click(object sender, EventArgs e)
         {
-            shoppingPanel.Visible = true;
-            orderPanel.Visible = false;
+            ShowPanel(PanelsEnum.Shopping);
             /*this.Hide();
 
             BrakesPg brakes = new BrakesPg();
@@ -184,7 +224,7 @@ namespace CSE412_Group17
             line.RetailPrice = curItem.RetailPrice;
             line.StockQuantity = curItem.StockQuantity;
 
-            cartItems.Add(line);
+            cartItemsDS.Add(line);
 
         }
 
@@ -210,17 +250,6 @@ namespace CSE412_Group17
 
         }
 
-        private void btnMyOrders_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            MyOrdersPg orders = new MyOrdersPg();
-
-            orders.Show();
-
-        }
-
         private void btnMyProfile_Click(object sender, EventArgs e)
         {
 
@@ -235,10 +264,10 @@ namespace CSE412_Group17
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {
             ItemsCTRL items = new ItemsCTRL();
 
-            itemsList.Clear();
+            itemsListDS.Clear();
             
             foreach(Item i in items.geItemsByCategory(comboBox1.Text)) {
-                itemsList.Add(i);
+                itemsListDS.Add(i);
             }
         }
 
@@ -248,9 +277,11 @@ namespace CSE412_Group17
                 comboBox1.Items.Add(s);
             }
 
-            listBox1.DataSource = itemsList;
-            ShoppingCart.DataSource = cartItems;
-            cartItems.ListChanged += new ListChangedEventHandler(list_ListChanged);
+            listBox1.DataSource = itemsListDS;
+            ShoppingCart.DataSource = cartItemsDS;
+            cartItemsDS.ListChanged += new ListChangedEventHandler(list_ListChanged);
+            MyOrdersListbox.DataSource = myOrdersDS;
+            MyItemsListbox.DataSource = myOrdersItemsDS;
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -264,12 +295,12 @@ namespace CSE412_Group17
         }
 
 
-        private decimal totalCartPrice() {
+        private decimal totalPrice(BindingList<LineItem> theList) {
             decimal output = 0;
 
             LineItem tmp;
 
-            foreach (Object i in cartItems) {
+            foreach (Object i in theList) {
                 tmp = (LineItem)i;
 
                 output += (tmp.RetailPrice * tmp.quantity);
@@ -281,7 +312,7 @@ namespace CSE412_Group17
 
         private void btnDeletItem_Click(object sender, EventArgs e) {
             if(ShoppingCart.SelectedIndex > -1) {
-                cartItems.RemoveAt(ShoppingCart.SelectedIndex);
+                cartItemsDS.RemoveAt(ShoppingCart.SelectedIndex);
             } 
         }
 
@@ -297,12 +328,12 @@ namespace CSE412_Group17
                         ((LineItem)ShoppingCart.SelectedItem).quantity = newQty;
 
                         ShoppingCart.DataSource = null;
-                        ShoppingCart.DataSource = cartItems;
+                        ShoppingCart.DataSource = cartItemsDS;
                         ListChangedEventArgs args = new ListChangedEventArgs(
                             ListChangedType.ItemChanged, ShoppingCart.SelectedIndex);
                         list_ListChanged(bntChangeQty, args);
                     } else {
-                        cartItems.RemoveAt(ShoppingCart.SelectedIndex);
+                        cartItemsDS.RemoveAt(ShoppingCart.SelectedIndex);
                     }
                 }
 
@@ -313,27 +344,26 @@ namespace CSE412_Group17
 
         //todo: update the ui controls here
         void list_ListChanged(object sender, ListChangedEventArgs e) {
-            lblTotal.Text = totalCartPrice().ToString();
+            lblTotal.Text = totalPrice(cartItemsDS).ToString();
         }
 
         private void btnCartClear_Click(object sender, EventArgs e) {
-            cartItems.Clear();
+            cartItemsDS.Clear();
         }
 
         private void btnCheckout_Click(object sender, EventArgs e) {
 
-            if (cartItems.Count > 0) {
+            if (cartItemsDS.Count > 0) {
                 //swap out the panels
-                shoppingPanel.Visible = !shoppingPanel.Visible;
-                orderPanel.Visible = !orderPanel.Visible;
+                ShowPanel(PanelsEnum.Checkout);
 
                 //save the order
                 OrderCTRL orderCTRL = new OrderCTRL();
 
                 Order newOrder = new Order();
                 newOrder.ConfirmationNumber = orderCTRL.generateConfirmationNumber();
-                newOrder.OrderDate = DateAndTime.Today.Date.ToShortDateString();
-                newOrder.TotalPrice = totalCartPrice();
+                newOrder.OrderDateTime = DateAndTime.Today.Date.ToShortDateString();
+                newOrder.TotalPrice = totalPrice(cartItemsDS);
                 newOrder.UserID = 1; //todo: change this to the real user id
 
                 int orderId = orderCTRL.saveOrder(newOrder);
@@ -342,7 +372,7 @@ namespace CSE412_Group17
 
                 List<ItemList> newItems = new List<ItemList>();
 
-                foreach(LineItem line in cartItems) {
+                foreach(LineItem line in cartItemsDS) {
                     ItemList newIL = new ItemList();
                     newIL.ItemID = line.ItemID;
                     newIL.OrderID = orderId;
@@ -352,7 +382,7 @@ namespace CSE412_Group17
 
                 orderCTRL.saveItemList(newItems);
 
-                OrderConfListBox.DataSource = cartItems;
+                OrderConfListBox.DataSource = cartItemsDS;
                 lblOrderID.Text = orderId.ToString();
                 lblConfNumber.Text = newOrder.ConfirmationNumber;
 
@@ -361,8 +391,54 @@ namespace CSE412_Group17
 
         private void btnOrderDone_Click(object sender, EventArgs e) {
             //swap out the panels
-            shoppingPanel.Visible = !shoppingPanel.Visible;
-            orderPanel.Visible = !orderPanel.Visible;
+            ShowPanel(PanelsEnum.Shopping);
+        }
+
+        private void btnMyOrders_Click(object sender, EventArgs e) {
+            //this.Hide();
+
+            //MyOrdersPg orders = new MyOrdersPg();
+
+            //orders.Show();
+
+            if (panelAccount.Height == 165) {
+                panelAccount.Height = 52;
+            } else {
+                panelAccount.Height = 165;
+            }
+            ShowPanel(PanelsEnum.MyOrders);
+
+            //fill out the controls
+            myOrdersDS.Clear();
+            //todo: put logged in user id here
+            OrderCTRL orderCTRL = new OrderCTRL();
+            foreach(Order o in orderCTRL.getOrdersByUser(1)) {
+                myOrdersDS.Add(o);
+            }
+
+        }
+
+        private void MyOrdersListbox_SelectedIndexChanged(object sender, EventArgs e) {
+            myOrdersItemsDS.Clear();
+            OrderCTRL orderCTRL = new OrderCTRL();
+            Order curOrder = (Order)MyOrdersListbox.SelectedItem;
+
+            List<ItemList> itemLists = orderCTRL.getOrderLineItems(curOrder.OrderID);
+            List<Item> items = orderCTRL.getOrderItems(curOrder.OrderID);
+            LineItem tmp = new LineItem(); ;
+            foreach (ItemList il in itemLists) {
+                tmp.ItemID = il.ItemID;
+                tmp.quantity = il.Quantity;
+                tmp.ItemName = items.Find(item => item.ItemID == il.ItemID).ItemName;
+                tmp.RetailPrice = items.Find(item => item.ItemID == il.ItemID).RetailPrice;
+                tmp.Category = items.Find(item => item.ItemID == il.ItemID).Category;
+                myOrdersItemsDS.Add(tmp);
+            }
+
+            lblMyTotal.Text =  totalPrice(myOrdersItemsDS).ToString();
+            lblMyOrderID.Text = itemLists[0].OrderID.ToString();
+            lblMyConfNum.Text = curOrder.ConfirmationNumber;
+
         }
     } //end class
 }

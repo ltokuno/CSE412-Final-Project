@@ -12,6 +12,10 @@ namespace CSE412_Group17
         public string ConfirmationNumber { get; set; }
         public decimal TotalPrice { get; set; }
         public int OrderID { get; set; }
-        public string OrderDate { get; set; }
+        public string OrderDateTime { get; set; }
+
+        public override string ToString() {
+            return OrderID.ToString() + "\t" + OrderDateTime;
+        }
     }
 }
