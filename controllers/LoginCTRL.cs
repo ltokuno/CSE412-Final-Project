@@ -7,8 +7,7 @@ namespace CSE412_Group17.controllers {
         public Login getLoginByUserID(int userID) {
             DBSelector selector = new DBSelector();
 
-            //todo: there's no userID in the Login table
-            return selector.getRow<Login>("SELECT * FROM Login WHERE UserID = " + userID);
+            return selector.getRow<Login>("SELECT * FROM Login WHERE ID = " + userID);
         }
 
 
