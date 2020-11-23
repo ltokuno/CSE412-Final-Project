@@ -69,3 +69,4 @@ D:\Data\source\CSE412\bin\Debug\System.Threading.Channels.xml
 D:\Data\source\CSE412\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Data\source\CSE412\bin\Debug\System.ValueTuple.xml
 D:\Data\source\CSE412\obj\Debug\CSE412_Group17.AdminBox.resources
+D:\Data\source\CSE412\obj\Debug\CSE412-Group17.csproj.ResolveComReference.cache

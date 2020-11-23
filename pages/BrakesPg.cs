@@ -1,4 +1,5 @@
 ﻿using CSE412_Group17.controllers;
+using CSE412_Group17.pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,13 +9,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 
 namespace CSE412_Group17
 {
     public partial class BrakesPg : Form
     {
-        public static string item = null;
-        public static int quantity = 0; // # of items to add to cart
+        BindingList<Item> itemsList = new BindingList<Item>();
+        BindingList<LineItem> cartItems = new BindingList<LineItem>();
 
         public BrakesPg()
         {
@@ -164,43 +166,24 @@ namespace CSE412_Group17
 
         }
 
-        private void comboBoxQuantity_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-            quantity = Convert.ToInt32(comboBoxQuantity.Text);
-
-        }
-
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
-            string msg = null;
 
-            if (quantity != 0)
-            {
+            // hide cart buttons now that item is added
+            lblQty.Visible = false;
+            quantityUpDn.Visible = false;
+            btnAddToCart.Visible = false;
 
-                //msg = String.Format("Quantity of {0} of {1} was added to the cart!", quantity, item);
+            LineItem line = new LineItem();
+            Item curItem = (Item)listBox1.SelectedItem;
 
-                // display success message
-                // MessageBox.Show(msg);
+            line.ItemID = curItem.ItemID;
+            line.ItemName = curItem.ItemName;
+            line.quantity = (int)quantityUpDn.Value;
+            line.RetailPrice = curItem.RetailPrice;
+            line.StockQuantity = curItem.StockQuantity;
 
-                // hide cart buttons now that item is added
-                comboBoxQuantity.Visible = false;
-                btnAddToCart.Visible = false;
-
-                comboBoxQuantity.Text = "Quantity"; // reset value
-                
-                ShoppingCart.Items.Add((Item)listBox1.SelectedItem);
-
-            }
-            else
-            {
-
-                msg = String.Format("Please add a quantity you want to buy for {0}.", item);
-
-                // display failure message
-                MessageBox.Show(msg);
-
-            }
+            cartItems.Add(line);
 
         }
 
@@ -251,49 +234,87 @@ namespace CSE412_Group17
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {
             ItemsCTRL items = new ItemsCTRL();
 
-            listBox1.Items.Clear();
-            foreach(Item i in items.geItemsByCategory(comboBox1.Text))
-                listBox1.Items.Add(i);
+            itemsList.Clear();
+            
+            foreach(Item i in items.geItemsByCategory(comboBox1.Text)) {
+                itemsList.Add(i);
+            }
         }
 
         private void BrakesPg_Load(object sender, EventArgs e) {
             ItemsCTRL items = new ItemsCTRL();
-
-            foreach (String s in items.getItemCategories())
+            foreach (String s in items.getItemCategories()) {
                 comboBox1.Items.Add(s);
+            }
+
+            listBox1.DataSource = itemsList;
+            ShoppingCart.DataSource = cartItems;
+            cartItems.ListChanged += new ListChangedEventHandler(list_ListChanged);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            item = listBox1.Text;
             // show add to cart and quantity to add
-            comboBoxQuantity.Visible = true;
+            lblQty.Visible = true;
+            quantityUpDn.Visible = true;
             btnAddToCart.Visible = true;
 
         }
 
-        private void ShoppingCart_SizeChanged(object sender, EventArgs e) {
-            lblTotal.Text = totalCartPrice().ToString();
-        }
-
-        private void ShoppingCart_SelectedIndexChanged(object sender, EventArgs e) {
-
-        }
 
         private decimal totalCartPrice() {
             decimal output = 0;
 
-            Item tmp;
+            LineItem tmp;
 
             foreach (Object i in ShoppingCart.Items) {
-                tmp = (Item)i;
+                tmp = (LineItem)i;
 
-                output += tmp.RetailPrice;
+                output += (tmp.RetailPrice * tmp.quantity);
 
             }
+            
             return output;
         }
 
-    }
+        private void btnDeletItem_Click(object sender, EventArgs e) {
+            if(ShoppingCart.SelectedIndex > -1) {
+                ShoppingCart.Items.RemoveAt(ShoppingCart.SelectedIndex);
+            } 
+        }
+
+        //Change Qty in shopping cart
+        private void button2_Click(object sender, EventArgs e) {
+            if (ShoppingCart.SelectedIndex > - 1) {
+
+                int newQty;
+
+                if(int.TryParse(Interaction.InputBox("Enter a Quantity", "Quantity"), out newQty)) {
+                    ((LineItem)ShoppingCart.SelectedItem).quantity = newQty;
+                }
+
+
+                
+            }
+        }
+
+
+        //todo: update the ui controls here
+        void list_ListChanged(object sender, ListChangedEventArgs e) {
+
+            lblTotal.Text = totalCartPrice().ToString();
+
+            System.Console.WriteLine("You are here");
+
+            //switch (e.ListChangedType) {
+            //    case ListChangedType.ItemAdded:
+            //        break;
+            //    case ListChangedType.ItemChanged:
+            //        break;
+            //    case ListChangedType.ItemDeleted:
+            //        break;
+            //}
+        }
+    } //end class
 }

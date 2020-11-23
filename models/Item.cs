@@ -10,7 +10,7 @@
         public string Category { get; set; }
 
         public override string ToString() {
-            return ItemName;
+            return ItemName + " -- " + RetailPrice;
         }
     }
 }
