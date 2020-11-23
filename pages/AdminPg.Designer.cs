@@ -104,7 +104,7 @@
             this.UsersBox.ItemHeight = 16;
             this.UsersBox.Location = new System.Drawing.Point(688, 142);
             this.UsersBox.Name = "UsersBox";
-            this.UsersBox.Size = new System.Drawing.Size(582, 356);
+            this.UsersBox.Size = new System.Drawing.Size(693, 356);
             this.UsersBox.TabIndex = 31;
             this.UsersBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 

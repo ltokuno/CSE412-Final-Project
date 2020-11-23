@@ -10,7 +10,7 @@ namespace CSE412_Group17
     {
         public override string ToString()
         {
-            return FirstName + " " + LastName + ", " + "Address: " + Address + ", Phone Number: " + PhoneNumber + ", Email Address: " + Email;
+            return FirstName + " " + LastName + ",  " + "Address: " + Address + ",  Phone: " + PhoneNumber + ",  Email: " + Email;
         }
         public int ID { get; set; }
         public string FirstName { get; set; }
