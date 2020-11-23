@@ -7,19 +7,19 @@ namespace CSE412_Group17.controllers {
 
         public List<String> getItemCategories() {
             DBSelector selector = new DBSelector();
-            return selector.getRows<String>("SELCT UNIQUE Category FROM Item");
+            return selector.getRows<String>("SELECT DISTINCT \"Category\" FROM \"Item\"");
         }
 
 
         public List<Item> geItemsByCategory(string category) {
             DBSelector selector = new DBSelector();
-            return selector.getRows<Item>("SELCT * FROM Item WHERE Category = " + category);
+            return selector.getRows<Item>("SELECT * FROM \"Item\" WHERE \"Category\" = " + "'" + category + "'");
         }
 
 
         public Item getItemByID(int ID) {
             DBSelector selector = new DBSelector();
-            return selector.getRow<Item>("SELECT * FROM Item WHERE ItemID=" + ID);
+            return selector.getRow<Item>("SELECT * FROM \"Item\" WHERE \"ItemID\"=" + ID);
         }
 
     } //end class

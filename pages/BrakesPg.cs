@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSE412_Group17.controllers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -271,6 +272,22 @@ namespace CSE412_Group17
 
             profilePg.Show();
 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {
+            ItemsCTRL items = new ItemsCTRL();
+
+            listBox1.Items.Clear();
+            foreach(Item i in items.geItemsByCategory(comboBox1.Text))
+                listBox1.Items.Add(i.ItemName);
+        }
+
+        private void BrakesPg_Load(object sender, EventArgs e) {
+            ItemsCTRL items = new ItemsCTRL();
+
+
+            foreach (String s in items.getItemCategories())
+                comboBox1.Items.Add(s);
         }
     }
 }

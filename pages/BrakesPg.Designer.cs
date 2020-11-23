@@ -61,6 +61,8 @@
             this.comboBoxQuantity = new System.Windows.Forms.ComboBox();
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnMyProfile = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
             this.panelResources.SuspendLayout();
@@ -506,11 +508,30 @@
             this.btnMyProfile.UseVisualStyleBackColor = false;
             this.btnMyProfile.Click += new System.EventHandler(this.btnMyProfile_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(150, 343);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 33;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(150, 369);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(120, 212);
+            this.listBox1.TabIndex = 34;
+            // 
             // BrakesPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 702);
+            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnMyProfile);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.comboBoxQuantity);
@@ -531,6 +552,7 @@
             this.Controls.Add(this.lblBrakesMessage1);
             this.Name = "BrakesPg";
             this.Text = "HomePage";
+            this.Load += new System.EventHandler(this.BrakesPg_Load);
             this.panelParts.ResumeLayout(false);
             this.panelAccount.ResumeLayout(false);
             this.panelResources.ResumeLayout(false);
@@ -573,5 +595,7 @@
         private System.Windows.Forms.ComboBox comboBoxQuantity;
         private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.Button btnMyProfile;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }

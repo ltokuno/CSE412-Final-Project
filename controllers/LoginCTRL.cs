@@ -7,7 +7,7 @@ namespace CSE412_Group17.controllers {
         public Login getLoginByUserID(int userID) {
             DBSelector selector = new DBSelector();
 
-            return selector.getRow<Login>("SELECT * FROM Login WHERE ID = " + userID);
+            return selector.getRow<Login>("SELECT * FROM \"Public.Login\" WHERE ID = " + userID);
         }
 
 
