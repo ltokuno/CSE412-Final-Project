@@ -18,11 +18,11 @@ namespace CSE412_Group17.controllers {
         }
 
 
-        public void addUser(User theUser) {
+        public void addUser(User theUser, int loginId) {
             DBModifier modder = new DBModifier();
 
-            modder.modifyRows("INSERT INTO \"User\"(\"FirstName\", \"LastName\", \"Email\", \"PhoneNumber\", \"DateOfBirth\", \"IsAdmin\", \"Gender\", \"Address\") VALUES('"                
-                + theUser.FirstName + "','" + theUser.LastName + "','" + theUser.Email + "','" + theUser.PhoneNumber + "','" + theUser.DateOfBirth + "','"
+            modder.modifyRows("INSERT INTO \"User\"(\"loginID\", \"FirstName\", \"LastName\", \"Email\", \"PhoneNumber\", \"DateOfBirth\", \"IsAdmin\", \"Gender\", \"Address\") VALUES('"
+                + "','" + loginId + "','" + theUser.FirstName + "','" + theUser.LastName + "','" + theUser.Email + "','" + theUser.PhoneNumber + "','" + theUser.DateOfBirth + "','"
                 + theUser.IsAdmin + "','" + theUser.Gender + "','" + theUser.Address + "'");
         }
 

@@ -437,6 +437,7 @@
             this.listBox1.Size = new System.Drawing.Size(120, 212);
             this.listBox1.TabIndex = 34;
             this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+
             // 
             // BrakesPg
             // 
