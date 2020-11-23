@@ -28,7 +28,6 @@ D:\Data\source\CSE412\obj\Debug\CSE412_Group17.AboutUsPg.resources
 D:\Data\source\CSE412\obj\Debug\CSE412_Group17.MyProfilePg.resources
 D:\Data\source\CSE412\obj\Debug\CSE412_Group17.MyOrdersPg.resources
 D:\Data\source\CSE412\obj\Debug\CSE412_Group17.MyCartPg.resources
-D:\Data\source\CSE412\obj\Debug\CSE412_Group17.AdminPg.resources
 D:\Data\source\CSE412\obj\Debug\CSE412_Group17.SignInRegPg.resources
 D:\Data\source\CSE412\obj\Debug\CSE412_Group17.TireTubesPg.resources
 D:\Data\source\CSE412\obj\Debug\CSE412_Group17.WheelsPg.resources
@@ -69,3 +68,4 @@ D:\Data\source\CSE412\bin\Debug\System.Text.Json.xml
 D:\Data\source\CSE412\bin\Debug\System.Threading.Channels.xml
 D:\Data\source\CSE412\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\Data\source\CSE412\bin\Debug\System.ValueTuple.xml
+D:\Data\source\CSE412\obj\Debug\CSE412_Group17.AdminBox.resources

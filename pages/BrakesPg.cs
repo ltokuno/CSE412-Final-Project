@@ -178,7 +178,7 @@ namespace CSE412_Group17
             if (quantity != 0)
             {
 
-                msg = String.Format("Quantity of {0} of {1} was added to the cart!", quantity, item);
+                //msg = String.Format("Quantity of {0} of {1} was added to the cart!", quantity, item);
 
                 // display success message
                 // MessageBox.Show(msg);
@@ -188,7 +188,7 @@ namespace CSE412_Group17
                 btnAddToCart.Visible = false;
 
                 comboBoxQuantity.Text = "Quantity"; // reset value
-
+                
                 ShoppingCart.Items.Add((Item)listBox1.SelectedItem);
 
             }
