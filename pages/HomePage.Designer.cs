@@ -41,7 +41,6 @@
             this.btnMyAccount = new System.Windows.Forms.Button();
             this.panelAccount = new System.Windows.Forms.Panel();
             this.btnMyOrders = new System.Windows.Forms.Button();
-            this.btnMyCart = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.panelResources = new System.Windows.Forms.Panel();
             this.btnAboutUs = new System.Windows.Forms.Button();
@@ -233,7 +232,6 @@
             // panelAccount
             // 
             this.panelAccount.Controls.Add(this.btnMyOrders);
-            this.panelAccount.Controls.Add(this.btnMyCart);
             this.panelAccount.Controls.Add(this.btnSignOut);
             this.panelAccount.Controls.Add(this.btnMyAccount);
             this.panelAccount.Location = new System.Drawing.Point(419, 143);
@@ -249,29 +247,13 @@
             this.btnMyOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMyOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyOrders.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMyOrders.Location = new System.Drawing.Point(0, 126);
+            this.btnMyOrders.Location = new System.Drawing.Point(0, 89);
             this.btnMyOrders.Name = "btnMyOrders";
             this.btnMyOrders.Size = new System.Drawing.Size(249, 37);
             this.btnMyOrders.TabIndex = 16;
             this.btnMyOrders.Text = "My Orders";
             this.btnMyOrders.UseVisualStyleBackColor = false;
             this.btnMyOrders.Click += new System.EventHandler(this.btnMyOrders_Click);
-            // 
-            // btnMyCart
-            // 
-            this.btnMyCart.BackColor = System.Drawing.Color.Gray;
-            this.btnMyCart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMyCart.FlatAppearance.BorderSize = 0;
-            this.btnMyCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyCart.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMyCart.Location = new System.Drawing.Point(0, 89);
-            this.btnMyCart.Name = "btnMyCart";
-            this.btnMyCart.Size = new System.Drawing.Size(249, 37);
-            this.btnMyCart.TabIndex = 15;
-            this.btnMyCart.Text = "My Cart";
-            this.btnMyCart.UseVisualStyleBackColor = false;
-            this.btnMyCart.Click += new System.EventHandler(this.btnMyCart_Click);
             // 
             // btnSignOut
             // 
@@ -415,7 +397,6 @@
         private System.Windows.Forms.Button btnMyAccount;
         private System.Windows.Forms.Panel panelAccount;
         private System.Windows.Forms.Button btnMyOrders;
-        private System.Windows.Forms.Button btnMyCart;
         private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Panel panelResources;
         private System.Windows.Forms.Button btnAboutUs;

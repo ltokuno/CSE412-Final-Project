@@ -38,6 +38,10 @@
             this.txtNewPassword = new System.Windows.Forms.TextBox();
             this.txtNewUser = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblUsernameDisplay = new System.Windows.Forms.Label();
+            this.lblPasswordDisplay = new System.Windows.Forms.Label();
+            this.lblNewUsernameDisplay = new System.Windows.Forms.Label();
+            this.lblNewPasswordDisplay = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblLoginMessage
@@ -46,9 +50,9 @@
             this.lblLoginMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoginMessage.Location = new System.Drawing.Point(383, 286);
             this.lblLoginMessage.Name = "lblLoginMessage";
-            this.lblLoginMessage.Size = new System.Drawing.Size(351, 20);
+            this.lblLoginMessage.Size = new System.Drawing.Size(244, 20);
             this.lblLoginMessage.TabIndex = 18;
-            this.lblLoginMessage.Text = "If you have an existing account, login here.";
+            this.lblLoginMessage.Text = "Existing members, login here.";
             // 
             // btnHomePage
             // 
@@ -69,9 +73,9 @@
             this.lblRegisterMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRegisterMessage.Location = new System.Drawing.Point(383, 457);
             this.lblRegisterMessage.Name = "lblRegisterMessage";
-            this.lblRegisterMessage.Size = new System.Drawing.Size(323, 20);
+            this.lblRegisterMessage.Size = new System.Drawing.Size(308, 20);
             this.lblRegisterMessage.TabIndex = 22;
-            this.lblRegisterMessage.Text = "If you are a new member, register here.";
+            this.lblRegisterMessage.Text = "Unregistered members, register here.";
             // 
             // txtUsername
             // 
@@ -133,11 +137,55 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Welcome! Please login or register to access our exclusive online bicycle store.";
             // 
+            // lblUsernameDisplay
+            // 
+            this.lblUsernameDisplay.AutoSize = true;
+            this.lblUsernameDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsernameDisplay.Location = new System.Drawing.Point(314, 325);
+            this.lblUsernameDisplay.Name = "lblUsernameDisplay";
+            this.lblUsernameDisplay.Size = new System.Drawing.Size(58, 13);
+            this.lblUsernameDisplay.TabIndex = 30;
+            this.lblUsernameDisplay.Text = "Username:";
+            // 
+            // lblPasswordDisplay
+            // 
+            this.lblPasswordDisplay.AutoSize = true;
+            this.lblPasswordDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPasswordDisplay.Location = new System.Drawing.Point(316, 363);
+            this.lblPasswordDisplay.Name = "lblPasswordDisplay";
+            this.lblPasswordDisplay.Size = new System.Drawing.Size(56, 13);
+            this.lblPasswordDisplay.TabIndex = 31;
+            this.lblPasswordDisplay.Text = "Password:";
+            // 
+            // lblNewUsernameDisplay
+            // 
+            this.lblNewUsernameDisplay.AutoSize = true;
+            this.lblNewUsernameDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewUsernameDisplay.Location = new System.Drawing.Point(276, 500);
+            this.lblNewUsernameDisplay.Name = "lblNewUsernameDisplay";
+            this.lblNewUsernameDisplay.Size = new System.Drawing.Size(95, 13);
+            this.lblNewUsernameDisplay.TabIndex = 32;
+            this.lblNewUsernameDisplay.Text = "Enter a Username:";
+            // 
+            // lblNewPasswordDisplay
+            // 
+            this.lblNewPasswordDisplay.AutoSize = true;
+            this.lblNewPasswordDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNewPasswordDisplay.Location = new System.Drawing.Point(276, 538);
+            this.lblNewPasswordDisplay.Name = "lblNewPasswordDisplay";
+            this.lblNewPasswordDisplay.Size = new System.Drawing.Size(93, 13);
+            this.lblNewPasswordDisplay.TabIndex = 33;
+            this.lblNewPasswordDisplay.Text = "Enter a Password:";
+            // 
             // SignInRegPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 702);
+            this.Controls.Add(this.lblNewPasswordDisplay);
+            this.Controls.Add(this.lblNewUsernameDisplay);
+            this.Controls.Add(this.lblPasswordDisplay);
+            this.Controls.Add(this.lblUsernameDisplay);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnRegister);
             this.Controls.Add(this.txtNewPassword);
@@ -167,5 +215,9 @@
         private System.Windows.Forms.TextBox txtNewPassword;
         private System.Windows.Forms.TextBox txtNewUser;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblUsernameDisplay;
+        private System.Windows.Forms.Label lblPasswordDisplay;
+        private System.Windows.Forms.Label lblNewUsernameDisplay;
+        private System.Windows.Forms.Label lblNewPasswordDisplay;
     }
 }

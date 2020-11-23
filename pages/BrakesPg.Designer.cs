@@ -41,7 +41,6 @@
             this.btnMyAccount = new System.Windows.Forms.Button();
             this.panelAccount = new System.Windows.Forms.Panel();
             this.btnMyOrders = new System.Windows.Forms.Button();
-            this.btnMyCart = new System.Windows.Forms.Button();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.panelResources = new System.Windows.Forms.Panel();
             this.btnAboutUs = new System.Windows.Forms.Button();
@@ -261,7 +260,6 @@
             // panelAccount
             // 
             this.panelAccount.Controls.Add(this.btnMyOrders);
-            this.panelAccount.Controls.Add(this.btnMyCart);
             this.panelAccount.Controls.Add(this.btnSignOut);
             this.panelAccount.Controls.Add(this.btnMyAccount);
             this.panelAccount.Location = new System.Drawing.Point(419, 143);
@@ -277,29 +275,13 @@
             this.btnMyOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMyOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyOrders.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMyOrders.Location = new System.Drawing.Point(0, 126);
+            this.btnMyOrders.Location = new System.Drawing.Point(0, 89);
             this.btnMyOrders.Name = "btnMyOrders";
             this.btnMyOrders.Size = new System.Drawing.Size(249, 37);
             this.btnMyOrders.TabIndex = 16;
             this.btnMyOrders.Text = "My Orders";
             this.btnMyOrders.UseVisualStyleBackColor = false;
             this.btnMyOrders.Click += new System.EventHandler(this.btnMyOrders_Click);
-            // 
-            // btnMyCart
-            // 
-            this.btnMyCart.BackColor = System.Drawing.Color.Gray;
-            this.btnMyCart.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMyCart.FlatAppearance.BorderSize = 0;
-            this.btnMyCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyCart.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMyCart.Location = new System.Drawing.Point(0, 89);
-            this.btnMyCart.Name = "btnMyCart";
-            this.btnMyCart.Size = new System.Drawing.Size(249, 37);
-            this.btnMyCart.TabIndex = 15;
-            this.btnMyCart.Text = "My Cart";
-            this.btnMyCart.UseVisualStyleBackColor = false;
-            this.btnMyCart.Click += new System.EventHandler(this.btnMyCart_Click);
             // 
             // btnSignOut
             // 
@@ -382,7 +364,7 @@
             // lblPartsDisplay
             // 
             this.lblPartsDisplay.AutoSize = true;
-            this.lblPartsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPartsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPartsDisplay.Location = new System.Drawing.Point(7, 5);
             this.lblPartsDisplay.Name = "lblPartsDisplay";
             this.lblPartsDisplay.Size = new System.Drawing.Size(51, 20);
@@ -500,6 +482,7 @@
             // lblQty
             // 
             this.lblQty.AutoSize = true;
+            this.lblQty.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQty.Location = new System.Drawing.Point(285, 58);
             this.lblQty.Name = "lblQty";
             this.lblQty.Size = new System.Drawing.Size(49, 13);
@@ -518,6 +501,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(561, 42);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(37, 13);
@@ -527,6 +511,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(462, 42);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
@@ -536,6 +521,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(8, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 13);
@@ -552,6 +538,7 @@
             // 
             // listBox1
             // 
+            this.listBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(11, 56);
             this.listBox1.Name = "listBox1";
@@ -561,6 +548,7 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(66, 29);
             this.comboBox1.Name = "comboBox1";
@@ -589,7 +577,7 @@
             this.orderPanel.Controls.Add(this.label5);
             this.orderPanel.Controls.Add(this.OrderConfListBox);
             this.orderPanel.Controls.Add(this.label4);
-            this.orderPanel.Location = new System.Drawing.Point(387, 303);
+            this.orderPanel.Location = new System.Drawing.Point(419, 297);
             this.orderPanel.Name = "orderPanel";
             this.orderPanel.Size = new System.Drawing.Size(258, 358);
             this.orderPanel.TabIndex = 48;
@@ -626,6 +614,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(17, 98);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(32, 13);
@@ -635,6 +624,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(20, 72);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 13);
@@ -644,6 +634,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(81, 50);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(50, 13);
@@ -652,6 +643,7 @@
             // 
             // OrderConfListBox
             // 
+            this.OrderConfListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OrderConfListBox.FormattingEnabled = true;
             this.OrderConfListBox.Location = new System.Drawing.Point(20, 114);
             this.OrderConfListBox.Name = "OrderConfListBox";
@@ -661,7 +653,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(55, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 24);
@@ -712,7 +704,6 @@
         private System.Windows.Forms.Button btnMyAccount;
         private System.Windows.Forms.Panel panelAccount;
         private System.Windows.Forms.Button btnMyOrders;
-        private System.Windows.Forms.Button btnMyCart;
         private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Panel panelResources;
         private System.Windows.Forms.Button btnAboutUs;
