@@ -5,24 +5,16 @@ namespace CSE412_Group17.controllers {
     class UserCTRL {
 
         public List<User> getAllUsers() {
-            List<User> output;
-
             DBSelector selector = new DBSelector();
 
-            output = selector.getRows<User>("SELECT * FROM \"User\"");
-
-            return output;
+            return selector.getRows<User>("SELECT * FROM \"User\"");
         }
 
 
         public User getUserByID(int ID) {
-            User output;
-
             DBSelector selector = new DBSelector();
 
-            output = selector.getRow<User>("SELECT * FROM \"User\" WHERE \"ID\"= '" + ID + "'");
-
-            return output;
+            return selector.getRow<User>("SELECT * FROM \"User\" WHERE \"ID\"= '" + ID + "'");
         }
 
 
@@ -37,8 +29,16 @@ namespace CSE412_Group17.controllers {
         public void changeUser(User theUser) {
             DBModifier modder = new DBModifier();
 
-            modder 
-
+            modder.modifyRows("UPDATE \"User\" SET " + 
+                "\"FirstName\" = '" + theUser.FirstName + "'," +
+                "\"LastName\"  = '" + theUser.LastName + "'," +
+                "\"Email\" = '" + theUser.Email + "'," +
+                "\"PhoneNumber\" = '" +theUser.PhoneNumber + "'," +
+                "\"DateOfBirth\" = '" + theUser.DateOfBirth + "'," + 
+                "\"IsAdmin\" = '" + theUser.IsAdmin + "'," +
+                "\"Gender\" = " + theUser.Gender + "'," + 
+                "\"Address\" = '" + theUser.Address + "'" + 
+                "WHERE \"UserID\" = '" + theUser.ID + "'");
         }
 
 
