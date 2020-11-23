@@ -69,7 +69,7 @@ namespace CSE412_Group17
             UserCTRL users = new UserCTRL();
             foreach (User u in users.getAllUsers())
             {
-                UsersBox.Items.Add(u.FirstName + " " + u.LastName + " " + u.Address);
+                UsersBox.Items.Add(u);
             }
         }
 
@@ -94,6 +94,14 @@ namespace CSE412_Group17
             UserCTRL userctrl = new UserCTRL();
             userctrl.addUser(user, user.ID);
             MessageBox.Show("NEW USER ADDED");
+            FirstNameBox.Text = "";
+            LastNameBox.Text = "";
+            PhoneNumberBox.Text = "";
+            AddressBox.Text = "";
+            EmailBox.Text = "";
+            MaleButton.Checked = false;
+            UsernameBox.Text = "";
+            PasswordBox.Text = "";
         }
 
         private void EditUserButton_Click(object sender, EventArgs e)
@@ -129,6 +137,12 @@ namespace CSE412_Group17
             UserCTRL userctrl = new UserCTRL();
             userctrl.changeUser(selectedUser);
             MessageBox.Show("USER INFO UPDATED");
+            EditFirstNameBox.Text = "";
+            EditLastNameBox.Text = "";
+            EditAddressBox.Text = "";
+            EditEmailBox.Text = "";
+            EditPhoneNumberBox.Text = "";
+            EditAdminBox.Checked = false;
         }
     }
 }
