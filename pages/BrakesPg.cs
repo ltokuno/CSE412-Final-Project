@@ -13,8 +13,8 @@ namespace CSE412_Group17
 {
     public partial class BrakesPg : Form
     {
-        public static string brakeItem = null;
-        public static int brakeQuantity = 0; // # of items to add to cart
+        public static string item = null;
+        public static int quantity = 0; // # of items to add to cart
 
         public BrakesPg()
         {
@@ -24,18 +24,12 @@ namespace CSE412_Group17
         private void btnParts_Click(object sender, EventArgs e)
         {
 
-            if(panelParts.Height == 313)
-            {
+            this.Hide();
 
-                panelParts.Height = 52;
+            BrakesPg brakes = new BrakesPg();
 
-            }
-            else
-            {
+            brakes.Show();
 
-                panelParts.Height = 313;
-
-            }
         }
 
         private void btnMyAccount_Click(object sender, EventArgs e)
@@ -159,43 +153,6 @@ namespace CSE412_Group17
 
         }
 
-        private void btnAddToCart_Cork_Click(object sender, EventArgs e)
-        {
-
-            brakeItem = lblCork.Text;
-            // show add to cart and quantity to add
-            comboBoxQuantity.Visible = true;
-            btnAddToCart.Visible = true;
-
-        }
-
-        private void btnAddToCart_Clark_Click(object sender, EventArgs e)
-        {
-            brakeItem = lblClark.Text;
-            // show add to cart and quantity to add
-            comboBoxQuantity.Visible = true;
-            btnAddToCart.Visible = true;
-
-        }
-
-        private void btnAddToCart_Hammer_Click(object sender, EventArgs e)
-        {
-            brakeItem = lblHammer.Text;
-            // show add to cart and quantity to add
-            comboBoxQuantity.Visible = true;
-            btnAddToCart.Visible = true;
-
-        }
-
-        private void btnAddToCart_Muddy_Click(object sender, EventArgs e)
-        {
-            brakeItem = lblMuddy.Text;
-            // show add to cart and quantity to add
-            comboBoxQuantity.Visible = true;
-            btnAddToCart.Visible = true;
-
-        }
-
         private void btnAboutUs_Click(object sender, EventArgs e)
         {
 
@@ -210,23 +167,38 @@ namespace CSE412_Group17
         private void comboBoxQuantity_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            brakeQuantity = Convert.ToInt32(comboBoxQuantity.Text);
+            quantity = Convert.ToInt32(comboBoxQuantity.Text);
 
         }
 
         private void btnAddToCart_Click(object sender, EventArgs e)
         {
+            string msg = null;
 
-            string msg = String.Format("Quantity of {0} of {1} was added to the cart!", brakeQuantity, brakeItem);
+            if (quantity != 0)
+            {
 
-            // display success message
-            MessageBox.Show(msg);
+                msg = String.Format("Quantity of {0} of {1} was added to the cart!", quantity, item);
 
-            // hide cart buttons now that item is added
-            comboBoxQuantity.Visible = false;
-            btnAddToCart.Visible = false;
+                // display success message
+                MessageBox.Show(msg);
 
-            comboBoxQuantity.Text = "Quantity"; // reset value
+                // hide cart buttons now that item is added
+                comboBoxQuantity.Visible = false;
+                btnAddToCart.Visible = false;
+
+                comboBoxQuantity.Text = "Quantity"; // reset value
+
+            }
+            else
+            {
+
+                msg = String.Format("Please add a quantity you want to buy for {0}.", item);
+
+                // display failure message
+                MessageBox.Show(msg);
+
+            }
 
         }
 
@@ -288,6 +260,16 @@ namespace CSE412_Group17
 
             foreach (String s in items.getItemCategories())
                 comboBox1.Items.Add(s);
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            item = listBox1.Text;
+            // show add to cart and quantity to add
+            comboBoxQuantity.Visible = true;
+            btnAddToCart.Visible = true;
+
         }
     }
 }
