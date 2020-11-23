@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Dapper;
+using Npgsql;
 
 namespace CSE412_Group17.dal {
     class DBModifier {
@@ -12,7 +13,7 @@ namespace CSE412_Group17.dal {
 
         public void modifyRows(string sql) {
 
-            using (SqlConnection connection = new SqlConnection(connectionString)) {
+            using (var connection = new NpgsqlConnection(connectionString)) {
                 connection.Execute(sql);
             }
 

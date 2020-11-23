@@ -279,7 +279,7 @@ namespace CSE412_Group17
 
             listBox1.Items.Clear();
             foreach(Item i in items.geItemsByCategory(comboBox1.Text))
-                listBox1.Items.Add(i.ItemName);
+                listBox1.Items.Add(i);
         }
 
         private void BrakesPg_Load(object sender, EventArgs e) {

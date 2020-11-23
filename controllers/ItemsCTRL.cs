@@ -23,6 +23,7 @@ namespace CSE412_Group17.controllers {
             return selector.getRow<Item>("SELECT * FROM \"Item\" WHERE \"ItemID\"= '" + ID + "'");
         }
 
+
         public void addItem(Item theItem, Vendor theVendor) {
             DBModifier modder = new DBModifier();
             DBSelector selector = new DBSelector();
