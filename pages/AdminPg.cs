@@ -28,11 +28,6 @@ namespace CSE412_Group17
 
         private void AdminPg_Load(object sender, EventArgs e)
         {
-            UserCTRL users = new UserCTRL();
-            foreach (User u in users.getAllUsers())
-            {
-                UsersBox.Items.Add(u);
-            }
                 
         }
     
@@ -143,6 +138,54 @@ namespace CSE412_Group17
             EditEmailBox.Text = "";
             EditPhoneNumberBox.Text = "";
             EditAdminBox.Checked = false;
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void GetLoginCredentialsButton_Click(object sender, EventArgs e)
+        {
+            LoginCTRL loginctrl = new LoginCTRL();
+            foreach (Login l in loginctrl.getAllLogins())
+            {
+                LoginBox.Items.Add(l);
+            }
+        }
+
+        private void EditSelectedCredentialButton_Click(object sender, EventArgs e)
+        {
+            Login selectedLogin = (Login)LoginBox.SelectedItem;
+            EditUsernameBox.Text = selectedLogin.UserName;
+            EditPasswordBox.Text = selectedLogin.Password;
+            EditPasswordBox2.Text = selectedLogin.Password;
+        }
+
+        private void EditCredentialsSaveButton_Click(object sender, EventArgs e)
+        {
+            if (EditPasswordBox.Text == EditPasswordBox2.Text)
+            {
+                Login selectedLogin = (Login)LoginBox.SelectedItem;
+                UpdateCredentials(selectedLogin);
+            }
+            else
+            {
+                MessageBox.Show("PASSWORDS MUST MATCH");
+            }
+        }
+
+        private void UpdateCredentials(Login selectedLogin)
+        {
+            selectedLogin.UserName = EditUsernameBox.Text;
+            selectedLogin.Password = EditPasswordBox.Text;
+            LoginCTRL loginctrl = new LoginCTRL();
+            loginctrl.changeLogin(selectedLogin);
+            MessageBox.Show("CREDENTIALS UPDATED");
+            EditUsernameBox.Text = "";
+            EditPasswordBox.Text = "";
+            EditPasswordBox2.Text = "";
+            LoginBox.Items.Clear();
         }
     }
 }
