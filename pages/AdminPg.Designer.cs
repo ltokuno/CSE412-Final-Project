@@ -55,6 +55,20 @@
             this.SaveUserButton = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.GetAllUsersButton = new System.Windows.Forms.Button();
+            this.EditUserButton = new System.Windows.Forms.Button();
+            this.EditFirstNameLabel = new System.Windows.Forms.Label();
+            this.EditLastNameLabel = new System.Windows.Forms.Label();
+            this.EditAddressLabel = new System.Windows.Forms.Label();
+            this.EditPhoneNumberLabel = new System.Windows.Forms.Label();
+            this.EditEmailLabel = new System.Windows.Forms.Label();
+            this.EditAdminLabel = new System.Windows.Forms.Label();
+            this.EditFirstNameBox = new System.Windows.Forms.TextBox();
+            this.EditLastNameBox = new System.Windows.Forms.TextBox();
+            this.EditAddressBox = new System.Windows.Forms.TextBox();
+            this.EditPhoneNumberBox = new System.Windows.Forms.TextBox();
+            this.EditEmailBox = new System.Windows.Forms.TextBox();
+            this.EditAdminBox = new System.Windows.Forms.CheckBox();
+            this.EditSaveChangesButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -88,9 +102,9 @@
             // 
             this.UsersBox.FormattingEnabled = true;
             this.UsersBox.ItemHeight = 16;
-            this.UsersBox.Location = new System.Drawing.Point(769, 142);
+            this.UsersBox.Location = new System.Drawing.Point(688, 142);
             this.UsersBox.Name = "UsersBox";
-            this.UsersBox.Size = new System.Drawing.Size(401, 356);
+            this.UsersBox.Size = new System.Drawing.Size(482, 356);
             this.UsersBox.TabIndex = 31;
             this.UsersBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
@@ -178,14 +192,14 @@
             // 
             this.AddressBox.Location = new System.Drawing.Point(426, 227);
             this.AddressBox.Name = "AddressBox";
-            this.AddressBox.Size = new System.Drawing.Size(100, 22);
+            this.AddressBox.Size = new System.Drawing.Size(224, 22);
             this.AddressBox.TabIndex = 42;
             // 
             // EmailBox
             // 
             this.EmailBox.Location = new System.Drawing.Point(426, 256);
             this.EmailBox.Name = "EmailBox";
-            this.EmailBox.Size = new System.Drawing.Size(100, 22);
+            this.EmailBox.Size = new System.Drawing.Size(224, 22);
             this.EmailBox.TabIndex = 43;
             // 
             // DOBBox
@@ -297,7 +311,7 @@
             // 
             // GetAllUsersButton
             // 
-            this.GetAllUsersButton.Location = new System.Drawing.Point(769, 504);
+            this.GetAllUsersButton.Location = new System.Drawing.Point(688, 504);
             this.GetAllUsersButton.Name = "GetAllUsersButton";
             this.GetAllUsersButton.Size = new System.Drawing.Size(130, 23);
             this.GetAllUsersButton.TabIndex = 56;
@@ -305,11 +319,146 @@
             this.GetAllUsersButton.UseVisualStyleBackColor = true;
             this.GetAllUsersButton.Click += new System.EventHandler(this.GetAllUsersButton_Click);
             // 
+            // EditUserButton
+            // 
+            this.EditUserButton.Location = new System.Drawing.Point(833, 504);
+            this.EditUserButton.Name = "EditUserButton";
+            this.EditUserButton.Size = new System.Drawing.Size(147, 23);
+            this.EditUserButton.TabIndex = 57;
+            this.EditUserButton.Text = "Edit Selected User";
+            this.EditUserButton.UseVisualStyleBackColor = true;
+            this.EditUserButton.Click += new System.EventHandler(this.EditUserButton_Click);
+            // 
+            // EditFirstNameLabel
+            // 
+            this.EditFirstNameLabel.AutoSize = true;
+            this.EditFirstNameLabel.Location = new System.Drawing.Point(697, 552);
+            this.EditFirstNameLabel.Name = "EditFirstNameLabel";
+            this.EditFirstNameLabel.Size = new System.Drawing.Size(76, 17);
+            this.EditFirstNameLabel.TabIndex = 58;
+            this.EditFirstNameLabel.Text = "First Name";
+            // 
+            // EditLastNameLabel
+            // 
+            this.EditLastNameLabel.AutoSize = true;
+            this.EditLastNameLabel.Location = new System.Drawing.Point(697, 582);
+            this.EditLastNameLabel.Name = "EditLastNameLabel";
+            this.EditLastNameLabel.Size = new System.Drawing.Size(76, 17);
+            this.EditLastNameLabel.TabIndex = 59;
+            this.EditLastNameLabel.Text = "Last Name";
+            // 
+            // EditAddressLabel
+            // 
+            this.EditAddressLabel.AutoSize = true;
+            this.EditAddressLabel.Location = new System.Drawing.Point(697, 610);
+            this.EditAddressLabel.Name = "EditAddressLabel";
+            this.EditAddressLabel.Size = new System.Drawing.Size(60, 17);
+            this.EditAddressLabel.TabIndex = 60;
+            this.EditAddressLabel.Text = "Address";
+            // 
+            // EditPhoneNumberLabel
+            // 
+            this.EditPhoneNumberLabel.AutoSize = true;
+            this.EditPhoneNumberLabel.Location = new System.Drawing.Point(697, 637);
+            this.EditPhoneNumberLabel.Name = "EditPhoneNumberLabel";
+            this.EditPhoneNumberLabel.Size = new System.Drawing.Size(103, 17);
+            this.EditPhoneNumberLabel.TabIndex = 61;
+            this.EditPhoneNumberLabel.Text = "Phone Number";
+            // 
+            // EditEmailLabel
+            // 
+            this.EditEmailLabel.AutoSize = true;
+            this.EditEmailLabel.Location = new System.Drawing.Point(697, 664);
+            this.EditEmailLabel.Name = "EditEmailLabel";
+            this.EditEmailLabel.Size = new System.Drawing.Size(42, 17);
+            this.EditEmailLabel.TabIndex = 62;
+            this.EditEmailLabel.Text = "Email";
+            this.EditEmailLabel.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // EditAdminLabel
+            // 
+            this.EditAdminLabel.AutoSize = true;
+            this.EditAdminLabel.Location = new System.Drawing.Point(697, 693);
+            this.EditAdminLabel.Name = "EditAdminLabel";
+            this.EditAdminLabel.Size = new System.Drawing.Size(113, 17);
+            this.EditAdminLabel.TabIndex = 63;
+            this.EditAdminLabel.Text = "Is Administrator?";
+            // 
+            // EditFirstNameBox
+            // 
+            this.EditFirstNameBox.Location = new System.Drawing.Point(833, 552);
+            this.EditFirstNameBox.Name = "EditFirstNameBox";
+            this.EditFirstNameBox.Size = new System.Drawing.Size(179, 22);
+            this.EditFirstNameBox.TabIndex = 64;
+            // 
+            // EditLastNameBox
+            // 
+            this.EditLastNameBox.Location = new System.Drawing.Point(833, 581);
+            this.EditLastNameBox.Name = "EditLastNameBox";
+            this.EditLastNameBox.Size = new System.Drawing.Size(179, 22);
+            this.EditLastNameBox.TabIndex = 65;
+            // 
+            // EditAddressBox
+            // 
+            this.EditAddressBox.Location = new System.Drawing.Point(833, 610);
+            this.EditAddressBox.Name = "EditAddressBox";
+            this.EditAddressBox.Size = new System.Drawing.Size(337, 22);
+            this.EditAddressBox.TabIndex = 66;
+            // 
+            // EditPhoneNumberBox
+            // 
+            this.EditPhoneNumberBox.Location = new System.Drawing.Point(833, 638);
+            this.EditPhoneNumberBox.Name = "EditPhoneNumberBox";
+            this.EditPhoneNumberBox.Size = new System.Drawing.Size(179, 22);
+            this.EditPhoneNumberBox.TabIndex = 67;
+            // 
+            // EditEmailBox
+            // 
+            this.EditEmailBox.Location = new System.Drawing.Point(833, 667);
+            this.EditEmailBox.Name = "EditEmailBox";
+            this.EditEmailBox.Size = new System.Drawing.Size(179, 22);
+            this.EditEmailBox.TabIndex = 68;
+            // 
+            // EditAdminBox
+            // 
+            this.EditAdminBox.AutoSize = true;
+            this.EditAdminBox.Location = new System.Drawing.Point(833, 693);
+            this.EditAdminBox.Name = "EditAdminBox";
+            this.EditAdminBox.Size = new System.Drawing.Size(69, 21);
+            this.EditAdminBox.TabIndex = 69;
+            this.EditAdminBox.Text = "Admin";
+            this.EditAdminBox.UseVisualStyleBackColor = true;
+            this.EditAdminBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // EditSaveChangesButton
+            // 
+            this.EditSaveChangesButton.Location = new System.Drawing.Point(1005, 715);
+            this.EditSaveChangesButton.Name = "EditSaveChangesButton";
+            this.EditSaveChangesButton.Size = new System.Drawing.Size(117, 23);
+            this.EditSaveChangesButton.TabIndex = 70;
+            this.EditSaveChangesButton.Text = "Save Changes";
+            this.EditSaveChangesButton.UseVisualStyleBackColor = true;
+            this.EditSaveChangesButton.Click += new System.EventHandler(this.EditSaveChangesButton_Click);
+            // 
             // AdminBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1409, 864);
+            this.Controls.Add(this.EditSaveChangesButton);
+            this.Controls.Add(this.EditAdminBox);
+            this.Controls.Add(this.EditEmailBox);
+            this.Controls.Add(this.EditPhoneNumberBox);
+            this.Controls.Add(this.EditAddressBox);
+            this.Controls.Add(this.EditLastNameBox);
+            this.Controls.Add(this.EditFirstNameBox);
+            this.Controls.Add(this.EditAdminLabel);
+            this.Controls.Add(this.EditEmailLabel);
+            this.Controls.Add(this.EditPhoneNumberLabel);
+            this.Controls.Add(this.EditAddressLabel);
+            this.Controls.Add(this.EditLastNameLabel);
+            this.Controls.Add(this.EditFirstNameLabel);
+            this.Controls.Add(this.EditUserButton);
             this.Controls.Add(this.GetAllUsersButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.SaveUserButton);
@@ -374,5 +523,19 @@
         private System.Windows.Forms.Button SaveUserButton;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button GetAllUsersButton;
+        private System.Windows.Forms.Button EditUserButton;
+        private System.Windows.Forms.Label EditFirstNameLabel;
+        private System.Windows.Forms.Label EditLastNameLabel;
+        private System.Windows.Forms.Label EditAddressLabel;
+        private System.Windows.Forms.Label EditPhoneNumberLabel;
+        private System.Windows.Forms.Label EditEmailLabel;
+        private System.Windows.Forms.Label EditAdminLabel;
+        private System.Windows.Forms.TextBox EditFirstNameBox;
+        private System.Windows.Forms.TextBox EditLastNameBox;
+        private System.Windows.Forms.TextBox EditAddressBox;
+        private System.Windows.Forms.TextBox EditPhoneNumberBox;
+        private System.Windows.Forms.TextBox EditEmailBox;
+        private System.Windows.Forms.CheckBox EditAdminBox;
+        private System.Windows.Forms.Button EditSaveChangesButton;
     }
 }

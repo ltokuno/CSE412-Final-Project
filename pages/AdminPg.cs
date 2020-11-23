@@ -31,7 +31,7 @@ namespace CSE412_Group17
             UserCTRL users = new UserCTRL();
             foreach (User u in users.getAllUsers())
             {
-                UsersBox.Items.Add(u.FirstName + " " + u.LastName + " " + u.Address);
+                UsersBox.Items.Add(u);
             }
                 
         }
@@ -82,20 +82,53 @@ namespace CSE412_Group17
             user.PhoneNumber = PhoneNumberBox.Text;
             user.Address = AddressBox.Text;
             user.Email = EmailBox.Text;
-            user.DateOfBirth = new DateTime();
+            user.DateOfBirth = DateTime.Now;
             if (MaleButton.Checked)
             {
                 user.Gender = "male";
             } else
                 user.Gender = "female";
             user.IsAdmin = AdminCheckBox.Checked;
-            MessageBox.Show("BEFORE LOGIN");
             LoginCTRL loginctrl = new LoginCTRL();
             user.ID = loginctrl.saveLoginInfo(UsernameBox.Text, PasswordBox.Text);
-            MessageBox.Show("AFTER LOGIN");
             UserCTRL userctrl = new UserCTRL();
             userctrl.addUser(user, user.ID);
-            MessageBox.Show("AFTER USER");
+            MessageBox.Show("NEW USER ADDED");
+        }
+
+        private void EditUserButton_Click(object sender, EventArgs e)
+        {
+            User selectedUser = (User)UsersBox.SelectedItem;
+            EditFirstNameBox.Text = selectedUser.FirstName;
+            EditLastNameBox.Text = selectedUser.LastName;
+            EditAddressBox.Text = selectedUser.Address;
+            EditEmailBox.Text = selectedUser.Email;
+            EditPhoneNumberBox.Text = selectedUser.PhoneNumber;
+            EditAdminBox.Checked = selectedUser.IsAdmin;
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EditSaveChangesButton_Click(object sender, EventArgs e)
+        {
+            User selectedUser = (User)UsersBox.SelectedItem;
+            selectedUser.FirstName = EditFirstNameBox.Text;
+            selectedUser.LastName = EditLastNameBox.Text;
+            selectedUser.Address = EditAddressBox.Text;
+            selectedUser.Email = EditEmailBox.Text;
+            selectedUser.PhoneNumber = EditPhoneNumberBox.Text;
+            selectedUser.IsAdmin = EditAdminBox.Checked;
+            UserCTRL userctrl = new UserCTRL();
+            userctrl.changeUser(selectedUser);
+            MessageBox.Show("USER INFO UPDATED");
         }
     }
 }

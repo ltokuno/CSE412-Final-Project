@@ -34,11 +34,11 @@ namespace CSE412_Group17.controllers {
                 "\"LastName\"  = '" + theUser.LastName + "'," +
                 "\"Email\" = '" + theUser.Email + "'," +
                 "\"PhoneNumber\" = '" +theUser.PhoneNumber + "'," +
-                "\"DateOfBirth\" = '" + theUser.DateOfBirth + "'," + 
+                "\"DateOfBirth\" = '" + theUser.DateOfBirth.Date + "'," + 
                 "\"IsAdmin\" = '" + theUser.IsAdmin + "'," +
-                "\"Gender\" = " + theUser.Gender + "'," + 
+                "\"Gender\" = '" + theUser.Gender + "'," + 
                 "\"Address\" = '" + theUser.Address + "'" + 
-                "WHERE \"UserID\" = '" + theUser.ID + "'");
+                " WHERE \"ID\" = '" + theUser.ID + "'");
         }
 
 
