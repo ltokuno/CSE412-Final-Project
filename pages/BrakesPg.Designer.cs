@@ -50,25 +50,37 @@
             this.lblBrakesMessage2 = new System.Windows.Forms.Label();
             this.lblPartsDisplay = new System.Windows.Forms.Label();
             this.btnHomePage = new System.Windows.Forms.Button();
-            this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnMyProfile = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.ShoppingCart = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.lblQty = new System.Windows.Forms.Label();
-            this.quantityUpDn = new System.Windows.Forms.NumericUpDown();
-            this.btnCartClear = new System.Windows.Forms.Button();
-            this.btnCheckout = new System.Windows.Forms.Button();
-            this.btnDeletItem = new System.Windows.Forms.Button();
+            this.shoppingPanel = new System.Windows.Forms.Panel();
             this.bntChangeQty = new System.Windows.Forms.Button();
+            this.btnDeletItem = new System.Windows.Forms.Button();
+            this.btnCheckout = new System.Windows.Forms.Button();
+            this.btnCartClear = new System.Windows.Forms.Button();
+            this.quantityUpDn = new System.Windows.Forms.NumericUpDown();
+            this.lblQty = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ShoppingCart = new System.Windows.Forms.ListBox();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnAddToCart = new System.Windows.Forms.Button();
+            this.orderPanel = new System.Windows.Forms.Panel();
+            this.btnOrderDone = new System.Windows.Forms.Button();
+            this.lblConfNumber = new System.Windows.Forms.Label();
+            this.lblOrderID = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
             this.panelResources.SuspendLayout();
+            this.shoppingPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantityUpDn)).BeginInit();
+            this.orderPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnParts
@@ -371,7 +383,7 @@
             // 
             this.lblPartsDisplay.AutoSize = true;
             this.lblPartsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPartsDisplay.Location = new System.Drawing.Point(125, 323);
+            this.lblPartsDisplay.Location = new System.Drawing.Point(7, 5);
             this.lblPartsDisplay.Name = "lblPartsDisplay";
             this.lblPartsDisplay.Size = new System.Drawing.Size(51, 20);
             this.lblPartsDisplay.TabIndex = 20;
@@ -390,17 +402,6 @@
             this.btnHomePage.UseVisualStyleBackColor = true;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
-            // btnAddToCart
-            // 
-            this.btnAddToCart.Location = new System.Drawing.Point(403, 439);
-            this.btnAddToCart.Name = "btnAddToCart";
-            this.btnAddToCart.Size = new System.Drawing.Size(96, 23);
-            this.btnAddToCart.TabIndex = 31;
-            this.btnAddToCart.Text = "Add To Cart";
-            this.btnAddToCart.UseVisualStyleBackColor = true;
-            this.btnAddToCart.Visible = false;
-            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
-            // 
             // btnMyProfile
             // 
             this.btnMyProfile.BackColor = System.Drawing.Color.Gray;
@@ -416,80 +417,71 @@
             this.btnMyProfile.UseVisualStyleBackColor = false;
             this.btnMyProfile.Click += new System.EventHandler(this.btnMyProfile_Click);
             // 
-            // comboBox1
+            // shoppingPanel
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(184, 375);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 33;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.shoppingPanel.Controls.Add(this.bntChangeQty);
+            this.shoppingPanel.Controls.Add(this.btnDeletItem);
+            this.shoppingPanel.Controls.Add(this.btnCheckout);
+            this.shoppingPanel.Controls.Add(this.btnCartClear);
+            this.shoppingPanel.Controls.Add(this.quantityUpDn);
+            this.shoppingPanel.Controls.Add(this.lblQty);
+            this.shoppingPanel.Controls.Add(this.lblTotal);
+            this.shoppingPanel.Controls.Add(this.label3);
+            this.shoppingPanel.Controls.Add(this.label2);
+            this.shoppingPanel.Controls.Add(this.label1);
+            this.shoppingPanel.Controls.Add(this.ShoppingCart);
+            this.shoppingPanel.Controls.Add(this.listBox1);
+            this.shoppingPanel.Controls.Add(this.comboBox1);
+            this.shoppingPanel.Controls.Add(this.btnAddToCart);
+            this.shoppingPanel.Controls.Add(this.lblPartsDisplay);
+            this.shoppingPanel.Location = new System.Drawing.Point(153, 312);
+            this.shoppingPanel.Name = "shoppingPanel";
+            this.shoppingPanel.Size = new System.Drawing.Size(749, 280);
+            this.shoppingPanel.TabIndex = 47;
             // 
-            // listBox1
+            // bntChangeQty
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(129, 402);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(268, 212);
-            this.listBox1.TabIndex = 34;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.bntChangeQty.Location = new System.Drawing.Point(670, 56);
+            this.bntChangeQty.Name = "bntChangeQty";
+            this.bntChangeQty.Size = new System.Drawing.Size(75, 23);
+            this.bntChangeQty.TabIndex = 60;
+            this.bntChangeQty.Text = "Change Qty";
+            this.bntChangeQty.UseVisualStyleBackColor = true;
+            this.bntChangeQty.Click += new System.EventHandler(this.button2_Click);
             // 
-            // ShoppingCart
+            // btnDeletItem
             // 
-            this.ShoppingCart.FormattingEnabled = true;
-            this.ShoppingCart.Location = new System.Drawing.Point(583, 404);
-            this.ShoppingCart.Name = "ShoppingCart";
-            this.ShoppingCart.Size = new System.Drawing.Size(199, 212);
-            this.ShoppingCart.TabIndex = 35;
+            this.btnDeletItem.Location = new System.Drawing.Point(670, 85);
+            this.btnDeletItem.Name = "btnDeletItem";
+            this.btnDeletItem.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletItem.TabIndex = 59;
+            this.btnDeletItem.Text = "Delete Item";
+            this.btnDeletItem.UseVisualStyleBackColor = true;
+            this.btnDeletItem.Click += new System.EventHandler(this.btnDeletItem_Click);
             // 
-            // label1
+            // btnCheckout
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(126, 378);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Category:";
+            this.btnCheckout.Location = new System.Drawing.Point(670, 143);
+            this.btnCheckout.Name = "btnCheckout";
+            this.btnCheckout.Size = new System.Drawing.Size(75, 23);
+            this.btnCheckout.TabIndex = 58;
+            this.btnCheckout.Text = "Place Order";
+            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.btnCheckout.Click += new System.EventHandler(this.btnCheckout_Click);
             // 
-            // label2
+            // btnCartClear
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(580, 388);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "Your Cart";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(679, 388);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 13);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "Total: ";
-            // 
-            // lblTotal
-            // 
-            this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(715, 388);
-            this.lblTotal.Name = "lblTotal";
-            this.lblTotal.Size = new System.Drawing.Size(0, 13);
-            this.lblTotal.TabIndex = 39;
-            // 
-            // lblQty
-            // 
-            this.lblQty.AutoSize = true;
-            this.lblQty.Location = new System.Drawing.Point(403, 404);
-            this.lblQty.Name = "lblQty";
-            this.lblQty.Size = new System.Drawing.Size(49, 13);
-            this.lblQty.TabIndex = 41;
-            this.lblQty.Text = "Quantity:";
-            this.lblQty.Visible = false;
+            this.btnCartClear.Location = new System.Drawing.Point(670, 114);
+            this.btnCartClear.Name = "btnCartClear";
+            this.btnCartClear.Size = new System.Drawing.Size(75, 23);
+            this.btnCartClear.TabIndex = 57;
+            this.btnCartClear.Text = "Clear Cart";
+            this.btnCartClear.UseVisualStyleBackColor = true;
+            this.btnCartClear.Click += new System.EventHandler(this.btnCartClear_Click);
             // 
             // quantityUpDn
             // 
-            this.quantityUpDn.Location = new System.Drawing.Point(455, 402);
+            this.quantityUpDn.Location = new System.Drawing.Point(337, 56);
             this.quantityUpDn.Minimum = new decimal(new int[] {
             1,
             0,
@@ -497,7 +489,7 @@
             0});
             this.quantityUpDn.Name = "quantityUpDn";
             this.quantityUpDn.Size = new System.Drawing.Size(44, 20);
-            this.quantityUpDn.TabIndex = 42;
+            this.quantityUpDn.TabIndex = 56;
             this.quantityUpDn.Value = new decimal(new int[] {
             1,
             0,
@@ -505,69 +497,187 @@
             0});
             this.quantityUpDn.Visible = false;
             // 
-            // btnCartClear
+            // lblQty
             // 
-            this.btnCartClear.Location = new System.Drawing.Point(788, 460);
-            this.btnCartClear.Name = "btnCartClear";
-            this.btnCartClear.Size = new System.Drawing.Size(75, 23);
-            this.btnCartClear.TabIndex = 43;
-            this.btnCartClear.Text = "Clear Cart";
-            this.btnCartClear.UseVisualStyleBackColor = true;
+            this.lblQty.AutoSize = true;
+            this.lblQty.Location = new System.Drawing.Point(285, 58);
+            this.lblQty.Name = "lblQty";
+            this.lblQty.Size = new System.Drawing.Size(49, 13);
+            this.lblQty.TabIndex = 55;
+            this.lblQty.Text = "Quantity:";
+            this.lblQty.Visible = false;
             // 
-            // btnCheckout
+            // lblTotal
             // 
-            this.btnCheckout.Location = new System.Drawing.Point(788, 489);
-            this.btnCheckout.Name = "btnCheckout";
-            this.btnCheckout.Size = new System.Drawing.Size(75, 23);
-            this.btnCheckout.TabIndex = 44;
-            this.btnCheckout.Text = "Checkout";
-            this.btnCheckout.UseVisualStyleBackColor = true;
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(597, 42);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 13);
+            this.lblTotal.TabIndex = 54;
             // 
-            // btnDeletItem
+            // label3
             // 
-            this.btnDeletItem.Location = new System.Drawing.Point(788, 431);
-            this.btnDeletItem.Name = "btnDeletItem";
-            this.btnDeletItem.Size = new System.Drawing.Size(75, 23);
-            this.btnDeletItem.TabIndex = 45;
-            this.btnDeletItem.Text = "Delete Item";
-            this.btnDeletItem.UseVisualStyleBackColor = true;
-            this.btnDeletItem.Click += new System.EventHandler(this.btnDeletItem_Click);
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(561, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 53;
+            this.label3.Text = "Total: ";
             // 
-            // bntChangeQty
+            // label2
             // 
-            this.bntChangeQty.Location = new System.Drawing.Point(788, 402);
-            this.bntChangeQty.Name = "bntChangeQty";
-            this.bntChangeQty.Size = new System.Drawing.Size(75, 23);
-            this.bntChangeQty.TabIndex = 46;
-            this.bntChangeQty.Text = "Change Qty";
-            this.bntChangeQty.UseVisualStyleBackColor = true;
-            this.bntChangeQty.Click += new System.EventHandler(this.button2_Click);
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(462, 42);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Your Cart";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(8, 32);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 51;
+            this.label1.Text = "Category:";
+            // 
+            // ShoppingCart
+            // 
+            this.ShoppingCart.FormattingEnabled = true;
+            this.ShoppingCart.Location = new System.Drawing.Point(465, 58);
+            this.ShoppingCart.Name = "ShoppingCart";
+            this.ShoppingCart.Size = new System.Drawing.Size(199, 212);
+            this.ShoppingCart.TabIndex = 50;
+            // 
+            // listBox1
+            // 
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(11, 56);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(268, 212);
+            this.listBox1.TabIndex = 49;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(66, 29);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 48;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // btnAddToCart
+            // 
+            this.btnAddToCart.Location = new System.Drawing.Point(285, 93);
+            this.btnAddToCart.Name = "btnAddToCart";
+            this.btnAddToCart.Size = new System.Drawing.Size(96, 23);
+            this.btnAddToCart.TabIndex = 47;
+            this.btnAddToCart.Text = "Add To Cart";
+            this.btnAddToCart.UseVisualStyleBackColor = true;
+            this.btnAddToCart.Visible = false;
+            this.btnAddToCart.Click += new System.EventHandler(this.btnAddToCart_Click);
+            // 
+            // orderPanel
+            // 
+            this.orderPanel.Controls.Add(this.btnOrderDone);
+            this.orderPanel.Controls.Add(this.lblConfNumber);
+            this.orderPanel.Controls.Add(this.lblOrderID);
+            this.orderPanel.Controls.Add(this.label7);
+            this.orderPanel.Controls.Add(this.label6);
+            this.orderPanel.Controls.Add(this.label5);
+            this.orderPanel.Controls.Add(this.listBox2);
+            this.orderPanel.Controls.Add(this.label4);
+            this.orderPanel.Location = new System.Drawing.Point(387, 303);
+            this.orderPanel.Name = "orderPanel";
+            this.orderPanel.Size = new System.Drawing.Size(258, 358);
+            this.orderPanel.TabIndex = 48;
+            this.orderPanel.Visible = false;
+            // 
+            // btnOrderDone
+            // 
+            this.btnOrderDone.Location = new System.Drawing.Point(174, 12);
+            this.btnOrderDone.Name = "btnOrderDone";
+            this.btnOrderDone.Size = new System.Drawing.Size(73, 24);
+            this.btnOrderDone.TabIndex = 7;
+            this.btnOrderDone.Text = "Done";
+            this.btnOrderDone.UseVisualStyleBackColor = true;
+            this.btnOrderDone.Click += new System.EventHandler(this.btnOrderDone_Click);
+            // 
+            // lblConfNumber
+            // 
+            this.lblConfNumber.AutoSize = true;
+            this.lblConfNumber.Location = new System.Drawing.Point(137, 72);
+            this.lblConfNumber.Name = "lblConfNumber";
+            this.lblConfNumber.Size = new System.Drawing.Size(0, 13);
+            this.lblConfNumber.TabIndex = 6;
+            // 
+            // lblOrderID
+            // 
+            this.lblOrderID.AutoSize = true;
+            this.lblOrderID.Location = new System.Drawing.Point(137, 50);
+            this.lblOrderID.Name = "lblOrderID";
+            this.lblOrderID.Size = new System.Drawing.Size(0, 13);
+            this.lblOrderID.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(17, 98);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(32, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Items";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(20, 72);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(111, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Confirmation Number::";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(81, 50);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(50, 13);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Order ID:";
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.Location = new System.Drawing.Point(20, 114);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(213, 225);
+            this.listBox2.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(16, 10);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(104, 24);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Your Order";
             // 
             // BrakesPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 702);
-            this.Controls.Add(this.bntChangeQty);
-            this.Controls.Add(this.btnDeletItem);
-            this.Controls.Add(this.btnCheckout);
-            this.Controls.Add(this.btnCartClear);
-            this.Controls.Add(this.quantityUpDn);
-            this.Controls.Add(this.lblQty);
-            this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.ShoppingCart);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(1057, 696);
+            this.Controls.Add(this.orderPanel);
+            this.Controls.Add(this.shoppingPanel);
             this.Controls.Add(this.btnMyProfile);
-            this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.panelResources);
             this.Controls.Add(this.panelAccount);
             this.Controls.Add(this.panelParts);
             this.Controls.Add(this.btnHomePage);
-            this.Controls.Add(this.lblPartsDisplay);
             this.Controls.Add(this.lblBrakesMessage2);
             this.Controls.Add(this.lblBrakesMessage1);
             this.Name = "BrakesPg";
@@ -576,7 +686,11 @@
             this.panelParts.ResumeLayout(false);
             this.panelAccount.ResumeLayout(false);
             this.panelResources.ResumeLayout(false);
+            this.shoppingPanel.ResumeLayout(false);
+            this.shoppingPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantityUpDn)).EndInit();
+            this.orderPanel.ResumeLayout(false);
+            this.orderPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -605,20 +719,30 @@
         private System.Windows.Forms.Label lblBrakesMessage2;
         private System.Windows.Forms.Label lblPartsDisplay;
         private System.Windows.Forms.Button btnHomePage;
-        private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.Button btnMyProfile;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox ShoppingCart;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label lblTotal;
-        private System.Windows.Forms.Label lblQty;
-        private System.Windows.Forms.NumericUpDown quantityUpDn;
-        private System.Windows.Forms.Button btnCartClear;
-        private System.Windows.Forms.Button btnCheckout;
-        private System.Windows.Forms.Button btnDeletItem;
+        private System.Windows.Forms.Panel shoppingPanel;
         private System.Windows.Forms.Button bntChangeQty;
+        private System.Windows.Forms.Button btnDeletItem;
+        private System.Windows.Forms.Button btnCheckout;
+        private System.Windows.Forms.Button btnCartClear;
+        private System.Windows.Forms.NumericUpDown quantityUpDn;
+        private System.Windows.Forms.Label lblQty;
+        private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ListBox ShoppingCart;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnAddToCart;
+        private System.Windows.Forms.Panel orderPanel;
+        private System.Windows.Forms.Label lblConfNumber;
+        private System.Windows.Forms.Label lblOrderID;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnOrderDone;
     }
 }

@@ -25,12 +25,13 @@ namespace CSE412_Group17
 
         private void btnParts_Click(object sender, EventArgs e)
         {
-
-            this.Hide();
+            shoppingPanel.Visible = true;
+            orderPanel.Visible = false;
+            /*this.Hide();
 
             BrakesPg brakes = new BrakesPg();
 
-            brakes.Show();
+            brakes.Show();*/
 
         }
 
@@ -268,7 +269,7 @@ namespace CSE412_Group17
 
             LineItem tmp;
 
-            foreach (Object i in ShoppingCart.Items) {
+            foreach (Object i in cartItems) {
                 tmp = (LineItem)i;
 
                 output += (tmp.RetailPrice * tmp.quantity);
@@ -280,20 +281,30 @@ namespace CSE412_Group17
 
         private void btnDeletItem_Click(object sender, EventArgs e) {
             if(ShoppingCart.SelectedIndex > -1) {
-                ShoppingCart.Items.RemoveAt(ShoppingCart.SelectedIndex);
+                cartItems.RemoveAt(ShoppingCart.SelectedIndex);
             } 
         }
 
         //Change Qty in shopping cart
         private void button2_Click(object sender, EventArgs e) {
             if (ShoppingCart.SelectedIndex > - 1) {
-
+                
                 int newQty;
 
                 if(int.TryParse(Interaction.InputBox("Enter a Quantity", "Quantity"), out newQty)) {
-                    ((LineItem)ShoppingCart.SelectedItem).quantity = newQty;
-                }
 
+                    if (newQty > 0) {
+                        ((LineItem)ShoppingCart.SelectedItem).quantity = newQty;
+
+                        ShoppingCart.DataSource = null;
+                        ShoppingCart.DataSource = cartItems;
+                        ListChangedEventArgs args = new ListChangedEventArgs(
+                            ListChangedType.ItemChanged, ShoppingCart.SelectedIndex);
+                        list_ListChanged(bntChangeQty, args);
+                    } else {
+                        cartItems.RemoveAt(ShoppingCart.SelectedIndex);
+                    }
+                }
 
                 
             }
@@ -302,19 +313,54 @@ namespace CSE412_Group17
 
         //todo: update the ui controls here
         void list_ListChanged(object sender, ListChangedEventArgs e) {
-
             lblTotal.Text = totalCartPrice().ToString();
+        }
 
-            System.Console.WriteLine("You are here");
+        private void btnCartClear_Click(object sender, EventArgs e) {
+            cartItems.Clear();
+        }
 
-            //switch (e.ListChangedType) {
-            //    case ListChangedType.ItemAdded:
-            //        break;
-            //    case ListChangedType.ItemChanged:
-            //        break;
-            //    case ListChangedType.ItemDeleted:
-            //        break;
-            //}
+        private void btnCheckout_Click(object sender, EventArgs e) {
+
+            if (cartItems.Count > 0) {
+                //swap out the panels
+                shoppingPanel.Visible = !shoppingPanel.Visible;
+                orderPanel.Visible = !orderPanel.Visible;
+
+                //save the order
+                OrderCTRL orderCTRL = new OrderCTRL();
+
+                Order newOrder = new Order();
+                newOrder.ConfirmationNumber = orderCTRL.generateConfirmationNumber();
+                newOrder.OrderDate = DateAndTime.Today.Date.ToShortDateString();
+                newOrder.TotalPrice = totalCartPrice();
+                newOrder.UserID = 1; //todo: change this to the real user id
+
+                int orderId = orderCTRL.saveOrder(newOrder);
+
+                //save the items in the order
+
+                List<ItemList> newItems = new List<ItemList>();
+
+                foreach(LineItem line in cartItems) {
+                    ItemList newIL = new ItemList();
+                    newIL.ItemID = line.ItemID;
+                    newIL.OrderID = orderId;
+                    newIL.Quantity = line.quantity;
+                    newItems.Add(newIL);
+                }
+
+                orderCTRL.saveItemList(newItems);
+
+
+
+            }
+        }
+
+        private void btnOrderDone_Click(object sender, EventArgs e) {
+            //swap out the panels
+            shoppingPanel.Visible = !shoppingPanel.Visible;
+            orderPanel.Visible = !orderPanel.Visible;
         }
     } //end class
 }

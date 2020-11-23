@@ -58,12 +58,19 @@ namespace CSE412_Group17.controllers {
         }
 
 
-        public void saveOrder(Order theOrder, List<ItemList> itemLists) {
+        public int saveOrder(Order theOrder) {
+
+            DBSelector selector = new DBSelector();
+
+            return selector.getRow<int>("INSERT INTO \"Order\" (\"ConfirmationNumber\", \"OrderDateTime\", \"TotalPrice\", \"UserID\") VALUES ('" +
+                theOrder.ConfirmationNumber + "','" + theOrder.OrderDate + "','" + theOrder.TotalPrice + "','" + theOrder.UserID + "')" +
+                "RETURNING \"OrderID\"");
+        }
+
+
+        public void saveItemList(List<ItemList> itemLists) {
 
             DBModifier modder = new DBModifier();
-
-            modder.modifyRows("INSERT INTO \"Order\" (\"ConfirmationNumber\", \"OrderDateTime\", \"TotalPrice\", \"UserID\") VALUES ('" +
-                theOrder.ConfirmationNumber + "','" + theOrder.OrderDate + "','" + theOrder.TotalPrice + "','" + theOrder.UserID + "')");
 
             foreach (ItemList i in itemLists) {
                 modder.modifyRows("INSERT INTO \"ItemList\" (\"OrderID\", \"ItemID\", \"Quantity\") VALUES ('" +
