@@ -48,21 +48,18 @@
             this.btnResources = new System.Windows.Forms.Button();
             this.lblBrakesMessage1 = new System.Windows.Forms.Label();
             this.lblBrakesMessage2 = new System.Windows.Forms.Label();
-            this.lblBrakesDisplay = new System.Windows.Forms.Label();
+            this.lblPartsDisplay = new System.Windows.Forms.Label();
             this.btnHomePage = new System.Windows.Forms.Button();
-            this.lblCork = new System.Windows.Forms.Label();
-            this.lblClark = new System.Windows.Forms.Label();
-            this.lblHammer = new System.Windows.Forms.Label();
-            this.lblMuddy = new System.Windows.Forms.Label();
-            this.btnAddToCart_Cork = new System.Windows.Forms.Button();
-            this.btnAddToCart_Clark = new System.Windows.Forms.Button();
-            this.btnAddToCart_Hammer = new System.Windows.Forms.Button();
-            this.btnAddToCart_Muddy = new System.Windows.Forms.Button();
             this.comboBoxQuantity = new System.Windows.Forms.ComboBox();
             this.btnAddToCart = new System.Windows.Forms.Button();
             this.btnMyProfile = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
+            this.ShoppingCart = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblTotal = new System.Windows.Forms.Label();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
             this.panelResources.SuspendLayout();
@@ -364,15 +361,15 @@
             this.lblBrakesMessage2.Text = "Whether you are fixing up a bike or building a new one, we have the items you\'ll " +
     "need.";
             // 
-            // lblBrakesDisplay
+            // lblPartsDisplay
             // 
-            this.lblBrakesDisplay.AutoSize = true;
-            this.lblBrakesDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrakesDisplay.Location = new System.Drawing.Point(512, 286);
-            this.lblBrakesDisplay.Name = "lblBrakesDisplay";
-            this.lblBrakesDisplay.Size = new System.Drawing.Size(65, 20);
-            this.lblBrakesDisplay.TabIndex = 20;
-            this.lblBrakesDisplay.Text = "Brakes";
+            this.lblPartsDisplay.AutoSize = true;
+            this.lblPartsDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPartsDisplay.Location = new System.Drawing.Point(512, 286);
+            this.lblPartsDisplay.Name = "lblPartsDisplay";
+            this.lblPartsDisplay.Size = new System.Drawing.Size(51, 20);
+            this.lblPartsDisplay.TabIndex = 20;
+            this.lblPartsDisplay.Text = "Parts";
             // 
             // btnHomePage
             // 
@@ -387,86 +384,6 @@
             this.btnHomePage.UseVisualStyleBackColor = true;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
-            // lblCork
-            // 
-            this.lblCork.AutoSize = true;
-            this.lblCork.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCork.Location = new System.Drawing.Point(383, 380);
-            this.lblCork.Name = "lblCork";
-            this.lblCork.Size = new System.Drawing.Size(128, 20);
-            this.lblCork.TabIndex = 22;
-            this.lblCork.Text = "Cork Brake Pads";
-            // 
-            // lblClark
-            // 
-            this.lblClark.AutoSize = true;
-            this.lblClark.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClark.Location = new System.Drawing.Point(383, 417);
-            this.lblClark.Name = "lblClark";
-            this.lblClark.Size = new System.Drawing.Size(131, 20);
-            this.lblClark.TabIndex = 23;
-            this.lblClark.Text = "Clark Brake Pads";
-            // 
-            // lblHammer
-            // 
-            this.lblHammer.AutoSize = true;
-            this.lblHammer.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHammer.Location = new System.Drawing.Point(383, 454);
-            this.lblHammer.Name = "lblHammer";
-            this.lblHammer.Size = new System.Drawing.Size(156, 20);
-            this.lblHammer.TabIndex = 24;
-            this.lblHammer.Text = "Hammer Brake Pads";
-            // 
-            // lblMuddy
-            // 
-            this.lblMuddy.AutoSize = true;
-            this.lblMuddy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMuddy.Location = new System.Drawing.Point(383, 491);
-            this.lblMuddy.Name = "lblMuddy";
-            this.lblMuddy.Size = new System.Drawing.Size(142, 20);
-            this.lblMuddy.TabIndex = 25;
-            this.lblMuddy.Text = "Muddy Brake Pads";
-            // 
-            // btnAddToCart_Cork
-            // 
-            this.btnAddToCart_Cork.Location = new System.Drawing.Point(640, 377);
-            this.btnAddToCart_Cork.Name = "btnAddToCart_Cork";
-            this.btnAddToCart_Cork.Size = new System.Drawing.Size(75, 23);
-            this.btnAddToCart_Cork.TabIndex = 26;
-            this.btnAddToCart_Cork.Text = "Buy";
-            this.btnAddToCart_Cork.UseVisualStyleBackColor = true;
-            this.btnAddToCart_Cork.Click += new System.EventHandler(this.btnAddToCart_Cork_Click);
-            // 
-            // btnAddToCart_Clark
-            // 
-            this.btnAddToCart_Clark.Location = new System.Drawing.Point(640, 414);
-            this.btnAddToCart_Clark.Name = "btnAddToCart_Clark";
-            this.btnAddToCart_Clark.Size = new System.Drawing.Size(75, 23);
-            this.btnAddToCart_Clark.TabIndex = 27;
-            this.btnAddToCart_Clark.Text = "Buy";
-            this.btnAddToCart_Clark.UseVisualStyleBackColor = true;
-            this.btnAddToCart_Clark.Click += new System.EventHandler(this.btnAddToCart_Clark_Click);
-            // 
-            // btnAddToCart_Hammer
-            // 
-            this.btnAddToCart_Hammer.Location = new System.Drawing.Point(640, 451);
-            this.btnAddToCart_Hammer.Name = "btnAddToCart_Hammer";
-            this.btnAddToCart_Hammer.Size = new System.Drawing.Size(75, 23);
-            this.btnAddToCart_Hammer.TabIndex = 28;
-            this.btnAddToCart_Hammer.Text = "Buy";
-            this.btnAddToCart_Hammer.UseVisualStyleBackColor = true;
-            this.btnAddToCart_Hammer.Click += new System.EventHandler(this.btnAddToCart_Hammer_Click);
-            // 
-            // btnAddToCart_Muddy
-            // 
-            this.btnAddToCart_Muddy.Location = new System.Drawing.Point(640, 488);
-            this.btnAddToCart_Muddy.Name = "btnAddToCart_Muddy";
-            this.btnAddToCart_Muddy.Size = new System.Drawing.Size(75, 23);
-            this.btnAddToCart_Muddy.TabIndex = 29;
-            this.btnAddToCart_Muddy.Text = "Buy";
-            this.btnAddToCart_Muddy.UseVisualStyleBackColor = true;
-            this.btnAddToCart_Muddy.Click += new System.EventHandler(this.btnAddToCart_Muddy_Click);
-            // 
             // comboBoxQuantity
             // 
             this.comboBoxQuantity.FormattingEnabled = true;
@@ -474,7 +391,7 @@
             "1",
             "2",
             "3"});
-            this.comboBoxQuantity.Location = new System.Drawing.Point(805, 353);
+            this.comboBoxQuantity.Location = new System.Drawing.Point(355, 380);
             this.comboBoxQuantity.Name = "comboBoxQuantity";
             this.comboBoxQuantity.Size = new System.Drawing.Size(77, 21);
             this.comboBoxQuantity.TabIndex = 30;
@@ -484,7 +401,7 @@
             // 
             // btnAddToCart
             // 
-            this.btnAddToCart.Location = new System.Drawing.Point(805, 441);
+            this.btnAddToCart.Location = new System.Drawing.Point(355, 417);
             this.btnAddToCart.Name = "btnAddToCart";
             this.btnAddToCart.Size = new System.Drawing.Size(96, 23);
             this.btnAddToCart.TabIndex = 31;
@@ -511,7 +428,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(150, 343);
+            this.comboBox1.Location = new System.Drawing.Point(228, 343);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 33;
@@ -520,35 +437,77 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(150, 369);
+            this.listBox1.Location = new System.Drawing.Point(229, 380);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(120, 212);
             this.listBox1.TabIndex = 34;
-            
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            // 
+            // ShoppingCart
+            // 
+            this.ShoppingCart.FormattingEnabled = true;
+            this.ShoppingCart.Location = new System.Drawing.Point(631, 380);
+            this.ShoppingCart.Name = "ShoppingCart";
+            this.ShoppingCart.Size = new System.Drawing.Size(120, 212);
+            this.ShoppingCart.TabIndex = 35;
+            this.ShoppingCart.SelectedIndexChanged += new System.EventHandler(this.ShoppingCart_SelectedIndexChanged);
+            this.ShoppingCart.SizeChanged += new System.EventHandler(this.ShoppingCart_SizeChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(228, 329);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(82, 13);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Select Category";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(631, 361);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "Your Cart";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(634, 599);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(37, 13);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Total: ";
+            // 
+            // lblTotal
+            // 
+            this.lblTotal.AutoSize = true;
+            this.lblTotal.Location = new System.Drawing.Point(678, 599);
+            this.lblTotal.Name = "lblTotal";
+            this.lblTotal.Size = new System.Drawing.Size(0, 13);
+            this.lblTotal.TabIndex = 39;
             // 
             // BrakesPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 702);
+            this.Controls.Add(this.lblTotal);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ShoppingCart);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnMyProfile);
             this.Controls.Add(this.btnAddToCart);
             this.Controls.Add(this.comboBoxQuantity);
-            this.Controls.Add(this.btnAddToCart_Muddy);
-            this.Controls.Add(this.btnAddToCart_Hammer);
-            this.Controls.Add(this.btnAddToCart_Clark);
-            this.Controls.Add(this.btnAddToCart_Cork);
-            this.Controls.Add(this.lblMuddy);
-            this.Controls.Add(this.lblHammer);
-            this.Controls.Add(this.lblClark);
-            this.Controls.Add(this.lblCork);
             this.Controls.Add(this.panelResources);
             this.Controls.Add(this.panelAccount);
             this.Controls.Add(this.panelParts);
             this.Controls.Add(this.btnHomePage);
-            this.Controls.Add(this.lblBrakesDisplay);
+            this.Controls.Add(this.lblPartsDisplay);
             this.Controls.Add(this.lblBrakesMessage2);
             this.Controls.Add(this.lblBrakesMessage1);
             this.Name = "BrakesPg";
@@ -583,20 +542,17 @@
         private System.Windows.Forms.Button btnResources;
         private System.Windows.Forms.Label lblBrakesMessage1;
         private System.Windows.Forms.Label lblBrakesMessage2;
-        private System.Windows.Forms.Label lblBrakesDisplay;
+        private System.Windows.Forms.Label lblPartsDisplay;
         private System.Windows.Forms.Button btnHomePage;
-        private System.Windows.Forms.Label lblCork;
-        private System.Windows.Forms.Label lblClark;
-        private System.Windows.Forms.Label lblHammer;
-        private System.Windows.Forms.Label lblMuddy;
-        private System.Windows.Forms.Button btnAddToCart_Cork;
-        private System.Windows.Forms.Button btnAddToCart_Clark;
-        private System.Windows.Forms.Button btnAddToCart_Hammer;
-        private System.Windows.Forms.Button btnAddToCart_Muddy;
         private System.Windows.Forms.ComboBox comboBoxQuantity;
         private System.Windows.Forms.Button btnAddToCart;
         private System.Windows.Forms.Button btnMyProfile;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox ShoppingCart;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTotal;
     }
 }
