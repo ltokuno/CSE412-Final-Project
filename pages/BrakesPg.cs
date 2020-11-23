@@ -352,7 +352,9 @@ namespace CSE412_Group17
 
                 orderCTRL.saveItemList(newItems);
 
-
+                OrderConfListBox.DataSource = cartItems;
+                lblOrderID.Text = orderId.ToString();
+                lblConfNumber.Text = newOrder.ConfirmationNumber;
 
             }
         }

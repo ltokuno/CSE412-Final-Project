@@ -73,7 +73,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.OrderConfListBox = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
@@ -587,7 +587,7 @@
             this.orderPanel.Controls.Add(this.label7);
             this.orderPanel.Controls.Add(this.label6);
             this.orderPanel.Controls.Add(this.label5);
-            this.orderPanel.Controls.Add(this.listBox2);
+            this.orderPanel.Controls.Add(this.OrderConfListBox);
             this.orderPanel.Controls.Add(this.label4);
             this.orderPanel.Location = new System.Drawing.Point(387, 303);
             this.orderPanel.Name = "orderPanel";
@@ -597,7 +597,7 @@
             // 
             // btnOrderDone
             // 
-            this.btnOrderDone.Location = new System.Drawing.Point(174, 12);
+            this.btnOrderDone.Location = new System.Drawing.Point(165, 9);
             this.btnOrderDone.Name = "btnOrderDone";
             this.btnOrderDone.Size = new System.Drawing.Size(73, 24);
             this.btnOrderDone.TabIndex = 7;
@@ -608,18 +608,20 @@
             // lblConfNumber
             // 
             this.lblConfNumber.AutoSize = true;
-            this.lblConfNumber.Location = new System.Drawing.Point(137, 72);
+            this.lblConfNumber.Location = new System.Drawing.Point(128, 72);
             this.lblConfNumber.Name = "lblConfNumber";
-            this.lblConfNumber.Size = new System.Drawing.Size(0, 13);
+            this.lblConfNumber.Size = new System.Drawing.Size(97, 13);
             this.lblConfNumber.TabIndex = 6;
+            this.lblConfNumber.Text = "999999999999999";
             // 
             // lblOrderID
             // 
             this.lblOrderID.AutoSize = true;
-            this.lblOrderID.Location = new System.Drawing.Point(137, 50);
+            this.lblOrderID.Location = new System.Drawing.Point(128, 50);
             this.lblOrderID.Name = "lblOrderID";
-            this.lblOrderID.Size = new System.Drawing.Size(0, 13);
+            this.lblOrderID.Size = new System.Drawing.Size(31, 13);
             this.lblOrderID.TabIndex = 5;
+            this.lblOrderID.Text = "9999";
             // 
             // label7
             // 
@@ -648,19 +650,19 @@
             this.label5.TabIndex = 2;
             this.label5.Text = "Order ID:";
             // 
-            // listBox2
+            // OrderConfListBox
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(20, 114);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(213, 225);
-            this.listBox2.TabIndex = 1;
+            this.OrderConfListBox.FormattingEnabled = true;
+            this.OrderConfListBox.Location = new System.Drawing.Point(20, 114);
+            this.OrderConfListBox.Name = "OrderConfListBox";
+            this.OrderConfListBox.Size = new System.Drawing.Size(213, 225);
+            this.OrderConfListBox.TabIndex = 1;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 10);
+            this.label4.Location = new System.Drawing.Point(55, 10);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(104, 24);
             this.label4.TabIndex = 0;
@@ -741,7 +743,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox OrderConfListBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnOrderDone;
     }
