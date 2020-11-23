@@ -32,10 +32,17 @@ namespace CSE412_Group17.controllers {
         public void addVendor(Vendor theVendor) {
             DBModifier modder = new DBModifier();
 
-            //todo: change this to the new DB structure
             modder.modifyRows("INSERT INTO \"Vendor\"(\"VendorName\", \"VendorAdress\") VALUES('"
                 + theVendor.VendorName + "','" + theVendor.VendorAddress + "')");
         }
+
+
+        public void addItemToVendor(int vendorID, int itemID) {
+            DBModifier modder = new DBModifier();
+            modder.modifyRows("INSERT INTO \"Vendor_Items\"(\"VedndorID\",\"ItemID\") VALUES(' " +
+                itemID + "'," + vendorID + "')");
+        }
+
 
     } //end class
 }

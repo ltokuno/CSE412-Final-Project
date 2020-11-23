@@ -62,9 +62,8 @@ namespace CSE412_Group17.controllers {
 
             DBModifier modder = new DBModifier();
 
-            //todo: OrderDateTime should come from the Order object
             modder.modifyRows("INSERT INTO \"Order\" (\"ConfirmationNumber\", \"OrderDateTime\", \"TotalPrice\", \"UserID\") VALUES ('" +
-                theOrder.ConfirmationNumber + "','" + theOrder.OrderID + "','" + theOrder.TotalPrice + "','" + theOrder.UserID + "')");
+                theOrder.ConfirmationNumber + "','" + theOrder.OrderDate + "','" + theOrder.TotalPrice + "','" + theOrder.UserID + "')");
 
             foreach (ItemList i in itemLists) {
                 modder.modifyRows("INSERT INTO \"ItemList\" (\"OrderID\", \"ItemID\", \"Quantity\") VALUES ('" +

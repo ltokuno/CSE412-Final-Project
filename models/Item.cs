@@ -7,5 +7,6 @@
         public decimal CostPrice { get; set; }
         public string ItemName { get; set; }
         public int StockQuantity { get; set; }
+        public string Category { get; set; }
     }
 }
