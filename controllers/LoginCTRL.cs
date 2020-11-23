@@ -34,8 +34,18 @@ namespace CSE412_Group17.controllers {
         public void setPassword(int loginID, string password) {
             DBModifier modder = new DBModifier();
 
-            modder.modifyRows("UPDATE \"Login\" SET \"Passsword\" = " + password + " WHERE \"ID\" = '" + loginID + "'");
+            modder.modifyRows("UPDATE \"Login\" SET \"Password\" = " + password + " WHERE \"ID\" = '" + loginID + "'");
 
+        }
+
+        public void changeLogin(Login theLogin)
+        {
+            DBModifier modder = new DBModifier();
+
+            modder.modifyRows("UPDATE \"Login\" SET " +
+                "\"UserName\" = '" + theLogin.UserName + "'," +
+                "\"Password\"  = '" + theLogin.Password + "'" +
+                " WHERE \"ID\" = '" + theLogin.ID + "'");
         }
 
     } //end class
