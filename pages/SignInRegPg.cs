@@ -146,7 +146,7 @@ namespace CSE412_Group17
 
                 this.Hide();
 
-                AdminPg admin = new AdminPg();
+                AdminBox admin = new AdminBox();
 
                 admin.Show();
 
