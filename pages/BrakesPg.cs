@@ -424,8 +424,9 @@ namespace CSE412_Group17
 
             List<ItemList> itemLists = orderCTRL.getOrderLineItems(curOrder.OrderID);
             List<Item> items = orderCTRL.getOrderItems(curOrder.OrderID);
-            LineItem tmp = new LineItem(); ;
+            
             foreach (ItemList il in itemLists) {
+                LineItem tmp = new LineItem();
                 tmp.ItemID = il.ItemID;
                 tmp.quantity = il.Quantity;
                 tmp.ItemName = items.Find(item => item.ItemID == il.ItemID).ItemName;
