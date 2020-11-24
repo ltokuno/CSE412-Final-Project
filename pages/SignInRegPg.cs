@@ -95,7 +95,14 @@ namespace CSE412_Group17
 
         private void btnRegister_Click(object sender, EventArgs e)
         {
-            
+
+            this.Hide();
+
+            NewUserRegistrationPg register = new NewUserRegistrationPg();
+
+            register.Show();
+
+
         }
 
         private void btnSignInRegister_Click(object sender, EventArgs e)
