@@ -26,7 +26,7 @@ namespace CSE412_Group17.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Host=cse412project.postgres.database.azure.com;Port=5432;Database=postgres;User I" +
-            "D=postgres@cse412project;Password=Mg12345678;")]
+            "D=norm_user@cse412project;Password=iamtheuser;")]
         public string DBConnString {
             get {
                 return ((string)(this["DBConnString"]));
