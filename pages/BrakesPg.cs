@@ -343,7 +343,6 @@ namespace CSE412_Group17
         }
 
 
-        //todo: update the ui controls here
         void list_ListChanged(object sender, ListChangedEventArgs e) {
             lblTotal.Text = totalPrice(cartItemsDS).ToString();
         }
@@ -365,7 +364,7 @@ namespace CSE412_Group17
                 newOrder.ConfirmationNumber = orderCTRL.generateConfirmationNumber();
                 newOrder.OrderDateTime = DateAndTime.Today.Date.ToShortDateString();
                 newOrder.TotalPrice = totalPrice(cartItemsDS);
-                newOrder.UserID = 1; //todo: change this to the real user id
+                newOrder.UserID = (UserSingleton.GetUser()).ID;
 
                 int orderId = orderCTRL.saveOrder(newOrder);
 
@@ -411,9 +410,8 @@ namespace CSE412_Group17
 
             //fill out the controls
             myOrdersDS.Clear();
-            //todo: put logged in user id here
             OrderCTRL orderCTRL = new OrderCTRL();
-            foreach(Order o in orderCTRL.getOrdersByUser(1)) {
+            foreach(Order o in orderCTRL.getOrdersByUser((UserSingleton.GetUser()).ID)) {
                 myOrdersDS.Add(o);
             }
 
