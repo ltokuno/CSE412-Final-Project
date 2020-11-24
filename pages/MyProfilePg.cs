@@ -1,4 +1,5 @@
-﻿using CSE412_Group17.models;
+﻿using CSE412_Group17.controllers;
+using CSE412_Group17.models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace CSE412_Group17
 {
     public partial class MyProfilePg : Form
     {
+        User user;
 
         public MyProfilePg()
         {
@@ -210,7 +212,7 @@ namespace CSE412_Group17
 
         private void MyProfilePg_Load(object sender, EventArgs e)
         {
-            User user = UserSingleton.GetUser();
+            user = UserSingleton.GetUser();
             FirstNameLabel.Text = user.FirstName;
             LastNameLabel.Text = user.LastName;
             EmailLabel.Text = user.Email;
@@ -222,6 +224,52 @@ namespace CSE412_Group17
             {
                 AdministratorLabel.Visible = false;
             }
+            EmailBox.Visible = false;
+            AddressBox.Visible = false;
+            PhoneNumberBox.Visible = false;
+            SaveButton.Visible = false;
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(PhoneNumberBox.Text))
+            {
+                MessageBox.Show("Please Enter Phone Number");
+                return;
+            }
+            else if (String.IsNullOrEmpty(AddressBox.Text))
+            {
+                MessageBox.Show("Please Enter Address");
+                return;
+            }
+            if (String.IsNullOrEmpty(EmailBox.Text))
+            {
+                MessageBox.Show("Please Enter Email");
+                return;
+            }
+            user.Email = EmailBox.Text;
+            user.Address = AddressBox.Text;
+            user.PhoneNumber = PhoneNumberBox.Text;
+            UserCTRL userctrl = new UserCTRL();
+            userctrl.changeUser(user);
+            MessageBox.Show("USER INFO UPDATED");
+            this.Hide();
+
+            HomePage home = new HomePage();
+
+            home.Show();
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            EmailBox.Visible = true;
+            AddressBox.Visible = true;
+            PhoneNumberBox.Visible = true;
+            EmailBox.Text = user.Email;
+            AddressBox.Text = user.Address;
+            PhoneNumberBox.Text = user.PhoneNumber;
+            UpdateButton.Visible = false;
+            SaveButton.Visible = true;
         }
     }
 }
