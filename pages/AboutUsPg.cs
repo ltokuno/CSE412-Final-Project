@@ -192,12 +192,6 @@ namespace CSE412_Group17
         private void btnMyOrders_Click(object sender, EventArgs e)
         {
 
-            this.Hide();
-
-            MyOrdersPg orders = new MyOrdersPg();
-
-            orders.Show();
-
         }
 
         private void btnMyProfile_Click(object sender, EventArgs e)

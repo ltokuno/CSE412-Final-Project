@@ -8,19 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CSE412_Group17.controllers;
+using CSE412_Group17.models;
 
 namespace CSE412_Group17
 {
     public partial class AdminBox : Form
     {
-        // used for comparing login info to existing account
-        public static string username = null;
-        public static string password = null;
-
-        // used for comparing NEW users to see if account already exists
-        public static string new_username = null;
-        public static string new_password = null;
-
         public AdminBox()
         {
             InitializeComponent();
@@ -34,27 +27,12 @@ namespace CSE412_Group17
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {
-
+            UserSingleton.LogOutUser();
             this.Hide();
 
             SignInRegPg signIn = new SignInRegPg();
 
             signIn.Show();
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -70,6 +48,49 @@ namespace CSE412_Group17
 
         private void SaveUserButton_Click(object sender, EventArgs e)
         {
+            if (String.IsNullOrEmpty(FirstNameBox.Text))
+            {
+                MessageBox.Show("Please Enter First Name");
+                return;
+            }
+            else if (String.IsNullOrEmpty(LastNameBox.Text))
+            {
+                MessageBox.Show("Please Enter Last Name");
+                return;
+            }
+            else if (String.IsNullOrEmpty(PhoneNumberBox.Text))
+            {
+                MessageBox.Show("Please Enter Phone Number");
+                return;
+            }
+            else if (String.IsNullOrEmpty(AddressBox.Text))
+            {
+                MessageBox.Show("Please Enter Address");
+                return;
+            }
+            if (String.IsNullOrEmpty(EmailBox.Text))
+            {
+                MessageBox.Show("Please Enter Email");
+                return;
+            }
+            else if (String.IsNullOrEmpty(UsernameBox.Text))
+            {
+                MessageBox.Show("Please Enter Username");
+                return;
+            }
+            else if  (String.IsNullOrEmpty(PasswordBox.Text))
+            {
+                MessageBox.Show("Please Enter Password");
+            }
+            LoginCTRL loginctrl = new LoginCTRL();
+            foreach(Login l in loginctrl.getAllLogins())
+            {
+                if (l.UserName == UsernameBox.Text)
+                {
+                    MessageBox.Show("Username Already Exists");
+                    return;
+                }
+            }
             User user = new User();
 
             user.FirstName = FirstNameBox.Text;
@@ -77,14 +98,23 @@ namespace CSE412_Group17
             user.PhoneNumber = PhoneNumberBox.Text;
             user.Address = AddressBox.Text;
             user.Email = EmailBox.Text;
-            user.DateOfBirth = DateTime.Now;
+            DateTime dateValue;
+            if (DateTime.TryParse(DOBBox.Text, out dateValue))
+            {
+                user.DateOfBirth = dateValue;
+            }
+            else
+            {
+                MessageBox.Show("DATE OF BIRTH MUST BE OF TYPE MM/DD/YYYY");
+                return;
+            }
             if (MaleButton.Checked)
             {
                 user.Gender = "male";
             } else
                 user.Gender = "female";
             user.IsAdmin = AdminCheckBox.Checked;
-            LoginCTRL loginctrl = new LoginCTRL();
+            
             user.ID = loginctrl.saveLoginInfo(UsernameBox.Text, PasswordBox.Text);
             UserCTRL userctrl = new UserCTRL();
             userctrl.addUser(user, user.ID);
@@ -94,7 +124,7 @@ namespace CSE412_Group17
             PhoneNumberBox.Text = "";
             AddressBox.Text = "";
             EmailBox.Text = "";
-            MaleButton.Checked = false;
+            AdminCheckBox.Checked = false;
             UsernameBox.Text = "";
             PasswordBox.Text = "";
         }
@@ -108,16 +138,6 @@ namespace CSE412_Group17
             EditEmailBox.Text = selectedUser.Email;
             EditPhoneNumberBox.Text = selectedUser.PhoneNumber;
             EditAdminBox.Checked = selectedUser.IsAdmin;
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void EditSaveChangesButton_Click(object sender, EventArgs e)
@@ -138,11 +158,6 @@ namespace CSE412_Group17
             EditEmailBox.Text = "";
             EditPhoneNumberBox.Text = "";
             EditAdminBox.Checked = false;
-        }
-
-        private void label4_Click_1(object sender, EventArgs e)
-        {
-
         }
 
         private void GetLoginCredentialsButton_Click(object sender, EventArgs e)

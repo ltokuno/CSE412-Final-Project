@@ -82,6 +82,7 @@
             this.EditCredentialsSaveButton = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.DateOfBirthLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -103,7 +104,7 @@
             this.btnSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignOut.ForeColor = System.Drawing.Color.Transparent;
             this.btnSignOut.Location = new System.Drawing.Point(1247, 54);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(4);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(136, 46);
             this.btnSignOut.TabIndex = 30;
@@ -120,7 +121,6 @@
             this.UsersBox.Name = "UsersBox";
             this.UsersBox.Size = new System.Drawing.Size(693, 356);
             this.UsersBox.TabIndex = 31;
-            this.UsersBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // UsernameBox
             // 
@@ -324,7 +324,6 @@
             this.label2.Size = new System.Drawing.Size(220, 29);
             this.label2.TabIndex = 52;
             this.label2.Text = "Enter A New User";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // SaveUserButton
             // 
@@ -346,7 +345,6 @@
             this.label3.Size = new System.Drawing.Size(329, 29);
             this.label3.TabIndex = 55;
             this.label3.Text = "Currently Registered Users";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // GetAllUsersButton
             // 
@@ -419,7 +417,6 @@
             this.EditEmailLabel.Size = new System.Drawing.Size(42, 17);
             this.EditEmailLabel.TabIndex = 62;
             this.EditEmailLabel.Text = "Email";
-            this.EditEmailLabel.Click += new System.EventHandler(this.label4_Click);
             // 
             // EditAdminLabel
             // 
@@ -482,7 +479,6 @@
             this.EditAdminBox.TabIndex = 69;
             this.EditAdminBox.Text = "Admin";
             this.EditAdminBox.UseVisualStyleBackColor = true;
-            this.EditAdminBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // EditSaveChangesButton
             // 
@@ -504,7 +500,6 @@
             this.EditLoginCredsLabel.Size = new System.Drawing.Size(334, 29);
             this.EditLoginCredsLabel.TabIndex = 71;
             this.EditLoginCredsLabel.Text = "Edit User Login Credentials";
-            this.EditLoginCredsLabel.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // LoginBox
             // 
@@ -614,11 +609,21 @@
             this.label8.Size = new System.Drawing.Size(2, 800);
             this.label8.TabIndex = 83;
             // 
+            // DateOfBirthLabel
+            // 
+            this.DateOfBirthLabel.AutoSize = true;
+            this.DateOfBirthLabel.Location = new System.Drawing.Point(533, 291);
+            this.DateOfBirthLabel.Name = "DateOfBirthLabel";
+            this.DateOfBirthLabel.Size = new System.Drawing.Size(94, 17);
+            this.DateOfBirthLabel.TabIndex = 84;
+            this.DateOfBirthLabel.Text = "MM/DD/YYYY";
+            // 
             // AdminBox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1409, 864);
+            this.Controls.Add(this.DateOfBirthLabel);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.EditCredentialsSaveButton);
@@ -673,7 +678,7 @@
             this.Controls.Add(this.UsersBox);
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminBox";
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.AdminPg_Load);
@@ -737,5 +742,6 @@
         private System.Windows.Forms.Button EditCredentialsSaveButton;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label DateOfBirthLabel;
     }
 }
