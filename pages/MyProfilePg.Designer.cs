@@ -63,7 +63,11 @@
             this.GenderLabel = new System.Windows.Forms.Label();
             this.AddressLabel = new System.Windows.Forms.Label();
             this.AdministratorLabel = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.UpdateButton = new System.Windows.Forms.Button();
+            this.EmailBox = new System.Windows.Forms.TextBox();
+            this.PhoneNumberBox = new System.Windows.Forms.TextBox();
+            this.AddressBox = new System.Windows.Forms.TextBox();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
             this.panelResources.SuspendLayout();
@@ -543,21 +547,57 @@
             this.AdministratorLabel.TabIndex = 36;
             this.AdministratorLabel.Text = "Administrator";
             // 
-            // button2
+            // UpdateButton
             // 
-            this.button2.Location = new System.Drawing.Point(108, 672);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(149, 25);
-            this.button2.TabIndex = 37;
-            this.button2.Text = "Update My Info";
-            this.button2.UseVisualStyleBackColor = true;
+            this.UpdateButton.Location = new System.Drawing.Point(108, 672);
+            this.UpdateButton.Name = "UpdateButton";
+            this.UpdateButton.Size = new System.Drawing.Size(149, 25);
+            this.UpdateButton.TabIndex = 37;
+            this.UpdateButton.Text = "Update My Info";
+            this.UpdateButton.UseVisualStyleBackColor = true;
+            this.UpdateButton.Click += new System.EventHandler(this.UpdateButton_Click);
+            // 
+            // EmailBox
+            // 
+            this.EmailBox.Location = new System.Drawing.Point(304, 441);
+            this.EmailBox.Name = "EmailBox";
+            this.EmailBox.Size = new System.Drawing.Size(276, 22);
+            this.EmailBox.TabIndex = 40;
+            // 
+            // PhoneNumberBox
+            // 
+            this.PhoneNumberBox.Location = new System.Drawing.Point(304, 470);
+            this.PhoneNumberBox.Name = "PhoneNumberBox";
+            this.PhoneNumberBox.Size = new System.Drawing.Size(276, 22);
+            this.PhoneNumberBox.TabIndex = 41;
+            // 
+            // AddressBox
+            // 
+            this.AddressBox.Location = new System.Drawing.Point(304, 626);
+            this.AddressBox.Name = "AddressBox";
+            this.AddressBox.Size = new System.Drawing.Size(424, 22);
+            this.AddressBox.TabIndex = 42;
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.Location = new System.Drawing.Point(263, 672);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(75, 25);
+            this.SaveButton.TabIndex = 43;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
             // MyProfilePg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1409, 864);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.SaveButton);
+            this.Controls.Add(this.AddressBox);
+            this.Controls.Add(this.PhoneNumberBox);
+            this.Controls.Add(this.EmailBox);
+            this.Controls.Add(this.UpdateButton);
             this.Controls.Add(this.AdministratorLabel);
             this.Controls.Add(this.AddressLabel);
             this.Controls.Add(this.GenderLabel);
@@ -627,6 +667,10 @@
         private System.Windows.Forms.Label GenderLabel;
         private System.Windows.Forms.Label AddressLabel;
         private System.Windows.Forms.Label AdministratorLabel;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.TextBox EmailBox;
+        private System.Windows.Forms.TextBox PhoneNumberBox;
+        private System.Windows.Forms.TextBox AddressBox;
+        private System.Windows.Forms.Button SaveButton;
     }
 }
