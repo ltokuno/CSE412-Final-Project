@@ -418,27 +418,38 @@ namespace CSE412_Group17
         }
 
         private void MyOrdersListbox_SelectedIndexChanged(object sender, EventArgs e) {
-            myOrdersItemsDS.Clear();
-            OrderCTRL orderCTRL = new OrderCTRL();
-            Order curOrder = (Order)MyOrdersListbox.SelectedItem;
 
-            List<ItemList> itemLists = orderCTRL.getOrderLineItems(curOrder.OrderID);
-            List<Item> items = orderCTRL.getOrderItems(curOrder.OrderID);
-            
-            foreach (ItemList il in itemLists) {
-                LineItem tmp = new LineItem();
-                tmp.ItemID = il.ItemID;
-                tmp.quantity = il.Quantity;
-                tmp.ItemName = items.Find(item => item.ItemID == il.ItemID).ItemName;
-                tmp.RetailPrice = items.Find(item => item.ItemID == il.ItemID).RetailPrice;
-                tmp.Category = items.Find(item => item.ItemID == il.ItemID).Category;
-                myOrdersItemsDS.Add(tmp);
+            clearMyOderItems();
+
+            if (MyOrdersListbox.SelectedItem != null) {
+                OrderCTRL orderCTRL = new OrderCTRL();
+                Order curOrder = (Order)MyOrdersListbox.SelectedItem;
+
+                List<ItemList> itemLists = orderCTRL.getOrderLineItems(curOrder.OrderID);
+                List<Item> items = orderCTRL.getOrderItems(curOrder.OrderID);
+
+                foreach (ItemList il in itemLists) {
+                    LineItem tmp = new LineItem();
+                    tmp.ItemID = il.ItemID;
+                    tmp.quantity = il.Quantity;
+                    tmp.ItemName = items.Find(item => item.ItemID == il.ItemID).ItemName;
+                    tmp.RetailPrice = items.Find(item => item.ItemID == il.ItemID).RetailPrice;
+                    tmp.Category = items.Find(item => item.ItemID == il.ItemID).Category;
+                    myOrdersItemsDS.Add(tmp);
+                }
+
+                lblMyTotal.Text = totalPrice(myOrdersItemsDS).ToString();
+                lblMyOrderID.Text = itemLists[0].OrderID.ToString();
+                lblMyConfNum.Text = curOrder.ConfirmationNumber;
             }
-
-            lblMyTotal.Text =  totalPrice(myOrdersItemsDS).ToString();
-            lblMyOrderID.Text = itemLists[0].OrderID.ToString();
-            lblMyConfNum.Text = curOrder.ConfirmationNumber;
-
         }
+
+        private void clearMyOderItems() {
+            myOrdersItemsDS.Clear();
+            lblMyTotal.Text = "";
+            lblMyOrderID.Text = "";
+            lblMyConfNum.Text = "";
+        }
+
     } //end class
 }
