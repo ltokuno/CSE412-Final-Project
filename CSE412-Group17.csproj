@@ -97,6 +97,12 @@
     <Compile Include="pages\AboutUsPg.Designer.cs">
       <DependentUpon>AboutUsPg.cs</DependentUpon>
     </Compile>
+    <Compile Include="pages\AddPartsPg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pages\AddPartsPg.Designer.cs">
+      <DependentUpon>AddPartsPg.cs</DependentUpon>
+    </Compile>
     <Compile Include="pages\NewUserRegistrationPg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +201,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="pages\AboutUsPg.resx">
       <DependentUpon>AboutUsPg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pages\AddPartsPg.resx">
+      <DependentUpon>AddPartsPg.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="pages\NewUserRegistrationPg.resx">
       <DependentUpon>NewUserRegistrationPg.cs</DependentUpon>

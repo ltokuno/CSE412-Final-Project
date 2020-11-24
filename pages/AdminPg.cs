@@ -202,5 +202,16 @@ namespace CSE412_Group17
             EditPasswordBox2.Text = "";
             LoginBox.Items.Clear();
         }
+
+        private void btnAddParts_Click(object sender, EventArgs e)
+        {
+            
+            this.Hide();
+
+            AddPartsPg addParts = new AddPartsPg();
+
+            addParts.Show();
+
+        }
     }
 }

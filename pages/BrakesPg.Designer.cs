@@ -289,7 +289,7 @@
             this.btnMyOrders.ForeColor = System.Drawing.Color.Transparent;
             this.btnMyOrders.Location = new System.Drawing.Point(0, 89);
             this.btnMyOrders.Name = "btnMyOrders";
-            this.btnMyOrders.Size = new System.Drawing.Size(249, 59);
+            this.btnMyOrders.Size = new System.Drawing.Size(249, 43);
             this.btnMyOrders.TabIndex = 16;
             this.btnMyOrders.Text = "My Orders";
             this.btnMyOrders.UseVisualStyleBackColor = false;

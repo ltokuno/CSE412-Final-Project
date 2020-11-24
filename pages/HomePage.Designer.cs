@@ -49,9 +49,23 @@
             this.btnHomePage = new System.Windows.Forms.Button();
             this.lblHomePageMessage2 = new System.Windows.Forms.Label();
             this.btnMyProfile = new System.Windows.Forms.Button();
+            this.MyOrdersPanel = new System.Windows.Forms.Panel();
+            this.lblMyTotal = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.lblMyConfNum = new System.Windows.Forms.Label();
+            this.lblMyOrderID = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.MyItemsListbox = new System.Windows.Forms.ListBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.MyOrdersListbox = new System.Windows.Forms.ListBox();
+            this.lblBrakesMessage1 = new System.Windows.Forms.Label();
+            this.lblBrakesMessage2 = new System.Windows.Forms.Label();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
             this.panelResources.SuspendLayout();
+            this.MyOrdersPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnParts
@@ -361,11 +375,146 @@
             this.btnMyProfile.UseVisualStyleBackColor = false;
             this.btnMyProfile.Click += new System.EventHandler(this.btnMyProfile_Click);
             // 
+            // MyOrdersPanel
+            // 
+            this.MyOrdersPanel.Controls.Add(this.lblMyTotal);
+            this.MyOrdersPanel.Controls.Add(this.label9);
+            this.MyOrdersPanel.Controls.Add(this.lblMyConfNum);
+            this.MyOrdersPanel.Controls.Add(this.lblMyOrderID);
+            this.MyOrdersPanel.Controls.Add(this.label11);
+            this.MyOrdersPanel.Controls.Add(this.label12);
+            this.MyOrdersPanel.Controls.Add(this.label13);
+            this.MyOrdersPanel.Controls.Add(this.MyItemsListbox);
+            this.MyOrdersPanel.Controls.Add(this.label8);
+            this.MyOrdersPanel.Controls.Add(this.MyOrdersListbox);
+            this.MyOrdersPanel.Location = new System.Drawing.Point(262, 300);
+            this.MyOrdersPanel.Name = "MyOrdersPanel";
+            this.MyOrdersPanel.Size = new System.Drawing.Size(519, 397);
+            this.MyOrdersPanel.TabIndex = 51;
+            this.MyOrdersPanel.Visible = false;
+            // 
+            // lblMyTotal
+            // 
+            this.lblMyTotal.AutoSize = true;
+            this.lblMyTotal.Location = new System.Drawing.Point(409, 93);
+            this.lblMyTotal.Name = "lblMyTotal";
+            this.lblMyTotal.Size = new System.Drawing.Size(0, 13);
+            this.lblMyTotal.TabIndex = 14;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(369, 91);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Total:";
+            // 
+            // lblMyConfNum
+            // 
+            this.lblMyConfNum.AutoSize = true;
+            this.lblMyConfNum.Location = new System.Drawing.Point(409, 65);
+            this.lblMyConfNum.Name = "lblMyConfNum";
+            this.lblMyConfNum.Size = new System.Drawing.Size(0, 13);
+            this.lblMyConfNum.TabIndex = 12;
+            // 
+            // lblMyOrderID
+            // 
+            this.lblMyOrderID.AutoSize = true;
+            this.lblMyOrderID.Location = new System.Drawing.Point(409, 41);
+            this.lblMyOrderID.Name = "lblMyOrderID";
+            this.lblMyOrderID.Size = new System.Drawing.Size(0, 13);
+            this.lblMyOrderID.TabIndex = 11;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(291, 116);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(32, 13);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Items";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(295, 66);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(108, 13);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Confirmation Number:";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(353, 41);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(50, 13);
+            this.label13.TabIndex = 8;
+            this.label13.Text = "Order ID:";
+            // 
+            // MyItemsListbox
+            // 
+            this.MyItemsListbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MyItemsListbox.FormattingEnabled = true;
+            this.MyItemsListbox.Location = new System.Drawing.Point(294, 132);
+            this.MyItemsListbox.Name = "MyItemsListbox";
+            this.MyItemsListbox.Size = new System.Drawing.Size(213, 225);
+            this.MyItemsListbox.TabIndex = 7;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(20, 32);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 13);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "My Orders";
+            // 
+            // MyOrdersListbox
+            // 
+            this.MyOrdersListbox.FormattingEnabled = true;
+            this.MyOrdersListbox.Location = new System.Drawing.Point(23, 50);
+            this.MyOrdersListbox.Name = "MyOrdersListbox";
+            this.MyOrdersListbox.Size = new System.Drawing.Size(215, 342);
+            this.MyOrdersListbox.TabIndex = 0;
+            // 
+            // lblBrakesMessage1
+            // 
+            this.lblBrakesMessage1.AutoSize = true;
+            this.lblBrakesMessage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrakesMessage1.Location = new System.Drawing.Point(394, 235);
+            this.lblBrakesMessage1.Name = "lblBrakesMessage1";
+            this.lblBrakesMessage1.Size = new System.Drawing.Size(298, 20);
+            this.lblBrakesMessage1.TabIndex = 52;
+            this.lblBrakesMessage1.Text = "Customize your bike to fit your style.";
+            this.lblBrakesMessage1.Visible = false;
+            // 
+            // lblBrakesMessage2
+            // 
+            this.lblBrakesMessage2.AutoSize = true;
+            this.lblBrakesMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBrakesMessage2.Location = new System.Drawing.Point(192, 255);
+            this.lblBrakesMessage2.Name = "lblBrakesMessage2";
+            this.lblBrakesMessage2.Size = new System.Drawing.Size(690, 20);
+            this.lblBrakesMessage2.TabIndex = 53;
+            this.lblBrakesMessage2.Text = "Whether you are fixing up a bike or building a new one, we have the items you\'ll " +
+    "need.";
+            this.lblBrakesMessage2.Visible = false;
+            // 
             // HomePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 702);
+            this.ClientSize = new System.Drawing.Size(1078, 743);
+            this.Controls.Add(this.lblBrakesMessage2);
+            this.Controls.Add(this.lblBrakesMessage1);
+            this.Controls.Add(this.MyOrdersPanel);
             this.Controls.Add(this.btnMyProfile);
             this.Controls.Add(this.panelAccount);
             this.Controls.Add(this.panelResources);
@@ -378,6 +527,8 @@
             this.panelParts.ResumeLayout(false);
             this.panelAccount.ResumeLayout(false);
             this.panelResources.ResumeLayout(false);
+            this.MyOrdersPanel.ResumeLayout(false);
+            this.MyOrdersPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -405,5 +556,18 @@
         private System.Windows.Forms.Button btnHomePage;
         private System.Windows.Forms.Label lblHomePageMessage2;
         private System.Windows.Forms.Button btnMyProfile;
+        private System.Windows.Forms.Panel MyOrdersPanel;
+        private System.Windows.Forms.Label lblMyTotal;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblMyConfNum;
+        private System.Windows.Forms.Label lblMyOrderID;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ListBox MyItemsListbox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListBox MyOrdersListbox;
+        private System.Windows.Forms.Label lblBrakesMessage1;
+        private System.Windows.Forms.Label lblBrakesMessage2;
     }
 }
