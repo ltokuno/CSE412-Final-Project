@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CSE412_Group17.models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -205,6 +206,22 @@ namespace CSE412_Group17
 
             profilePg.Show();
 
+        }
+
+        private void MyProfilePg_Load(object sender, EventArgs e)
+        {
+            User user = UserSingleton.GetUser();
+            FirstNameLabel.Text = user.FirstName;
+            LastNameLabel.Text = user.LastName;
+            EmailLabel.Text = user.Email;
+            PhoneNumberLabel.Text = user.PhoneNumber;
+            DateOfBirthLabel.Text = user.DateOfBirth.ToString();
+            GenderLabel.Text = user.Gender;
+            AddressLabel.Text = user.Address;
+            if (!user.IsAdmin)
+            {
+                AdministratorLabel.Visible = false;
+            }
         }
     }
 }
