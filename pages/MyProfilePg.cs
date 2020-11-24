@@ -1,4 +1,6 @@
 ﻿using CSE412_Group17.controllers;
+using CSE412_Group17.pages;
+using CSE412_Group17.controllers;
 using CSE412_Group17.models;
 using System;
 using System.Collections.Generic;
@@ -9,12 +11,45 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
+using CSE412_Group17.models;
 
 namespace CSE412_Group17
 {
     public partial class MyProfilePg : Form
     {
         User user;
+
+        private BindingList<Order> myOrdersDS = new BindingList<Order>();
+
+        private enum PanelsEnum
+        {
+            MyOrders
+        }
+        private void ShowPanel(PanelsEnum thePanel)
+        {
+
+            List<Panel> thePanels = new List<Panel>();
+
+            thePanels.Add(MyOrdersPanel);
+
+            foreach (Panel p in thePanels)
+            {
+
+                p.Visible = false;
+
+            }
+
+            switch (thePanel)
+            {
+
+                case PanelsEnum.MyOrders:
+                    MyOrdersPanel.Visible = true;
+                    break;
+
+            }
+
+        }
 
         public MyProfilePg()
         {
@@ -190,13 +225,47 @@ namespace CSE412_Group17
 
         private void btnMyOrders_Click(object sender, EventArgs e)
         {
+            label1.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+            
+            lblHomeMessage1.Visible = false;
+            lblHomePageMessage2.Visible = false;
+            FirstNameLabel.Visible = false;
+            LastNameLabel.Visible = false;
+            DateOfBirthLabel.Visible = false;
+            GenderLabel.Visible = false;
+            AddressLabel.Visible = false;
+            EmailLabel.Visible = false;
+            PhoneNumberLabel.Visible = false;
+            AdministratorLabel.Visible = false;
 
-            this.Hide();
+            lblBrakesMessage1.Visible = true;
+            lblBrakesMessage2.Visible = true;
 
-            MyOrdersPg orders = new MyOrdersPg();
+            UpdateButton.Visible = false;
 
-            orders.Show();
+            if (panelAccount.Height == 165)
+            {
+                panelAccount.Height = 52;
+            }
+            else
+            {
+                panelAccount.Height = 165;
+            }
 
+            ShowPanel(PanelsEnum.MyOrders);
+
+            //fill out the controls
+            myOrdersDS.Clear();
+            OrderCTRL orderCTRL = new OrderCTRL();
+            foreach (Order o in orderCTRL.getOrdersByUser((UserSingleton.GetUser()).ID))
+            {
+                myOrdersDS.Add(o);
+            }
         }
 
         private void btnMyProfile_Click(object sender, EventArgs e)
