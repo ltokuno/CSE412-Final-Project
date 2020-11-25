@@ -56,11 +56,11 @@
             this.btnHomePage.FlatAppearance.BorderSize = 0;
             this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomePage.Location = new System.Drawing.Point(387, 42);
+            this.btnHomePage.Location = new System.Drawing.Point(386, 42);
             this.btnHomePage.Name = "btnHomePage";
             this.btnHomePage.Size = new System.Drawing.Size(318, 58);
             this.btnHomePage.TabIndex = 21;
-            this.btnHomePage.Text = "Store Name";
+            this.btnHomePage.Text = "BikeBoss";
             this.btnHomePage.UseVisualStyleBackColor = true;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
@@ -143,7 +143,7 @@
             // 
             this.SignInAsAdminBox.AutoSize = true;
             this.SignInAsAdminBox.Location = new System.Drawing.Point(310, 422);
-            this.SignInAsAdminBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SignInAsAdminBox.Margin = new System.Windows.Forms.Padding(2);
             this.SignInAsAdminBox.Name = "SignInAsAdminBox";
             this.SignInAsAdminBox.Size = new System.Drawing.Size(103, 17);
             this.SignInAsAdminBox.TabIndex = 34;

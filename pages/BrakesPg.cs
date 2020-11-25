@@ -115,9 +115,9 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            HomePage home = new HomePage();
+            BrakesPg brakes = new BrakesPg();
 
-            home.Show();
+            brakes.Show();
 
         }
 

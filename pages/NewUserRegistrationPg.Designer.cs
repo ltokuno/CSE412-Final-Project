@@ -60,12 +60,11 @@
             this.btnHomePage.FlatAppearance.BorderSize = 0;
             this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomePage.Location = new System.Drawing.Point(516, 52);
-            this.btnHomePage.Margin = new System.Windows.Forms.Padding(4);
+            this.btnHomePage.Location = new System.Drawing.Point(387, 42);
             this.btnHomePage.Name = "btnHomePage";
-            this.btnHomePage.Size = new System.Drawing.Size(424, 71);
+            this.btnHomePage.Size = new System.Drawing.Size(318, 58);
             this.btnHomePage.TabIndex = 21;
-            this.btnHomePage.Text = "Store Name";
+            this.btnHomePage.Text = "BikeBoss";
             this.btnHomePage.UseVisualStyleBackColor = true;
             // 
             // btnLoginPage
@@ -75,10 +74,9 @@
             this.btnLoginPage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLoginPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoginPage.ForeColor = System.Drawing.Color.Transparent;
-            this.btnLoginPage.Location = new System.Drawing.Point(57, 78);
-            this.btnLoginPage.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLoginPage.Location = new System.Drawing.Point(43, 63);
             this.btnLoginPage.Name = "btnLoginPage";
-            this.btnLoginPage.Size = new System.Drawing.Size(240, 46);
+            this.btnLoginPage.Size = new System.Drawing.Size(180, 37);
             this.btnLoginPage.TabIndex = 40;
             this.btnLoginPage.Text = "Back To Login Page";
             this.btnLoginPage.UseVisualStyleBackColor = false;
@@ -86,10 +84,10 @@
             // 
             // SaveUserButton
             // 
-            this.SaveUserButton.Location = new System.Drawing.Point(753, 566);
-            this.SaveUserButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SaveUserButton.Location = new System.Drawing.Point(565, 460);
+            this.SaveUserButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SaveUserButton.Name = "SaveUserButton";
-            this.SaveUserButton.Size = new System.Drawing.Size(77, 25);
+            this.SaveUserButton.Size = new System.Drawing.Size(58, 20);
             this.SaveUserButton.TabIndex = 75;
             this.SaveUserButton.Text = "Register";
             this.SaveUserButton.UseVisualStyleBackColor = true;
@@ -99,9 +97,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(325, 340);
+            this.label2.Location = new System.Drawing.Point(244, 276);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(297, 39);
+            this.label2.Size = new System.Drawing.Size(242, 31);
             this.label2.TabIndex = 74;
             this.label2.Text = "User Registration";
             // 
@@ -109,10 +108,10 @@
             // 
             this.FemaleButton.AutoSize = true;
             this.FemaleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FemaleButton.Location = new System.Drawing.Point(796, 524);
-            this.FemaleButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FemaleButton.Location = new System.Drawing.Point(597, 426);
+            this.FemaleButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FemaleButton.Name = "FemaleButton";
-            this.FemaleButton.Size = new System.Drawing.Size(75, 21);
+            this.FemaleButton.Size = new System.Drawing.Size(59, 17);
             this.FemaleButton.TabIndex = 73;
             this.FemaleButton.TabStop = true;
             this.FemaleButton.Text = "Female";
@@ -122,10 +121,10 @@
             // 
             this.MaleButton.AutoSize = true;
             this.MaleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaleButton.Location = new System.Drawing.Point(729, 524);
-            this.MaleButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaleButton.Location = new System.Drawing.Point(547, 426);
+            this.MaleButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaleButton.Name = "MaleButton";
-            this.MaleButton.Size = new System.Drawing.Size(59, 21);
+            this.MaleButton.Size = new System.Drawing.Size(48, 17);
             this.MaleButton.TabIndex = 72;
             this.MaleButton.TabStop = true;
             this.MaleButton.Text = "Male";
@@ -135,9 +134,10 @@
             // 
             this.DOBLabel.AutoSize = true;
             this.DOBLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DOBLabel.Location = new System.Drawing.Point(605, 495);
+            this.DOBLabel.Location = new System.Drawing.Point(454, 402);
+            this.DOBLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DOBLabel.Name = "DOBLabel";
-            this.DOBLabel.Size = new System.Drawing.Size(90, 17);
+            this.DOBLabel.Size = new System.Drawing.Size(68, 13);
             this.DOBLabel.TabIndex = 71;
             this.DOBLabel.Text = "Date Of Birth";
             // 
@@ -145,9 +145,10 @@
             // 
             this.AddressLabel.AutoSize = true;
             this.AddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddressLabel.Location = new System.Drawing.Point(605, 436);
+            this.AddressLabel.Location = new System.Drawing.Point(454, 354);
+            this.AddressLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AddressLabel.Name = "AddressLabel";
-            this.AddressLabel.Size = new System.Drawing.Size(60, 17);
+            this.AddressLabel.Size = new System.Drawing.Size(45, 13);
             this.AddressLabel.TabIndex = 69;
             this.AddressLabel.Text = "Address";
             // 
@@ -155,9 +156,10 @@
             // 
             this.EmailLabel.AutoSize = true;
             this.EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabel.Location = new System.Drawing.Point(605, 465);
+            this.EmailLabel.Location = new System.Drawing.Point(454, 378);
+            this.EmailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(42, 17);
+            this.EmailLabel.Size = new System.Drawing.Size(32, 13);
             this.EmailLabel.TabIndex = 68;
             this.EmailLabel.Text = "Email";
             // 
@@ -165,43 +167,45 @@
             // 
             this.GenderLabel.AutoSize = true;
             this.GenderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GenderLabel.Location = new System.Drawing.Point(605, 524);
+            this.GenderLabel.Location = new System.Drawing.Point(454, 426);
+            this.GenderLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GenderLabel.Name = "GenderLabel";
-            this.GenderLabel.Size = new System.Drawing.Size(56, 17);
+            this.GenderLabel.Size = new System.Drawing.Size(42, 13);
             this.GenderLabel.TabIndex = 67;
             this.GenderLabel.Text = "Gender";
             // 
             // DOBBox
             // 
-            this.DOBBox.Location = new System.Drawing.Point(729, 495);
-            this.DOBBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.DOBBox.Location = new System.Drawing.Point(547, 402);
+            this.DOBBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.DOBBox.Name = "DOBBox";
-            this.DOBBox.Size = new System.Drawing.Size(144, 22);
+            this.DOBBox.Size = new System.Drawing.Size(109, 20);
             this.DOBBox.TabIndex = 66;
             // 
             // EmailBox
             // 
-            this.EmailBox.Location = new System.Drawing.Point(729, 465);
-            this.EmailBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.EmailBox.Location = new System.Drawing.Point(547, 378);
+            this.EmailBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EmailBox.Name = "EmailBox";
-            this.EmailBox.Size = new System.Drawing.Size(224, 22);
+            this.EmailBox.Size = new System.Drawing.Size(169, 20);
             this.EmailBox.TabIndex = 65;
             // 
             // AddressBox
             // 
-            this.AddressBox.Location = new System.Drawing.Point(729, 436);
-            this.AddressBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddressBox.Location = new System.Drawing.Point(547, 354);
+            this.AddressBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddressBox.Name = "AddressBox";
-            this.AddressBox.Size = new System.Drawing.Size(224, 22);
+            this.AddressBox.Size = new System.Drawing.Size(169, 20);
             this.AddressBox.TabIndex = 64;
             // 
             // PhoneNumberLabel
             // 
             this.PhoneNumberLabel.AutoSize = true;
             this.PhoneNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumberLabel.Location = new System.Drawing.Point(603, 407);
+            this.PhoneNumberLabel.Location = new System.Drawing.Point(452, 331);
+            this.PhoneNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
-            this.PhoneNumberLabel.Size = new System.Drawing.Size(103, 17);
+            this.PhoneNumberLabel.Size = new System.Drawing.Size(78, 13);
             this.PhoneNumberLabel.TabIndex = 63;
             this.PhoneNumberLabel.Text = "Phone Number";
             // 
@@ -209,9 +213,10 @@
             // 
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameLabel.Location = new System.Drawing.Point(329, 494);
+            this.LastNameLabel.Location = new System.Drawing.Point(247, 401);
+            this.LastNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(76, 17);
+            this.LastNameLabel.Size = new System.Drawing.Size(58, 13);
             this.LastNameLabel.TabIndex = 62;
             this.LastNameLabel.Text = "Last Name";
             // 
@@ -219,9 +224,10 @@
             // 
             this.FirstNameLabel.AutoSize = true;
             this.FirstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameLabel.Location = new System.Drawing.Point(329, 464);
+            this.FirstNameLabel.Location = new System.Drawing.Point(247, 377);
+            this.FirstNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(76, 17);
+            this.FirstNameLabel.Size = new System.Drawing.Size(57, 13);
             this.FirstNameLabel.TabIndex = 61;
             this.FirstNameLabel.Text = "First Name";
             // 
@@ -229,9 +235,10 @@
             // 
             this.PasswordLabel.AutoSize = true;
             this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.Location = new System.Drawing.Point(329, 436);
+            this.PasswordLabel.Location = new System.Drawing.Point(247, 354);
+            this.PasswordLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(69, 17);
+            this.PasswordLabel.Size = new System.Drawing.Size(53, 13);
             this.PasswordLabel.TabIndex = 60;
             this.PasswordLabel.Text = "Password";
             // 
@@ -239,77 +246,80 @@
             // 
             this.UsernameLabel.AutoSize = true;
             this.UsernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsernameLabel.Location = new System.Drawing.Point(329, 407);
+            this.UsernameLabel.Location = new System.Drawing.Point(247, 331);
+            this.UsernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.UsernameLabel.Name = "UsernameLabel";
-            this.UsernameLabel.Size = new System.Drawing.Size(73, 17);
+            this.UsernameLabel.Size = new System.Drawing.Size(55, 13);
             this.UsernameLabel.TabIndex = 59;
             this.UsernameLabel.Text = "Username";
             // 
             // PhoneNumberBox
             // 
-            this.PhoneNumberBox.Location = new System.Drawing.Point(729, 407);
-            this.PhoneNumberBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PhoneNumberBox.Location = new System.Drawing.Point(547, 331);
+            this.PhoneNumberBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PhoneNumberBox.Name = "PhoneNumberBox";
-            this.PhoneNumberBox.Size = new System.Drawing.Size(144, 22);
+            this.PhoneNumberBox.Size = new System.Drawing.Size(109, 20);
             this.PhoneNumberBox.TabIndex = 58;
             // 
             // LastNameBox
             // 
-            this.LastNameBox.Location = new System.Drawing.Point(455, 494);
-            this.LastNameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LastNameBox.Location = new System.Drawing.Point(341, 401);
+            this.LastNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LastNameBox.Name = "LastNameBox";
-            this.LastNameBox.Size = new System.Drawing.Size(128, 22);
+            this.LastNameBox.Size = new System.Drawing.Size(97, 20);
             this.LastNameBox.TabIndex = 57;
             // 
             // FirstNameBox
             // 
-            this.FirstNameBox.Location = new System.Drawing.Point(455, 464);
-            this.FirstNameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.FirstNameBox.Location = new System.Drawing.Point(341, 377);
+            this.FirstNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.FirstNameBox.Name = "FirstNameBox";
-            this.FirstNameBox.Size = new System.Drawing.Size(128, 22);
+            this.FirstNameBox.Size = new System.Drawing.Size(97, 20);
             this.FirstNameBox.TabIndex = 56;
             // 
             // PasswordBox
             // 
-            this.PasswordBox.Location = new System.Drawing.Point(455, 436);
-            this.PasswordBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PasswordBox.Location = new System.Drawing.Point(341, 354);
+            this.PasswordBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PasswordBox.Name = "PasswordBox";
-            this.PasswordBox.Size = new System.Drawing.Size(128, 22);
+            this.PasswordBox.Size = new System.Drawing.Size(97, 20);
             this.PasswordBox.TabIndex = 55;
             this.PasswordBox.UseSystemPasswordChar = true;
             // 
             // UsernameBox
             // 
-            this.UsernameBox.Location = new System.Drawing.Point(455, 407);
-            this.UsernameBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UsernameBox.Location = new System.Drawing.Point(341, 331);
+            this.UsernameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UsernameBox.Name = "UsernameBox";
-            this.UsernameBox.Size = new System.Drawing.Size(128, 22);
+            this.UsernameBox.Size = new System.Drawing.Size(97, 20);
             this.UsernameBox.TabIndex = 54;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(327, 215);
+            this.label1.Location = new System.Drawing.Point(245, 175);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(727, 31);
+            this.label1.Size = new System.Drawing.Size(592, 25);
             this.label1.TabIndex = 76;
             this.label1.Text = "Create your account, then head back to the login page!";
             // 
             // DateOfBirthLabel
             // 
             this.DateOfBirthLabel.AutoSize = true;
-            this.DateOfBirthLabel.Location = new System.Drawing.Point(880, 499);
+            this.DateOfBirthLabel.Location = new System.Drawing.Point(660, 405);
+            this.DateOfBirthLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DateOfBirthLabel.Name = "DateOfBirthLabel";
-            this.DateOfBirthLabel.Size = new System.Drawing.Size(94, 17);
+            this.DateOfBirthLabel.Size = new System.Drawing.Size(79, 13);
             this.DateOfBirthLabel.TabIndex = 77;
             this.DateOfBirthLabel.Text = "MM/DD/YYYY";
             // 
             // NewUserRegistrationPg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1409, 864);
+            this.ClientSize = new System.Drawing.Size(1057, 702);
             this.Controls.Add(this.DateOfBirthLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.SaveUserButton);
@@ -335,7 +345,6 @@
             this.Controls.Add(this.UsernameBox);
             this.Controls.Add(this.btnLoginPage);
             this.Controls.Add(this.btnHomePage);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NewUserRegistrationPg";
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.NewUserRegistrationPg_Load);

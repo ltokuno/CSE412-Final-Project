@@ -69,9 +69,9 @@ namespace CSE412_Group17
                             notFound = false;
                             this.Hide();
 
-                            HomePage home = new HomePage();
+                            BrakesPg brakes = new BrakesPg();
 
-                            home.Show();
+                            brakes.Show();
                         }
                         else
                         {
@@ -80,9 +80,9 @@ namespace CSE412_Group17
                             notFound = false;
                             this.Hide();
 
-                            HomePage home = new HomePage();
+                            BrakesPg brakes = new BrakesPg();
 
-                            home.Show();
+                            brakes.Show();
                         }
                     }
                 }
