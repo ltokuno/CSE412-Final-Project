@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnParts = new System.Windows.Forms.Button();
+            this.btnShop = new System.Windows.Forms.Button();
             this.panelParts = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.btnTiresTubes = new System.Windows.Forms.Button();
@@ -94,21 +94,21 @@
             this.MyOrdersPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // btnParts
+            // btnShop
             // 
-            this.btnParts.BackColor = System.Drawing.Color.Gray;
-            this.btnParts.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnParts.FlatAppearance.BorderSize = 0;
-            this.btnParts.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnParts.ForeColor = System.Drawing.Color.Transparent;
-            this.btnParts.Location = new System.Drawing.Point(0, 0);
-            this.btnParts.Name = "btnParts";
-            this.btnParts.Size = new System.Drawing.Size(249, 52);
-            this.btnParts.TabIndex = 4;
-            this.btnParts.Text = "Parts";
-            this.btnParts.UseVisualStyleBackColor = false;
-            this.btnParts.Click += new System.EventHandler(this.btnParts_Click);
+            this.btnShop.BackColor = System.Drawing.Color.Gray;
+            this.btnShop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnShop.FlatAppearance.BorderSize = 0;
+            this.btnShop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShop.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnShop.ForeColor = System.Drawing.Color.Transparent;
+            this.btnShop.Location = new System.Drawing.Point(0, 0);
+            this.btnShop.Name = "btnShop";
+            this.btnShop.Size = new System.Drawing.Size(249, 52);
+            this.btnShop.TabIndex = 4;
+            this.btnShop.Text = "Shop";
+            this.btnShop.UseVisualStyleBackColor = false;
+            this.btnShop.Click += new System.EventHandler(this.btnParts_Click);
             // 
             // panelParts
             // 
@@ -120,7 +120,7 @@
             this.panelParts.Controls.Add(this.btnForks);
             this.panelParts.Controls.Add(this.btnChains);
             this.panelParts.Controls.Add(this.btnBrakes);
-            this.panelParts.Controls.Add(this.btnParts);
+            this.panelParts.Controls.Add(this.btnShop);
             this.panelParts.Location = new System.Drawing.Point(81, 143);
             this.panelParts.Name = "panelParts";
             this.panelParts.Size = new System.Drawing.Size(249, 52);
@@ -392,7 +392,7 @@
             this.btnHomePage.Name = "btnHomePage";
             this.btnHomePage.Size = new System.Drawing.Size(318, 58);
             this.btnHomePage.TabIndex = 21;
-            this.btnHomePage.Text = "Store Name";
+            this.btnHomePage.Text = "BikeBoss";
             this.btnHomePage.UseVisualStyleBackColor = true;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
@@ -814,7 +814,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnParts;
+        private System.Windows.Forms.Button btnShop;
         private System.Windows.Forms.Panel panelParts;
         private System.Windows.Forms.Button btnTiresTubes;
         private System.Windows.Forms.Button btnWheels;
