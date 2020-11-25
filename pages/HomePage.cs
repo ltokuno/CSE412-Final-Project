@@ -23,9 +23,20 @@ namespace CSE412_Group17
             MyOrders
         }
 
-        public HomePage()
+        private HomePage()
         {
             InitializeComponent();
+        }
+
+        private static HomePage curPage = null;
+
+        public static HomePage getInstance() {
+            if (curPage == null) {
+                curPage = new HomePage();
+                curPage.InitializeComponent();
+            }
+            curPage.Show();
+            return curPage;
         }
 
         private void btnParts_Click(object sender, EventArgs e)
@@ -109,9 +120,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            MyCartPg cart = new MyCartPg();
-
-            cart.Show();
+            MyCartPg.getInstance();
 
         }
 
@@ -146,10 +155,12 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            MyProfilePg profilePg = new MyProfilePg();
+            MyProfilePg.getInstance();
 
-            profilePg.Show();
+        }
 
+        private void HomePage_FormClosed(object sender, FormClosedEventArgs e) {
+            Application.Exit();
         }
     }
 }

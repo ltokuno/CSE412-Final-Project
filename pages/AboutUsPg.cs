@@ -4,14 +4,12 @@ using System.Windows.Forms;
 namespace CSE412_Group17 {
     public partial class AboutUsPg : Form
     {
-
-        private static AboutUsPg curPage;
-
         private AboutUsPg()
         {
             InitializeComponent();
         }
 
+        private static AboutUsPg curPage;
         public static AboutUsPg getInstance() {
             if (curPage == null) {
                 curPage = new AboutUsPg();
@@ -46,6 +44,10 @@ namespace CSE412_Group17 {
 
             shoppingPg.Show();
 
+        }
+
+        private void AboutUsPg_Closed(object sender, FormClosedEventArgs e) {
+            Application.Exit();
         }
     }
 }

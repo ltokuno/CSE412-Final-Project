@@ -276,6 +276,7 @@
             this.Controls.Add(this.lblHomeMessage1);
             this.Name = "HomePage";
             this.Text = "HomePage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomePage_FormClosed);
             this.panelParts.ResumeLayout(false);
             this.panelAccount.ResumeLayout(false);
             this.panelResources.ResumeLayout(false);

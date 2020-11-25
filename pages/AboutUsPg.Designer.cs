@@ -204,6 +204,7 @@
             this.Controls.Add(this.lblLine3);
             this.Name = "AboutUsPg";
             this.Text = "About Us";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AboutUsPg_Closed);
             this.Load += new System.EventHandler(this.AboutUsPg_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

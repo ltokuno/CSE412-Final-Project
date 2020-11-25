@@ -12,10 +12,20 @@ namespace CSE412_Group17
 {
     public partial class MyOrdersPg : Form
     {
-
-        public MyOrdersPg()
+        private MyOrdersPg()
         {
             InitializeComponent();
+        }
+
+        private static MyOrdersPg curPage = null;
+
+        public static MyOrdersPg getInstance() {
+            if (curPage == null) {
+                curPage = new MyOrdersPg();
+                curPage.InitializeComponent();
+            }
+            curPage.Show();
+            return curPage;
         }
 
         private void btnParts_Click(object sender, EventArgs e)
@@ -69,9 +79,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            HomePage home = new HomePage();
-
-            home.Show();
+            HomePage.getInstance();
 
         }
 
@@ -100,9 +108,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            MyCartPg cart = new MyCartPg();
-
-            cart.Show();
+            MyCartPg.getInstance();
 
         }
 
@@ -122,10 +128,12 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            MyProfilePg profilePg = new MyProfilePg();
+            MyProfilePg.getInstance();
 
-            profilePg.Show();
+        }
 
+        private void MyOrdersPg_FormClosed(object sender, FormClosedEventArgs e) {
+            Application.Exit();
         }
     }
 }

@@ -1,22 +1,26 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CSE412_Group17.controllers;
 using CSE412_Group17.models;
 
-namespace CSE412_Group17
-{
-    public partial class AdminBox : Form
+namespace CSE412_Group17 {
+    public partial class AdminPg : Form
     {
-        public AdminBox()
+        private AdminPg()
         {
             InitializeComponent();
+        }
+
+        private static AdminPg curPage = null;
+
+        public static AdminPg getInstance() {
+            if (curPage == null) {
+                curPage = new AdminPg();
+                curPage.InitializeComponent();
+
+            }
+            curPage.Show();
+            return curPage;
         }
 
         private void AdminPg_Load(object sender, EventArgs e)
@@ -208,9 +212,12 @@ namespace CSE412_Group17
             
             this.Hide();
 
-            AddPartsPg addParts = new AddPartsPg();
+            AddPartsPg.getInstance();
 
-            addParts.Show();
+        }
+
+        private void AdminBox_FormClosed(object sender, FormClosedEventArgs e) {
+            Application.Exit();
 
         }
     }

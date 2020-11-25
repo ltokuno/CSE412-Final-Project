@@ -85,7 +85,7 @@
             // SaveUserButton
             // 
             this.SaveUserButton.Location = new System.Drawing.Point(565, 460);
-            this.SaveUserButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SaveUserButton.Margin = new System.Windows.Forms.Padding(2);
             this.SaveUserButton.Name = "SaveUserButton";
             this.SaveUserButton.Size = new System.Drawing.Size(58, 20);
             this.SaveUserButton.TabIndex = 75;
@@ -109,7 +109,7 @@
             this.FemaleButton.AutoSize = true;
             this.FemaleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FemaleButton.Location = new System.Drawing.Point(597, 426);
-            this.FemaleButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FemaleButton.Margin = new System.Windows.Forms.Padding(2);
             this.FemaleButton.Name = "FemaleButton";
             this.FemaleButton.Size = new System.Drawing.Size(59, 17);
             this.FemaleButton.TabIndex = 73;
@@ -122,7 +122,7 @@
             this.MaleButton.AutoSize = true;
             this.MaleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaleButton.Location = new System.Drawing.Point(547, 426);
-            this.MaleButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaleButton.Margin = new System.Windows.Forms.Padding(2);
             this.MaleButton.Name = "MaleButton";
             this.MaleButton.Size = new System.Drawing.Size(48, 17);
             this.MaleButton.TabIndex = 72;
@@ -177,7 +177,7 @@
             // DOBBox
             // 
             this.DOBBox.Location = new System.Drawing.Point(547, 402);
-            this.DOBBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DOBBox.Margin = new System.Windows.Forms.Padding(2);
             this.DOBBox.Name = "DOBBox";
             this.DOBBox.Size = new System.Drawing.Size(109, 20);
             this.DOBBox.TabIndex = 66;
@@ -185,7 +185,7 @@
             // EmailBox
             // 
             this.EmailBox.Location = new System.Drawing.Point(547, 378);
-            this.EmailBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmailBox.Margin = new System.Windows.Forms.Padding(2);
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.Size = new System.Drawing.Size(169, 20);
             this.EmailBox.TabIndex = 65;
@@ -193,7 +193,7 @@
             // AddressBox
             // 
             this.AddressBox.Location = new System.Drawing.Point(547, 354);
-            this.AddressBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddressBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddressBox.Name = "AddressBox";
             this.AddressBox.Size = new System.Drawing.Size(169, 20);
             this.AddressBox.TabIndex = 64;
@@ -256,7 +256,7 @@
             // PhoneNumberBox
             // 
             this.PhoneNumberBox.Location = new System.Drawing.Point(547, 331);
-            this.PhoneNumberBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PhoneNumberBox.Margin = new System.Windows.Forms.Padding(2);
             this.PhoneNumberBox.Name = "PhoneNumberBox";
             this.PhoneNumberBox.Size = new System.Drawing.Size(109, 20);
             this.PhoneNumberBox.TabIndex = 58;
@@ -264,7 +264,7 @@
             // LastNameBox
             // 
             this.LastNameBox.Location = new System.Drawing.Point(341, 401);
-            this.LastNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LastNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.LastNameBox.Name = "LastNameBox";
             this.LastNameBox.Size = new System.Drawing.Size(97, 20);
             this.LastNameBox.TabIndex = 57;
@@ -272,7 +272,7 @@
             // FirstNameBox
             // 
             this.FirstNameBox.Location = new System.Drawing.Point(341, 377);
-            this.FirstNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FirstNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.FirstNameBox.Name = "FirstNameBox";
             this.FirstNameBox.Size = new System.Drawing.Size(97, 20);
             this.FirstNameBox.TabIndex = 56;
@@ -280,7 +280,7 @@
             // PasswordBox
             // 
             this.PasswordBox.Location = new System.Drawing.Point(341, 354);
-            this.PasswordBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PasswordBox.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(97, 20);
             this.PasswordBox.TabIndex = 55;
@@ -289,7 +289,7 @@
             // UsernameBox
             // 
             this.UsernameBox.Location = new System.Drawing.Point(341, 331);
-            this.UsernameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UsernameBox.Margin = new System.Windows.Forms.Padding(2);
             this.UsernameBox.Name = "UsernameBox";
             this.UsernameBox.Size = new System.Drawing.Size(97, 20);
             this.UsernameBox.TabIndex = 54;
@@ -347,6 +347,7 @@
             this.Controls.Add(this.btnHomePage);
             this.Name = "NewUserRegistrationPg";
             this.Text = "HomePage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NewUserRegistrationPg_FormClosed);
             this.Load += new System.EventHandler(this.NewUserRegistrationPg_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -1,6 +1,6 @@
 ﻿namespace CSE412_Group17
 {
-    partial class AdminBox
+    partial class AdminPg
     {
         /// <summary>
         /// Required designer variable.
@@ -117,7 +117,7 @@
             // 
             this.UsersBox.FormattingEnabled = true;
             this.UsersBox.Location = new System.Drawing.Point(516, 115);
-            this.UsersBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UsersBox.Margin = new System.Windows.Forms.Padding(2);
             this.UsersBox.Name = "UsersBox";
             this.UsersBox.Size = new System.Drawing.Size(521, 290);
             this.UsersBox.TabIndex = 31;
@@ -125,7 +125,7 @@
             // UsernameBox
             // 
             this.UsernameBox.Location = new System.Drawing.Point(114, 161);
-            this.UsernameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.UsernameBox.Margin = new System.Windows.Forms.Padding(2);
             this.UsernameBox.Name = "UsernameBox";
             this.UsernameBox.Size = new System.Drawing.Size(76, 20);
             this.UsernameBox.TabIndex = 32;
@@ -133,7 +133,7 @@
             // PasswordBox
             // 
             this.PasswordBox.Location = new System.Drawing.Point(114, 184);
-            this.PasswordBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PasswordBox.Margin = new System.Windows.Forms.Padding(2);
             this.PasswordBox.Name = "PasswordBox";
             this.PasswordBox.Size = new System.Drawing.Size(76, 20);
             this.PasswordBox.TabIndex = 33;
@@ -142,7 +142,7 @@
             // FirstNameBox
             // 
             this.FirstNameBox.Location = new System.Drawing.Point(114, 207);
-            this.FirstNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FirstNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.FirstNameBox.Name = "FirstNameBox";
             this.FirstNameBox.Size = new System.Drawing.Size(76, 20);
             this.FirstNameBox.TabIndex = 34;
@@ -150,7 +150,7 @@
             // LastNameBox
             // 
             this.LastNameBox.Location = new System.Drawing.Point(114, 231);
-            this.LastNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LastNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.LastNameBox.Name = "LastNameBox";
             this.LastNameBox.Size = new System.Drawing.Size(76, 20);
             this.LastNameBox.TabIndex = 35;
@@ -158,7 +158,7 @@
             // PhoneNumberBox
             // 
             this.PhoneNumberBox.Location = new System.Drawing.Point(320, 161);
-            this.PhoneNumberBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PhoneNumberBox.Margin = new System.Windows.Forms.Padding(2);
             this.PhoneNumberBox.Name = "PhoneNumberBox";
             this.PhoneNumberBox.Size = new System.Drawing.Size(76, 20);
             this.PhoneNumberBox.TabIndex = 36;
@@ -221,7 +221,7 @@
             // AddressBox
             // 
             this.AddressBox.Location = new System.Drawing.Point(320, 184);
-            this.AddressBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddressBox.Margin = new System.Windows.Forms.Padding(2);
             this.AddressBox.Name = "AddressBox";
             this.AddressBox.Size = new System.Drawing.Size(169, 20);
             this.AddressBox.TabIndex = 42;
@@ -229,7 +229,7 @@
             // EmailBox
             // 
             this.EmailBox.Location = new System.Drawing.Point(320, 208);
-            this.EmailBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EmailBox.Margin = new System.Windows.Forms.Padding(2);
             this.EmailBox.Name = "EmailBox";
             this.EmailBox.Size = new System.Drawing.Size(169, 20);
             this.EmailBox.TabIndex = 43;
@@ -237,7 +237,7 @@
             // DOBBox
             // 
             this.DOBBox.Location = new System.Drawing.Point(320, 232);
-            this.DOBBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DOBBox.Margin = new System.Windows.Forms.Padding(2);
             this.DOBBox.Name = "DOBBox";
             this.DOBBox.Size = new System.Drawing.Size(76, 20);
             this.DOBBox.TabIndex = 44;
@@ -280,7 +280,7 @@
             this.AdminCheckBox.AutoSize = true;
             this.AdminCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdminCheckBox.Location = new System.Drawing.Point(114, 256);
-            this.AdminCheckBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AdminCheckBox.Margin = new System.Windows.Forms.Padding(2);
             this.AdminCheckBox.Name = "AdminCheckBox";
             this.AdminCheckBox.Size = new System.Drawing.Size(97, 17);
             this.AdminCheckBox.TabIndex = 48;
@@ -303,7 +303,7 @@
             this.MaleButton.AutoSize = true;
             this.MaleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaleButton.Location = new System.Drawing.Point(320, 256);
-            this.MaleButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaleButton.Margin = new System.Windows.Forms.Padding(2);
             this.MaleButton.Name = "MaleButton";
             this.MaleButton.Size = new System.Drawing.Size(48, 17);
             this.MaleButton.TabIndex = 50;
@@ -316,7 +316,7 @@
             this.FemaleButton.AutoSize = true;
             this.FemaleButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FemaleButton.Location = new System.Drawing.Point(370, 256);
-            this.FemaleButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FemaleButton.Margin = new System.Windows.Forms.Padding(2);
             this.FemaleButton.Name = "FemaleButton";
             this.FemaleButton.Size = new System.Drawing.Size(59, 17);
             this.FemaleButton.TabIndex = 51;
@@ -338,7 +338,7 @@
             // SaveUserButton
             // 
             this.SaveUserButton.Location = new System.Drawing.Point(338, 290);
-            this.SaveUserButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SaveUserButton.Margin = new System.Windows.Forms.Padding(2);
             this.SaveUserButton.Name = "SaveUserButton";
             this.SaveUserButton.Size = new System.Drawing.Size(58, 20);
             this.SaveUserButton.TabIndex = 53;
@@ -360,7 +360,7 @@
             // GetAllUsersButton
             // 
             this.GetAllUsersButton.Location = new System.Drawing.Point(516, 410);
-            this.GetAllUsersButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GetAllUsersButton.Margin = new System.Windows.Forms.Padding(2);
             this.GetAllUsersButton.Name = "GetAllUsersButton";
             this.GetAllUsersButton.Size = new System.Drawing.Size(98, 26);
             this.GetAllUsersButton.TabIndex = 56;
@@ -371,7 +371,7 @@
             // EditUserButton
             // 
             this.EditUserButton.Location = new System.Drawing.Point(625, 410);
-            this.EditUserButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditUserButton.Margin = new System.Windows.Forms.Padding(2);
             this.EditUserButton.Name = "EditUserButton";
             this.EditUserButton.Size = new System.Drawing.Size(110, 26);
             this.EditUserButton.TabIndex = 57;
@@ -448,7 +448,7 @@
             // EditFirstNameBox
             // 
             this.EditFirstNameBox.Location = new System.Drawing.Point(625, 448);
-            this.EditFirstNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditFirstNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.EditFirstNameBox.Name = "EditFirstNameBox";
             this.EditFirstNameBox.Size = new System.Drawing.Size(135, 20);
             this.EditFirstNameBox.TabIndex = 64;
@@ -456,7 +456,7 @@
             // EditLastNameBox
             // 
             this.EditLastNameBox.Location = new System.Drawing.Point(625, 472);
-            this.EditLastNameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditLastNameBox.Margin = new System.Windows.Forms.Padding(2);
             this.EditLastNameBox.Name = "EditLastNameBox";
             this.EditLastNameBox.Size = new System.Drawing.Size(135, 20);
             this.EditLastNameBox.TabIndex = 65;
@@ -464,7 +464,7 @@
             // EditAddressBox
             // 
             this.EditAddressBox.Location = new System.Drawing.Point(625, 496);
-            this.EditAddressBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditAddressBox.Margin = new System.Windows.Forms.Padding(2);
             this.EditAddressBox.Name = "EditAddressBox";
             this.EditAddressBox.Size = new System.Drawing.Size(254, 20);
             this.EditAddressBox.TabIndex = 66;
@@ -472,7 +472,7 @@
             // EditPhoneNumberBox
             // 
             this.EditPhoneNumberBox.Location = new System.Drawing.Point(625, 518);
-            this.EditPhoneNumberBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditPhoneNumberBox.Margin = new System.Windows.Forms.Padding(2);
             this.EditPhoneNumberBox.Name = "EditPhoneNumberBox";
             this.EditPhoneNumberBox.Size = new System.Drawing.Size(135, 20);
             this.EditPhoneNumberBox.TabIndex = 67;
@@ -480,7 +480,7 @@
             // EditEmailBox
             // 
             this.EditEmailBox.Location = new System.Drawing.Point(625, 542);
-            this.EditEmailBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditEmailBox.Margin = new System.Windows.Forms.Padding(2);
             this.EditEmailBox.Name = "EditEmailBox";
             this.EditEmailBox.Size = new System.Drawing.Size(135, 20);
             this.EditEmailBox.TabIndex = 68;
@@ -490,7 +490,7 @@
             this.EditAdminBox.AutoSize = true;
             this.EditAdminBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EditAdminBox.Location = new System.Drawing.Point(625, 563);
-            this.EditAdminBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditAdminBox.Margin = new System.Windows.Forms.Padding(2);
             this.EditAdminBox.Name = "EditAdminBox";
             this.EditAdminBox.Size = new System.Drawing.Size(55, 17);
             this.EditAdminBox.TabIndex = 69;
@@ -500,7 +500,7 @@
             // EditSaveChangesButton
             // 
             this.EditSaveChangesButton.Location = new System.Drawing.Point(754, 581);
-            this.EditSaveChangesButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditSaveChangesButton.Margin = new System.Windows.Forms.Padding(2);
             this.EditSaveChangesButton.Name = "EditSaveChangesButton";
             this.EditSaveChangesButton.Size = new System.Drawing.Size(94, 28);
             this.EditSaveChangesButton.TabIndex = 70;
@@ -523,7 +523,7 @@
             // 
             this.LoginBox.FormattingEnabled = true;
             this.LoginBox.Location = new System.Drawing.Point(26, 410);
-            this.LoginBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LoginBox.Margin = new System.Windows.Forms.Padding(2);
             this.LoginBox.Name = "LoginBox";
             this.LoginBox.Size = new System.Drawing.Size(368, 160);
             this.LoginBox.TabIndex = 72;
@@ -531,7 +531,7 @@
             // EditUsernameBox
             // 
             this.EditUsernameBox.Location = new System.Drawing.Point(134, 607);
-            this.EditUsernameBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditUsernameBox.Margin = new System.Windows.Forms.Padding(2);
             this.EditUsernameBox.Name = "EditUsernameBox";
             this.EditUsernameBox.Size = new System.Drawing.Size(76, 20);
             this.EditUsernameBox.TabIndex = 73;
@@ -539,7 +539,7 @@
             // EditPasswordBox
             // 
             this.EditPasswordBox.Location = new System.Drawing.Point(134, 630);
-            this.EditPasswordBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditPasswordBox.Margin = new System.Windows.Forms.Padding(2);
             this.EditPasswordBox.Name = "EditPasswordBox";
             this.EditPasswordBox.Size = new System.Drawing.Size(76, 20);
             this.EditPasswordBox.TabIndex = 74;
@@ -548,7 +548,7 @@
             // EditPasswordBox2
             // 
             this.EditPasswordBox2.Location = new System.Drawing.Point(134, 652);
-            this.EditPasswordBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditPasswordBox2.Margin = new System.Windows.Forms.Padding(2);
             this.EditPasswordBox2.Name = "EditPasswordBox2";
             this.EditPasswordBox2.Size = new System.Drawing.Size(76, 20);
             this.EditPasswordBox2.TabIndex = 75;
@@ -590,7 +590,7 @@
             // GetLoginCredentialsButton
             // 
             this.GetLoginCredentialsButton.Location = new System.Drawing.Point(26, 574);
-            this.GetLoginCredentialsButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GetLoginCredentialsButton.Margin = new System.Windows.Forms.Padding(2);
             this.GetLoginCredentialsButton.Name = "GetLoginCredentialsButton";
             this.GetLoginCredentialsButton.Size = new System.Drawing.Size(116, 26);
             this.GetLoginCredentialsButton.TabIndex = 79;
@@ -601,7 +601,7 @@
             // EditSelectedCredentialButton
             // 
             this.EditSelectedCredentialButton.Location = new System.Drawing.Point(153, 574);
-            this.EditSelectedCredentialButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditSelectedCredentialButton.Margin = new System.Windows.Forms.Padding(2);
             this.EditSelectedCredentialButton.Name = "EditSelectedCredentialButton";
             this.EditSelectedCredentialButton.Size = new System.Drawing.Size(130, 26);
             this.EditSelectedCredentialButton.TabIndex = 80;
@@ -612,7 +612,7 @@
             // EditCredentialsSaveButton
             // 
             this.EditCredentialsSaveButton.Location = new System.Drawing.Point(227, 648);
-            this.EditCredentialsSaveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.EditCredentialsSaveButton.Margin = new System.Windows.Forms.Padding(2);
             this.EditCredentialsSaveButton.Name = "EditCredentialsSaveButton";
             this.EditCredentialsSaveButton.Size = new System.Drawing.Size(95, 26);
             this.EditCredentialsSaveButton.TabIndex = 81;
@@ -743,7 +743,8 @@
             this.Controls.Add(this.btnSignOut);
             this.Controls.Add(this.label1);
             this.Name = "AdminBox";
-            this.Text = "HomePage";
+            this.Text = "User Admin";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminBox_FormClosed);
             this.Load += new System.EventHandler(this.AdminPg_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

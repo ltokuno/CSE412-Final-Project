@@ -312,6 +312,7 @@
             this.Controls.Add(this.listView1);
             this.Name = "MyCartPg";
             this.Text = "HomePage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MyCartPg_FormClosed);
             this.panelParts.ResumeLayout(false);
             this.panelAccount.ResumeLayout(false);
             this.panelResources.ResumeLayout(false);

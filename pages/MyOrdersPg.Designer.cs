@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.btnParts = new System.Windows.Forms.Button();
             this.panelParts = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
@@ -221,7 +221,7 @@
             this.columnQuantity});
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(231, 343);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(624, 266);
@@ -269,6 +269,7 @@
             this.Controls.Add(this.btnHomePage);
             this.Name = "MyOrdersPg";
             this.Text = "My Orders";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MyOrdersPg_FormClosed);
             this.panelParts.ResumeLayout(false);
             this.panelAccount.ResumeLayout(false);
             this.panelResources.ResumeLayout(false);

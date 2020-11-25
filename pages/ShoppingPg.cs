@@ -60,8 +60,6 @@ namespace CSE412_Group17
             }
         }
 
-       
-
         private ShoppingPg()
         {
             InitializeComponent();
@@ -72,11 +70,11 @@ namespace CSE412_Group17
         public static ShoppingPg getInstance() {
             if (curPage == null) {
                 curPage = new ShoppingPg();
+                curPage.InitializeComponent();
             }
+            curPage.Show();
             return curPage;
         }
-
-
 
         private void btnParts_Click(object sender, EventArgs e)
         {
@@ -180,9 +178,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            MyProfilePg profilePg = new MyProfilePg();
-
-            profilePg.Show();
+            MyProfilePg.getInstance();
 
         }
 
@@ -373,5 +369,8 @@ namespace CSE412_Group17
             lblMyConfNum.Text = "";
         }
 
+        private void ShoppingPg_Closed(object sender, FormClosedEventArgs e) {
+            Application.Exit();
+        }
     } //end class
 }

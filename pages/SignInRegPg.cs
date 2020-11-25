@@ -60,9 +60,8 @@ namespace CSE412_Group17
                             notFound = false;
                             this.Hide();
 
-                            AdminBox admin = new AdminBox();
+                            AdminPg.getInstance();
 
-                            admin.Show();
                         }else if (!user.IsAdmin && SignInAsAdminBox.Checked)
                         {
                             MessageBox.Show("User is Not an Admin");
@@ -113,6 +112,10 @@ namespace CSE412_Group17
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void SignInRegPg_FormClosed(object sender, FormClosedEventArgs e) {
+            Application.Exit();
         }
     }
 }

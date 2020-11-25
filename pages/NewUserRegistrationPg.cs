@@ -121,5 +121,9 @@ namespace CSE412_Group17
         {
 
         }
+
+        private void NewUserRegistrationPg_FormClosed(object sender, FormClosedEventArgs e) {
+            Application.Exit();
+        }
     }
 }

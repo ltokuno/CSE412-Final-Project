@@ -671,6 +671,7 @@
             this.Controls.Add(this.lblBrakesMessage1);
             this.Name = "ShoppingPg";
             this.Text = "HomePage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ShoppingPg_Closed);
             this.Load += new System.EventHandler(this.BrakesPg_Load);
             this.panelParts.ResumeLayout(false);
             this.panelAccount.ResumeLayout(false);

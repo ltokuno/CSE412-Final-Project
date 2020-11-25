@@ -169,6 +169,7 @@
             this.Controls.Add(this.lblLoginMessage);
             this.Name = "SignInRegPg";
             this.Text = "HomePage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SignInRegPg_FormClosed);
             this.Load += new System.EventHandler(this.SignInRegPg_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

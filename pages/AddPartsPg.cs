@@ -1,23 +1,28 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CSE412_Group17.controllers;
 using CSE412_Group17.models;
 
-namespace CSE412_Group17
-{
+namespace CSE412_Group17 {
     public partial class AddPartsPg : Form
     {
-        public AddPartsPg()
+        private AddPartsPg()
         {
             InitializeComponent();
         }
+
+        private static AddPartsPg curPage = null;
+
+        public static AddPartsPg getInstance() {
+            if (curPage == null) {
+                curPage = new AddPartsPg();
+                curPage.InitializeComponent();
+
+            }
+            curPage.Show();
+            return curPage;
+        }
+
 
         private void AdminPg_Load(object sender, EventArgs e)
         {
@@ -50,9 +55,7 @@ namespace CSE412_Group17
             
             this.Hide();
 
-            AdminBox adminPg = new AdminBox();
-
-            adminPg.Show();
+            AdminPg.getInstance();
 
         }
 
@@ -174,6 +177,10 @@ namespace CSE412_Group17
             MessageBox.Show("NEW VENDOR ADDED");
             VendorNameBox.Clear();
             VendorAddressBox.Clear();
+        }
+
+        private void AddPartsPg_Closed(object sender, FormClosedEventArgs e) {
+            Application.Exit();
         }
     }
 }

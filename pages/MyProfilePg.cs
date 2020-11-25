@@ -18,9 +18,21 @@ namespace CSE412_Group17
     {
         User user;
 
-        public MyProfilePg()
+        private MyProfilePg()
         {
             InitializeComponent();
+        }
+        
+        private static MyProfilePg curPage = null;
+
+        public static MyProfilePg getInstance() {
+            if (curPage == null) {
+                curPage = new MyProfilePg();
+                curPage.InitializeComponent();
+                
+            }
+            curPage.Show();
+            return curPage;
         }
 
         private void btnHomePage_Click(object sender, EventArgs e) // go to Home page
@@ -91,9 +103,8 @@ namespace CSE412_Group17
             MessageBox.Show("USER INFO UPDATED");
             this.Hide();
 
-            HomePage home = new HomePage();
+            HomePage.getInstance();
 
-            home.Show();
         }
 
         private void UpdateButton_Click(object sender, EventArgs e)
@@ -106,6 +117,10 @@ namespace CSE412_Group17
             PhoneNumberBox.Text = user.PhoneNumber;
             UpdateButton.Visible = false;
             SaveButton.Visible = true;
+        }
+
+        private void MyProfilePg_FormClosed(object sender, FormClosedEventArgs e) {
+            Application.Exit();
         }
     }
 }

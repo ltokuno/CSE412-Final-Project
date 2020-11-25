@@ -338,6 +338,7 @@
             this.Controls.Add(this.lblHomeMessage1);
             this.Name = "MyProfilePg";
             this.Text = "HomePage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MyProfilePg_FormClosed);
             this.Load += new System.EventHandler(this.MyProfilePg_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
