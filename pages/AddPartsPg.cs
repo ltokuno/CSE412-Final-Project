@@ -21,9 +21,19 @@ namespace CSE412_Group17
 
         private void AdminPg_Load(object sender, EventArgs e)
         {
-                
+            VendorCTRL vendorctrl = new VendorCTRL();
+            foreach(Vendor v in vendorctrl.getAllVendors())
+            {
+                VendorSelectBox.Items.Add(v);
+            }
+            ItemsCTRL itemctrl = new ItemsCTRL();
+            foreach(String category in itemctrl.getItemCategories())
+            {
+                CategorySelectBox.Items.Add(category);
+                EditCategoryBox.Items.Add(category);
+            }
         }
-    
+
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {
@@ -36,173 +46,6 @@ namespace CSE412_Group17
 
         }
 
-        private void GetAllUsersButton_Click(object sender, EventArgs e)
-        {
-            //UsersBox.Items.Clear();
-            //UserCTRL users = new UserCTRL();
-            //foreach (User u in users.getAllUsers())
-            //{
-            //    UsersBox.Items.Add(u);
-            //}
-        }
-
-        private void SaveUserButton_Click(object sender, EventArgs e)
-        {
-            //if (String.IsNullOrEmpty(FirstNameBox.Text))
-            //{
-            //    MessageBox.Show("Please Enter First Name");
-            //    return;
-            //}
-            //else if (String.IsNullOrEmpty(LastNameBox.Text))
-            //{
-            //    MessageBox.Show("Please Enter Last Name");
-            //    return;
-            //}
-            //else if (String.IsNullOrEmpty(PhoneNumberBox.Text))
-            //{
-            //    MessageBox.Show("Please Enter Phone Number");
-            //    return;
-            //}
-            //else if (String.IsNullOrEmpty(AddressBox.Text))
-            //{
-            //    MessageBox.Show("Please Enter Address");
-            //    return;
-            //}
-            //if (String.IsNullOrEmpty(EmailBox.Text))
-            //{
-            //    MessageBox.Show("Please Enter Email");
-            //    return;
-            //}
-            //else if (String.IsNullOrEmpty(UsernameBox.Text))
-            //{
-            //    MessageBox.Show("Please Enter Username");
-            //    return;
-            //}
-            //else if (String.IsNullOrEmpty(PasswordBox.Text))
-            //{
-            //    MessageBox.Show("Please Enter Password");
-            //}
-            //LoginCTRL loginctrl = new LoginCTRL();
-            //foreach (Login l in loginctrl.getAllLogins())
-            //{
-            //    if (l.UserName == UsernameBox.Text)
-            //    {
-            //        MessageBox.Show("Username Already Exists");
-            //        return;
-            //    }
-            //}
-            //User user = new User();
-
-            //user.FirstName = FirstNameBox.Text;
-            //user.LastName = LastNameBox.Text;
-            //user.PhoneNumber = PhoneNumberBox.Text;
-            //user.Address = AddressBox.Text;
-            //user.Email = EmailBox.Text;
-            //DateTime dateValue;
-            //if (DateTime.TryParse(DOBBox.Text, out dateValue))
-            //{
-            //    user.DateOfBirth = dateValue;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("DATE OF BIRTH MUST BE OF TYPE MM/DD/YYYY");
-            //    return;
-            //}
-            //if (MaleButton.Checked)
-            //{
-            //    user.Gender = "male";
-            //}
-            //else
-            //    user.Gender = "female";
-            //user.IsAdmin = AdminCheckBox.Checked;
-
-            //user.ID = loginctrl.saveLoginInfo(UsernameBox.Text, PasswordBox.Text);
-            //UserCTRL userctrl = new UserCTRL();
-            //userctrl.addUser(user, user.ID);
-            //MessageBox.Show("NEW USER ADDED");
-            //FirstNameBox.Text = "";
-            //LastNameBox.Text = "";
-            //PhoneNumberBox.Text = "";
-            //AddressBox.Text = "";
-            //EmailBox.Text = "";
-            //AdminCheckBox.Checked = false;
-            //UsernameBox.Text = "";
-            //PasswordBox.Text = "";
-        }
-
-        private void EditUserButton_Click(object sender, EventArgs e)
-        {
-            //User selectedUser = (User)UsersBox.SelectedItem;
-            //txtEditItemNameBox.Text = selectedUser.FirstName;
-            //txtEditCategoryBox.Text = selectedUser.LastName;
-            //txtEditRetailPriceBox.Text = selectedUser.Address;
-            //txtEditStockQuantityBox.Text = selectedUser.Email;
-            //txtEditCostPriceBox.Text = selectedUser.PhoneNumber;
-            //EditAdminBox.Checked = selectedUser.IsAdmin;
-        }
-
-        private void EditSaveChangesButton_Click(object sender, EventArgs e)
-        {
-            //User selectedUser = (User)UsersBox.SelectedItem;
-            //selectedUser.FirstName = txtEditItemNameBox.Text;
-            //selectedUser.LastName = txtEditCategoryBox.Text;
-            //selectedUser.Address = txtEditRetailPriceBox.Text;
-            //selectedUser.Email = txtEditStockQuantityBox.Text;
-            //selectedUser.PhoneNumber = txtEditCostPriceBox.Text;
-            //selectedUser.IsAdmin = EditAdminBox.Checked;
-            //UserCTRL userctrl = new UserCTRL();
-            //userctrl.changeUser(selectedUser);
-            //MessageBox.Show("USER INFO UPDATED");
-            //txtEditItemNameBox.Text = "";
-            //txtEditCategoryBox.Text = "";
-            //txtEditRetailPriceBox.Text = "";
-            //txtEditStockQuantityBox.Text = "";
-            //txtEditCostPriceBox.Text = "";
-            //EditAdminBox.Checked = false;
-        }
-
-        private void GetLoginCredentialsButton_Click(object sender, EventArgs e)
-        {
-            //LoginCTRL loginctrl = new LoginCTRL();
-            //foreach (Login l in loginctrl.getAllLogins())
-            //{
-            //    LoginBox.Items.Add(l);
-            //}
-        }
-
-        private void EditSelectedCredentialButton_Click(object sender, EventArgs e)
-        {
-            //Login selectedLogin = (Login)LoginBox.SelectedItem;
-            //EditUsernameBox.Text = selectedLogin.UserName;
-            //EditPasswordBox.Text = selectedLogin.Password;
-            //EditPasswordBox2.Text = selectedLogin.Password;
-        }
-
-        private void EditCredentialsSaveButton_Click(object sender, EventArgs e)
-        {
-            //if (EditPasswordBox.Text == EditPasswordBox2.Text)
-            //{
-            //    Login selectedLogin = (Login)LoginBox.SelectedItem;
-            //    UpdateCredentials(selectedLogin);
-            //}
-            //else
-            //{
-            //    MessageBox.Show("PASSWORDS MUST MATCH");
-            //}
-        }
-
-        private void UpdateCredentials(Login selectedLogin)
-        {
-            //selectedLogin.UserName = EditUsernameBox.Text;
-            //selectedLogin.Password = EditPasswordBox.Text;
-            //LoginCTRL loginctrl = new LoginCTRL();
-            //loginctrl.changeLogin(selectedLogin);
-            //MessageBox.Show("CREDENTIALS UPDATED");
-            //EditUsernameBox.Text = "";
-            //EditPasswordBox.Text = "";
-            //EditPasswordBox2.Text = "";
-            //LoginBox.Items.Clear();
-        }
 
         private void btnBackToAdminPg_Click(object sender, EventArgs e)
         {
@@ -217,7 +60,122 @@ namespace CSE412_Group17
 
         private void SavePartButton_Click(object sender, EventArgs e)
         {
+            ItemsCTRL itemctrl = new ItemsCTRL();
+            Vendor vendor = (Vendor)VendorSelectBox.SelectedItem;
+            if (String.IsNullOrEmpty(txtItemNameBox.Text))
+            {
+                MessageBox.Show("Please Enter Part Name");
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtCostPriceBox.Text))
+            {
+                MessageBox.Show("Please Enter Cost");
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtRetailPriceBox.Text))
+            {
+                MessageBox.Show("Please Enter Retail Price");
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtStockQuantityBox.Text))
+            {
+                MessageBox.Show("Please Enter Stock Quantity");
+                return;
+            }
+            Item item = new Item();
+            item.Category = (String)CategorySelectBox.SelectedItem;
+            item.CostPrice = Convert.ToDecimal(txtCostPriceBox.Text);
+            item.RetailPrice = Convert.ToDecimal(txtRetailPriceBox.Text);
+            item.StockQuantity = Convert.ToInt32(txtStockQuantityBox.Text);
+            item.ItemName = txtItemNameBox.Text;
+            itemctrl.addItem(item, vendor);
+            MessageBox.Show("ITEM ADDED TO INVENTORY");
+            CategorySelectBox.ResetText();
+            VendorSelectBox.ResetText();
+            txtCostPriceBox.Clear();
+            txtRetailPriceBox.Clear();
+            txtStockQuantityBox.Clear();
+            txtItemNameBox.Clear();
+        }
 
+        private void btnGetAllParts_Click(object sender, EventArgs e)
+        {
+            string category;
+            ItemsCTRL itemctrl = new ItemsCTRL();
+            if (EditCategoryBox.SelectedIndex > -1)
+            {
+                category = EditCategoryBox.SelectedItem.ToString();
+            }
+            else
+            {
+                MessageBox.Show("SELECT CATEGORY"); 
+                return;
+            }
+            
+            foreach(Item item in itemctrl.geItemsByCategory(category))
+            {
+                PartsBox.Items.Add(item);
+            }
+        }
+
+        private void btnSaveEditedPart_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(txtEditItemNameBox.Text))
+            {
+                MessageBox.Show("Please Enter Part Name");
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtEditCostPriceBox.Text))
+            {
+                MessageBox.Show("Please Enter Cost");
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtEditRetailPriceBox.Text))
+            {
+                MessageBox.Show("Please Enter Retail Price");
+                return;
+            }
+            else if (String.IsNullOrEmpty(txtEditStockQuantityBox.Text))
+            {
+                MessageBox.Show("Please Enter Stock Quantity");
+                return;
+            }
+            Item item = (Item)PartsBox.SelectedItem;
+            item.ItemName = txtItemNameBox.Text;
+            item.CostPrice = Convert.ToDecimal(txtEditCostPriceBox.Text);
+            item.RetailPrice = Convert.ToDecimal(txtEditRetailPriceBox.Text);
+            item.StockQuantity = Convert.ToInt32(txtEditStockQuantityBox.Text);
+        }
+
+        private void btnEditSelectedPart_Click(object sender, EventArgs e)
+        {
+            Item item = (Item)PartsBox.SelectedItem;
+            txtEditItemNameBox.Text = item.ItemName;
+            txtEditRetailPriceBox.Text = item.RetailPrice.ToString();
+            txtEditStockQuantityBox.Text = item.StockQuantity.ToString();
+            txtEditCostPriceBox.Text = item.StockQuantity.ToString();
+        }
+
+        private void SaveVendorButton_Click(object sender, EventArgs e)
+        {
+            if (String.IsNullOrEmpty(VendorNameBox.Text))
+            {
+                MessageBox.Show("Please Enter Vendor Name");
+                return;
+            }
+            else if (String.IsNullOrEmpty(VendorAddressBox.Text))
+            {
+                MessageBox.Show("Please Enter Vendor Address");
+                return;
+            }
+            Vendor vendor = new Vendor();
+            vendor.VendorName = VendorNameBox.Text;
+            vendor.VendorAddress = VendorAddressBox.Text;
+            VendorCTRL vendorctrl = new VendorCTRL();
+            vendorctrl.addVendor(vendor);
+            MessageBox.Show("NEW VENDOR ADDED");
+            VendorNameBox.Clear();
+            VendorAddressBox.Clear();
         }
     }
 }

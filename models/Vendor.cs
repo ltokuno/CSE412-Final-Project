@@ -8,9 +8,12 @@ namespace CSE412_Group17.models
 {
     class Vendor
     {
+        public override string ToString()
+        {
+            return VendorName;
+        }
         public int VendorID { get; set; }
         public string VendorName { get; set; }
         public string VendorAddress { get; set; }
-        public Item[] Items { get; set; }
-    }
+       }
 }

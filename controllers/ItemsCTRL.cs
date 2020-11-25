@@ -29,19 +29,19 @@ namespace CSE412_Group17.controllers {
             DBSelector selector = new DBSelector();
 
             //put the item in the DB
-            modder.modifyRows("INSERT INTO \"Item\"(\"RetailPrice\",\"StockQuantity\",\"ItemName\",\"CostPrice\",\"Category\") VALUES('" +
-                theItem.RetailPrice + "'," + theItem.StockQuantity + "'," + theItem.ItemName + "'," + theItem.CostPrice + "'," + 
+            modder.modifyRows("INSERT INTO \"Item\"(\"RetailPrice\",\"StockQuantity\",\"ItemName\",\"CostPrice\",\"Category\") VALUES(" +
+                theItem.RetailPrice + "," + theItem.StockQuantity + ",'" + theItem.ItemName + "'," + theItem.CostPrice + ",'" + 
                 theItem.Category + "')");
 
-            Item newitem = selector.getRow<Item>("SELECT * FROM \"Item\" WHERE \"RetailPrice\" = '" + theItem.RetailPrice + 
-                "' AND \"StockQuantity\" = " + theItem.StockQuantity +
-                "' AND \"ItemName\" = '" + theItem.ItemName + 
-                "' AND \"CostPrice\" = '" + theItem.CostPrice + 
-                "' AND \"Category\" = '" + theItem.Category);
+            Item newitem = selector.getRow<Item>("SELECT * FROM \"Item\" WHERE \"RetailPrice\" = " + theItem.RetailPrice + 
+                " AND \"StockQuantity\" = " + theItem.StockQuantity +
+                " AND \"ItemName\" = '" + theItem.ItemName + 
+                "' AND \"CostPrice\" = " + theItem.CostPrice + 
+                " AND \"Category\" = '" + theItem.Category + "'");
 
             //add it to the vedor
-            modder.modifyRows("INSERT INTO \"Vendor_Items\"(\"VedndorID\",\"ItemID\") VALUES(' " +
-                newitem.ItemID + "'," + theVendor.VendorID + "')");
+            modder.modifyRows("INSERT INTO \"Vendor_Items\"(\"VendorID\",\"ItemID\") VALUES( " +
+                theVendor.VendorID + "," + newitem.ItemID + ")");
         }
 
     } //end class

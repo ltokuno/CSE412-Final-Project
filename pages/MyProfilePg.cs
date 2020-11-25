@@ -1,6 +1,5 @@
 ﻿using CSE412_Group17.controllers;
 using CSE412_Group17.pages;
-using CSE412_Group17.controllers;
 using CSE412_Group17.models;
 using System;
 using System.Collections.Generic;
@@ -12,7 +11,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
-using CSE412_Group17.models;
 
 namespace CSE412_Group17
 {
