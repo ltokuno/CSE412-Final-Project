@@ -41,7 +41,6 @@
             this.lblBrakesMessage1 = new System.Windows.Forms.Label();
             this.lblBrakesMessage2 = new System.Windows.Forms.Label();
             this.lblPartsDisplay = new System.Windows.Forms.Label();
-            this.btnHomePage = new System.Windows.Forms.Button();
             this.btnMyProfile = new System.Windows.Forms.Button();
             this.shoppingPanel = new System.Windows.Forms.Panel();
             this.bntChangeQty = new System.Windows.Forms.Button();
@@ -78,6 +77,7 @@
             this.MyItemsListbox = new System.Windows.Forms.ListBox();
             this.label8 = new System.Windows.Forms.Label();
             this.MyOrdersListbox = new System.Windows.Forms.ListBox();
+            this.btnHomePage = new System.Windows.Forms.Button();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
             this.panelResources.SuspendLayout();
@@ -256,19 +256,6 @@
             this.lblPartsDisplay.Size = new System.Drawing.Size(51, 20);
             this.lblPartsDisplay.TabIndex = 20;
             this.lblPartsDisplay.Text = "Parts";
-            // 
-            // btnHomePage
-            // 
-            this.btnHomePage.FlatAppearance.BorderSize = 0;
-            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomePage.Location = new System.Drawing.Point(387, 42);
-            this.btnHomePage.Name = "btnHomePage";
-            this.btnHomePage.Size = new System.Drawing.Size(318, 58);
-            this.btnHomePage.TabIndex = 21;
-            this.btnHomePage.Text = "BikeBoss";
-            this.btnHomePage.UseVisualStyleBackColor = true;
-            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
             // btnMyProfile
             // 
@@ -653,6 +640,19 @@
             this.MyOrdersListbox.Size = new System.Drawing.Size(215, 342);
             this.MyOrdersListbox.TabIndex = 0;
             this.MyOrdersListbox.SelectedIndexChanged += new System.EventHandler(this.MyOrdersListbox_SelectedIndexChanged);
+            // 
+            // btnHomePage
+            // 
+            this.btnHomePage.FlatAppearance.BorderSize = 0;
+            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHomePage.Image = global::CSE412_Group17.Properties.Resources.new_logo1;
+            this.btnHomePage.Location = new System.Drawing.Point(223, 12);
+            this.btnHomePage.Name = "btnHomePage";
+            this.btnHomePage.Size = new System.Drawing.Size(623, 115);
+            this.btnHomePage.TabIndex = 21;
+            this.btnHomePage.UseVisualStyleBackColor = true;
+            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
             // ShoppingPg
             // 

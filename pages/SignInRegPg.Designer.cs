@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblLoginMessage = new System.Windows.Forms.Label();
-            this.btnHomePage = new System.Windows.Forms.Button();
             this.lblRegisterMessage = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.txtPassword = new System.Windows.Forms.TextBox();
@@ -39,6 +38,7 @@
             this.lblUsernameDisplay = new System.Windows.Forms.Label();
             this.lblPasswordDisplay = new System.Windows.Forms.Label();
             this.SignInAsAdminBox = new System.Windows.Forms.CheckBox();
+            this.btnHomePage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblLoginMessage
@@ -50,19 +50,6 @@
             this.lblLoginMessage.Size = new System.Drawing.Size(244, 20);
             this.lblLoginMessage.TabIndex = 18;
             this.lblLoginMessage.Text = "Existing members, login here.";
-            // 
-            // btnHomePage
-            // 
-            this.btnHomePage.FlatAppearance.BorderSize = 0;
-            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomePage.Location = new System.Drawing.Point(386, 42);
-            this.btnHomePage.Name = "btnHomePage";
-            this.btnHomePage.Size = new System.Drawing.Size(318, 58);
-            this.btnHomePage.TabIndex = 21;
-            this.btnHomePage.Text = "BikeBoss";
-            this.btnHomePage.UseVisualStyleBackColor = true;
-            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
             // lblRegisterMessage
             // 
@@ -151,11 +138,25 @@
             this.SignInAsAdminBox.UseVisualStyleBackColor = true;
             this.SignInAsAdminBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
+            // btnHomePage
+            // 
+            this.btnHomePage.FlatAppearance.BorderSize = 0;
+            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHomePage.Image = global::CSE412_Group17.Properties.Resources.new_logo1;
+            this.btnHomePage.Location = new System.Drawing.Point(223, 12);
+            this.btnHomePage.Name = "btnHomePage";
+            this.btnHomePage.Size = new System.Drawing.Size(623, 115);
+            this.btnHomePage.TabIndex = 35;
+            this.btnHomePage.UseVisualStyleBackColor = true;
+            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click_1);
+            // 
             // SignInRegPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1057, 702);
+            this.Controls.Add(this.btnHomePage);
             this.Controls.Add(this.SignInAsAdminBox);
             this.Controls.Add(this.lblPasswordDisplay);
             this.Controls.Add(this.lblUsernameDisplay);
@@ -165,7 +166,6 @@
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblRegisterMessage);
-            this.Controls.Add(this.btnHomePage);
             this.Controls.Add(this.lblLoginMessage);
             this.Name = "SignInRegPg";
             this.Text = "HomePage";
@@ -178,7 +178,6 @@
 
         #endregion
         private System.Windows.Forms.Label lblLoginMessage;
-        private System.Windows.Forms.Button btnHomePage;
         private System.Windows.Forms.Label lblRegisterMessage;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.TextBox txtPassword;
@@ -188,5 +187,6 @@
         private System.Windows.Forms.Label lblUsernameDisplay;
         private System.Windows.Forms.Label lblPasswordDisplay;
         private System.Windows.Forms.CheckBox SignInAsAdminBox;
+        private System.Windows.Forms.Button btnHomePage;
     }
 }
