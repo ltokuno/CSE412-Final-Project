@@ -23,31 +23,6 @@ namespace CSE412_Group17
             MyOrders
         }
 
-        private void ShowPanel(PanelsEnum thePanel)
-        {
-
-            List<Panel> thePanels = new List<Panel>();
-
-            thePanels.Add(MyOrdersPanel);
-
-            foreach (Panel p in thePanels)
-            {
-
-                p.Visible = false;
-
-            }
-
-            switch (thePanel)
-            {
-
-                case PanelsEnum.MyOrders:
-                    MyOrdersPanel.Visible = true;
-                    break;
-
-            }
-
-        }
-
         public HomePage()
         {
             InitializeComponent();
@@ -109,83 +84,6 @@ namespace CSE412_Group17
 
         }
 
-        private void btnBrakes_Click(object sender, EventArgs e) // go to Brakes page
-        {
-
-            this.Hide();
-
-            BrakesPg brakes = new BrakesPg();
-
-            brakes.Show();
-
-        }
-
-        private void btnChains_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            ChainsPg chains = new ChainsPg();
-
-            chains.Show();
-
-        }
-
-        private void btnForks_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            ForksPg forks = new ForksPg();
-
-            forks.Show();
-
-        }
-
-        private void btnHandlebars_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            HandleBarsPg handlebars = new HandleBarsPg();
-
-            handlebars.Show();
-
-        }
-
-        private void btnPedals_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            PedalsPg pedals = new PedalsPg();
-
-            pedals.Show();
-
-        }
-
-        private void btnWheels_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            WheelsPg wheels = new WheelsPg();
-
-            wheels.Show();
-
-        }
-
-        private void btnTiresTubes_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            TireTubesPg tiretubes = new TireTubesPg();
-
-            tiretubes.Show();
-
-        }
-
         private void btnAboutUs_Click(object sender, EventArgs e)
         {
 
@@ -234,8 +132,6 @@ namespace CSE412_Group17
             {
                 panelAccount.Height = 165;
             }
-
-            ShowPanel(PanelsEnum.MyOrders);
 
             //fill out the controls
             myOrdersDS.Clear();

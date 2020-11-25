@@ -140,42 +140,6 @@
     <Compile Include="pages\SignInRegPg.Designer.cs">
       <DependentUpon>SignInRegPg.cs</DependentUpon>
     </Compile>
-    <Compile Include="pages\TireTubesPg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="pages\TireTubesPg.Designer.cs">
-      <DependentUpon>TireTubesPg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pages\WheelsPg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="pages\WheelsPg.Designer.cs">
-      <DependentUpon>WheelsPg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pages\PedalsPg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="pages\PedalsPg.Designer.cs">
-      <DependentUpon>PedalsPg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pages\HandleBarsPg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="pages\HandleBarsPg.Designer.cs">
-      <DependentUpon>HandleBarsPg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pages\ForksPg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="pages\ForksPg.Designer.cs">
-      <DependentUpon>ForksPg.cs</DependentUpon>
-    </Compile>
-    <Compile Include="pages\ChainsPg.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="pages\ChainsPg.Designer.cs">
-      <DependentUpon>ChainsPg.cs</DependentUpon>
-    </Compile>
     <Compile Include="controllers\OrderCTRL.cs" />
     <Compile Include="controllers\ItemsCTRL.cs" />
     <Compile Include="controllers\UserCTRL.cs" />
@@ -222,24 +186,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="pages\SignInRegPg.resx">
       <DependentUpon>SignInRegPg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pages\TireTubesPg.resx">
-      <DependentUpon>TireTubesPg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pages\WheelsPg.resx">
-      <DependentUpon>WheelsPg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pages\PedalsPg.resx">
-      <DependentUpon>PedalsPg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pages\HandleBarsPg.resx">
-      <DependentUpon>HandleBarsPg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pages\ForksPg.resx">
-      <DependentUpon>ForksPg.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="pages\ChainsPg.resx">
-      <DependentUpon>ChainsPg.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="models\User.cs" />
     <EmbeddedResource Include="pages\HomePage.resx">

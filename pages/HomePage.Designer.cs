@@ -31,13 +31,6 @@
             this.btnParts = new System.Windows.Forms.Button();
             this.panelParts = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnTiresTubes = new System.Windows.Forms.Button();
-            this.btnWheels = new System.Windows.Forms.Button();
-            this.btnPedals = new System.Windows.Forms.Button();
-            this.btnHandlebars = new System.Windows.Forms.Button();
-            this.btnForks = new System.Windows.Forms.Button();
-            this.btnChains = new System.Windows.Forms.Button();
-            this.btnBrakes = new System.Windows.Forms.Button();
             this.btnMyAccount = new System.Windows.Forms.Button();
             this.panelAccount = new System.Windows.Forms.Panel();
             this.btnMyOrders = new System.Windows.Forms.Button();
@@ -49,23 +42,11 @@
             this.btnHomePage = new System.Windows.Forms.Button();
             this.lblHomePageMessage2 = new System.Windows.Forms.Label();
             this.btnMyProfile = new System.Windows.Forms.Button();
-            this.MyOrdersPanel = new System.Windows.Forms.Panel();
-            this.lblMyTotal = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblMyConfNum = new System.Windows.Forms.Label();
-            this.lblMyOrderID = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.MyItemsListbox = new System.Windows.Forms.ListBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.MyOrdersListbox = new System.Windows.Forms.ListBox();
             this.lblBrakesMessage1 = new System.Windows.Forms.Label();
             this.lblBrakesMessage2 = new System.Windows.Forms.Label();
             this.panelParts.SuspendLayout();
             this.panelAccount.SuspendLayout();
             this.panelResources.SuspendLayout();
-            this.MyOrdersPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnParts
@@ -87,13 +68,6 @@
             // panelParts
             // 
             this.panelParts.Controls.Add(this.button1);
-            this.panelParts.Controls.Add(this.btnTiresTubes);
-            this.panelParts.Controls.Add(this.btnWheels);
-            this.panelParts.Controls.Add(this.btnPedals);
-            this.panelParts.Controls.Add(this.btnHandlebars);
-            this.panelParts.Controls.Add(this.btnForks);
-            this.panelParts.Controls.Add(this.btnChains);
-            this.panelParts.Controls.Add(this.btnBrakes);
             this.panelParts.Controls.Add(this.btnParts);
             this.panelParts.Location = new System.Drawing.Point(81, 143);
             this.panelParts.Name = "panelParts";
@@ -108,124 +82,12 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(0, 311);
+            this.button1.Location = new System.Drawing.Point(0, 52);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(249, 118);
+            this.button1.Size = new System.Drawing.Size(249, 111);
             this.button1.TabIndex = 12;
             this.button1.Text = "Parts";
             this.button1.UseVisualStyleBackColor = false;
-            // 
-            // btnTiresTubes
-            // 
-            this.btnTiresTubes.BackColor = System.Drawing.Color.Gray;
-            this.btnTiresTubes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTiresTubes.FlatAppearance.BorderSize = 0;
-            this.btnTiresTubes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTiresTubes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTiresTubes.ForeColor = System.Drawing.Color.Transparent;
-            this.btnTiresTubes.Location = new System.Drawing.Point(0, 274);
-            this.btnTiresTubes.Name = "btnTiresTubes";
-            this.btnTiresTubes.Size = new System.Drawing.Size(249, 37);
-            this.btnTiresTubes.TabIndex = 11;
-            this.btnTiresTubes.Text = "Tires/Tubes";
-            this.btnTiresTubes.UseVisualStyleBackColor = false;
-            this.btnTiresTubes.Click += new System.EventHandler(this.btnTiresTubes_Click);
-            // 
-            // btnWheels
-            // 
-            this.btnWheels.BackColor = System.Drawing.Color.Gray;
-            this.btnWheels.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnWheels.FlatAppearance.BorderSize = 0;
-            this.btnWheels.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnWheels.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnWheels.ForeColor = System.Drawing.Color.Transparent;
-            this.btnWheels.Location = new System.Drawing.Point(0, 237);
-            this.btnWheels.Name = "btnWheels";
-            this.btnWheels.Size = new System.Drawing.Size(249, 37);
-            this.btnWheels.TabIndex = 10;
-            this.btnWheels.Text = "Wheels";
-            this.btnWheels.UseVisualStyleBackColor = false;
-            this.btnWheels.Click += new System.EventHandler(this.btnWheels_Click);
-            // 
-            // btnPedals
-            // 
-            this.btnPedals.BackColor = System.Drawing.Color.Gray;
-            this.btnPedals.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnPedals.FlatAppearance.BorderSize = 0;
-            this.btnPedals.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPedals.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedals.ForeColor = System.Drawing.Color.Transparent;
-            this.btnPedals.Location = new System.Drawing.Point(0, 200);
-            this.btnPedals.Name = "btnPedals";
-            this.btnPedals.Size = new System.Drawing.Size(249, 37);
-            this.btnPedals.TabIndex = 9;
-            this.btnPedals.Text = "Pedals";
-            this.btnPedals.UseVisualStyleBackColor = false;
-            this.btnPedals.Click += new System.EventHandler(this.btnPedals_Click);
-            // 
-            // btnHandlebars
-            // 
-            this.btnHandlebars.BackColor = System.Drawing.Color.Gray;
-            this.btnHandlebars.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnHandlebars.FlatAppearance.BorderSize = 0;
-            this.btnHandlebars.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHandlebars.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHandlebars.ForeColor = System.Drawing.Color.Transparent;
-            this.btnHandlebars.Location = new System.Drawing.Point(0, 163);
-            this.btnHandlebars.Name = "btnHandlebars";
-            this.btnHandlebars.Size = new System.Drawing.Size(249, 37);
-            this.btnHandlebars.TabIndex = 8;
-            this.btnHandlebars.Text = "Handlebars";
-            this.btnHandlebars.UseVisualStyleBackColor = false;
-            this.btnHandlebars.Click += new System.EventHandler(this.btnHandlebars_Click);
-            // 
-            // btnForks
-            // 
-            this.btnForks.BackColor = System.Drawing.Color.Gray;
-            this.btnForks.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnForks.FlatAppearance.BorderSize = 0;
-            this.btnForks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnForks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnForks.ForeColor = System.Drawing.Color.Transparent;
-            this.btnForks.Location = new System.Drawing.Point(0, 126);
-            this.btnForks.Name = "btnForks";
-            this.btnForks.Size = new System.Drawing.Size(249, 37);
-            this.btnForks.TabIndex = 7;
-            this.btnForks.Text = "Forks";
-            this.btnForks.UseVisualStyleBackColor = false;
-            this.btnForks.Click += new System.EventHandler(this.btnForks_Click);
-            // 
-            // btnChains
-            // 
-            this.btnChains.BackColor = System.Drawing.Color.Gray;
-            this.btnChains.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnChains.FlatAppearance.BorderSize = 0;
-            this.btnChains.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnChains.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChains.ForeColor = System.Drawing.Color.Transparent;
-            this.btnChains.Location = new System.Drawing.Point(0, 89);
-            this.btnChains.Name = "btnChains";
-            this.btnChains.Size = new System.Drawing.Size(249, 37);
-            this.btnChains.TabIndex = 6;
-            this.btnChains.Text = "Chains";
-            this.btnChains.UseVisualStyleBackColor = false;
-            this.btnChains.Click += new System.EventHandler(this.btnChains_Click);
-            // 
-            // btnBrakes
-            // 
-            this.btnBrakes.BackColor = System.Drawing.Color.Gray;
-            this.btnBrakes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnBrakes.FlatAppearance.BorderSize = 0;
-            this.btnBrakes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrakes.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBrakes.ForeColor = System.Drawing.Color.Transparent;
-            this.btnBrakes.Location = new System.Drawing.Point(0, 52);
-            this.btnBrakes.Name = "btnBrakes";
-            this.btnBrakes.Size = new System.Drawing.Size(249, 37);
-            this.btnBrakes.TabIndex = 5;
-            this.btnBrakes.Text = "Brakes";
-            this.btnBrakes.UseVisualStyleBackColor = false;
-            this.btnBrakes.Click += new System.EventHandler(this.btnBrakes_Click);
             // 
             // btnMyAccount
             // 
@@ -375,115 +237,6 @@
             this.btnMyProfile.UseVisualStyleBackColor = false;
             this.btnMyProfile.Click += new System.EventHandler(this.btnMyProfile_Click);
             // 
-            // MyOrdersPanel
-            // 
-            this.MyOrdersPanel.Controls.Add(this.lblMyTotal);
-            this.MyOrdersPanel.Controls.Add(this.label9);
-            this.MyOrdersPanel.Controls.Add(this.lblMyConfNum);
-            this.MyOrdersPanel.Controls.Add(this.lblMyOrderID);
-            this.MyOrdersPanel.Controls.Add(this.label11);
-            this.MyOrdersPanel.Controls.Add(this.label12);
-            this.MyOrdersPanel.Controls.Add(this.label13);
-            this.MyOrdersPanel.Controls.Add(this.MyItemsListbox);
-            this.MyOrdersPanel.Controls.Add(this.label8);
-            this.MyOrdersPanel.Controls.Add(this.MyOrdersListbox);
-            this.MyOrdersPanel.Location = new System.Drawing.Point(262, 300);
-            this.MyOrdersPanel.Name = "MyOrdersPanel";
-            this.MyOrdersPanel.Size = new System.Drawing.Size(519, 397);
-            this.MyOrdersPanel.TabIndex = 51;
-            this.MyOrdersPanel.Visible = false;
-            // 
-            // lblMyTotal
-            // 
-            this.lblMyTotal.AutoSize = true;
-            this.lblMyTotal.Location = new System.Drawing.Point(409, 93);
-            this.lblMyTotal.Name = "lblMyTotal";
-            this.lblMyTotal.Size = new System.Drawing.Size(0, 13);
-            this.lblMyTotal.TabIndex = 14;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(369, 91);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(34, 13);
-            this.label9.TabIndex = 13;
-            this.label9.Text = "Total:";
-            // 
-            // lblMyConfNum
-            // 
-            this.lblMyConfNum.AutoSize = true;
-            this.lblMyConfNum.Location = new System.Drawing.Point(409, 65);
-            this.lblMyConfNum.Name = "lblMyConfNum";
-            this.lblMyConfNum.Size = new System.Drawing.Size(0, 13);
-            this.lblMyConfNum.TabIndex = 12;
-            // 
-            // lblMyOrderID
-            // 
-            this.lblMyOrderID.AutoSize = true;
-            this.lblMyOrderID.Location = new System.Drawing.Point(409, 41);
-            this.lblMyOrderID.Name = "lblMyOrderID";
-            this.lblMyOrderID.Size = new System.Drawing.Size(0, 13);
-            this.lblMyOrderID.TabIndex = 11;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(291, 116);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(32, 13);
-            this.label11.TabIndex = 10;
-            this.label11.Text = "Items";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(295, 66);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(108, 13);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Confirmation Number:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(353, 41);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(50, 13);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "Order ID:";
-            // 
-            // MyItemsListbox
-            // 
-            this.MyItemsListbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MyItemsListbox.FormattingEnabled = true;
-            this.MyItemsListbox.Location = new System.Drawing.Point(294, 132);
-            this.MyItemsListbox.Name = "MyItemsListbox";
-            this.MyItemsListbox.Size = new System.Drawing.Size(213, 225);
-            this.MyItemsListbox.TabIndex = 7;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(20, 32);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 13);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "My Orders";
-            // 
-            // MyOrdersListbox
-            // 
-            this.MyOrdersListbox.FormattingEnabled = true;
-            this.MyOrdersListbox.Location = new System.Drawing.Point(23, 50);
-            this.MyOrdersListbox.Name = "MyOrdersListbox";
-            this.MyOrdersListbox.Size = new System.Drawing.Size(215, 342);
-            this.MyOrdersListbox.TabIndex = 0;
-            // 
             // lblBrakesMessage1
             // 
             this.lblBrakesMessage1.AutoSize = true;
@@ -514,7 +267,6 @@
             this.ClientSize = new System.Drawing.Size(1078, 743);
             this.Controls.Add(this.lblBrakesMessage2);
             this.Controls.Add(this.lblBrakesMessage1);
-            this.Controls.Add(this.MyOrdersPanel);
             this.Controls.Add(this.btnMyProfile);
             this.Controls.Add(this.panelAccount);
             this.Controls.Add(this.panelResources);
@@ -527,8 +279,6 @@
             this.panelParts.ResumeLayout(false);
             this.panelAccount.ResumeLayout(false);
             this.panelResources.ResumeLayout(false);
-            this.MyOrdersPanel.ResumeLayout(false);
-            this.MyOrdersPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,13 +287,6 @@
         #endregion
         private System.Windows.Forms.Button btnParts;
         private System.Windows.Forms.Panel panelParts;
-        private System.Windows.Forms.Button btnTiresTubes;
-        private System.Windows.Forms.Button btnWheels;
-        private System.Windows.Forms.Button btnPedals;
-        private System.Windows.Forms.Button btnHandlebars;
-        private System.Windows.Forms.Button btnForks;
-        private System.Windows.Forms.Button btnChains;
-        private System.Windows.Forms.Button btnBrakes;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnMyAccount;
         private System.Windows.Forms.Panel panelAccount;
@@ -556,17 +299,6 @@
         private System.Windows.Forms.Button btnHomePage;
         private System.Windows.Forms.Label lblHomePageMessage2;
         private System.Windows.Forms.Button btnMyProfile;
-        private System.Windows.Forms.Panel MyOrdersPanel;
-        private System.Windows.Forms.Label lblMyTotal;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label lblMyConfNum;
-        private System.Windows.Forms.Label lblMyOrderID;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ListBox MyItemsListbox;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListBox MyOrdersListbox;
         private System.Windows.Forms.Label lblBrakesMessage1;
         private System.Windows.Forms.Label lblBrakesMessage2;
     }
