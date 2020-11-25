@@ -1,25 +1,24 @@
-﻿using CSE412_Group17.controllers;
-using CSE412_Group17.pages;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
-using Microsoft.VisualBasic;
-using CSE412_Group17.models;
 
-namespace CSE412_Group17
-{
+namespace CSE412_Group17 {
     public partial class AboutUsPg : Form
     {
 
-        public AboutUsPg()
+        private static AboutUsPg curPage;
+
+        private AboutUsPg()
         {
             InitializeComponent();
+        }
+
+        public static AboutUsPg getInstance() {
+            if (curPage == null) {
+                curPage = new AboutUsPg();
+                curPage.InitializeComponent();
+                curPage.Show();
+            }
+            return curPage;
         }
 
         private void btnHomePage_Click(object sender, EventArgs e) // go to Home page

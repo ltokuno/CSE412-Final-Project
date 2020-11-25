@@ -203,7 +203,7 @@
             this.Controls.Add(this.lblLine1);
             this.Controls.Add(this.lblLine3);
             this.Name = "AboutUsPg";
-            this.Text = "HomePage";
+            this.Text = "About Us";
             this.Load += new System.EventHandler(this.AboutUsPg_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

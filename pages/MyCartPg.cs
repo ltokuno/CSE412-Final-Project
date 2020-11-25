@@ -79,9 +79,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            AboutUsPg about = new AboutUsPg();
-
-            about.Show();
+            AboutUsPg.getInstance().Show();
 
         }
 
