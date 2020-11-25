@@ -60,10 +60,23 @@ namespace CSE412_Group17
             }
         }
 
-        public ShoppingPg()
+       
+
+        private ShoppingPg()
         {
             InitializeComponent();
         }
+
+        private static ShoppingPg curPage = null;
+
+        public static ShoppingPg getInstance() {
+            if (curPage == null) {
+                curPage = new ShoppingPg();
+            }
+            return curPage;
+        }
+
+
 
         private void btnParts_Click(object sender, EventArgs e)
         {

@@ -27,9 +27,9 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            ShoppingPg brakes = new ShoppingPg();
+            ShoppingPg shoppingPg = ShoppingPg.getInstance();
 
-            brakes.Show();
+            shoppingPg.Show();
 
         }
 
@@ -43,9 +43,9 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            ShoppingPg brakes = new ShoppingPg();
+            ShoppingPg shoppingPg = ShoppingPg.getInstance();
 
-            brakes.Show();
+            shoppingPg.Show();
 
         }
     }

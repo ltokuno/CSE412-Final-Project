@@ -69,9 +69,9 @@ namespace CSE412_Group17
                             notFound = false;
                             this.Hide();
 
-                            ShoppingPg brakes = new ShoppingPg();
+                            ShoppingPg shoppingPg = ShoppingPg.getInstance();
 
-                            brakes.Show();
+                            shoppingPg.Show();
                         }
                         else
                         {
@@ -80,9 +80,9 @@ namespace CSE412_Group17
                             notFound = false;
                             this.Hide();
 
-                            ShoppingPg brakes = new ShoppingPg();
+                            ShoppingPg shoppingPg = ShoppingPg.getInstance();
 
-                            brakes.Show();
+                            shoppingPg.Show();
                         }
                     }
                 }
