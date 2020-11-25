@@ -23,7 +23,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            BrakesPg brakes = new BrakesPg();
+            ShoppingPg brakes = new ShoppingPg();
 
             brakes.Show();
 

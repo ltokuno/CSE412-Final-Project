@@ -16,7 +16,7 @@ namespace CSE412_Group17 {
             //Application.Run(new MainForm());
             //Application.Run(new HomePage());
             Application.Run(new SignInRegPg()); // new sign in page.
-            //Application.Run(new BrakesPg());
+            //Application.Run(new ShoppingPg());
             
         }
     }

@@ -14,7 +14,7 @@ using CSE412_Group17.models;
 
 namespace CSE412_Group17
 {
-    public partial class BrakesPg : Form
+    public partial class ShoppingPg : Form
     {
         private BindingList<Item> itemsListDS = new BindingList<Item>();
         private BindingList<LineItem> cartItemsDS = new BindingList<LineItem>();
@@ -60,7 +60,7 @@ namespace CSE412_Group17
             }
         }
 
-        public BrakesPg()
+        public ShoppingPg()
         {
             InitializeComponent();
         }
@@ -70,7 +70,7 @@ namespace CSE412_Group17
             ShowPanel(PanelsEnum.Shopping);
             /*this.Hide();
 
-            BrakesPg brakes = new BrakesPg();
+            ShoppingPg brakes = new ShoppingPg();
 
             brakes.Show();*/
 
@@ -115,7 +115,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            BrakesPg brakes = new BrakesPg();
+            ShoppingPg brakes = new ShoppingPg();
 
             brakes.Show();
 

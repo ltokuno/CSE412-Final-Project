@@ -1,6 +1,6 @@
 ﻿namespace CSE412_Group17
 {
-    partial class BrakesPg 
+    partial class ShoppingPg 
     {
         /// <summary>
         /// Required designer variable.
@@ -654,7 +654,7 @@
             this.MyOrdersListbox.TabIndex = 0;
             this.MyOrdersListbox.SelectedIndexChanged += new System.EventHandler(this.MyOrdersListbox_SelectedIndexChanged);
             // 
-            // BrakesPg
+            // ShoppingPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -669,7 +669,7 @@
             this.Controls.Add(this.btnHomePage);
             this.Controls.Add(this.lblBrakesMessage2);
             this.Controls.Add(this.lblBrakesMessage1);
-            this.Name = "BrakesPg";
+            this.Name = "ShoppingPg";
             this.Text = "HomePage";
             this.Load += new System.EventHandler(this.BrakesPg_Load);
             this.panelParts.ResumeLayout(false);
