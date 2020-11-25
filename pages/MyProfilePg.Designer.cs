@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblHomeMessage1 = new System.Windows.Forms.Label();
-            this.btnHomePage = new System.Windows.Forms.Button();
             this.lblHomePageMessage2 = new System.Windows.Forms.Label();
             this.btnGoBackHome = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@
             this.AddressBox = new System.Windows.Forms.TextBox();
             this.SaveButton = new System.Windows.Forms.Button();
             this.lblProfileHeader = new System.Windows.Forms.Label();
+            this.btnHomePage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblHomeMessage1
@@ -63,19 +63,6 @@
             this.lblHomeMessage1.Size = new System.Drawing.Size(90, 20);
             this.lblHomeMessage1.TabIndex = 18;
             this.lblHomeMessage1.Text = "First Name:";
-            // 
-            // btnHomePage
-            // 
-            this.btnHomePage.FlatAppearance.BorderSize = 0;
-            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomePage.Location = new System.Drawing.Point(388, 42);
-            this.btnHomePage.Name = "btnHomePage";
-            this.btnHomePage.Size = new System.Drawing.Size(318, 58);
-            this.btnHomePage.TabIndex = 21;
-            this.btnHomePage.Text = "BikeBoss";
-            this.btnHomePage.UseVisualStyleBackColor = true;
-            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
             // lblHomePageMessage2
             // 
@@ -307,11 +294,25 @@
             this.lblProfileHeader.TabIndex = 44;
             this.lblProfileHeader.Text = "User\'s Profile";
             // 
+            // btnHomePage
+            // 
+            this.btnHomePage.FlatAppearance.BorderSize = 0;
+            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHomePage.Image = global::CSE412_Group17.Properties.Resources.new_logo1;
+            this.btnHomePage.Location = new System.Drawing.Point(223, 12);
+            this.btnHomePage.Name = "btnHomePage";
+            this.btnHomePage.Size = new System.Drawing.Size(623, 115);
+            this.btnHomePage.TabIndex = 45;
+            this.btnHomePage.UseVisualStyleBackColor = true;
+            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click_1);
+            // 
             // MyProfilePg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1078, 743);
+            this.Controls.Add(this.btnHomePage);
             this.Controls.Add(this.lblProfileHeader);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.AddressBox);
@@ -334,7 +335,6 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGoBackHome);
             this.Controls.Add(this.lblHomePageMessage2);
-            this.Controls.Add(this.btnHomePage);
             this.Controls.Add(this.lblHomeMessage1);
             this.Name = "MyProfilePg";
             this.Text = "HomePage";
@@ -347,7 +347,6 @@
 
         #endregion
         private System.Windows.Forms.Label lblHomeMessage1;
-        private System.Windows.Forms.Button btnHomePage;
         private System.Windows.Forms.Label lblHomePageMessage2;
         private System.Windows.Forms.Button btnGoBackHome;
         private System.Windows.Forms.Label label1;
@@ -370,5 +369,6 @@
         private System.Windows.Forms.TextBox AddressBox;
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Label lblProfileHeader;
+        private System.Windows.Forms.Button btnHomePage;
     }
 }
