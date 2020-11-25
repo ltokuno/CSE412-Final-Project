@@ -105,17 +105,6 @@ namespace CSE412_Group17
 
         }
 
-        private void btnSignInRegister_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            SignInRegPg signIn = new SignInRegPg();
-
-            signIn.Show();
-
-        }
-
         private void SignInRegPg_Load(object sender, EventArgs e)
         {
 

@@ -19,8 +19,6 @@ namespace CSE412_Group17
             InitializeComponent();
         }
 
-
-
         private void btnBackToLoginPg_Click(object sender, EventArgs e)
         {
 

@@ -164,17 +164,6 @@ namespace CSE412_Group17
 
         }
 
-        private void btnMyCart_Click(object sender, EventArgs e)
-        {
-
-            this.Hide();
-
-            MyCartPg cart = new MyCartPg();
-
-            cart.Show();
-
-        }
-
         private void btnMyProfile_Click(object sender, EventArgs e)
         {
 
@@ -218,7 +207,6 @@ namespace CSE412_Group17
             btnAddToCart.Visible = true;
 
         }
-
 
         private decimal totalPrice(BindingList<LineItem> theList) {
             decimal output = 0;
@@ -265,7 +253,6 @@ namespace CSE412_Group17
                 
             }
         }
-
 
         void list_ListChanged(object sender, ListChangedEventArgs e) {
             lblTotal.Text = totalPrice(cartItemsDS).ToString();

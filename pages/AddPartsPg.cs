@@ -34,7 +34,6 @@ namespace CSE412_Group17
             }
         }
 
-
         private void btnSignOut_Click(object sender, EventArgs e)
         {
             UserSingleton.LogOutUser();
@@ -45,7 +44,6 @@ namespace CSE412_Group17
             signIn.Show();
 
         }
-
 
         private void btnBackToAdminPg_Click(object sender, EventArgs e)
         {
