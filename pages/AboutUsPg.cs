@@ -54,5 +54,14 @@ namespace CSE412_Group17 {
             ShoppingPg.getInstance();
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+
+            HomePage.getInstance();
+
+        }
     }
 }

@@ -124,4 +124,7 @@
   <data name="new_logo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\new_logo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="final_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\final_logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

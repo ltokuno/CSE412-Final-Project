@@ -52,41 +52,26 @@
             this.SaveButton = new System.Windows.Forms.Button();
             this.lblProfileHeader = new System.Windows.Forms.Label();
             this.btnHomePage = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblHomeMessage1
             // 
             this.lblHomeMessage1.AutoSize = true;
             this.lblHomeMessage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHomeMessage1.Location = new System.Drawing.Point(103, 358);
-            this.lblHomeMessage1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHomeMessage1.Location = new System.Drawing.Point(77, 291);
             this.lblHomeMessage1.Name = "lblHomeMessage1";
-            this.lblHomeMessage1.Size = new System.Drawing.Size(112, 25);
+            this.lblHomeMessage1.Size = new System.Drawing.Size(90, 20);
             this.lblHomeMessage1.TabIndex = 18;
             this.lblHomeMessage1.Text = "First Name:";
-            // 
-            // btnHomePage
-            // 
-            this.btnHomePage.FlatAppearance.BorderSize = 0;
-            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomePage.Location = new System.Drawing.Point(517, 52);
-            this.btnHomePage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnHomePage.Name = "btnHomePage";
-            this.btnHomePage.Size = new System.Drawing.Size(424, 71);
-            this.btnHomePage.TabIndex = 21;
-            this.btnHomePage.Text = "BikeBoss";
-            this.btnHomePage.UseVisualStyleBackColor = true;
-            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
             // lblHomePageMessage2
             // 
             this.lblHomePageMessage2.AutoSize = true;
             this.lblHomePageMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHomePageMessage2.Location = new System.Drawing.Point(103, 388);
-            this.lblHomePageMessage2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHomePageMessage2.Location = new System.Drawing.Point(77, 315);
             this.lblHomePageMessage2.Name = "lblHomePageMessage2";
-            this.lblHomePageMessage2.Size = new System.Drawing.Size(112, 25);
+            this.lblHomePageMessage2.Size = new System.Drawing.Size(90, 20);
             this.lblHomePageMessage2.TabIndex = 22;
             this.lblHomePageMessage2.Text = "Last Name:";
             // 
@@ -97,10 +82,9 @@
             this.btnGoBackHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoBackHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoBackHome.ForeColor = System.Drawing.Color.Transparent;
-            this.btnGoBackHome.Location = new System.Drawing.Point(108, 78);
-            this.btnGoBackHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGoBackHome.Location = new System.Drawing.Point(81, 54);
             this.btnGoBackHome.Name = "btnGoBackHome";
-            this.btnGoBackHome.Size = new System.Drawing.Size(136, 46);
+            this.btnGoBackHome.Size = new System.Drawing.Size(102, 37);
             this.btnGoBackHome.TabIndex = 17;
             this.btnGoBackHome.Text = "Go Back";
             this.btnGoBackHome.UseVisualStyleBackColor = false;
@@ -110,10 +94,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(103, 453);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(77, 368);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 25);
+            this.label1.Size = new System.Drawing.Size(52, 20);
             this.label1.TabIndex = 23;
             this.label1.Text = "Email:";
             // 
@@ -121,10 +104,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(103, 482);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(77, 392);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 25);
+            this.label2.Size = new System.Drawing.Size(119, 20);
             this.label2.TabIndex = 24;
             this.label2.Text = "Phone Number:";
             // 
@@ -132,10 +114,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(103, 544);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(77, 442);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(124, 25);
+            this.label3.Size = new System.Drawing.Size(103, 20);
             this.label3.TabIndex = 25;
             this.label3.Text = "Date of Birth:";
             // 
@@ -143,10 +124,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(103, 574);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(77, 466);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 25);
+            this.label4.Size = new System.Drawing.Size(67, 20);
             this.label4.TabIndex = 26;
             this.label4.Text = "Gender:";
             // 
@@ -154,10 +134,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(103, 636);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(77, 517);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 25);
+            this.label5.Size = new System.Drawing.Size(72, 20);
             this.label5.TabIndex = 27;
             this.label5.Text = "Address:";
             // 
@@ -165,10 +144,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(103, 306);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(77, 249);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(205, 29);
+            this.label6.Size = new System.Drawing.Size(163, 24);
             this.label6.TabIndex = 28;
             this.label6.Text = "Your Information";
             // 
@@ -176,9 +154,10 @@
             // 
             this.FirstNameLabel.AutoSize = true;
             this.FirstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameLabel.Location = new System.Drawing.Point(300, 364);
+            this.FirstNameLabel.Location = new System.Drawing.Point(225, 296);
+            this.FirstNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(53, 20);
+            this.FirstNameLabel.Size = new System.Drawing.Size(46, 17);
             this.FirstNameLabel.TabIndex = 29;
             this.FirstNameLabel.Text = "label7";
             // 
@@ -186,9 +165,10 @@
             // 
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameLabel.Location = new System.Drawing.Point(300, 388);
+            this.LastNameLabel.Location = new System.Drawing.Point(225, 315);
+            this.LastNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(53, 20);
+            this.LastNameLabel.Size = new System.Drawing.Size(46, 17);
             this.LastNameLabel.TabIndex = 30;
             this.LastNameLabel.Text = "label7";
             // 
@@ -196,9 +176,10 @@
             // 
             this.EmailLabel.AutoSize = true;
             this.EmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailLabel.Location = new System.Drawing.Point(303, 453);
+            this.EmailLabel.Location = new System.Drawing.Point(227, 368);
+            this.EmailLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(53, 20);
+            this.EmailLabel.Size = new System.Drawing.Size(46, 17);
             this.EmailLabel.TabIndex = 31;
             this.EmailLabel.Text = "label7";
             // 
@@ -206,9 +187,10 @@
             // 
             this.PhoneNumberLabel.AutoSize = true;
             this.PhoneNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PhoneNumberLabel.Location = new System.Drawing.Point(303, 482);
+            this.PhoneNumberLabel.Location = new System.Drawing.Point(227, 392);
+            this.PhoneNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
-            this.PhoneNumberLabel.Size = new System.Drawing.Size(53, 20);
+            this.PhoneNumberLabel.Size = new System.Drawing.Size(46, 17);
             this.PhoneNumberLabel.TabIndex = 32;
             this.PhoneNumberLabel.Text = "label7";
             // 
@@ -216,9 +198,10 @@
             // 
             this.DateOfBirthLabel.AutoSize = true;
             this.DateOfBirthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateOfBirthLabel.Location = new System.Drawing.Point(307, 544);
+            this.DateOfBirthLabel.Location = new System.Drawing.Point(230, 442);
+            this.DateOfBirthLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DateOfBirthLabel.Name = "DateOfBirthLabel";
-            this.DateOfBirthLabel.Size = new System.Drawing.Size(53, 20);
+            this.DateOfBirthLabel.Size = new System.Drawing.Size(46, 17);
             this.DateOfBirthLabel.TabIndex = 33;
             this.DateOfBirthLabel.Text = "label7";
             // 
@@ -226,9 +209,10 @@
             // 
             this.GenderLabel.AutoSize = true;
             this.GenderLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GenderLabel.Location = new System.Drawing.Point(307, 577);
+            this.GenderLabel.Location = new System.Drawing.Point(230, 469);
+            this.GenderLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.GenderLabel.Name = "GenderLabel";
-            this.GenderLabel.Size = new System.Drawing.Size(53, 20);
+            this.GenderLabel.Size = new System.Drawing.Size(46, 17);
             this.GenderLabel.TabIndex = 34;
             this.GenderLabel.Text = "label7";
             // 
@@ -236,9 +220,10 @@
             // 
             this.AddressLabel.AutoSize = true;
             this.AddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddressLabel.Location = new System.Drawing.Point(307, 636);
+            this.AddressLabel.Location = new System.Drawing.Point(230, 517);
+            this.AddressLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AddressLabel.Name = "AddressLabel";
-            this.AddressLabel.Size = new System.Drawing.Size(53, 20);
+            this.AddressLabel.Size = new System.Drawing.Size(46, 17);
             this.AddressLabel.TabIndex = 35;
             this.AddressLabel.Text = "label7";
             // 
@@ -247,18 +232,19 @@
             this.AdministratorLabel.AutoSize = true;
             this.AdministratorLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AdministratorLabel.ForeColor = System.Drawing.Color.Crimson;
-            this.AdministratorLabel.Location = new System.Drawing.Point(325, 306);
+            this.AdministratorLabel.Location = new System.Drawing.Point(244, 249);
+            this.AdministratorLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.AdministratorLabel.Name = "AdministratorLabel";
-            this.AdministratorLabel.Size = new System.Drawing.Size(174, 31);
+            this.AdministratorLabel.Size = new System.Drawing.Size(141, 26);
             this.AdministratorLabel.TabIndex = 36;
             this.AdministratorLabel.Text = "Administrator";
             // 
             // UpdateButton
             // 
-            this.UpdateButton.Location = new System.Drawing.Point(108, 687);
-            this.UpdateButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.UpdateButton.Location = new System.Drawing.Point(81, 558);
+            this.UpdateButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.UpdateButton.Name = "UpdateButton";
-            this.UpdateButton.Size = new System.Drawing.Size(149, 25);
+            this.UpdateButton.Size = new System.Drawing.Size(112, 20);
             this.UpdateButton.TabIndex = 37;
             this.UpdateButton.Text = "Update My Info";
             this.UpdateButton.UseVisualStyleBackColor = true;
@@ -266,34 +252,34 @@
             // 
             // EmailBox
             // 
-            this.EmailBox.Location = new System.Drawing.Point(304, 455);
-            this.EmailBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.EmailBox.Location = new System.Drawing.Point(228, 370);
+            this.EmailBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.EmailBox.Name = "EmailBox";
-            this.EmailBox.Size = new System.Drawing.Size(276, 22);
+            this.EmailBox.Size = new System.Drawing.Size(208, 20);
             this.EmailBox.TabIndex = 40;
             // 
             // PhoneNumberBox
             // 
-            this.PhoneNumberBox.Location = new System.Drawing.Point(304, 485);
-            this.PhoneNumberBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.PhoneNumberBox.Location = new System.Drawing.Point(228, 394);
+            this.PhoneNumberBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PhoneNumberBox.Name = "PhoneNumberBox";
-            this.PhoneNumberBox.Size = new System.Drawing.Size(276, 22);
+            this.PhoneNumberBox.Size = new System.Drawing.Size(208, 20);
             this.PhoneNumberBox.TabIndex = 41;
             // 
             // AddressBox
             // 
-            this.AddressBox.Location = new System.Drawing.Point(304, 641);
-            this.AddressBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AddressBox.Location = new System.Drawing.Point(228, 521);
+            this.AddressBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.AddressBox.Name = "AddressBox";
-            this.AddressBox.Size = new System.Drawing.Size(424, 22);
+            this.AddressBox.Size = new System.Drawing.Size(319, 20);
             this.AddressBox.TabIndex = 42;
             // 
             // SaveButton
             // 
-            this.SaveButton.Location = new System.Drawing.Point(263, 687);
-            this.SaveButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SaveButton.Location = new System.Drawing.Point(197, 558);
+            this.SaveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.SaveButton.Name = "SaveButton";
-            this.SaveButton.Size = new System.Drawing.Size(75, 25);
+            this.SaveButton.Size = new System.Drawing.Size(56, 20);
             this.SaveButton.TabIndex = 43;
             this.SaveButton.Text = "Save";
             this.SaveButton.UseVisualStyleBackColor = true;
@@ -303,10 +289,9 @@
             // 
             this.lblProfileHeader.AutoSize = true;
             this.lblProfileHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblProfileHeader.Location = new System.Drawing.Point(99, 215);
-            this.lblProfileHeader.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblProfileHeader.Location = new System.Drawing.Point(74, 175);
             this.lblProfileHeader.Name = "lblProfileHeader";
-            this.lblProfileHeader.Size = new System.Drawing.Size(272, 46);
+            this.lblProfileHeader.Size = new System.Drawing.Size(220, 37);
             this.lblProfileHeader.TabIndex = 44;
             this.lblProfileHeader.Text = "User\'s Profile";
             // 
@@ -317,16 +302,33 @@
             this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHomePage.Image = global::CSE412_Group17.Properties.Resources.new_logo1;
             this.btnHomePage.Location = new System.Drawing.Point(223, 12);
+            this.btnHomePage.Margin = new System.Windows.Forms.Padding(4);
             this.btnHomePage.Name = "btnHomePage";
             this.btnHomePage.Size = new System.Drawing.Size(623, 115);
             this.btnHomePage.TabIndex = 45;
+            this.btnHomePage.Text = "BikeBoss";
             this.btnHomePage.UseVisualStyleBackColor = true;
+            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Image = global::CSE412_Group17.Properties.Resources.final_logo;
+            this.button1.Location = new System.Drawing.Point(389, 45);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(303, 58);
+            this.button1.TabIndex = 45;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MyProfilePg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1437, 914);
+            this.ClientSize = new System.Drawing.Size(1078, 743);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.lblProfileHeader);
             this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.AddressBox);
@@ -350,7 +352,6 @@
             this.Controls.Add(this.btnGoBackHome);
             this.Controls.Add(this.lblHomePageMessage2);
             this.Controls.Add(this.lblHomeMessage1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MyProfilePg";
             this.Text = "HomePage";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MyProfilePg_FormClosed);
@@ -385,5 +386,6 @@
         private System.Windows.Forms.Button SaveButton;
         private System.Windows.Forms.Label lblProfileHeader;
         private System.Windows.Forms.Button btnHomePage;
+        private System.Windows.Forms.Button button1;
     }
 }
