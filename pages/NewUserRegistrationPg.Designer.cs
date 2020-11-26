@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnHomePage = new System.Windows.Forms.Button();
             this.btnLoginPage = new System.Windows.Forms.Button();
             this.SaveUserButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,6 +52,7 @@
             this.UsernameBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.DateOfBirthLabel = new System.Windows.Forms.Label();
+            this.btnHomePage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnHomePage
@@ -306,6 +306,19 @@
             this.DateOfBirthLabel.TabIndex = 77;
             this.DateOfBirthLabel.Text = "MM/DD/YYYY";
             // 
+            // btnHomePage
+            // 
+            this.btnHomePage.FlatAppearance.BorderSize = 0;
+            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHomePage.Image = global::CSE412_Group17.Properties.Resources.new_logo1;
+            this.btnHomePage.Location = new System.Drawing.Point(229, 12);
+            this.btnHomePage.Name = "btnHomePage";
+            this.btnHomePage.Size = new System.Drawing.Size(617, 115);
+            this.btnHomePage.TabIndex = 78;
+            this.btnHomePage.UseVisualStyleBackColor = true;
+            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
+            // 
             // NewUserRegistrationPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -347,7 +360,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button btnHomePage;
         private System.Windows.Forms.Button btnLoginPage;
         private System.Windows.Forms.Button SaveUserButton;
         private System.Windows.Forms.Label label2;
@@ -372,5 +384,6 @@
         private System.Windows.Forms.TextBox UsernameBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label DateOfBirthLabel;
+        private System.Windows.Forms.Button btnHomePage;
     }
 }

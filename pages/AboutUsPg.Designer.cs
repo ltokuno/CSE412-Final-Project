@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.lblLine1 = new System.Windows.Forms.Label();
-            this.btnHomePage = new System.Windows.Forms.Button();
             this.lblLine2 = new System.Windows.Forms.Label();
             this.lblLine3 = new System.Windows.Forms.Label();
             this.lblCompanyFounders = new System.Windows.Forms.Label();
@@ -41,6 +40,7 @@
             this.lblMichael = new System.Windows.Forms.Label();
             this.btnGoBackHome = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnHomePage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblLine1
@@ -54,20 +54,6 @@
             this.lblLine1.TabIndex = 18;
             this.lblLine1.Text = "We are a passionate company selling a variety of bike parts for everyone to enjoy" +
     ". The";
-            // 
-            // btnHomePage
-            // 
-            this.btnHomePage.FlatAppearance.BorderSize = 0;
-            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomePage.Location = new System.Drawing.Point(515, 52);
-            this.btnHomePage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnHomePage.Name = "btnHomePage";
-            this.btnHomePage.Size = new System.Drawing.Size(424, 71);
-            this.btnHomePage.TabIndex = 21;
-            this.btnHomePage.Text = "BikeBoss";
-            this.btnHomePage.UseVisualStyleBackColor = true;
-            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
             // lblLine2
             // 
@@ -197,6 +183,19 @@
             this.label1.TabIndex = 32;
             this.label1.Text = "About Us";
             // 
+            // btnHomePage
+            // 
+            this.btnHomePage.FlatAppearance.BorderSize = 0;
+            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHomePage.Image = global::CSE412_Group17.Properties.Resources.new_logo1;
+            this.btnHomePage.Location = new System.Drawing.Point(223, 12);
+            this.btnHomePage.Name = "btnHomePage";
+            this.btnHomePage.Size = new System.Drawing.Size(623, 115);
+            this.btnHomePage.TabIndex = 33;
+            this.btnHomePage.UseVisualStyleBackColor = true;
+            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click_1);
+            // 
             // AboutUsPg
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -212,7 +211,6 @@
             this.Controls.Add(this.lblRobert);
             this.Controls.Add(this.lblCompanyFounders);
             this.Controls.Add(this.lblLine2);
-            this.Controls.Add(this.btnHomePage);
             this.Controls.Add(this.lblLine1);
             this.Controls.Add(this.lblLine3);
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -227,7 +225,6 @@
 
         #endregion
         private System.Windows.Forms.Label lblLine1;
-        private System.Windows.Forms.Button btnHomePage;
         private System.Windows.Forms.Label lblLine2;
         private System.Windows.Forms.Label lblLine3;
         private System.Windows.Forms.Label lblCompanyFounders;
@@ -239,5 +236,6 @@
         private System.Windows.Forms.Label lblMichael;
         private System.Windows.Forms.Button btnGoBackHome;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnHomePage;
     }
 }

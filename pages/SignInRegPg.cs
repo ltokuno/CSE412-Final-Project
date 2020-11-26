@@ -114,5 +114,16 @@ namespace CSE412_Group17
         private void SignInRegPg_FormClosed(object sender, FormClosedEventArgs e) {
             Application.Exit();
         }
+
+        private void btnHomePage_Click_1(object sender, EventArgs e)
+        {
+
+            this.Hide();
+
+            SignInRegPg signIn = new SignInRegPg();
+
+            signIn.Show();
+
+        }
     }
 }
