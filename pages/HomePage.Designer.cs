@@ -58,11 +58,10 @@
             this.btnParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnParts.ForeColor = System.Drawing.Color.Transparent;
             this.btnParts.Location = new System.Drawing.Point(0, 0);
-            this.btnParts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnParts.Name = "btnParts";
-            this.btnParts.Size = new System.Drawing.Size(332, 64);
+            this.btnParts.Size = new System.Drawing.Size(249, 52);
             this.btnParts.TabIndex = 4;
-            this.btnParts.Text = "Parts";
+            this.btnParts.Text = "Shop";
             this.btnParts.UseVisualStyleBackColor = false;
             this.btnParts.Click += new System.EventHandler(this.btnParts_Click);
             // 
@@ -70,10 +69,9 @@
             // 
             this.panelParts.Controls.Add(this.button1);
             this.panelParts.Controls.Add(this.btnParts);
-            this.panelParts.Location = new System.Drawing.Point(108, 176);
-            this.panelParts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelParts.Location = new System.Drawing.Point(81, 143);
             this.panelParts.Name = "panelParts";
-            this.panelParts.Size = new System.Drawing.Size(332, 64);
+            this.panelParts.Size = new System.Drawing.Size(249, 52);
             this.panelParts.TabIndex = 5;
             // 
             // button1
@@ -84,10 +82,9 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(0, 64);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(0, 52);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(332, 137);
+            this.button1.Size = new System.Drawing.Size(249, 111);
             this.button1.TabIndex = 12;
             this.button1.Text = "Parts";
             this.button1.UseVisualStyleBackColor = false;
@@ -101,9 +98,8 @@
             this.btnMyAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyAccount.ForeColor = System.Drawing.Color.Transparent;
             this.btnMyAccount.Location = new System.Drawing.Point(0, 0);
-            this.btnMyAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMyAccount.Name = "btnMyAccount";
-            this.btnMyAccount.Size = new System.Drawing.Size(332, 64);
+            this.btnMyAccount.Size = new System.Drawing.Size(249, 52);
             this.btnMyAccount.TabIndex = 13;
             this.btnMyAccount.Text = "My Account";
             this.btnMyAccount.UseVisualStyleBackColor = false;
@@ -114,10 +110,9 @@
             this.panelAccount.Controls.Add(this.btnMyOrders);
             this.panelAccount.Controls.Add(this.btnSignOut);
             this.panelAccount.Controls.Add(this.btnMyAccount);
-            this.panelAccount.Location = new System.Drawing.Point(559, 176);
-            this.panelAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelAccount.Location = new System.Drawing.Point(419, 143);
             this.panelAccount.Name = "panelAccount";
-            this.panelAccount.Size = new System.Drawing.Size(332, 64);
+            this.panelAccount.Size = new System.Drawing.Size(249, 52);
             this.panelAccount.TabIndex = 14;
             // 
             // btnMyOrders
@@ -128,10 +123,9 @@
             this.btnMyOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMyOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyOrders.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMyOrders.Location = new System.Drawing.Point(0, 110);
-            this.btnMyOrders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMyOrders.Location = new System.Drawing.Point(0, 89);
             this.btnMyOrders.Name = "btnMyOrders";
-            this.btnMyOrders.Size = new System.Drawing.Size(332, 46);
+            this.btnMyOrders.Size = new System.Drawing.Size(249, 37);
             this.btnMyOrders.TabIndex = 16;
             this.btnMyOrders.Text = "My Orders";
             this.btnMyOrders.UseVisualStyleBackColor = false;
@@ -145,10 +139,9 @@
             this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignOut.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSignOut.Location = new System.Drawing.Point(0, 64);
-            this.btnSignOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSignOut.Location = new System.Drawing.Point(0, 52);
             this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(332, 46);
+            this.btnSignOut.Size = new System.Drawing.Size(249, 37);
             this.btnSignOut.TabIndex = 14;
             this.btnSignOut.Text = "Sign Out";
             this.btnSignOut.UseVisualStyleBackColor = false;
@@ -158,10 +151,9 @@
             // 
             this.panelResources.Controls.Add(this.btnAboutUs);
             this.panelResources.Controls.Add(this.btnResources);
-            this.panelResources.Location = new System.Drawing.Point(983, 176);
-            this.panelResources.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelResources.Location = new System.Drawing.Point(737, 143);
             this.panelResources.Name = "panelResources";
-            this.panelResources.Size = new System.Drawing.Size(332, 64);
+            this.panelResources.Size = new System.Drawing.Size(249, 52);
             this.panelResources.TabIndex = 17;
             // 
             // btnAboutUs
@@ -172,10 +164,9 @@
             this.btnAboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAboutUs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAboutUs.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAboutUs.Location = new System.Drawing.Point(0, 64);
-            this.btnAboutUs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAboutUs.Location = new System.Drawing.Point(0, 52);
             this.btnAboutUs.Name = "btnAboutUs";
-            this.btnAboutUs.Size = new System.Drawing.Size(332, 46);
+            this.btnAboutUs.Size = new System.Drawing.Size(249, 37);
             this.btnAboutUs.TabIndex = 14;
             this.btnAboutUs.Text = "About Us";
             this.btnAboutUs.UseVisualStyleBackColor = false;
@@ -190,9 +181,8 @@
             this.btnResources.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResources.ForeColor = System.Drawing.Color.Transparent;
             this.btnResources.Location = new System.Drawing.Point(0, 0);
-            this.btnResources.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnResources.Name = "btnResources";
-            this.btnResources.Size = new System.Drawing.Size(332, 64);
+            this.btnResources.Size = new System.Drawing.Size(249, 52);
             this.btnResources.TabIndex = 13;
             this.btnResources.Text = "Resources";
             this.btnResources.UseVisualStyleBackColor = false;
@@ -202,10 +192,9 @@
             // 
             this.lblHomeMessage1.AutoSize = true;
             this.lblHomeMessage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHomeMessage1.Location = new System.Drawing.Point(287, 380);
-            this.lblHomeMessage1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHomeMessage1.Location = new System.Drawing.Point(215, 309);
             this.lblHomeMessage1.Name = "lblHomeMessage1";
-            this.lblHomeMessage1.Size = new System.Drawing.Size(774, 25);
+            this.lblHomeMessage1.Size = new System.Drawing.Size(639, 20);
             this.lblHomeMessage1.TabIndex = 18;
             this.lblHomeMessage1.Text = "Welcome to our bicycle store! We have a variety of parts to help build your ride." +
     "";
@@ -215,12 +204,11 @@
             this.btnHomePage.FlatAppearance.BorderSize = 0;
             this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomePage.Location = new System.Drawing.Point(516, 52);
-            this.btnHomePage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHomePage.Image = global::CSE412_Group17.Properties.Resources.final_logo;
+            this.btnHomePage.Location = new System.Drawing.Point(390, 42);
             this.btnHomePage.Name = "btnHomePage";
-            this.btnHomePage.Size = new System.Drawing.Size(424, 71);
+            this.btnHomePage.Size = new System.Drawing.Size(303, 58);
             this.btnHomePage.TabIndex = 21;
-            this.btnHomePage.Text = "Store Name";
             this.btnHomePage.UseVisualStyleBackColor = true;
             this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
@@ -228,10 +216,9 @@
             // 
             this.lblHomePageMessage2.AutoSize = true;
             this.lblHomePageMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHomePageMessage2.Location = new System.Drawing.Point(469, 405);
-            this.lblHomePageMessage2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHomePageMessage2.Location = new System.Drawing.Point(352, 329);
             this.lblHomePageMessage2.Name = "lblHomePageMessage2";
-            this.lblHomePageMessage2.Size = new System.Drawing.Size(442, 25);
+            this.lblHomePageMessage2.Size = new System.Drawing.Size(369, 20);
             this.lblHomePageMessage2.TabIndex = 22;
             this.lblHomePageMessage2.Text = "Please explore the tabs above to get started!";
             // 
@@ -242,10 +229,9 @@
             this.btnMyProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMyProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyProfile.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMyProfile.Location = new System.Drawing.Point(1179, 78);
-            this.btnMyProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMyProfile.Location = new System.Drawing.Point(884, 63);
             this.btnMyProfile.Name = "btnMyProfile";
-            this.btnMyProfile.Size = new System.Drawing.Size(136, 46);
+            this.btnMyProfile.Size = new System.Drawing.Size(102, 37);
             this.btnMyProfile.TabIndex = 17;
             this.btnMyProfile.Text = "My Profile";
             this.btnMyProfile.UseVisualStyleBackColor = false;
@@ -255,10 +241,9 @@
             // 
             this.lblBrakesMessage1.AutoSize = true;
             this.lblBrakesMessage1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrakesMessage1.Location = new System.Drawing.Point(525, 289);
-            this.lblBrakesMessage1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBrakesMessage1.Location = new System.Drawing.Point(394, 235);
             this.lblBrakesMessage1.Name = "lblBrakesMessage1";
-            this.lblBrakesMessage1.Size = new System.Drawing.Size(360, 25);
+            this.lblBrakesMessage1.Size = new System.Drawing.Size(298, 20);
             this.lblBrakesMessage1.TabIndex = 52;
             this.lblBrakesMessage1.Text = "Customize your bike to fit your style.";
             this.lblBrakesMessage1.Visible = false;
@@ -267,10 +252,9 @@
             // 
             this.lblBrakesMessage2.AutoSize = true;
             this.lblBrakesMessage2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBrakesMessage2.Location = new System.Drawing.Point(256, 314);
-            this.lblBrakesMessage2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblBrakesMessage2.Location = new System.Drawing.Point(192, 255);
             this.lblBrakesMessage2.Name = "lblBrakesMessage2";
-            this.lblBrakesMessage2.Size = new System.Drawing.Size(835, 25);
+            this.lblBrakesMessage2.Size = new System.Drawing.Size(690, 20);
             this.lblBrakesMessage2.TabIndex = 53;
             this.lblBrakesMessage2.Text = "Whether you are fixing up a bike or building a new one, we have the items you\'ll " +
     "need.";
@@ -278,9 +262,9 @@
             // 
             // HomePage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1437, 914);
+            this.ClientSize = new System.Drawing.Size(1078, 743);
             this.Controls.Add(this.lblBrakesMessage2);
             this.Controls.Add(this.lblBrakesMessage1);
             this.Controls.Add(this.btnMyProfile);
@@ -290,7 +274,6 @@
             this.Controls.Add(this.lblHomePageMessage2);
             this.Controls.Add(this.btnHomePage);
             this.Controls.Add(this.lblHomeMessage1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "HomePage";
             this.Text = "HomePage";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.HomePage_FormClosed);
