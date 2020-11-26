@@ -55,20 +55,6 @@
             this.btnHomePage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnHomePage
-            // 
-            this.btnHomePage.FlatAppearance.BorderSize = 0;
-            this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomePage.Location = new System.Drawing.Point(516, 52);
-            this.btnHomePage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnHomePage.Name = "btnHomePage";
-            this.btnHomePage.Size = new System.Drawing.Size(424, 71);
-            this.btnHomePage.TabIndex = 21;
-            this.btnHomePage.Text = "BikeBoss";
-            this.btnHomePage.UseVisualStyleBackColor = true;
-            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
-            // 
             // btnLoginPage
             // 
             this.btnLoginPage.BackColor = System.Drawing.Color.Gray;
@@ -77,7 +63,7 @@
             this.btnLoginPage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoginPage.ForeColor = System.Drawing.Color.Transparent;
             this.btnLoginPage.Location = new System.Drawing.Point(57, 78);
-            this.btnLoginPage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLoginPage.Margin = new System.Windows.Forms.Padding(4);
             this.btnLoginPage.Name = "btnLoginPage";
             this.btnLoginPage.Size = new System.Drawing.Size(240, 46);
             this.btnLoginPage.TabIndex = 40;
@@ -312,7 +298,8 @@
             this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHomePage.Image = global::CSE412_Group17.Properties.Resources.new_logo1;
-            this.btnHomePage.Location = new System.Drawing.Point(229, 12);
+            this.btnHomePage.Location = new System.Drawing.Point(357, 13);
+            this.btnHomePage.Margin = new System.Windows.Forms.Padding(4);
             this.btnHomePage.Name = "btnHomePage";
             this.btnHomePage.Size = new System.Drawing.Size(617, 115);
             this.btnHomePage.TabIndex = 78;
@@ -349,7 +336,7 @@
             this.Controls.Add(this.UsernameBox);
             this.Controls.Add(this.btnLoginPage);
             this.Controls.Add(this.btnHomePage);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "NewUserRegistrationPg";
             this.Text = "HomePage";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NewUserRegistrationPg_FormClosed);

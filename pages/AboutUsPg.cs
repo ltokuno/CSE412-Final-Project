@@ -51,9 +51,7 @@ namespace CSE412_Group17 {
 
             this.Hide();
 
-            ShoppingPg shoppingPg = ShoppingPg.getInstance();
-
-            shoppingPg.Show();
+            ShoppingPg.getInstance();
 
         }
     }
