@@ -158,7 +158,6 @@
             this.btnHomePage.Size = new System.Drawing.Size(831, 142);
             this.btnHomePage.TabIndex = 35;
             this.btnHomePage.UseVisualStyleBackColor = true;
-            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click_1);
             // 
             // SignInRegPg
             // 

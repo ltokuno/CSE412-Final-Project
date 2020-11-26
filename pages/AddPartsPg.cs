@@ -130,10 +130,18 @@ namespace CSE412_Group17 {
                 return;
             }
             Item item = (Item)PartsBox.SelectedItem;
-            item.ItemName = txtItemNameBox.Text;
+            item.ItemName = txtEditItemNameBox.Text;
             item.CostPrice = Convert.ToDecimal(txtEditCostPriceBox.Text);
             item.RetailPrice = Convert.ToDecimal(txtEditRetailPriceBox.Text);
             item.StockQuantity = Convert.ToInt32(txtEditStockQuantityBox.Text);
+            ItemsCTRL itemsctrl = new ItemsCTRL();
+            itemsctrl.changeItem(item);
+            MessageBox.Show("PART SAVED");
+            txtItemNameBox.Clear();
+            txtEditCostPriceBox.Clear();
+            txtEditRetailPriceBox.Clear();
+            txtEditStockQuantityBox.Clear();
+            PartsBox.Items.Clear();
         }
 
         private void btnEditSelectedPart_Click(object sender, EventArgs e)
@@ -174,7 +182,10 @@ namespace CSE412_Group17 {
 
         private void Initialize()
         {
+            VendorSelectBox.Items.Clear();
+            CategorySelectBox.Items.Clear();
             PartsBox.Items.Clear();
+            EditCategoryBox.Items.Clear();
             VendorCTRL vendorctrl = new VendorCTRL();
             foreach (Vendor v in vendorctrl.getAllVendors())
             {

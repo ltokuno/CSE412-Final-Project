@@ -44,5 +44,17 @@ namespace CSE412_Group17.controllers {
                 theVendor.VendorID + "," + newitem.ItemID + ")");
         }
 
+        public void changeItem(Item theItem)
+        {
+            DBModifier modder = new DBModifier();
+
+            modder.modifyRows("UPDATE \"Item\" SET " +
+                "\"StockQuantity\" = " + theItem.StockQuantity + "," +
+                "\"ItemName\"  = '" + theItem.ItemName + "'," +
+                "\"CostPrice\" = " + theItem.CostPrice + "," +
+                "\"RetailPrice\" = " + theItem.RetailPrice + "" +
+                " WHERE \"ItemID\" = '" + theItem.ItemID + "'");
+        }
+
     } //end class
 }
