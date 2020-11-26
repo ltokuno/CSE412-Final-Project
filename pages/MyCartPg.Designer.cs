@@ -63,8 +63,9 @@
             this.btnParts.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnParts.ForeColor = System.Drawing.Color.Transparent;
             this.btnParts.Location = new System.Drawing.Point(0, 0);
+            this.btnParts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnParts.Name = "btnParts";
-            this.btnParts.Size = new System.Drawing.Size(249, 52);
+            this.btnParts.Size = new System.Drawing.Size(332, 64);
             this.btnParts.TabIndex = 4;
             this.btnParts.Text = "Parts";
             this.btnParts.UseVisualStyleBackColor = false;
@@ -74,9 +75,10 @@
             // 
             this.panelParts.Controls.Add(this.button1);
             this.panelParts.Controls.Add(this.btnParts);
-            this.panelParts.Location = new System.Drawing.Point(81, 143);
+            this.panelParts.Location = new System.Drawing.Point(108, 176);
+            this.panelParts.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelParts.Name = "panelParts";
-            this.panelParts.Size = new System.Drawing.Size(249, 52);
+            this.panelParts.Size = new System.Drawing.Size(332, 64);
             this.panelParts.TabIndex = 5;
             // 
             // button1
@@ -87,9 +89,10 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(0, 52);
+            this.button1.Location = new System.Drawing.Point(0, 64);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(249, 118);
+            this.button1.Size = new System.Drawing.Size(332, 145);
             this.button1.TabIndex = 12;
             this.button1.Text = "Parts";
             this.button1.UseVisualStyleBackColor = false;
@@ -103,8 +106,9 @@
             this.btnMyAccount.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyAccount.ForeColor = System.Drawing.Color.Transparent;
             this.btnMyAccount.Location = new System.Drawing.Point(0, 0);
+            this.btnMyAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMyAccount.Name = "btnMyAccount";
-            this.btnMyAccount.Size = new System.Drawing.Size(249, 52);
+            this.btnMyAccount.Size = new System.Drawing.Size(332, 64);
             this.btnMyAccount.TabIndex = 13;
             this.btnMyAccount.Text = "My Account";
             this.btnMyAccount.UseVisualStyleBackColor = false;
@@ -116,9 +120,10 @@
             this.panelAccount.Controls.Add(this.btnMyCart);
             this.panelAccount.Controls.Add(this.btnSignOut);
             this.panelAccount.Controls.Add(this.btnMyAccount);
-            this.panelAccount.Location = new System.Drawing.Point(419, 143);
+            this.panelAccount.Location = new System.Drawing.Point(559, 176);
+            this.panelAccount.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelAccount.Name = "panelAccount";
-            this.panelAccount.Size = new System.Drawing.Size(249, 52);
+            this.panelAccount.Size = new System.Drawing.Size(332, 64);
             this.panelAccount.TabIndex = 14;
             // 
             // btnMyOrders
@@ -129,9 +134,10 @@
             this.btnMyOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMyOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyOrders.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMyOrders.Location = new System.Drawing.Point(0, 126);
+            this.btnMyOrders.Location = new System.Drawing.Point(0, 156);
+            this.btnMyOrders.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMyOrders.Name = "btnMyOrders";
-            this.btnMyOrders.Size = new System.Drawing.Size(249, 37);
+            this.btnMyOrders.Size = new System.Drawing.Size(332, 46);
             this.btnMyOrders.TabIndex = 16;
             this.btnMyOrders.Text = "My Orders";
             this.btnMyOrders.UseVisualStyleBackColor = false;
@@ -145,9 +151,10 @@
             this.btnMyCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMyCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyCart.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMyCart.Location = new System.Drawing.Point(0, 89);
+            this.btnMyCart.Location = new System.Drawing.Point(0, 110);
+            this.btnMyCart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMyCart.Name = "btnMyCart";
-            this.btnMyCart.Size = new System.Drawing.Size(249, 37);
+            this.btnMyCart.Size = new System.Drawing.Size(332, 46);
             this.btnMyCart.TabIndex = 15;
             this.btnMyCart.Text = "My Cart";
             this.btnMyCart.UseVisualStyleBackColor = false;
@@ -161,9 +168,10 @@
             this.btnSignOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSignOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignOut.ForeColor = System.Drawing.Color.Transparent;
-            this.btnSignOut.Location = new System.Drawing.Point(0, 52);
+            this.btnSignOut.Location = new System.Drawing.Point(0, 64);
+            this.btnSignOut.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(249, 37);
+            this.btnSignOut.Size = new System.Drawing.Size(332, 46);
             this.btnSignOut.TabIndex = 14;
             this.btnSignOut.Text = "Sign Out";
             this.btnSignOut.UseVisualStyleBackColor = false;
@@ -173,9 +181,10 @@
             // 
             this.panelResources.Controls.Add(this.btnAboutUs);
             this.panelResources.Controls.Add(this.btnResources);
-            this.panelResources.Location = new System.Drawing.Point(737, 143);
+            this.panelResources.Location = new System.Drawing.Point(983, 176);
+            this.panelResources.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelResources.Name = "panelResources";
-            this.panelResources.Size = new System.Drawing.Size(249, 52);
+            this.panelResources.Size = new System.Drawing.Size(332, 64);
             this.panelResources.TabIndex = 17;
             // 
             // btnAboutUs
@@ -186,9 +195,10 @@
             this.btnAboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAboutUs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAboutUs.ForeColor = System.Drawing.Color.Transparent;
-            this.btnAboutUs.Location = new System.Drawing.Point(0, 52);
+            this.btnAboutUs.Location = new System.Drawing.Point(0, 64);
+            this.btnAboutUs.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAboutUs.Name = "btnAboutUs";
-            this.btnAboutUs.Size = new System.Drawing.Size(249, 37);
+            this.btnAboutUs.Size = new System.Drawing.Size(332, 46);
             this.btnAboutUs.TabIndex = 14;
             this.btnAboutUs.Text = "About Us";
             this.btnAboutUs.UseVisualStyleBackColor = false;
@@ -203,8 +213,9 @@
             this.btnResources.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnResources.ForeColor = System.Drawing.Color.Transparent;
             this.btnResources.Location = new System.Drawing.Point(0, 0);
+            this.btnResources.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnResources.Name = "btnResources";
-            this.btnResources.Size = new System.Drawing.Size(249, 52);
+            this.btnResources.Size = new System.Drawing.Size(332, 64);
             this.btnResources.TabIndex = 13;
             this.btnResources.Text = "Resources";
             this.btnResources.UseVisualStyleBackColor = false;
@@ -214,9 +225,10 @@
             // 
             this.lblCartMessage.AutoSize = true;
             this.lblCartMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCartMessage.Location = new System.Drawing.Point(77, 286);
+            this.lblCartMessage.Location = new System.Drawing.Point(103, 352);
+            this.lblCartMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCartMessage.Name = "lblCartMessage";
-            this.lblCartMessage.Size = new System.Drawing.Size(167, 20);
+            this.lblCartMessage.Size = new System.Drawing.Size(202, 25);
             this.lblCartMessage.TabIndex = 18;
             this.lblCartMessage.Text = "Your Shopping Cart";
             // 
@@ -225,9 +237,10 @@
             this.btnHomePage.FlatAppearance.BorderSize = 0;
             this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomePage.Location = new System.Drawing.Point(387, 42);
+            this.btnHomePage.Location = new System.Drawing.Point(516, 52);
+            this.btnHomePage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHomePage.Name = "btnHomePage";
-            this.btnHomePage.Size = new System.Drawing.Size(318, 58);
+            this.btnHomePage.Size = new System.Drawing.Size(424, 71);
             this.btnHomePage.TabIndex = 21;
             this.btnHomePage.Text = "Store Name";
             this.btnHomePage.UseVisualStyleBackColor = true;
@@ -242,9 +255,10 @@
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
             listViewItem1});
-            this.listView1.Location = new System.Drawing.Point(81, 343);
+            this.listView1.Location = new System.Drawing.Point(108, 422);
+            this.listView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(624, 266);
+            this.listView1.Size = new System.Drawing.Size(831, 326);
             this.listView1.TabIndex = 22;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -263,9 +277,10 @@
             // btnPlaceOrder
             // 
             this.btnPlaceOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlaceOrder.Location = new System.Drawing.Point(796, 434);
+            this.btnPlaceOrder.Location = new System.Drawing.Point(1061, 534);
+            this.btnPlaceOrder.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPlaceOrder.Name = "btnPlaceOrder";
-            this.btnPlaceOrder.Size = new System.Drawing.Size(132, 43);
+            this.btnPlaceOrder.Size = new System.Drawing.Size(176, 53);
             this.btnPlaceOrder.TabIndex = 23;
             this.btnPlaceOrder.Text = "Place Order";
             this.btnPlaceOrder.UseVisualStyleBackColor = true;
@@ -275,9 +290,10 @@
             // 
             this.lblPlaceOrderMessage.AutoSize = true;
             this.lblPlaceOrderMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPlaceOrderMessage.Location = new System.Drawing.Point(742, 397);
+            this.lblPlaceOrderMessage.Location = new System.Drawing.Point(989, 489);
+            this.lblPlaceOrderMessage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPlaceOrderMessage.Name = "lblPlaceOrderMessage";
-            this.lblPlaceOrderMessage.Size = new System.Drawing.Size(244, 20);
+            this.lblPlaceOrderMessage.Size = new System.Drawing.Size(297, 25);
             this.lblPlaceOrderMessage.TabIndex = 24;
             this.lblPlaceOrderMessage.Text = "Click below to place an order!";
             // 
@@ -288,9 +304,10 @@
             this.btnMyProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMyProfile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMyProfile.ForeColor = System.Drawing.Color.Transparent;
-            this.btnMyProfile.Location = new System.Drawing.Point(884, 63);
+            this.btnMyProfile.Location = new System.Drawing.Point(1179, 78);
+            this.btnMyProfile.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnMyProfile.Name = "btnMyProfile";
-            this.btnMyProfile.Size = new System.Drawing.Size(102, 37);
+            this.btnMyProfile.Size = new System.Drawing.Size(136, 46);
             this.btnMyProfile.TabIndex = 25;
             this.btnMyProfile.Text = "My Profile";
             this.btnMyProfile.UseVisualStyleBackColor = false;
@@ -298,9 +315,9 @@
             // 
             // MyCartPg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 702);
+            this.ClientSize = new System.Drawing.Size(1409, 864);
             this.Controls.Add(this.btnMyProfile);
             this.Controls.Add(this.panelAccount);
             this.Controls.Add(this.lblPlaceOrderMessage);
@@ -310,9 +327,11 @@
             this.Controls.Add(this.btnHomePage);
             this.Controls.Add(this.lblCartMessage);
             this.Controls.Add(this.listView1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MyCartPg";
             this.Text = "HomePage";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MyCartPg_FormClosed);
+            this.Load += new System.EventHandler(this.MyCartPg_Load);
             this.panelParts.ResumeLayout(false);
             this.panelAccount.ResumeLayout(false);
             this.panelResources.ResumeLayout(false);

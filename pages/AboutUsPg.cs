@@ -4,19 +4,19 @@ using System.Windows.Forms;
 namespace CSE412_Group17 {
     public partial class AboutUsPg : Form
     {
-        private AboutUsPg()
+        protected AboutUsPg()
         {
-            InitializeComponent();
         }
 
-        private static AboutUsPg curPage;
+        private static AboutUsPg instance;
         public static AboutUsPg getInstance() {
-            if (curPage == null) {
-                curPage = new AboutUsPg();
-                curPage.InitializeComponent();
-                curPage.Show();
+            if (instance == null) {
+                instance = new AboutUsPg();
+
             }
-            return curPage;
+            instance.InitializeComponent();
+            instance.Show();
+            return instance;
         }
 
         private void btnHomePage_Click(object sender, EventArgs e) // go to Home page
@@ -24,9 +24,7 @@ namespace CSE412_Group17 {
 
             this.Hide();
 
-            ShoppingPg shoppingPg = ShoppingPg.getInstance();
-
-            shoppingPg.Show();
+            HomePage.getInstance();
 
         }
 
@@ -40,9 +38,7 @@ namespace CSE412_Group17 {
 
             this.Hide();
 
-            ShoppingPg shoppingPg = ShoppingPg.getInstance();
-
-            shoppingPg.Show();
+            HomePage.getInstance();
 
         }
 

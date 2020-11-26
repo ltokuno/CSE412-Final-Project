@@ -12,21 +12,28 @@ namespace CSE412_Group17
 {
     public partial class MyCartPg : Form
     {
-        private MyCartPg()
+        protected MyCartPg()
         {
-            InitializeComponent();
+
         }
 
-        private static MyCartPg curPage = null;
+        private static MyCartPg instance;
 
         public static MyCartPg getInstance() {
-            if (curPage == null) {
-                curPage = new MyCartPg();
-                curPage.InitializeComponent();
+            if (instance == null) {
+                instance = new MyCartPg();
+                instance.InitializeComponent();
 
             }
-            curPage.Show();
-            return curPage;
+            instance.Initialize();
+            instance.Show();
+            return instance;
+        }
+
+        private void Initialize()
+        {
+             panelAccount.Height = 52;
+             panelResources.Height = 52;
         }
 
         private void btnParts_Click(object sender, EventArgs e)
@@ -35,9 +42,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            ShoppingPg shoppingPg = ShoppingPg.getInstance();
-
-            shoppingPg.Show();
+            ShoppingPg.getInstance();
 
         }
 
@@ -89,7 +94,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            AboutUsPg.getInstance().Show();
+            AboutUsPg.getInstance();
 
         }
 
@@ -98,9 +103,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            SignInRegPg signIn = new SignInRegPg();
-
-            signIn.Show();
+            SignInRegPg.GetInstance();
 
         }
 
@@ -109,9 +112,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            MyCartPg cart = new MyCartPg();
-
-            cart.Show();
+            getInstance();
 
         }
 
@@ -159,6 +160,11 @@ namespace CSE412_Group17
 
         private void MyCartPg_FormClosed(object sender, FormClosedEventArgs e) {
             Application.Exit();
+        }
+
+        private void MyCartPg_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

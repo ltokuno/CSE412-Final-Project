@@ -23,20 +23,28 @@ namespace CSE412_Group17
             MyOrders
         }
 
-        private HomePage()
+        protected HomePage()
         {
-            InitializeComponent();
+
         }
 
-        private static HomePage curPage = null;
+        private static HomePage instance;
 
         public static HomePage getInstance() {
-            if (curPage == null) {
-                curPage = new HomePage();
-                curPage.InitializeComponent();
+            if (instance == null) {
+                instance = new HomePage();
+                instance.InitializeComponent();
             }
-            curPage.Show();
-            return curPage;
+            instance.Initialize();
+            instance.Show();
+            return instance;
+        }
+
+        private void Initialize()
+        {
+            panelAccount.Height = 52;
+            panelResources.Height = 52;
+
         }
 
         private void btnParts_Click(object sender, EventArgs e)
@@ -44,9 +52,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            ShoppingPg shoppingPg = ShoppingPg.getInstance();
-
-            shoppingPg.Show();
+            ShoppingPg.getInstance();
 
         }
 
@@ -89,9 +95,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            HomePage home = new HomePage();
-
-            home.Show();
+            getInstance();
 
         }
 
@@ -100,7 +104,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            AboutUsPg.getInstance().Show();
+            AboutUsPg.getInstance();
 
         }
 
@@ -109,9 +113,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            SignInRegPg signIn = new SignInRegPg();
-
-            signIn.Show();
+            SignInRegPg.GetInstance();
 
         }
 
@@ -147,7 +149,8 @@ namespace CSE412_Group17
             {
                 myOrdersDS.Add(o);
             }
-
+            this.Hide();
+            ShoppingPg.getInstance();
         }
 
         private void btnMyProfile_Click(object sender, EventArgs e)
@@ -161,6 +164,11 @@ namespace CSE412_Group17
 
         private void HomePage_FormClosed(object sender, FormClosedEventArgs e) {
             Application.Exit();
+        }
+
+        private void HomePage_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

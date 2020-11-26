@@ -18,32 +18,22 @@ namespace CSE412_Group17
     {
         User user;
 
-        private MyProfilePg()
+        protected MyProfilePg()
         {
-            InitializeComponent();
+
         }
         
-        private static MyProfilePg curPage = null;
+        private static MyProfilePg instance;
 
         public static MyProfilePg getInstance() {
-            if (curPage == null) {
-                curPage = new MyProfilePg();
-                curPage.InitializeComponent();
+            if (instance == null) {
+                instance = new MyProfilePg();
+                instance.InitializeComponent();
                 
             }
-            curPage.Show();
-            return curPage;
-        }
-
-        private void btnHomePage_Click(object sender, EventArgs e) // go to Home page
-        {
-
-            this.Hide();
-
-            ShoppingPg shoppingPg = ShoppingPg.getInstance();
-
-            shoppingPg.Show();
-
+            instance.Initialize();
+            instance.Show();
+            return instance;
         }
 
         private void btnMyProfile_Click(object sender, EventArgs e)
@@ -51,31 +41,12 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            ShoppingPg shoppingPg = ShoppingPg.getInstance();
-
-            shoppingPg.Show();
+            HomePage.getInstance();
 
         }
 
         private void MyProfilePg_Load(object sender, EventArgs e)
         {
-            user = UserSingleton.GetUser();
-            lblProfileHeader.Text = user.FirstName + "'s Profile";
-            FirstNameLabel.Text = user.FirstName;
-            LastNameLabel.Text = user.LastName;
-            EmailLabel.Text = user.Email;
-            PhoneNumberLabel.Text = user.PhoneNumber;
-            DateOfBirthLabel.Text = user.DateOfBirth.ToString();
-            GenderLabel.Text = user.Gender;
-            AddressLabel.Text = user.Address;
-            if (!user.IsAdmin)
-            {
-                AdministratorLabel.Visible = false;
-            }
-            EmailBox.Visible = false;
-            AddressBox.Visible = false;
-            PhoneNumberBox.Visible = false;
-            SaveButton.Visible = false;
         }
 
         private void SaveButton_Click(object sender, EventArgs e)
@@ -100,6 +71,7 @@ namespace CSE412_Group17
             user.PhoneNumber = PhoneNumberBox.Text;
             UserCTRL userctrl = new UserCTRL();
             userctrl.changeUser(user);
+            Initialize();
             MessageBox.Show("USER INFO UPDATED");
             this.Hide();
 
@@ -121,6 +93,34 @@ namespace CSE412_Group17
 
         private void MyProfilePg_FormClosed(object sender, FormClosedEventArgs e) {
             Application.Exit();
+        }
+
+        private void Initialize()
+        {
+            user = UserSingleton.GetUser();
+            lblProfileHeader.Text = user.FirstName + "'s Profile";
+            FirstNameLabel.Text = user.FirstName;
+            LastNameLabel.Text = user.LastName;
+            EmailLabel.Text = user.Email;
+            PhoneNumberLabel.Text = user.PhoneNumber;
+            DateOfBirthLabel.Text = user.DateOfBirth.ToString();
+            GenderLabel.Text = user.Gender;
+            AddressLabel.Text = user.Address;
+            if (!user.IsAdmin)
+            {
+                AdministratorLabel.Visible = false;
+            }
+            EmailBox.Visible = false;
+            AddressBox.Visible = false;
+            PhoneNumberBox.Visible = false;
+            SaveButton.Visible = false;
+            UpdateButton.Visible = true;
+        }
+
+        private void btnHomePage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            HomePage.getInstance();
         }
     }
 }

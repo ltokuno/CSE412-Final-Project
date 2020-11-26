@@ -47,9 +47,10 @@
             // 
             this.lblLine1.AutoSize = true;
             this.lblLine1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLine1.Location = new System.Drawing.Point(226, 279);
+            this.lblLine1.Location = new System.Drawing.Point(301, 343);
+            this.lblLine1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLine1.Name = "lblLine1";
-            this.lblLine1.Size = new System.Drawing.Size(609, 20);
+            this.lblLine1.Size = new System.Drawing.Size(756, 25);
             this.lblLine1.TabIndex = 18;
             this.lblLine1.Text = "We are a passionate company selling a variety of bike parts for everyone to enjoy" +
     ". The";
@@ -59,9 +60,10 @@
             this.btnHomePage.FlatAppearance.BorderSize = 0;
             this.btnHomePage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHomePage.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHomePage.Location = new System.Drawing.Point(386, 42);
+            this.btnHomePage.Location = new System.Drawing.Point(515, 52);
+            this.btnHomePage.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnHomePage.Name = "btnHomePage";
-            this.btnHomePage.Size = new System.Drawing.Size(318, 58);
+            this.btnHomePage.Size = new System.Drawing.Size(424, 71);
             this.btnHomePage.TabIndex = 21;
             this.btnHomePage.Text = "BikeBoss";
             this.btnHomePage.UseVisualStyleBackColor = true;
@@ -71,9 +73,10 @@
             // 
             this.lblLine2.AutoSize = true;
             this.lblLine2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLine2.Location = new System.Drawing.Point(226, 299);
+            this.lblLine2.Location = new System.Drawing.Point(301, 368);
+            this.lblLine2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLine2.Name = "lblLine2";
-            this.lblLine2.Size = new System.Drawing.Size(598, 20);
+            this.lblLine2.Size = new System.Drawing.Size(730, 25);
             this.lblLine2.TabIndex = 22;
             this.lblLine2.Text = "items you will find are the most popular and durable to tailor to your needs. It\'" +
     "s about";
@@ -82,9 +85,10 @@
             // 
             this.lblLine3.AutoSize = true;
             this.lblLine3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLine3.Location = new System.Drawing.Point(226, 319);
+            this.lblLine3.Location = new System.Drawing.Point(301, 393);
+            this.lblLine3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLine3.Name = "lblLine3";
-            this.lblLine3.Size = new System.Drawing.Size(636, 20);
+            this.lblLine3.Size = new System.Drawing.Size(781, 25);
             this.lblLine3.TabIndex = 23;
             this.lblLine3.Text = "you, and we are here to guarantee the best possible parts so that you can enjoy y" +
     "our ride.";
@@ -93,9 +97,10 @@
             // 
             this.lblCompanyFounders.AutoSize = true;
             this.lblCompanyFounders.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCompanyFounders.Location = new System.Drawing.Point(458, 387);
+            this.lblCompanyFounders.Location = new System.Drawing.Point(611, 476);
+            this.lblCompanyFounders.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCompanyFounders.Name = "lblCompanyFounders";
-            this.lblCompanyFounders.Size = new System.Drawing.Size(164, 20);
+            this.lblCompanyFounders.Size = new System.Drawing.Size(201, 25);
             this.lblCompanyFounders.TabIndex = 24;
             this.lblCompanyFounders.Text = "Company Founders";
             // 
@@ -103,9 +108,10 @@
             // 
             this.lblRobert.AutoSize = true;
             this.lblRobert.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRobert.Location = new System.Drawing.Point(597, 497);
+            this.lblRobert.Location = new System.Drawing.Point(796, 612);
+            this.lblRobert.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblRobert.Name = "lblRobert";
-            this.lblRobert.Size = new System.Drawing.Size(128, 20);
+            this.lblRobert.Size = new System.Drawing.Size(154, 25);
             this.lblRobert.TabIndex = 25;
             this.lblRobert.Text = "Robert McIntosh";
             // 
@@ -113,9 +119,10 @@
             // 
             this.lblScott.AutoSize = true;
             this.lblScott.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblScott.Location = new System.Drawing.Point(568, 456);
+            this.lblScott.Location = new System.Drawing.Point(757, 561);
+            this.lblScott.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblScott.Name = "lblScott";
-            this.lblScott.Size = new System.Drawing.Size(157, 20);
+            this.lblScott.Size = new System.Drawing.Size(192, 25);
             this.lblScott.TabIndex = 26;
             this.lblScott.Text = "Scott VanDiepenbos";
             // 
@@ -123,9 +130,10 @@
             // 
             this.lblLance.AutoSize = true;
             this.lblLance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLance.Location = new System.Drawing.Point(383, 456);
+            this.lblLance.Location = new System.Drawing.Point(511, 561);
+            this.lblLance.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLance.Name = "lblLance";
-            this.lblLance.Size = new System.Drawing.Size(110, 20);
+            this.lblLance.Size = new System.Drawing.Size(138, 25);
             this.lblLance.TabIndex = 27;
             this.lblLance.Text = "Lance Tokuno";
             // 
@@ -133,9 +141,10 @@
             // 
             this.lblMisgana.AutoSize = true;
             this.lblMisgana.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMisgana.Location = new System.Drawing.Point(555, 422);
+            this.lblMisgana.Location = new System.Drawing.Point(740, 519);
+            this.lblMisgana.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMisgana.Name = "lblMisgana";
-            this.lblMisgana.Size = new System.Drawing.Size(170, 20);
+            this.lblMisgana.Size = new System.Drawing.Size(210, 25);
             this.lblMisgana.TabIndex = 28;
             this.lblMisgana.Text = "Misgana Gebremariam";
             // 
@@ -143,9 +152,10 @@
             // 
             this.lblIsabella.AutoSize = true;
             this.lblIsabella.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIsabella.Location = new System.Drawing.Point(383, 422);
+            this.lblIsabella.Location = new System.Drawing.Point(511, 519);
+            this.lblIsabella.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblIsabella.Name = "lblIsabella";
-            this.lblIsabella.Size = new System.Drawing.Size(125, 20);
+            this.lblIsabella.Size = new System.Drawing.Size(157, 25);
             this.lblIsabella.TabIndex = 29;
             this.lblIsabella.Text = "Isabella Shilliday";
             // 
@@ -153,9 +163,10 @@
             // 
             this.lblMichael.AutoSize = true;
             this.lblMichael.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMichael.Location = new System.Drawing.Point(383, 497);
+            this.lblMichael.Location = new System.Drawing.Point(511, 612);
+            this.lblMichael.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMichael.Name = "lblMichael";
-            this.lblMichael.Size = new System.Drawing.Size(99, 20);
+            this.lblMichael.Size = new System.Drawing.Size(125, 25);
             this.lblMichael.TabIndex = 30;
             this.lblMichael.Text = "Michael Park";
             // 
@@ -166,11 +177,12 @@
             this.btnGoBackHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGoBackHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoBackHome.ForeColor = System.Drawing.Color.Transparent;
-            this.btnGoBackHome.Location = new System.Drawing.Point(81, 63);
+            this.btnGoBackHome.Location = new System.Drawing.Point(108, 78);
+            this.btnGoBackHome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGoBackHome.Name = "btnGoBackHome";
-            this.btnGoBackHome.Size = new System.Drawing.Size(102, 37);
+            this.btnGoBackHome.Size = new System.Drawing.Size(136, 46);
             this.btnGoBackHome.TabIndex = 31;
-            this.btnGoBackHome.Text = "Go Back";
+            this.btnGoBackHome.Text = "Home";
             this.btnGoBackHome.UseVisualStyleBackColor = false;
             this.btnGoBackHome.Click += new System.EventHandler(this.btnMyProfile_Click);
             // 
@@ -178,17 +190,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(460, 171);
+            this.label1.Location = new System.Drawing.Point(613, 210);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 37);
+            this.label1.Size = new System.Drawing.Size(193, 46);
             this.label1.TabIndex = 32;
             this.label1.Text = "About Us";
             // 
             // AboutUsPg
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1078, 743);
+            this.ClientSize = new System.Drawing.Size(1437, 914);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnGoBackHome);
             this.Controls.Add(this.lblMichael);
@@ -202,6 +215,7 @@
             this.Controls.Add(this.btnHomePage);
             this.Controls.Add(this.lblLine1);
             this.Controls.Add(this.lblLine3);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AboutUsPg";
             this.Text = "About Us";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AboutUsPg_Closed);

@@ -62,7 +62,6 @@
             this.btnHomePage.TabIndex = 21;
             this.btnHomePage.Text = "BikeBoss";
             this.btnHomePage.UseVisualStyleBackColor = true;
-            this.btnHomePage.Click += new System.EventHandler(this.btnHomePage_Click);
             // 
             // lblRegisterMessage
             // 
@@ -149,7 +148,6 @@
             this.SignInAsAdminBox.TabIndex = 34;
             this.SignInAsAdminBox.Text = "Sign In to Admin";
             this.SignInAsAdminBox.UseVisualStyleBackColor = true;
-            this.SignInAsAdminBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // SignInRegPg
             // 

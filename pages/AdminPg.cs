@@ -6,37 +6,39 @@ using CSE412_Group17.models;
 namespace CSE412_Group17 {
     public partial class AdminPg : Form
     {
-        private AdminPg()
+        protected AdminPg()
         {
-            InitializeComponent();
         }
 
-        private static AdminPg curPage = null;
+        private static AdminPg instance;
 
         public static AdminPg getInstance() {
-            if (curPage == null) {
-                curPage = new AdminPg();
-                curPage.InitializeComponent();
-
+            if (instance == null) {
+                instance = new AdminPg();
+                instance.InitializeComponent();
             }
-            curPage.Show();
-            return curPage;
+            instance.Initialize();
+            instance.Show();
+            return instance;
+        }
+
+        private void Initialize()
+        {
+            UsersBox.Items.Clear();
+            LoginBox.Items.Clear();
         }
 
         private void AdminPg_Load(object sender, EventArgs e)
         {
-                
+
         }
     
 
         private void btnSignOut_Click(object sender, EventArgs e)
         {
-            UserSingleton.LogOutUser();
             this.Hide();
 
-            SignInRegPg signIn = new SignInRegPg();
-
-            signIn.Show();
+            SignInRegPg.GetInstance();
 
         }
 
@@ -131,6 +133,7 @@ namespace CSE412_Group17 {
             AdminCheckBox.Checked = false;
             UsernameBox.Text = "";
             PasswordBox.Text = "";
+            DOBBox.Text = "";
         }
 
         private void EditUserButton_Click(object sender, EventArgs e)

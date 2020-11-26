@@ -12,9 +12,9 @@ namespace CSE412_Group17.models
         private static User user;
         private static UserSingleton _instance;
 
-        protected UserSingleton(User newUser)
+        protected UserSingleton()
         {
-            user = newUser;
+
         }
 
         public static UserSingleton Instance(User newUser)
@@ -22,7 +22,8 @@ namespace CSE412_Group17.models
 
             if (_instance == null)
             {
-                _instance = new UserSingleton(newUser);
+                _instance = new UserSingleton();
+                user = newUser;
             }
 
             return _instance;
@@ -30,7 +31,11 @@ namespace CSE412_Group17.models
 
         public static void LogOutUser()
         {
-            _instance = null;
+            if (_instance != null)
+            {
+                _instance = null;
+                user = null;
+            }
         }
 
         public static User GetUser()

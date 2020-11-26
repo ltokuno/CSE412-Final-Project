@@ -15,7 +15,7 @@ namespace CSE412_Group17 {
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new MainForm());
             //Application.Run(new HomePage());
-            Application.Run(new SignInRegPg()); // new sign in page.
+            Application.Run(SignInRegPg.GetInstance()); // new sign in page.
             //Application.Run(new ShoppingPg());
             
         }

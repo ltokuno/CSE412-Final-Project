@@ -13,20 +13,34 @@ namespace CSE412_Group17
 {
     public partial class NewUserRegistrationPg : Form
     {
-
-        public NewUserRegistrationPg()
+        private static NewUserRegistrationPg instance;
+        protected NewUserRegistrationPg()
         {
             InitializeComponent();
         }
 
+        public static NewUserRegistrationPg GetInstance()
+        {
+            if (instance == null)
+            {
+                instance = new NewUserRegistrationPg();
+            }
+            instance.Show();
+            return instance;
+        }
+
         private void btnBackToLoginPg_Click(object sender, EventArgs e)
         {
-
+            FirstNameBox.Text = "";
+            LastNameBox.Text = "";
+            PhoneNumberBox.Text = "";
+            AddressBox.Text = "";
+            EmailBox.Text = "";
+            UsernameBox.Text = "";
+            PasswordBox.Text = "";
             this.Hide();
 
-            SignInRegPg signIn = new SignInRegPg();
-
-            signIn.Show();
+            SignInRegPg.GetInstance();
 
         }
 
@@ -112,9 +126,7 @@ namespace CSE412_Group17
             PasswordBox.Text = "";
             this.Hide();
 
-            SignInRegPg signIn = new SignInRegPg();
-
-            signIn.Show();
+            SignInRegPg.GetInstance();
         }
 
         private void NewUserRegistrationPg_Load(object sender, EventArgs e)
@@ -124,6 +136,11 @@ namespace CSE412_Group17
 
         private void NewUserRegistrationPg_FormClosed(object sender, FormClosedEventArgs e) {
             Application.Exit();
+        }
+
+        private void btnHomePage_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

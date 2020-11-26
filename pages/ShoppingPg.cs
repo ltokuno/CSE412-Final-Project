@@ -60,20 +60,43 @@ namespace CSE412_Group17
             }
         }
 
-        private ShoppingPg()
+        protected ShoppingPg()
         {
-            InitializeComponent();
+
         }
 
-        private static ShoppingPg curPage = null;
+        private static ShoppingPg instance;
 
         public static ShoppingPg getInstance() {
-            if (curPage == null) {
-                curPage = new ShoppingPg();
-                curPage.InitializeComponent();
+            if (instance == null) {
+                instance = new ShoppingPg();
+                instance.InitializeComponent();
             }
-            curPage.Show();
-            return curPage;
+            instance.Initialize();
+            instance.Show();
+            return instance;
+        }
+
+        private void Initialize()
+        {
+            itemsListDS.Clear();
+            cartItemsDS.Clear();
+            myOrdersDS.Clear();
+            myOrdersItemsDS.Clear();
+            comboBox1.Items.Clear();
+            ItemsCTRL items = new ItemsCTRL();
+            foreach (String s in items.getItemCategories())
+            {
+                comboBox1.Items.Add(s);
+            }
+
+            listBox1.DataSource = itemsListDS;
+            ShoppingCart.DataSource = cartItemsDS;
+            cartItemsDS.ListChanged += new ListChangedEventHandler(list_ListChanged);
+            MyOrdersListbox.DataSource = myOrdersDS;
+            MyItemsListbox.DataSource = myOrdersItemsDS;
+            panelAccount.Height = 52;
+            panelResources.Height = 52;
         }
 
         private void btnParts_Click(object sender, EventArgs e)
@@ -126,9 +149,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            ShoppingPg brakes = new ShoppingPg();
-
-            brakes.Show();
+            HomePage.getInstance();
 
         }
 
@@ -137,7 +158,7 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            AboutUsPg.getInstance().Show();
+            AboutUsPg.getInstance();
 
         }
 
@@ -166,10 +187,7 @@ namespace CSE412_Group17
         {
 
             this.Hide();
-            UserSingleton.LogOutUser();
-            SignInRegPg signIn = new SignInRegPg();
-
-            signIn.Show();
+            SignInRegPg.GetInstance();
 
         }
 
@@ -192,17 +210,9 @@ namespace CSE412_Group17
             }
         }
 
-        private void BrakesPg_Load(object sender, EventArgs e) {
-            ItemsCTRL items = new ItemsCTRL();
-            foreach (String s in items.getItemCategories()) {
-                comboBox1.Items.Add(s);
-            }
-
-            listBox1.DataSource = itemsListDS;
-            ShoppingCart.DataSource = cartItemsDS;
-            cartItemsDS.ListChanged += new ListChangedEventHandler(list_ListChanged);
-            MyOrdersListbox.DataSource = myOrdersDS;
-            MyItemsListbox.DataSource = myOrdersItemsDS;
+        private void BrakesPg_Load(object sender, EventArgs e) 
+        {
+            
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -371,6 +381,11 @@ namespace CSE412_Group17
 
         private void ShoppingPg_Closed(object sender, FormClosedEventArgs e) {
             Application.Exit();
+        }
+
+        private void MyOrdersPanel_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     } //end class
 }

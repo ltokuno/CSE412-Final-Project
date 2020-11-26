@@ -6,37 +6,27 @@ using CSE412_Group17.models;
 namespace CSE412_Group17 {
     public partial class AddPartsPg : Form
     {
-        private AddPartsPg()
+        protected AddPartsPg()
         {
-            InitializeComponent();
+
         }
 
-        private static AddPartsPg curPage = null;
+        private static AddPartsPg instance;
 
         public static AddPartsPg getInstance() {
-            if (curPage == null) {
-                curPage = new AddPartsPg();
-                curPage.InitializeComponent();
-
+            if (instance == null) {
+                instance = new AddPartsPg();
+                instance.InitializeComponent();
             }
-            curPage.Show();
-            return curPage;
+            instance.Initialize();
+            instance.Show();
+            return instance;
         }
 
 
         private void AdminPg_Load(object sender, EventArgs e)
         {
-            VendorCTRL vendorctrl = new VendorCTRL();
-            foreach(Vendor v in vendorctrl.getAllVendors())
-            {
-                VendorSelectBox.Items.Add(v);
-            }
-            ItemsCTRL itemctrl = new ItemsCTRL();
-            foreach(String category in itemctrl.getItemCategories())
-            {
-                CategorySelectBox.Items.Add(category);
-                EditCategoryBox.Items.Add(category);
-            }
+
         }
 
         private void btnSignOut_Click(object sender, EventArgs e)
@@ -44,9 +34,7 @@ namespace CSE412_Group17 {
             UserSingleton.LogOutUser();
             this.Hide();
 
-            SignInRegPg signIn = new SignInRegPg();
-
-            signIn.Show();
+            SignInRegPg.GetInstance();
 
         }
 
@@ -175,8 +163,29 @@ namespace CSE412_Group17 {
             VendorCTRL vendorctrl = new VendorCTRL();
             vendorctrl.addVendor(vendor);
             MessageBox.Show("NEW VENDOR ADDED");
+            VendorSelectBox.Items.Clear();
+            foreach (Vendor v in vendorctrl.getAllVendors())
+            {
+                VendorSelectBox.Items.Add(v);
+            }
             VendorNameBox.Clear();
             VendorAddressBox.Clear();
+        }
+
+        private void Initialize()
+        {
+            PartsBox.Items.Clear();
+            VendorCTRL vendorctrl = new VendorCTRL();
+            foreach (Vendor v in vendorctrl.getAllVendors())
+            {
+                VendorSelectBox.Items.Add(v);
+            }
+            ItemsCTRL itemctrl = new ItemsCTRL();
+            foreach (String category in itemctrl.getItemCategories())
+            {
+                CategorySelectBox.Items.Add(category);
+                EditCategoryBox.Items.Add(category);
+            }
         }
 
         private void AddPartsPg_Closed(object sender, FormClosedEventArgs e) {

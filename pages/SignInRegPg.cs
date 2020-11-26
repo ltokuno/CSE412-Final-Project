@@ -15,20 +15,28 @@ namespace CSE412_Group17
     public partial class SignInRegPg : Form
     {
 
-        public SignInRegPg()
+        private static SignInRegPg instance;
+        protected SignInRegPg()
         {
-            InitializeComponent();
         }
 
-        private void btnHomePage_Click(object sender, EventArgs e) // go to Home page
+        public static SignInRegPg GetInstance()
         {
+            if (instance == null)
+            {
+                instance = new SignInRegPg();
+                instance.InitializeComponent();
+            }
+            instance.Initialize();
+            instance.Show();
+            return instance;
+        }
 
-            this.Hide();
-
-            SignInRegPg signIn = new SignInRegPg();
-
-            signIn.Show();
-
+        private void Initialize()
+        {
+            UserSingleton.LogOutUser();
+            txtUsername.Clear();
+            txtPassword.Clear();
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -68,9 +76,7 @@ namespace CSE412_Group17
                             notFound = false;
                             this.Hide();
 
-                            ShoppingPg shoppingPg = ShoppingPg.getInstance();
-
-                            shoppingPg.Show();
+                            HomePage.getInstance();
                         }
                         else
                         {
@@ -79,9 +85,7 @@ namespace CSE412_Group17
                             notFound = false;
                             this.Hide();
 
-                            ShoppingPg shoppingPg = ShoppingPg.getInstance();
-
-                            shoppingPg.Show();
+                            HomePage.getInstance();
                         }
                     }
                 }
@@ -97,21 +101,14 @@ namespace CSE412_Group17
 
             this.Hide();
 
-            NewUserRegistrationPg register = new NewUserRegistrationPg();
-
-            register.Show();
+            NewUserRegistrationPg.GetInstance();
 
 
         }
 
         private void SignInRegPg_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
+            
         }
 
         private void SignInRegPg_FormClosed(object sender, FormClosedEventArgs e) {
