@@ -206,7 +206,10 @@ namespace CSE412_Group17
             itemsListDS.Clear();
             
             foreach(Item i in items.geItemsByCategory(comboBox1.Text)) {
-                itemsListDS.Add(i);
+                if (i.StockQuantity > -1)
+                {
+                    itemsListDS.Add(i);
+                }
             }
         }
 

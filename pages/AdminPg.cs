@@ -223,5 +223,30 @@ namespace CSE412_Group17 {
             Application.Exit();
 
         }
+
+        private void DeleteUserButton_Click(object sender, EventArgs e)
+        {
+            if (UsersBox.SelectedIndex > -1)
+            {
+                var confirmResult = MessageBox.Show("Are you sure to delete this User ??",
+                                     "Confirm Delete!!",
+                                     MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    User selectedUser = (User)UsersBox.SelectedItem;
+                    UserCTRL userctrl = new UserCTRL();
+                    userctrl.deleteUser(selectedUser);
+                    MessageBox.Show("USER HAS BEEN DELETED");
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+                MessageBox.Show("Please Select a User to Delete");
+            return;
+            
+        }
     }
 }

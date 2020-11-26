@@ -41,6 +41,17 @@ namespace CSE412_Group17.controllers {
                 " WHERE \"ID\" = '" + theUser.ID + "'");
         }
 
+        public void deleteUser(User user)
+        {
+            DBModifier modder = new DBModifier();
+
+            modder.modifyRows("DELETE FROM \"User\"" +
+                " WHERE \"ID\" = '" + user.ID + "'");
+
+            modder.modifyRows("DELETE FROM \"Login\"" +
+                " WHERE \"ID\" = '" + user.ID + "'");
+        }
+
 
     } //end class
 }

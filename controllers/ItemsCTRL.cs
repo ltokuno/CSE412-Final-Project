@@ -56,5 +56,16 @@ namespace CSE412_Group17.controllers {
                 " WHERE \"ItemID\" = '" + theItem.ItemID + "'");
         }
 
+        public void deleteItem(Item item)
+        {
+            DBModifier modder = new DBModifier();
+
+            modder.modifyRows("DELETE FROM \"Vendor_Items\"" +
+                " WHERE \"ItemID\" = '" + item.ItemID + "'");
+
+            modder.modifyRows("DELETE FROM \"Item\"" +
+                " WHERE \"ItemID\" = '" + item.ItemID + "'");
+        }
+
     } //end class
 }

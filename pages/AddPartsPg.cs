@@ -89,6 +89,7 @@ namespace CSE412_Group17 {
 
         private void btnGetAllParts_Click(object sender, EventArgs e)
         {
+            PartsBox.Items.Clear();
             string category;
             ItemsCTRL itemctrl = new ItemsCTRL();
             if (EditCategoryBox.SelectedIndex > -1)
@@ -103,7 +104,10 @@ namespace CSE412_Group17 {
             
             foreach(Item item in itemctrl.geItemsByCategory(category))
             {
-                PartsBox.Items.Add(item);
+                if (item.StockQuantity > -1)
+                {
+                    PartsBox.Items.Add(item);
+                }
             }
         }
 
@@ -137,7 +141,7 @@ namespace CSE412_Group17 {
             ItemsCTRL itemsctrl = new ItemsCTRL();
             itemsctrl.changeItem(item);
             MessageBox.Show("PART SAVED");
-            txtItemNameBox.Clear();
+            txtEditItemNameBox.Clear();
             txtEditCostPriceBox.Clear();
             txtEditRetailPriceBox.Clear();
             txtEditStockQuantityBox.Clear();
@@ -150,7 +154,7 @@ namespace CSE412_Group17 {
             txtEditItemNameBox.Text = item.ItemName;
             txtEditRetailPriceBox.Text = item.RetailPrice.ToString();
             txtEditStockQuantityBox.Text = item.StockQuantity.ToString();
-            txtEditCostPriceBox.Text = item.StockQuantity.ToString();
+            txtEditCostPriceBox.Text = item.CostPrice.ToString();
         }
 
         private void SaveVendorButton_Click(object sender, EventArgs e)
@@ -201,6 +205,31 @@ namespace CSE412_Group17 {
 
         private void AddPartsPg_Closed(object sender, FormClosedEventArgs e) {
             Application.Exit();
+        }
+
+        private void DeletePartButton_Click(object sender, EventArgs e)
+        {
+            if (PartsBox.SelectedIndex > -1)
+            {
+                var confirmResult = MessageBox.Show("Are you sure to delete this Part ??",
+                                     "Confirm Delete!!",
+                                     MessageBoxButtons.YesNo);
+                if (confirmResult == DialogResult.Yes)
+                {
+                    Item selectedItem = (Item)PartsBox.SelectedItem;
+                    ItemsCTRL itemctrl = new ItemsCTRL();
+                    selectedItem.StockQuantity = -1;
+                    itemctrl.changeItem(selectedItem);
+                    MessageBox.Show("PART HAS BEEN REMOVED");
+                }
+                else
+                {
+                    return;
+                }
+            }
+            else
+                MessageBox.Show("Please Select a Part to Delete");
+            return;
         }
     }
 }
