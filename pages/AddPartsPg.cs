@@ -231,5 +231,9 @@ namespace CSE412_Group17 {
                 MessageBox.Show("Please Select a Part to Delete");
             return;
         }
+
+        private void txtEditStockQuantityBox_TextChanged(object sender, EventArgs e) {
+
+        }
     }
 }
